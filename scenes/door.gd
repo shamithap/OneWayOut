@@ -1,7 +1,6 @@
-extends Area2D
+extends Node2D
 
-@onready var hint = $"../../Hint"
-
+@onready var hint = $"../Hint"
 
 func _on_door_body_entered(_body: Node2D) -> void:
 	hint.visible(true)
