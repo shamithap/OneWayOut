@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://c7ftp3tiw7ccv"]
 
-[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scenes/rooms/room_3.gd" id="1_brib7"]
+[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room_3.gd" id="1_brib7"]
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/tilemap.png" id="1_dk4yb"]
 [ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/- Spooky castle tileset/- Spooky castle - final.png" id="2_u63ts"]
-[ext_resource type="Script" uid="uid://bbe2e5vfjmnec" path="res://scenes/knight.gd" id="3_u63ts"]
+[ext_resource type="Script" uid="uid://bbe2e5vfjmnec" path="res://scripts/characters/knight.gd" id="3_u63ts"]
 [ext_resource type="PackedScene" uid="uid://kv8c6b8i08yg" path="res://scenes/player.tscn" id="5_2dixu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brib7"]
