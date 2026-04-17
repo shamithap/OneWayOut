@@ -316,4 +316,4 @@ animation = &"idle_left"
 shape = SubResource("RectangleShape2D_ml6mh")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1900570101]
-zoom = Vector2(4.505, 4.505)
+zoom = Vector2(3.5, 3.5)
