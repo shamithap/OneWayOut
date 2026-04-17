@@ -533,7 +533,7 @@ script = ExtResource("3_tbgi4")
 position = Vector2(301, 203)
 sprite_frames = SubResource("SpriteFrames_o7ddy")
 animation = &"idle_left"
-frame_progress = 0.65221655
+frame_progress = 0.9735791
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1563865170]
 position = Vector2(302, 198)
