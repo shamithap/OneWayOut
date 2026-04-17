@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var hint = $"../Hint"
+@onready var hint = $"../CanvasLayer/Hint"
 
 #helps keep track when player is nearby
 var player_in_range = false 
