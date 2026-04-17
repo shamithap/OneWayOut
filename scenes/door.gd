@@ -17,4 +17,4 @@ func _on_door_body_exited(_body: Node2D) -> void:
 func _process(_delta):
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		Global.spawn_location = "door1" 
-		get_tree().change_scene_to_file("res://scenes/room1.tscn")
+		get_tree().change_scene_to_file("res://scenes/rooms/room1.tscn")
