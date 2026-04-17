@@ -308,6 +308,7 @@ script = ExtResource("1_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2089907789]
 position = Vector2(0, 4)
+scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_npsde")
 animation = &"idle_left"
 
@@ -315,4 +316,4 @@ animation = &"idle_left"
 shape = SubResource("RectangleShape2D_ml6mh")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1900570101]
-zoom = Vector2(2.755, 2.755)
+zoom = Vector2(4.505, 4.505)
