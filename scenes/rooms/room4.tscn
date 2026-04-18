@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://dwn60is8t6bq7"]
 
+[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_51wyk"]
+[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="2_xdd6j"]
+
 [node name="room4" type="Node2D" unique_id=102341009]
+script = ExtResource("1_51wyk")
+
+[node name="Doors" type="Node2D" parent="." unique_id=600286449]
+
+[node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("2_xdd6j")]
+destination_room_name = "main"
+destination_door_tag = "4"
+spawn_direction = "up"
+
+[editable path="Doors/Door_S"]
