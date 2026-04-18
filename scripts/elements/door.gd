@@ -7,14 +7,13 @@ class_name Door
 
 #room that the door will take you to
 @export var destination_room_name : String
-#the spawn point within the destination room
+#the tag of the door within the destination room
 @export var destination_door_tag : String 
 #the direction the character should be facing at this door
 @export var spawn_direction : String
 
 #helps keep track when player is nearby
 var player_in_range = false 
-
 
 func _on_door_body_entered(body: Node2D) -> void:
 	if body is Player:

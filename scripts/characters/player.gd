@@ -33,6 +33,7 @@ func _physics_process(_delta):
 		anim.play("idle_" + last_direction)
 		
 
+#is triggered from navigation manager
 func _on_spawn(spawn_position : Vector2, direction : String):
 	global_position = spawn_position
 	velocity = Vector2.ZERO
