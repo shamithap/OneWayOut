@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ivlcrp1mdvmk"
-path="res://.godot/imported/static_floors+walls.png-111dc3160f218a84b111e6d841075fbb.ctex"
+path="res://.godot/imported/static_floors+walls.png-daa2a675bcb6a4c40e3b028bcc1cd765.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/- Spooky castle tileset/static_floors+walls.png"
-dest_files=["res://.godot/imported/static_floors+walls.png-111dc3160f218a84b111e6d841075fbb.ctex"]
+source_file="res://assets/SpookyCastleTileset/static_floors+walls.png"
+dest_files=["res://.godot/imported/static_floors+walls.png-daa2a675bcb6a4c40e3b028bcc1cd765.ctex"]
 
 [params]
 

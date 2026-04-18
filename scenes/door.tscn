@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://yy6em55b80o7"]
+
+[ext_resource type="Script" uid="uid://clka5wfi3ab3x" path="res://scripts/elements/door.gd" id="1_hpvv5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
+size = Vector2(20, 13)
+
+[node name="Door" type="Area2D" unique_id=1336069685]
+script = ExtResource("1_hpvv5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1225352784]
+shape = SubResource("RectangleShape2D_jyhfs")
+debug_color = Color(0.81455207, 0.40853918, 0, 0.41960785)
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=817698842]
+position = Vector2(0, 13)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2090216197]
+
+[node name="Hint" type="Label" parent="CanvasLayer" unique_id=237814863]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.5
+offset_top = -220.0
+offset_right = 60.5
+offset_bottom = -197.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to enter"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[connection signal="body_entered" from="." to="." method="_on_door_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_door_body_exited"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvypl7t5twtuh"
-path="res://.godot/imported/animation_hazards+walls.png-765f65adbb258ba3c4cc78270334eb5c.ctex"
+uid="uid://d3toerbp3a1s7"
+path="res://.godot/imported/- Spooky castle - final.png-4f28f804cad99e356676d9e92ee1e577.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/- Spooky castle tileset/animation_hazards+walls.png"
-dest_files=["res://.godot/imported/animation_hazards+walls.png-765f65adbb258ba3c4cc78270334eb5c.ctex"]
+source_file="res://assets/SpookyCastleTileset/- Spooky castle - final.png"
+dest_files=["res://.godot/imported/- Spooky castle - final.png-4f28f804cad99e356676d9e92ee1e577.ctex"]
 
 [params]
 

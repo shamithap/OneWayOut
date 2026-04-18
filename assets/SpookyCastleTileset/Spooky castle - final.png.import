@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do3jqrd2rqnv"
-path="res://.godot/imported/items_swords+arrows.png-7afd3f9881aa977eb4dd715b86338045.ctex"
+uid="uid://bl50xfe12jy2l"
+path="res://.godot/imported/Spooky castle - final.png-1beb75f19509dccadcc65df989df6cbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/- Spooky castle tileset/items_swords+arrows.png"
-dest_files=["res://.godot/imported/items_swords+arrows.png-7afd3f9881aa977eb4dd715b86338045.ctex"]
+source_file="res://assets/SpookyCastleTileset/Spooky castle - final.png"
+dest_files=["res://.godot/imported/Spooky castle - final.png-1beb75f19509dccadcc65df989df6cbd.ctex"]
 
 [params]
 

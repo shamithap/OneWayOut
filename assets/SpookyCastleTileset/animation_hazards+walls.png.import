@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dni46tbd12sop"
-path="res://.godot/imported/animation_breakable+doors.png-853bafa47c92c07b688aae3cbf5a47da.ctex"
+uid="uid://bvypl7t5twtuh"
+path="res://.godot/imported/animation_hazards+walls.png-84a49adaab88716cabea786a1011b49f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/- Spooky castle tileset/animation_breakable+doors.png"
-dest_files=["res://.godot/imported/animation_breakable+doors.png-853bafa47c92c07b688aae3cbf5a47da.ctex"]
+source_file="res://assets/SpookyCastleTileset/animation_hazards+walls.png"
+dest_files=["res://.godot/imported/animation_hazards+walls.png-84a49adaab88716cabea786a1011b49f.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dpus0siq28e0w"]
 
-[ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/- Spooky castle tileset/static_floors+walls.png" id="1_277jj"]
-[ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/- Spooky castle tileset/Spooky castle - final.png" id="2_actgu"]
+[ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="1_277jj"]
+[ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="2_actgu"]
 [ext_resource type="PackedScene" uid="uid://kv8c6b8i08yg" path="res://scenes/player.tscn" id="3_277jj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21e2k"]

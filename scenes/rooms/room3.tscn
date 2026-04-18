@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://c7ftp3tiw7ccv"]
 
-[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room_3.gd" id="1_brib7"]
+[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_brib7"]
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/tilemap.png" id="1_dk4yb"]
-[ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/- Spooky castle tileset/- Spooky castle - final.png" id="2_u63ts"]
+[ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="2_u63ts"]
 [ext_resource type="Script" uid="uid://bbe2e5vfjmnec" path="res://scripts/characters/knight.gd" id="3_u63ts"]
-[ext_resource type="PackedScene" uid="uid://kv8c6b8i08yg" path="res://scenes/player.tscn" id="5_2dixu"]
+[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="6_uupts"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brib7"]
 texture = ExtResource("1_dk4yb")
@@ -2302,5 +2302,15 @@ debug_color = Color(0.7727886, 0.4400833, 0.14358974, 0.41960785)
 position = Vector2(0, -0.3558712)
 shape = SubResource("RectangleShape2D_uupts")
 
-[node name="Player" parent="." unique_id=1424528440 instance=ExtResource("5_2dixu")]
-position = Vector2(53, -3)
+[node name="Doors" type="Node2D" parent="." unique_id=1400196794]
+
+[node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("6_uupts")]
+position = Vector2(8, 51)
+destination_room_name = "main"
+destination_door_tag = "3"
+spawn_direction = "up"
+
+[node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
+position = Vector2(0, -8)
+
+[editable path="Doors/Door_S"]
