@@ -209,6 +209,9 @@ spawn_direction = "down"
 
 [node name="Door_4" parent="Doors" unique_id=2129524922 instance=ExtResource("2_3os3j")]
 position = Vector2(408, 126)
+destination_room_name = "room4"
+destination_door_tag = "S"
+spawn_direction = "down"
 
 [node name="Player" parent="." unique_id=1424528440 instance=ExtResource("3_hhji2")]
 position = Vector2(304, 235)
