@@ -3,7 +3,9 @@ extends Node
 const scene_dict = {
 	"main" : preload("res://scenes/rooms/main.tscn"),
 	"room1": preload("res://scenes/rooms/room1.tscn"),
-	 "room3" : preload("res://scenes/rooms/room3.tscn")
+	 "room3" : preload("res://scenes/rooms/room3.tscn"),
+	 "room4" : preload("res://scenes/rooms/room4.tscn")
+
 }
 
 signal on_trigger_player_spawn
