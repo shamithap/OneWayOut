@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="OneWayOut"
-run/main_scene="uid://cvgtgva4l26sh"
+run/main_scene="uid://dydkf4toui63v"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
