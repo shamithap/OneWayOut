@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b5golwofx2sd2"]
+
+[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="1_s5msr"]
+[ext_resource type="PackedScene" uid="uid://8v6ewggwmu2s" path="res://scenes/guess_popup.tscn" id="2_4w0uv"]
+[ext_resource type="Script" path="res://guess_popup.gd" id="2_aok5s"]
+
+[node name="Room2" type="Node2D" unique_id=1244363592]
+
+[node name="Door" parent="." unique_id=1336069685 instance=ExtResource("1_s5msr")]
+
+[node name="GuessPopup" type="Control" parent="." unique_id=1702126622]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_aok5s")
+
+[node name="Panel" parent="GuessPopup" unique_id=570874226 instance=ExtResource("2_4w0uv")]
+layout_mode = 0
+
+[node name="Feedback" type="Label" parent="GuessPopup/Panel" unique_id=1230687836]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LineEdit" type="LineEdit" parent="GuessPopup/Panel" unique_id=131917605]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 30.0
+offset_right = 168.5
+offset_bottom = 60.333336
