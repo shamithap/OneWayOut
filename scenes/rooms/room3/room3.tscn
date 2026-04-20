@@ -1,13 +1,15 @@
 [gd_scene format=4 uid="uid://c7ftp3tiw7ccv"]
 
-[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_brib7"]
-[ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/tilemap.png" id="1_dk4yb"]
-[ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="2_u63ts"]
-[ext_resource type="Script" uid="uid://bbe2e5vfjmnec" path="res://scripts/characters/knight.gd" id="3_u63ts"]
-[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="6_uupts"]
+[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_bwx3g"]
+[ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="2_l08gl"]
+[ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="3_wmnrf"]
+[ext_resource type="Script" uid="uid://bbe2e5vfjmnec" path="res://scripts/characters/knight.gd" id="4_ujuor"]
+[ext_resource type="Texture2D" uid="uid://srennupptqf" path="res://assets/UI/Chat BalloonsBubbles - Pixel Art/Icons-1.png" id="5_vrard"]
+[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="6_b7j3g"]
+[ext_resource type="PackedScene" uid="uid://vpw14sjthq4h" path="res://scenes/rooms/room3/rps_game.tscn" id="7_5yegw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brib7"]
-texture = ExtResource("1_dk4yb")
+texture = ExtResource("2_l08gl")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -143,7 +145,7 @@ separation = Vector2i(1, 1)
 11:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2dixu"]
-texture = ExtResource("2_u63ts")
+texture = ExtResource("3_wmnrf")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -748,7 +750,7 @@ sources/0 = SubResource("TileSetAtlasSource_brib7")
 sources/1 = SubResource("TileSetAtlasSource_2dixu")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vucmd"]
-texture = ExtResource("2_u63ts")
+texture = ExtResource("3_wmnrf")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1349,7 +1351,7 @@ texture = ExtResource("2_u63ts")
 16:64/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ketqm"]
-texture = ExtResource("1_dk4yb")
+texture = ExtResource("2_l08gl")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -1489,7 +1491,7 @@ sources/0 = SubResource("TileSetAtlasSource_vucmd")
 sources/1 = SubResource("TileSetAtlasSource_ketqm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_risbr"]
-texture = ExtResource("2_u63ts")
+texture = ExtResource("3_wmnrf")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -2090,7 +2092,7 @@ texture = ExtResource("2_u63ts")
 16:64/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dnxy"]
-texture = ExtResource("1_dk4yb")
+texture = ExtResource("2_l08gl")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -2247,7 +2249,7 @@ sources/0 = SubResource("TileSetAtlasSource_risbr")
 sources/1 = SubResource("TileSetAtlasSource_3dnxy")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dk4yb"]
-atlas = ExtResource("1_dk4yb")
+atlas = ExtResource("2_l08gl")
 region = Rect2(0.030448914, 137.53592, 15.1132965, 16.34703)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dixu"]
@@ -2256,38 +2258,72 @@ size = Vector2(26.33452, 25.622776)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uupts"]
 size = Vector2(14.234876, 14.946621)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2dixu"]
+load_path = "res://.godot/imported/Chat-1.png-e863348028d881e23cb84b8ddc4a1084.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vucmd"]
+atlas = SubResource("CompressedTexture2D_2dixu")
+region = Rect2(80, 208, 48, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ketqm"]
+atlas = ExtResource("5_vrard")
+region = Rect2(233, 80, 33, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuaid"]
+atlas = ExtResource("5_vrard")
+region = Rect2(233, 96, 33, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_risbr"]
+atlas = ExtResource("5_vrard")
+region = Rect2(233, 112, 33, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3dnxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ketqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuaid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_risbr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
 [node name="Room3" type="Node2D" unique_id=1379598978]
-script = ExtResource("1_brib7")
+script = ExtResource("1_bwx3g")
 
-[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1592044690]
-position = Vector2(8, 44)
+[node name="TileMaps" type="Node2D" parent="." unique_id=1825718850]
+position = Vector2(-8, -32)
 
-[node name="Environment" type="Node2D" parent="." unique_id=1825718850]
-
-[node name="Floor" type="TileMapLayer" parent="Environment" unique_id=377820810]
+[node name="Floor" type="TileMapLayer" parent="TileMaps" unique_id=377820810]
 tile_map_data = PackedByteArray("AAD8//7/AQADAAMAAAD8////AQADAAMAAAD8/wAAAQADAAMAAAD8/wEAAQADAAMAAAD8/wIAAQADAAMAAAD9//7/AQADAAMAAAD9////AQADAAMAAAD9/wAAAQADAAMAAAD9/wEAAQADAAMAAAD9/wIAAQADAAMAAAD+//7/AQADAAMAAAD+////AQADAAMAAAD+/wAAAQADAAMAAAD+/wEAAQADAAMAAAD+/wIAAQADAAMAAAD//wAAAQADAAMAAAD//wEAAQADAAMAAAD//wIAAQADAAMAAAAAAAAAAQADAAMAAAAAAAEAAQADAAMAAAAAAAIAAQADAAMAAAABAAAAAQADAAMAAAABAAEAAQADAAMAAAABAAIAAQADAAMAAAACAP7/AQADAAMAAAACAAAAAQADAAMAAAACAAEAAQADAAMAAAACAAIAAQADAAMAAAADAP7/AQADAAMAAAADAP//AQADAAMAAAADAAAAAQADAAMAAAADAAEAAQADAAMAAAADAAIAAQADAAMAAAAEAP7/AQACAAQAAAAEAP//AQACAAQAAAAEAAAAAQACAAQAAAAEAAEAAQACAAQAAAAEAAIAAQACAAQAAAACAP//AQADAAMAAAD/////AQADAAUAAAAAAP//AQADAAMAAAABAP//AQADAAMAAAABAP7/AQADAAMAAAAAAP7/AQADAAMAAAD///7/AQADAAMAAAA=")
 tile_set = SubResource("TileSet_uupts")
 metadata/_edit_lock_ = true
 
-[node name="FloorDetails" type="TileMapLayer" parent="Environment" unique_id=1476295335]
+[node name="FloorDetails" type="TileMapLayer" parent="TileMaps" unique_id=1476295335]
 position = Vector2(-624, -336)
 tile_map_data = PackedByteArray("AAAlABQAAAAPAA0AAAAlABUAAAALAA0AAAAkABMAAAALAAwAAAAkABQAAAALAA0AAAAkABUAAAALAA0AAAAkABYAAAAPAA4AAAAlABMAAAAPAAwAAAAlABYAAAALAA0AAAAkABcAAAALAA4AAAAlABcAAAAPAA8AAAAjABQAAAAOAA0AAAAjABUAAAAOAA4AAAAjABYAAAAKAA0AAAAjABcAAAAKAA4AAAAjABMAAAAKAAwAAAAqABQAAAALAA0AAAAqABUAAAALAA0AAAAqABYAAAALAA0AAAAqABcAAAAQAA8AAAArABQAAAAMAA0AAAArABUAAAARAA4AAAArABYAAAAMAA0AAAArABcAAAAMAA4AAAAmABMAAAALAAwAAAAmABUAAAALAA0AAAAmABYAAAALAA0AAAAmABcAAAALAA4AAAAnABMAAAALAAwAAAAnABUAAAALAA0AAAAnABYAAAALAA0AAAAnABcAAAALAA4AAAAoABMAAAALAAwAAAAoABUAAAAQAA0AAAAoABYAAAALAA0AAAAoABcAAAAQAA8AAAApABMAAAAQAAwAAAApABQAAAALAA0AAAApABUAAAALAA0AAAApABYAAAALAA0AAAApABcAAAALAA4AAAAqABMAAAALAAwAAAArABMAAAARAAwAAAAmABQAAAALAA0AAAAnABQAAAALAA0AAAAoABQAAAALAA0AAAA=")
 tile_set = SubResource("TileSet_nuaid")
 metadata/_edit_lock_ = true
 
-[node name="Walls" type="TileMapLayer" parent="Environment" unique_id=1962015851]
+[node name="Walls" type="TileMapLayer" parent="TileMaps" unique_id=1962015851]
 position = Vector2(-624, -336)
 tile_map_data = PackedByteArray("AAAiABIAAQABAAEAAAAiABMAAQABAAEAAAAiABQAAQABAAEAAAAiABUAAQABAAEAAAAiABYAAQABAAEAAAAiABcAAQABAAEAAAAiABgAAQABAAIAAAAjABgAAQACAAIAAAAkABgAAQACAAIAAAAlABgAAQACAAIAAAAmABgAAQACAAIAAAAnABgAAQAJAAMAAAAoABgAAQACAAIAAAApABgAAQACAAIAAAAqABgAAQACAAIAAAArABgAAQACAAIAAAAsABgAAQADAAIAAAAsABIAAQADAAEAAAAjABIAAQAEAAMAAAAkABIAAQAFAAIAAAAlABIAAQACAAEAAAAmABIAAQAEAAMAAAAnABIAAQAHAAEAAAAoABIAAQACAAEAAAApABIAAQAEAAMAAAAqABIAAQAFAAIAAAArABIAAQACAAEAAAAsABMAAQADAAEAAAAsABYAAQADAAEAAAAsABcAAQADAAEAAAAiABEAAQABAAAAAAAsABEAAQADAAAAAAAjABEAAQACAAAAAAAkABEAAQACAAAAAAAlABEAAQACAAAAAAAmABEAAQACAAAAAAAnABEAAQACAAAAAAAoABEAAQACAAAAAAApABEAAQACAAAAAAAqABEAAQACAAAAAAArABEAAQACAAAAAAAsABUAAQADAAEAAAAsABQAAQADAAEAAAA=")
 tile_set = SubResource("TileSet_kqajr")
 metadata/_edit_lock_ = true
 
-[node name="Knight" type="Area2D" parent="." unique_id=1118995715]
-position = Vector2(7, -15)
+[node name="Knight" type="StaticBody2D" parent="." unique_id=15177484]
+position = Vector2(-1, -47)
 scale = Vector2(1.405, 1.405)
 collision_layer = 4
-script = ExtResource("3_u63ts")
+script = ExtResource("4_ujuor")
 
-[node name="Sprite2D" type="Sprite2D" parent="Knight" unique_id=1913068649]
+[node name="KnightSprite" type="Sprite2D" parent="Knight" unique_id=1913068649]
 texture = SubResource("AtlasTexture_dk4yb")
 
 [node name="TriggerArea" type="Area2D" parent="Knight" unique_id=620784551]
@@ -2302,9 +2338,40 @@ debug_color = Color(0.7727886, 0.4400833, 0.14358974, 0.41960785)
 position = Vector2(0, -0.3558712)
 shape = SubResource("RectangleShape2D_uupts")
 
-[node name="Doors" type="Node2D" parent="." unique_id=1400196794]
+[node name="Bubbles" type="Node2D" parent="Knight" unique_id=941729255]
 
-[node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("6_uupts")]
+[node name="ChatBubble" type="Sprite2D" parent="Knight/Bubbles" unique_id=1325598757]
+visible = false
+texture_filter = 1
+position = Vector2(-14.94662, -14.234875)
+scale = Vector2(0.60359067, 0.69738173)
+texture = SubResource("AtlasTexture_vucmd")
+
+[node name="Label" type="Label" parent="Knight/Bubbles/ChatBubble" unique_id=961355451]
+texture_filter = 1
+offset_left = -20.46245
+offset_top = -9.479416
+offset_right = 20.80895
+offset_bottom = 9.911873
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -3
+theme_override_font_sizes/font_size = 5
+text = "Wanna play a game?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="IndicatorBubble" type="AnimatedSprite2D" parent="Knight/Bubbles" unique_id=1562978536]
+position = Vector2(-6.4056926, -9.964413)
+scale = Vector2(0.47449586, 0.4448396)
+sprite_frames = SubResource("SpriteFrames_3dnxy")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.070840254
+
+[node name="Doors" type="Node2D" parent="." unique_id=1400196794]
+position = Vector2(-8, -32)
+
+[node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("6_b7j3g")]
 position = Vector2(8, 51)
 destination_room_name = "main"
 destination_door_tag = "3"
@@ -2312,5 +2379,30 @@ spawn_direction = "up"
 
 [node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
 position = Vector2(0, -8)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2008966280]
+
+[node name="Hint" type="Label" parent="CanvasLayer" unique_id=1797814364]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.5
+offset_top = -220.0
+offset_right = 60.5
+offset_bottom = -197.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to talk"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="RPS" parent="CanvasLayer" unique_id=68996279 instance=ExtResource("7_5yegw")]
+visible = false
+
+[connection signal="body_entered" from="Knight/TriggerArea" to="Knight" method="_on_trigger_area_body_entered"]
+[connection signal="body_exited" from="Knight/TriggerArea" to="Knight" method="_on_trigger_area_body_exited"]
 
 [editable path="Doors/Door_S"]

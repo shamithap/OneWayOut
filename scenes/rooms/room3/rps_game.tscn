@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://vpw14sjthq4h"]
+
+[ext_resource type="Script" uid="uid://dm6b5os64i24c" path="res://scripts/rps_game.gd" id="1_ds4op"]
+[ext_resource type="Texture2D" uid="uid://csf87sivifdl7" path="res://assets/player/player tileset/Player/player_Idle.png" id="1_sgstv"]
+[ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="2_ds4op"]
+[ext_resource type="Texture2D" uid="uid://6bgbdovdm4qp" path="res://assets/BigWander_ArtOfScrolls/IndividualSprites/Scroll_01_01_ArtOfScrolls_BigWander(16x16).png" id="3_hjcyi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flgm4"]
+atlas = ExtResource("1_sgstv")
+region = Rect2(61, 8, 22, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgstv"]
+atlas = ExtResource("2_ds4op")
+region = Rect2(0, 137, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uupts"]
+atlas = ExtResource("2_ds4op")
+region = Rect2(136, 136, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dnxy"]
+atlas = ExtResource("2_ds4op")
+region = Rect2(102, 135, 16, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ds4op"]
+bg_color = Color(0.15343648, 0.15343651, 0.15343645, 1)
+
+[node name="RPS" type="Control" unique_id=68996279]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 651.0
+script = ExtResource("1_ds4op")
+
+[node name="Label" type="Label" parent="." unique_id=228082403]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -259.5
+offset_right = 259.5
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Pick an option!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprites" type="HBoxContainer" parent="." unique_id=795905291]
+layout_mode = 0
+offset_top = 187.0
+offset_right = 1156.0
+offset_bottom = 337.0
+theme_override_constants/separation = 84
+alignment = 1
+
+[node name="Player" type="TextureRect" parent="Sprites" unique_id=446793945]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = SubResource("AtlasTexture_flgm4")
+
+[node name="PlayerChoice" type="TextureRect" parent="Sprites" unique_id=208518303]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="KnightChoice" type="TextureRect" parent="Sprites" unique_id=1693251369]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Knight" type="TextureRect" parent="Sprites" unique_id=691571136]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = SubResource("AtlasTexture_sgstv")
+
+[node name="Buttons" type="PanelContainer" parent="." unique_id=1226336732]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -414.75
+offset_top = -201.0
+offset_right = 414.75
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons" unique_id=678828209]
+layout_mode = 2
+theme_override_constants/separation = 39
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Buttons/HBoxContainer" unique_id=1027231778]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 74
+columns = 3
+
+[node name="SwordButton" type="TextureButton" parent="Buttons/HBoxContainer/GridContainer" unique_id=2027515571]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_uupts")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ShieldButton" type="TextureButton" parent="Buttons/HBoxContainer/GridContainer" unique_id=798773518]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_3dnxy")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ScrollButton" type="TextureButton" parent="Buttons/HBoxContainer/GridContainer" unique_id=612514444]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("3_hjcyi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="SwordLabel" type="Label" parent="Buttons/HBoxContainer/GridContainer" unique_id=1359243882]
+layout_mode = 2
+text = "Sword
+"
+horizontal_alignment = 1
+
+[node name="ShieldLabel" type="Label" parent="Buttons/HBoxContainer/GridContainer" unique_id=265013439]
+layout_mode = 2
+text = "Shield
+"
+horizontal_alignment = 1
+
+[node name="ScrollLabel" type="Label" parent="Buttons/HBoxContainer/GridContainer" unique_id=1006436254]
+layout_mode = 2
+text = "Scroll
+"
+horizontal_alignment = 1
+
+[node name="Confirmationbutton" type="Button" parent="Buttons/HBoxContainer" unique_id=1781198011]
+layout_mode = 2
+text = "Confirm"
+
+[node name="NextRoundButton" type="Button" parent="." unique_id=725458284]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.5
+offset_top = 27.5
+offset_right = 148.5
+offset_bottom = 94.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "Next Round"
+
+[node name="Panel" type="Panel" parent="." unique_id=1314287871]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ds4op")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1707450182]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -30.5
+offset_right = 20.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 64
+
+[node name="GameWinOrLose" type="Label" parent="Panel/VBoxContainer" unique_id=1785937868]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "test"
+horizontal_alignment = 1
+
+[node name="ReturnRoomButton" type="Button" parent="Panel/VBoxContainer" unique_id=805289465]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Go Back to Room"
+
+[connection signal="pressed" from="Buttons/HBoxContainer/GridContainer/SwordButton" to="." method="_on_sword_button_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer/GridContainer/ShieldButton" to="." method="_on_shield_button_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer/GridContainer/ScrollButton" to="." method="_on_scroll_button_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer/Confirmationbutton" to="." method="_on_confirmation_button_pressed"]
+[connection signal="pressed" from="NextRoundButton" to="." method="_on_next_round_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ReturnRoomButton" to="." method="_on_return_room_button_pressed"]
