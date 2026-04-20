@@ -37,8 +37,7 @@ func _process(_delta) -> void:
 			game_win_or_lose.text = "You lost..."
 
 func knight_turn() -> void:
-	#knights_choice = option_pictures.keys().pick_random()
-	knights_choice = "sword"
+	knights_choice = option_pictures.keys().pick_random()
 	knights_texture.texture = option_pictures[knights_choice]
 	
 func reset() -> void:
