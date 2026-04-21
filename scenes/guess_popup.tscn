@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://8v6ewggwmu2s"]
+
+[node name="GuessPopup" type="Control" unique_id=21247487]
+layout_mode = 3
+anchors_preset = 0
