@@ -3,7 +3,7 @@ extends Control
 @onready var players_texture := $Sprites/PlayerChoice
 @onready var knights_texture := $Sprites/KnightChoice
 @onready var label := $Label
-@onready var game_win_or_lose := $Panel/VBoxContainer/GameWinOrLose
+@onready var game_win_or_lose := $EndPanel/VBoxContainer/GameWinOrLose
 @onready var next_round_button := $NextRoundButton
 @onready var confirmation_button := $Buttons/HBoxContainer/Confirmationbutton
 
@@ -30,7 +30,7 @@ func _process(_delta) -> void:
 		round_winner() #see who won
 		await next_round_button.pressed #next round
 	elif round_count > 3 or player_win_count == 2:
-		$Panel.visible = true
+		$EndPanel.visible = true
 		if(player_win_count == 2):
 			game_win_or_lose.text = "Congrats you won!"
 		else:
@@ -52,7 +52,6 @@ func reset() -> void:
 	knights_texture.texture = null
 
 func round_winner() -> void:
-	print("players choice is " + str(players_choice) + " and knights choice is " + str(knights_choice))
 	if players_choice == "sword" and knights_choice == "shield":
 		#knight wins
 		knight_won_round()
