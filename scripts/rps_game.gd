@@ -103,7 +103,7 @@ func _on_next_round_button_pressed() -> void:
 	reset()
 
 func _on_return_room_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/rooms/room3/room3.tscn")
+	get_tree().change_scene_to_file("res://scenes/rooms/armory/armory.tscn")
 
 func _on_confirmation_button_pressed() -> void:
 	can_make_choice = false
