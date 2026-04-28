@@ -3454,6 +3454,18 @@ position = Vector2(8, -49)
 [node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
 position = Vector2(0, 16)
 
+[node name="Door_W" parent="Doors" unique_id=299786170 instance=ExtResource("6_htjyl")]
+position = Vector2(-66, -4)
+rotation = -1.5707964
+destination_room_name = "dungeon"
+destination_door_tag = "E"
+spawn_direction = "right"
+
+[node name="Door_E" parent="Doors" unique_id=88716495 instance=ExtResource("6_htjyl")]
+position = Vector2(83, -2)
+rotation = 1.5707964
+spawn_direction = "left"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2008966280]
 
 [node name="Hint" type="Label" parent="CanvasLayer" unique_id=1797814364]
