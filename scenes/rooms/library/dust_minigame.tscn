@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://dxvtj7usm6fgc"]
+
+[ext_resource type="PackedScene" uid="uid://kv8c6b8i08yg" path="res://scenes/player.tscn" id="1_8cvr3"]
+[ext_resource type="Script" uid="uid://26tq1bj63jko" path="res://scenes/rooms/library/dust_minigame.gd" id="1_gp5ab"]
+[ext_resource type="Texture2D" uid="uid://bqy1gube14ng4" path="res://scenes/rooms/library/Broomsprite.png" id="2_gp5ab"]
+[ext_resource type="Script" uid="uid://dcp44npfrcf1b" path="res://scenes/rooms/library/dust_1.gd" id="3_nr32u"]
+[ext_resource type="Texture2D" uid="uid://b2rhtm8slwf6w" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C2.png" id="4_8cvr3"]
+[ext_resource type="Texture2D" uid="uid://m75lk0sw0dx1" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C3.png" id="5_nr32u"]
+[ext_resource type="Texture2D" uid="uid://sw585664uhb8" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C4.png" id="6_gp5ab"]
+[ext_resource type="Texture2D" uid="uid://dt3tu3iwbddde" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C5.png" id="7_hdu0e"]
+[ext_resource type="Texture2D" uid="uid://dlrcjikw6e0s4" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C6.png" id="8_d6oqe"]
+[ext_resource type="Texture2D" uid="uid://cg0tkcv1x3rxf" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C7.png" id="9_tepd4"]
+[ext_resource type="Texture2D" uid="uid://byga157jdcpa3" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C8.png" id="10_c2l5v"]
+[ext_resource type="Texture2D" uid="uid://nrfuff4eoe5b" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C1.png" id="12_hdu0e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vmgkd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_hdu0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8cvr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nr32u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gp5ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hdu0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d6oqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tepd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_c2l5v")
+}],
+"loop": false,
+"name": &"dust",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cvr3"]
+size = Vector2(8, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6oqe"]
+size = Vector2(6, 10)
+
+[node name="DustMinigame" type="Node2D" unique_id=16023897]
+position = Vector2(-8, 7)
+script = ExtResource("1_gp5ab")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=204378067]
+offset_left = -95.0
+offset_top = -31.0
+offset_right = 237.0
+offset_bottom = 132.0
+color = Color(0.21960784, 0.007843138, 0.11764706, 1)
+
+[node name="DustGroup" type="Node2D" parent="." unique_id=1738265308]
+
+[node name="Dust1" type="Area2D" parent="DustGroup" unique_id=480519393]
+script = ExtResource("3_nr32u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DustGroup/Dust1" unique_id=24997426]
+visible = false
+position = Vector2(59, 42)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_vmgkd")
+animation = &"dust"
+frame = 7
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DustGroup/Dust1" unique_id=2114611523]
+position = Vector2(60, 44)
+shape = SubResource("RectangleShape2D_8cvr3")
+
+[node name="Sprite2D" type="Sprite2D" parent="DustGroup/Dust1" unique_id=1830139302]
+position = Vector2(59, 42)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_hdu0e")
+
+[node name="Dust3" type="Area2D" parent="DustGroup" unique_id=870535451]
+script = ExtResource("3_nr32u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DustGroup/Dust3" unique_id=1301283388]
+visible = false
+position = Vector2(79, 28)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_vmgkd")
+animation = &"dust"
+frame = 7
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DustGroup/Dust3" unique_id=1998114185]
+position = Vector2(79, 28)
+shape = SubResource("RectangleShape2D_8cvr3")
+
+[node name="Sprite2D" type="Sprite2D" parent="DustGroup/Dust3" unique_id=1941703705]
+position = Vector2(79, 26)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_hdu0e")
+
+[node name="Dust2" type="Area2D" parent="DustGroup" unique_id=1528111310]
+script = ExtResource("3_nr32u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DustGroup/Dust2" unique_id=1208611803]
+visible = false
+position = Vector2(83, 46)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_vmgkd")
+animation = &"dust"
+frame = 7
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DustGroup/Dust2" unique_id=29352597]
+position = Vector2(83, 46)
+shape = SubResource("RectangleShape2D_8cvr3")
+
+[node name="Sprite2D" type="Sprite2D" parent="DustGroup/Dust2" unique_id=1105435553]
+position = Vector2(83, 43)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_hdu0e")
+
+[node name="Player" parent="." unique_id=1424528440 instance=ExtResource("1_8cvr3")]
+position = Vector2(69, 58)
+
+[node name="BroomStick" type="Node2D" parent="Player" unique_id=167482483]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/BroomStick" unique_id=1310001129]
+texture = ExtResource("2_gp5ab")
+
+[node name="Hitbox" type="Area2D" parent="Player/BroomStick" unique_id=11772682]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/BroomStick/Hitbox" unique_id=2014324641]
+position = Vector2(-3, 9)
+shape = SubResource("RectangleShape2D_d6oqe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=665805293]
+
+[node name="Instructions" type="Label" parent="CanvasLayer" unique_id=1466119732]
+offset_left = -19.0
+offset_top = -14.0
+offset_right = 145.0
+offset_bottom = 9.0
+theme_override_font_sizes/font_size = 10
+text = "Use the broom to dust the library!"
+horizontal_alignment = 1
+
+[connection signal="area_entered" from="DustGroup/Dust1" to="DustGroup/Dust1" method="_on_area_entered"]
+[connection signal="area_entered" from="DustGroup/Dust3" to="DustGroup/Dust3" method="_on_area_entered"]
+[connection signal="area_entered" from="DustGroup/Dust2" to="DustGroup/Dust2" method="_on_area_entered"]

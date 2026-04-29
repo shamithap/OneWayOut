@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" path="res://scenes/door.tscn" id="4_uns5t"]
 [ext_resource type="Script" uid="uid://lt2c4hq3cdn3" path="res://scenes/rooms/library/broom.gd" id="5_75ugr"]
 [ext_resource type="Texture2D" uid="uid://bqy1gube14ng4" path="res://scenes/rooms/library/Broomsprite.png" id="6_mlruy"]
-[ext_resource type="Script" uid="uid://dwg04iss4kqmf" path="res://scenes/rooms/trigger_area.gd" id="7_gcw75"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21e2k"]
 texture = ExtResource("2_mynaw")
@@ -989,24 +988,23 @@ position = Vector2(198, 114)
 texture = ExtResource("6_mlruy")
 
 [node name="TriggerArea" type="Area2D" parent="Broom" unique_id=1175578897]
-script = ExtResource("7_gcw75")
+position = Vector2(196, 141)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Broom/TriggerArea" unique_id=799725445]
-position = Vector2(195, 116)
+position = Vector2(0, -23)
 shape = SubResource("RectangleShape2D_geole")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Broom" unique_id=394501141]
-
-[node name="Hint" type="Label" parent="Broom/CanvasLayer" unique_id=123495810]
-offset_left = 140.0
-offset_top = 132.0
-offset_right = 252.0
-offset_bottom = 154.33334
+[node name="Hint" type="Label" parent="Broom" unique_id=123495810]
+visible = false
+offset_left = 139.0
+offset_top = 137.0
+offset_right = 251.0
+offset_bottom = 159.33334
 theme_override_font_sizes/font_size = 5
 text = "Press E to play"
 horizontal_alignment = 1
 
-[connection signal="body_entered" from="Broom/TriggerArea" to="." method="_on_trigger_area_body_entered"]
-[connection signal="body_exited" from="Broom/TriggerArea" to="." method="_on_trigger_area_body_exited"]
+[connection signal="body_entered" from="Broom/TriggerArea" to="Broom" method="_on_trigger_area_body_entered"]
+[connection signal="body_exited" from="Broom/TriggerArea" to="Broom" method="_on_trigger_area_body_exited"]
 
 [editable path="Doors/Door_S"]
