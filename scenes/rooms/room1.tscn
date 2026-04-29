@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scripts/rooms/room.gd" id="1_geole"]
 [ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="2_actgu"]
 [ext_resource type="PackedScene" path="res://scenes/door.tscn" id="4_0yqos"]
+[ext_resource type="Texture2D" uid="uid://bqy1gube14ng4" path="res://scenes/rooms/armory/Broomsprite.png" id="5_geole"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21e2k"]
 texture = ExtResource("1_277jj")
@@ -942,6 +943,9 @@ sources/0 = SubResource("TileSetAtlasSource_21e2k")
 sources/1 = SubResource("TileSetAtlasSource_dtrb7")
 sources/3 = SubResource("TileSetAtlasSource_npsde")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_geole"]
+size = Vector2(21, 26)
+
 [node name="Room1" type="Node2D" unique_id=1465284747]
 script = ExtResource("1_geole")
 
@@ -974,5 +978,17 @@ position = Vector2(188, 75)
 
 [node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
 position = Vector2(187, 72)
+
+[node name="Broom" type="Node2D" parent="." unique_id=2145047984]
+
+[node name="Sprite2D" type="Sprite2D" parent="Broom" unique_id=798709100]
+position = Vector2(198, 114)
+texture = ExtResource("5_geole")
+
+[node name="TriggerArea" type="Area2D" parent="Broom" unique_id=1175578897]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Broom/TriggerArea" unique_id=799725445]
+position = Vector2(195, 116)
+shape = SubResource("RectangleShape2D_geole")
 
 [editable path="Doors/Door_S"]
