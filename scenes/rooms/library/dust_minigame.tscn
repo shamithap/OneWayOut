@@ -127,6 +127,50 @@ position = Vector2(83, 43)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("12_hdu0e")
 
+[node name="Dust4" type="Area2D" parent="DustGroup" unique_id=1010210678]
+position = Vector2(29, -8)
+script = ExtResource("3_nr32u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DustGroup/Dust4" unique_id=1597061178]
+visible = false
+position = Vector2(83, 46)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_vmgkd")
+animation = &"dust"
+frame = 7
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DustGroup/Dust4" unique_id=2043224004]
+position = Vector2(83, 46)
+shape = SubResource("RectangleShape2D_8cvr3")
+
+[node name="Sprite2D" type="Sprite2D" parent="DustGroup/Dust4" unique_id=88779050]
+position = Vector2(83, 43)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_hdu0e")
+
+[node name="Dust5" type="Area2D" parent="DustGroup" unique_id=323352775]
+position = Vector2(17, 15)
+script = ExtResource("3_nr32u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DustGroup/Dust5" unique_id=1628366897]
+visible = false
+position = Vector2(83, 46)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_vmgkd")
+animation = &"dust"
+frame = 7
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DustGroup/Dust5" unique_id=661035459]
+position = Vector2(83, 46)
+shape = SubResource("RectangleShape2D_8cvr3")
+
+[node name="Sprite2D" type="Sprite2D" parent="DustGroup/Dust5" unique_id=1875427350]
+position = Vector2(83, 43)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_hdu0e")
+
 [node name="Player" parent="." unique_id=1424528440 instance=ExtResource("1_8cvr3")]
 position = Vector2(69, 58)
 
@@ -155,3 +199,5 @@ horizontal_alignment = 1
 [connection signal="area_entered" from="DustGroup/Dust1" to="DustGroup/Dust1" method="_on_area_entered"]
 [connection signal="area_entered" from="DustGroup/Dust3" to="DustGroup/Dust3" method="_on_area_entered"]
 [connection signal="area_entered" from="DustGroup/Dust2" to="DustGroup/Dust2" method="_on_area_entered"]
+[connection signal="area_entered" from="DustGroup/Dust4" to="DustGroup/Dust4" method="_on_area_entered"]
+[connection signal="area_entered" from="DustGroup/Dust5" to="DustGroup/Dust5" method="_on_area_entered"]
