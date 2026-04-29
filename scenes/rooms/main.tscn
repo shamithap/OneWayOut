@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://dydkf4toui63v"]
 
-[ext_resource type="Script" uid="uid://csac02uil303o" path="res://scripts/rooms/main.gd" id="1_3os3j"]
+[ext_resource type="Script" path="res://scripts/rooms/main.gd" id="1_3os3j"]
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="1_oafy4"]
-[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="2_3os3j"]
+[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="2_3os3j"]
 [ext_resource type="PackedScene" uid="uid://kv8c6b8i08yg" path="res://scenes/player.tscn" id="3_hhji2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5qli"]
@@ -189,6 +189,7 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_o5qli")
 
 [node name="Main" type="Node2D" unique_id=1807837972]
+position = Vector2(-3, -3)
 script = ExtResource("1_3os3j")
 
 [node name="RoomArt" type="TileMapLayer" parent="." unique_id=253767771]
