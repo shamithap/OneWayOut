@@ -1918,4 +1918,40 @@ position = Vector2(188, 168)
 [node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
 position = Vector2(187, 168)
 
+[node name="Door_N" parent="Doors" unique_id=1777423109 instance=ExtResource("4_ofrfw")]
+destination_room_name = "main"
+destination_door_tag = "4"
+spawn_direction = "down"
+
+[node name="CollisionShape2D" parent="Doors/Door_N" index="0" unique_id=1225352784]
+position = Vector2(188, 62)
+
+[node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
+position = Vector2(188, 71)
+
+[node name="Door_E" parent="Doors" unique_id=1525974212 instance=ExtResource("4_ofrfw")]
+destination_room_name = "main"
+destination_door_tag = "4"
+spawn_direction = "down"
+
+[node name="CollisionShape2D" parent="Doors/Door_E" index="0" unique_id=1225352784]
+position = Vector2(290, 124)
+
+[node name="Spawn" parent="Doors/Door_E" index="1" unique_id=817698842]
+position = Vector2(279, 124)
+
+[node name="Door_W" parent="Doors" unique_id=480234401 instance=ExtResource("4_ofrfw")]
+destination_room_name = "main"
+destination_door_tag = "4"
+spawn_direction = "down"
+
+[node name="CollisionShape2D" parent="Doors/Door_W" index="0" unique_id=1225352784]
+position = Vector2(101, 125)
+
+[node name="Spawn" parent="Doors/Door_W" index="1" unique_id=817698842]
+position = Vector2(111, 125)
+
 [editable path="Doors/Door_S"]
+[editable path="Doors/Door_N"]
+[editable path="Doors/Door_E"]
+[editable path="Doors/Door_W"]
