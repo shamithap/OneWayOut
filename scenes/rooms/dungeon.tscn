@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://jdr1obnx6yyo"]
 
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="1_84bop"]
-[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_blvdk"]
+[ext_resource type="Script" uid="uid://bmgtod44qgjb3" path="res://scripts/rooms/dungeon.gd" id="1_422x5"]
 [ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="2_a1hri"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="3_a1hri"]
+[ext_resource type="Texture2D" uid="uid://bjsmqnx3roske" path="res://assets/objects/Dungeon assets/PNG/Lever/Outline/Lever_outline_black.png" id="5_422x5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_blvdk"]
 texture = ExtResource("1_84bop")
@@ -2263,8 +2264,14 @@ physics_layer_0/collision_layer = 4
 sources/0 = SubResource("TileSetAtlasSource_d64og")
 sources/1 = SubResource("TileSetAtlasSource_g0x3l")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_422x5"]
+size = Vector2(12.5, 7.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x77a5"]
+size = Vector2(12, 33)
+
 [node name="Dungeon" type="Node2D" unique_id=1974248255]
-script = ExtResource("1_blvdk")
+script = ExtResource("1_422x5")
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=378831415]
 
@@ -2318,6 +2325,90 @@ rotation = 1.5707964
 
 [node name="Spawn" parent="Doors/Door_E" index="1" unique_id=817698842]
 position = Vector2(85, 14)
+
+[node name="Levers" type="Node2D" parent="." unique_id=918247060]
+
+[node name="Lever1" type="StaticBody2D" parent="Levers" unique_id=2077190413]
+collision_layer = 4
+
+[node name="LeverSprite" type="Sprite2D" parent="Levers/Lever1" unique_id=1971316801]
+position = Vector2(-8, 24.999998)
+scale = Vector2(0.6764706, 0.6764706)
+texture = ExtResource("5_422x5")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Levers/Lever1" unique_id=854489626]
+position = Vector2(-8.25, 23.875)
+shape = SubResource("RectangleShape2D_422x5")
+
+[node name="Interact" type="Area2D" parent="Levers/Lever1" unique_id=901157597]
+
+[node name="InteractHitbox" type="CollisionShape2D" parent="Levers/Lever1/Interact" unique_id=2085313093]
+position = Vector2(-9, 27.5)
+shape = SubResource("RectangleShape2D_x77a5")
+debug_color = Color(0.69838804, 0.49343163, 0.014697591, 0.41960785)
+
+[node name="Lever2" type="StaticBody2D" parent="Levers" unique_id=910980780]
+position = Vector2(16, 0)
+collision_layer = 4
+
+[node name="LeverSprite" type="Sprite2D" parent="Levers/Lever2" unique_id=1247696489]
+position = Vector2(-8, 24.999998)
+scale = Vector2(0.6764706, 0.6764706)
+texture = ExtResource("5_422x5")
+
+[node name="Interact" type="Area2D" parent="Levers/Lever2" unique_id=978574225]
+
+[node name="InteractHitbox" type="CollisionShape2D" parent="Levers/Lever2/Interact" unique_id=456836109]
+position = Vector2(-9, 27.5)
+shape = SubResource("RectangleShape2D_x77a5")
+debug_color = Color(0.69838804, 0.49343163, 0.014697591, 0.41960785)
+
+[node name="Hitbox" type="CollisionShape2D" parent="Levers/Lever2" unique_id=58655861]
+position = Vector2(-9, 24.5)
+shape = SubResource("RectangleShape2D_422x5")
+
+[node name="Lever3" type="StaticBody2D" parent="Levers" unique_id=377538704]
+position = Vector2(32, 0)
+collision_layer = 4
+
+[node name="LeverSprite" type="Sprite2D" parent="Levers/Lever3" unique_id=1446177754]
+position = Vector2(-8, 24.999998)
+scale = Vector2(0.6764706, 0.6764706)
+texture = ExtResource("5_422x5")
+
+[node name="Interact" type="Area2D" parent="Levers/Lever3" unique_id=369340562]
+
+[node name="InteractHitbox" type="CollisionShape2D" parent="Levers/Lever3/Interact" unique_id=1985920349]
+position = Vector2(-9, 27.5)
+shape = SubResource("RectangleShape2D_x77a5")
+debug_color = Color(0.69838804, 0.49343163, 0.014697591, 0.41960785)
+
+[node name="Hitbox" type="CollisionShape2D" parent="Levers/Lever3" unique_id=1337122533]
+position = Vector2(-9, 24.5)
+shape = SubResource("RectangleShape2D_422x5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=628808853]
+
+[node name="Hint" type="Label" parent="CanvasLayer" unique_id=284625634]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.5
+offset_top = -220.0
+offset_right = 60.5
+offset_bottom = -197.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to interact"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[connection signal="body_entered" from="Levers/Lever1/Interact" to="." method="_on_lever1_interact_entered"]
+[connection signal="body_entered" from="Levers/Lever2/Interact" to="." method="_on_lever2_interact_entered"]
+[connection signal="body_entered" from="Levers/Lever3/Interact" to="." method="_on_lever3_interact_entered"]
 
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_W"]

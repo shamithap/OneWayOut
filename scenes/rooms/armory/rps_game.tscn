@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://vpw14sjthq4h"]
 
-[ext_resource type="Script" uid="uid://dm6b5os64i24c" path="res://scripts/rps_game.gd" id="1_ds4op"]
+[ext_resource type="Script" uid="uid://dm6b5os64i24c" path="res://scripts/rooms/rps_game.gd" id="1_ds4op"]
 [ext_resource type="Texture2D" uid="uid://csf87sivifdl7" path="res://assets/player/player tileset/Player/player_Idle.png" id="1_sgstv"]
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="2_ds4op"]
-[ext_resource type="Texture2D" uid="uid://6bgbdovdm4qp" path="res://assets/BigWander_ArtOfScrolls/IndividualSprites/Scroll_01_01_ArtOfScrolls_BigWander(16x16).png" id="3_hjcyi"]
+[ext_resource type="Texture2D" uid="uid://6bgbdovdm4qp" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_01_01_ArtOfScrolls_BigWander(16x16).png" id="3_hjcyi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_flgm4"]
 atlas = ExtResource("1_sgstv")
