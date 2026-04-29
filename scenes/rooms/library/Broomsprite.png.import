@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqy1gube14ng4"
-path="res://.godot/imported/Broomsprite.png-c41b79ee479ced32b24895fcb48ba8a2.ctex"
+path="res://.godot/imported/Broomsprite.png-a8b0c273e5c8be2ea386b6fd723f7e49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/rooms/armory/Broomsprite.png"
-dest_files=["res://.godot/imported/Broomsprite.png-c41b79ee479ced32b24895fcb48ba8a2.ctex"]
+source_file="res://scenes/rooms/library/Broomsprite.png"
+dest_files=["res://.godot/imported/Broomsprite.png-a8b0c273e5c8be2ea386b6fd723f7e49.ctex"]
 
 [params]
 
