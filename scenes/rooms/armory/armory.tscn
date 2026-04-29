@@ -3487,6 +3487,7 @@ vertical_alignment = 2
 
 [node name="RPS" parent="CanvasLayer" unique_id=68996279 instance=ExtResource("7_2u6x3")]
 visible = false
+script = null
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=891407175]
 tile_set = SubResource("TileSet_bwx3g")
