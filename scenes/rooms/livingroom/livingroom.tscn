@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dwn60is8t6bq7"]
 
-[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_51wyk"]
-[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="2_xdd6j"]
-[ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="3_qg7lp"]
-[ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="4_nojl6"]
+[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_frly4"]
+[ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_sy43q"]
+[ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="3_tcbj0"]
+[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="4_ofrfw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ttfhd"]
-texture = ExtResource("3_qg7lp")
+texture = ExtResource("2_sy43q")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -185,7 +185,7 @@ texture = ExtResource("3_qg7lp")
 6:19/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0pl5x"]
-texture = ExtResource("4_nojl6")
+texture = ExtResource("3_tcbj0")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -930,7 +930,7 @@ sources/1 = SubResource("TileSetAtlasSource_0pl5x")
 sources/3 = SubResource("TileSetAtlasSource_h3m3m")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qg7lp"]
-texture = ExtResource("3_qg7lp")
+texture = ExtResource("2_sy43q")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1109,7 +1109,7 @@ texture = ExtResource("3_qg7lp")
 6:19/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nojl6"]
-texture = ExtResource("4_nojl6")
+texture = ExtResource("3_tcbj0")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1850,8 +1850,8 @@ sources/0 = SubResource("TileSetAtlasSource_qg7lp")
 sources/1 = SubResource("TileSetAtlasSource_nojl6")
 sources/3 = SubResource("TileSetAtlasSource_803qg")
 
-[node name="room4" type="Node2D" unique_id=102341009]
-script = ExtResource("1_51wyk")
+[node name="livingroom" type="Node2D" unique_id=102341009]
+script = ExtResource("1_frly4")
 
 [node name="Floor" type="TileMap" parent="." unique_id=662161728]
 position = Vector2(188, 113)
@@ -1872,7 +1872,7 @@ layer_1/name = "Walls"
 
 [node name="Doors" type="Node2D" parent="." unique_id=600286449]
 
-[node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("2_xdd6j")]
+[node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("4_ofrfw")]
 destination_room_name = "main"
 destination_door_tag = "4"
 spawn_direction = "up"
