@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="3_tcbj0"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="4_ofrfw"]
 [ext_resource type="Texture2D" uid="uid://cgx53o80qyugq" path="res://assets/objects/Livingroom assets/clock2.png" id="5_sy43q"]
+[ext_resource type="Script" uid="uid://u8lqpnhrrdbo" path="res://scripts/rooms/clock_puzzle.gd" id="5_tcbj0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ttfhd"]
 texture = ExtResource("2_sy43q")
@@ -1860,6 +1861,8 @@ size = Vector2(18, 120)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ofrfw"]
 size = Vector2(220, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sy43q"]
+
 [node name="livingroom" type="Node2D" unique_id=102341009]
 script = ExtResource("1_frly4")
 
@@ -1953,6 +1956,7 @@ position = Vector2(101, 125)
 position = Vector2(111, 125)
 
 [node name="ClockPuzzle" type="Node2D" parent="." unique_id=576775565]
+script = ExtResource("5_tcbj0")
 
 [node name="ClockSprite" type="Sprite2D" parent="ClockPuzzle" unique_id=1579439187]
 position = Vector2(189, 119)
@@ -1962,6 +1966,16 @@ texture = ExtResource("5_sy43q")
 [node name="InteractArea" type="Area2D" parent="ClockPuzzle" unique_id=797258165]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClockPuzzle/InteractArea" unique_id=1764559903]
+position = Vector2(190, 120)
+shape = SubResource("RectangleShape2D_sy43q")
+
+[node name="Hint" type="Label" parent="ClockPuzzle" unique_id=1755194246]
+visible = false
+offset_left = 106.0
+offset_top = 112.0
+offset_right = 285.0
+offset_bottom = 134.33333
+text = "Press E to inspect clock"
 
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_N"]
