@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="4_ofrfw"]
 [ext_resource type="Texture2D" uid="uid://cgx53o80qyugq" path="res://assets/objects/Livingroom assets/clock2.png" id="5_sy43q"]
 [ext_resource type="Script" uid="uid://u8lqpnhrrdbo" path="res://scripts/rooms/clock_puzzle.gd" id="5_tcbj0"]
+[ext_resource type="Texture2D" uid="uid://dxb2yeotd2bl7" path="res://assets/objects/Livingroom assets/fireplace.png" id="7_ofrfw"]
+[ext_resource type="Script" uid="uid://evvi6sg82a6e" path="res://scripts/rooms/fireplace_hint.gd" id="8_bkkyl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ttfhd"]
 texture = ExtResource("2_sy43q")
@@ -1863,6 +1865,8 @@ size = Vector2(220, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sy43q"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7thh3"]
+
 [node name="livingroom" type="Node2D" unique_id=102341009]
 script = ExtResource("1_frly4")
 
@@ -1871,7 +1875,7 @@ position = Vector2(188, 113)
 tile_set = SubResource("TileSet_803qg")
 format = 2
 layer_0/name = "Floor"
-layer_0/tile_data = PackedInt32Array(196606, 720897, 13, -65539, 720897, 13, -65538, 720897, 13, -131072, 720897, 13, -131071, 720897, 13, -131070, 720897, 13, -131069, 720897, 13, -131068, 720897, 13, -65532, 720897, 13, 4, 720897, 13, 65540, 720897, 13, 65539, 720897, 13, 65538, 720897, 13, 65537, 720897, 13, 65536, 720897, 13, 131071, 720897, 13, 131070, 720897, 13, 131069, 720897, 13, 131068, 720897, 13, 65532, 720897, 13, -4, 720897, 13, 65533, 720897, 13, -65535, 720897, 13, -65534, 720897, 13, -65533, 720897, 13, 3, 720897, 13, 2, 720897, 13, 1, 720897, 13, 196604, 720897, 13, 196605, 720897, 13, 196607, 720897, 13, 131072, 720897, 13, 131073, 720897, 13, 131074, 720897, 13, 131075, 720897, 13, 131076, 720897, 13, 196603, 720897, 13, 131067, 720897, 13, 65531, 720897, 13, -5, 720897, 13, -65541, 720897, 13, -131077, 720897, 13, -131076, 720897, 13, -131075, 720897, 13, -131074, 720897, 13, -131073, 720897, 13, -196608, 720897, 13, -196607, 720897, 13, -196606, 720897, 13, -196605, 720897, 13, -196604, 720897, 13, -196603, 720897, 13, -131067, 720897, 13, -65531, 720897, 13, 5, 720897, 13, 65541, 720897, 13, 131077, 720897, 13, 196613, 720897, 13, 196612, 720897, 13, 196611, 720897, 13, 196610, 720897, 13, 262142, 720897, 13, 262141, 720897, 13, 262140, 720897, 13, 262139, 720897, 13, 262138, 720897, 13, 196602, 720897, 13, 65530, 720897, 13, -6, 720897, 13, -131078, 720897, 13, -65542, 720897, 13, 262143, 720897, 13, -196602, 720897, 13, -131066, 720897, 13, -65530, 720897, 13, 6, 720897, 13, 65542, 720897, 13, 131078, 720897, 13, 196614, 720897, 13, 196609, 720897, 13, 196608, 720897, 13, 131066, 720896, 13, -2, 720897, 13, -3, 720897, 13, -65540, 720897, 13, 0, 720897, 13, 65535, 720897, 13, 65534, 720897, 13, -65536, 720897, 13, -1, 720897, 13, -65537, 720897, 13)
+layer_0/tile_data = PackedInt32Array(196606, 720897, 13, -65539, 720897, 13, -65538, 327683, 2, -131072, 720897, 13, -131071, 720897, 13, -131070, 720897, 13, -131069, 720897, 13, -131068, 720897, 13, -65532, 720897, 13, 4, 720897, 13, 65540, 720897, 13, 65539, 720897, 13, 65538, 720897, 13, 65537, 720897, 13, 65536, 720897, 13, 131071, 720897, 13, 131070, 720897, 13, 131069, 720897, 13, 131068, 720897, 13, 65532, 720897, 13, -4, 720897, 13, 65533, 720897, 13, -65535, 720897, 13, -65534, 720897, 13, -65533, 720897, 13, 3, 720897, 13, 2, 720897, 13, 1, 720897, 13, 196604, 720897, 13, 196605, 720897, 13, 196607, 720897, 13, 131072, 720897, 13, 131073, 720897, 13, 131074, 720897, 13, 131075, 720897, 13, 131076, 720897, 13, 196603, 720897, 13, 131067, 720897, 13, 65531, 720897, 13, -5, 196611, 3, -65541, 327683, 2, -131077, 196611, 3, -131076, 720897, 13, -131075, 720897, 13, -131074, 196611, 3, -131073, 720897, 13, -196608, 720897, 13, -196607, 720897, 13, -196606, 720897, 13, -196605, 720897, 13, -196604, 720897, 13, -196603, 720897, 13, -131067, 720897, 13, -65531, 720897, 13, 5, 720897, 13, 65541, 720897, 13, 131077, 720897, 13, 196613, 720897, 13, 196612, 720897, 13, 196611, 720897, 13, 196610, 720897, 13, 262142, 720897, 13, 262141, 720897, 13, 262140, 720897, 13, 262139, 720897, 13, 262138, 720897, 13, 196602, 720897, 13, 65530, 720897, 13, -6, 720897, 13, -131078, 720897, 13, -65542, 720897, 13, 262143, 720897, 13, -196602, 720897, 13, -131066, 720897, 13, -65530, 720897, 13, 6, 720897, 13, 65542, 720897, 13, 131078, 720897, 13, 196614, 720897, 13, 196609, 720897, 13, 196608, 720897, 13, 131066, 720896, 13, -2, 196611, 3, -3, 720897, 13, -65540, 720897, 13, 0, 720897, 13, 65535, 720897, 13, 65534, 720897, 13, -65536, 720897, 13, -1, 720897, 13, -65537, 720897, 13)
 layer_1/name = "Walls"
 
 [node name="Walls" type="TileMap" parent="." unique_id=518968641]
@@ -1959,64 +1963,66 @@ position = Vector2(111, 125)
 script = ExtResource("5_tcbj0")
 
 [node name="ClockSprite" type="Sprite2D" parent="ClockPuzzle" unique_id=1579439187]
-position = Vector2(189, 119)
+position = Vector2(243, 122)
 scale = Vector2(0.5, 0.544)
 texture = ExtResource("5_sy43q")
 
 [node name="InteractArea" type="Area2D" parent="ClockPuzzle" unique_id=797258165]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClockPuzzle/InteractArea" unique_id=1764559903]
-position = Vector2(189, 124)
+position = Vector2(243, 122)
 shape = SubResource("RectangleShape2D_sy43q")
 
 [node name="Hint" type="Label" parent="ClockPuzzle" unique_id=1755194246]
-visible = false
-offset_left = 161.0
-offset_top = 97.99999
-offset_right = 340.0
-offset_bottom = 120.33333
+offset_left = 213.0
+offset_top = 101.0
+offset_right = 392.0
+offset_bottom = 123.333336
 scale = Vector2(0.35, 0.35)
 text = "Press E to inspect clock"
 
 [node name="PuzzlePanel" type="Panel" parent="ClockPuzzle" unique_id=574260901]
-offset_left = 169.0
-offset_top = 101.0
-offset_right = 209.0
-offset_bottom = 141.0
+offset_left = 190.0
+offset_top = 112.0
+offset_right = 280.0
+offset_bottom = 155.0
 
 [node name="ClueLabel" type="Label" parent="ClockPuzzle/PuzzlePanel" unique_id=552200085]
 layout_mode = 0
-offset_left = -33.0
-offset_top = -18.0
-offset_right = 289.0
-offset_bottom = 5.0
+offset_left = 24.999996
+offset_top = -43.0
+offset_right = 347.0
+offset_bottom = 4.666668
 scale = Vector2(0.4, 0.4)
-text = "Dinner started when the room went dark."
+text = "Dinner started when 
+the room went dark."
 
 [node name="HourInput" type="LineEdit" parent="ClockPuzzle/PuzzlePanel" unique_id=1704982211]
 layout_mode = 0
-offset_left = -31.0
-offset_top = -6.0
-offset_right = 37.5
-offset_bottom = 25.0
+offset_left = 24.0
+offset_top = -20.0
+offset_right = 92.5
+offset_bottom = 11.0
 scale = Vector2(0.3, 0.3)
 placeholder_text = "Hour"
 
 [node name="MinuteInput" type="LineEdit" parent="ClockPuzzle/PuzzlePanel" unique_id=1258948229]
-layout_mode = 0
-offset_left = -31.0
-offset_top = 7.0
-offset_right = 37.5
-offset_bottom = 38.0
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.18400002
+offset_left = 50.0
+offset_top = -12.639999
+offset_right = 118.5
+offset_bottom = 11.0
 scale = Vector2(0.3, 0.3)
 placeholder_text = "Minute"
 
 [node name="CheckButton" type="Button" parent="ClockPuzzle/PuzzlePanel" unique_id=37745457]
 layout_mode = 0
-offset_left = -29.0
-offset_top = 23.0
-offset_right = 26.0
-offset_bottom = 54.0
+offset_left = 25.0
+offset_top = -8.0
+offset_right = 80.0
+offset_bottom = 23.0
 scale = Vector2(0.3, 0.3)
 text = "Check"
 
@@ -2028,8 +2034,40 @@ offset_right = 16.0
 offset_bottom = 62.0
 scale = Vector2(0.3, 0.3)
 
+[node name="Fireplace" type="Sprite2D" parent="." unique_id=1264126537]
+position = Vector2(140.00002, 86)
+scale = Vector2(0.03867189, 0.03769532)
+texture = ExtResource("7_ofrfw")
+script = ExtResource("8_bkkyl")
+
+[node name="InteractArea" type="Area2D" parent="Fireplace" unique_id=1896755211]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fireplace/InteractArea" unique_id=1184023200]
+shape = SubResource("RectangleShape2D_7thh3")
+
+[node name="Hint" type="Label" parent="Fireplace" unique_id=971958369]
+offset_right = 698.1814
+offset_bottom = 742.79785
+text = "Press E to inspect fireplace"
+
+[node name="NotePanel" type="Panel" parent="Fireplace" unique_id=391224996]
+offset_left = -387.87903
+offset_top = -291.81345
+offset_right = 413.73694
+offset_bottom = 318.3419
+
+[node name="ClueLabel" type="Label" parent="Fireplace/NotePanel" unique_id=430067111]
+layout_mode = 0
+offset_left = -232.72719
+offset_top = -583.6269
+offset_right = 646.46423
+offset_bottom = -26.528503
+text = "The fireplace went dark at 7:30."
+
 [connection signal="body_entered" from="ClockPuzzle/InteractArea" to="ClockPuzzle" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="ClockPuzzle/InteractArea" to="ClockPuzzle" method="_on_interact_area_body_exited"]
+[connection signal="body_entered" from="Fireplace/InteractArea" to="Fireplace" method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Fireplace/InteractArea" to="Fireplace" method="_on_interact_area_body_exited"]
 
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_N"]
