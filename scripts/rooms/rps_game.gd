@@ -4,8 +4,15 @@ extends Control
 @onready var knights_texture := $Sprites/KnightChoice
 @onready var label := $Label
 @onready var game_win_or_lose := $EndPanel/VBoxContainer/GameWinOrLose
-@onready var next_round_button := $NextRoundButton
-@onready var confirmation_button := $Buttons/HBoxContainer/Confirmationbutton
+
+@onready var buttons = [
+	$Buttons/HBoxContainer/GridContainer/SwordButton,
+	$Buttons/HBoxContainer/GridContainer/ShieldButton,
+	$Buttons/HBoxContainer/GridContainer/ScrollButton,
+	$NextRoundButton,
+	$Buttons/HBoxContainer/ConfirmationButton,
+	$EndPanel/VBoxContainer/ReturnRoomButton
+]
 
 @onready var option_pictures := {
 	"sword" : load("res://assets/kenney_tiny-dungeon/Tiles/tile_0104.png"),
@@ -22,13 +29,17 @@ var round_count : int = 1
 var can_make_choice : bool = true
 var in_round: bool = false
 
+func _ready() -> void:
+	for i in range(buttons.size()):
+		buttons[i].pressed.connect(_on_button_pressed.bind(buttons[i]))
+
 func _process(_delta) -> void:
 	if round_count <= 3 and not in_round and player_win_count != 2:
 		in_round = true
-		await confirmation_button.pressed #player makes choice
+		await buttons[4].pressed #confirmation button - player makes choice
 		knight_turn() #player done making choice, time for knight
 		round_winner() #see who won
-		await next_round_button.pressed #next round
+		await buttons[3].pressed #next round button
 	elif round_count > 3 or player_win_count == 2:
 		$EndPanel.visible = true
 		if(player_win_count == 2):
@@ -73,7 +84,7 @@ func round_winner() -> void:
 	else: 
 		#tie
 		label.text = "It was a tie!"
-	next_round_button.visible = true
+	buttons[3].visible = true
 	
 func player_won_round():
 	player_win_count += 1
@@ -82,28 +93,25 @@ func player_won_round():
 func knight_won_round():
 	label.text = "You lost this round..."
 
-func _on_sword_button_pressed() -> void:
-	if can_make_choice:
-		players_choice = "sword"
-		players_texture.texture = option_pictures[players_choice]
-
-func _on_shield_button_pressed() -> void:
-	if can_make_choice:
-		players_choice = "shield"
-		players_texture.texture = option_pictures[players_choice]
-
-func _on_scroll_button_pressed() -> void:
-	if can_make_choice:
-		players_choice = "scroll"
-		players_texture.texture = option_pictures[players_choice]
-
-func _on_next_round_button_pressed() -> void:
-	next_round_button.visible = false
-	round_count += 1
-	reset()
-
-func _on_return_room_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/rooms/armory/armory.tscn")
-
-func _on_confirmation_button_pressed() -> void:
-	can_make_choice = false
+func _on_button_pressed(button):
+	match button.name:
+		"SwordButton":
+			if can_make_choice:
+				players_choice = "sword"
+				players_texture.texture = option_pictures[players_choice]
+		"ShieldButton":
+			if can_make_choice:
+				players_choice = "shield"
+				players_texture.texture = option_pictures[players_choice]
+		"ScrollButton":
+			if can_make_choice:
+				players_choice = "scroll"
+				players_texture.texture = option_pictures[players_choice]
+		"NextRoundButton":
+			buttons[3].visible = false
+			round_count += 1
+			reset()
+		"ConfirmationButton":
+			can_make_choice = false
+		"ReturnRoomButton":
+			get_tree().change_scene_to_file("res://scenes/rooms/armory/armory.tscn")

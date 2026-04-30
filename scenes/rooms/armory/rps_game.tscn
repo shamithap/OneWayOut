@@ -134,7 +134,7 @@ text = "Scroll
 "
 horizontal_alignment = 1
 
-[node name="Confirmationbutton" type="Button" parent="Buttons/HBoxContainer" unique_id=1781198011]
+[node name="ConfirmationButton" type="Button" parent="Buttons/HBoxContainer" unique_id=1781198011]
 layout_mode = 2
 text = "Confirm"
 
@@ -190,9 +190,4 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Go Back to Room"
 
-[connection signal="pressed" from="Buttons/HBoxContainer/GridContainer/SwordButton" to="." method="_on_sword_button_pressed"]
-[connection signal="pressed" from="Buttons/HBoxContainer/GridContainer/ShieldButton" to="." method="_on_shield_button_pressed"]
 [connection signal="pressed" from="Buttons/HBoxContainer/GridContainer/ScrollButton" to="." method="_on_scroll_button_pressed"]
-[connection signal="pressed" from="Buttons/HBoxContainer/Confirmationbutton" to="." method="_on_confirmation_button_pressed"]
-[connection signal="pressed" from="NextRoundButton" to="." method="_on_next_round_button_pressed"]
-[connection signal="pressed" from="EndPanel/VBoxContainer/ReturnRoomButton" to="." method="_on_return_room_button_pressed"]
