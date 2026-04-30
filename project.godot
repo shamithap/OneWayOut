@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*uid://dfbhhmjirf0l6"
 NavigationManager="*uid://cxy2h5on8o6vl"
+FinishedRoomsManager="*uid://dr5ilm3ncf7yo"
 
 [display]
 

@@ -1388,7 +1388,9 @@ separation = Vector2i(1, 1)
 3:1/0 = 0
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:1/0 = 0
 7:1/0 = 0
 8:1/0 = 0
@@ -2275,6 +2277,10 @@ size = Vector2(2, 16)
 atlas = ExtResource("6_x77a5")
 region = Rect2(304, 79, 16, 18)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rb7p"]
+atlas = ExtResource("6_x77a5")
+region = Rect2(400, 79, 16, 18)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_1qag5"]
 atlas = ExtResource("6_x77a5")
 region = Rect2(320, 79, 16, 18)
@@ -2295,10 +2301,6 @@ region = Rect2(368, 79, 16, 18)
 atlas = ExtResource("6_x77a5")
 region = Rect2(384, 79, 16, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6rb7p"]
-atlas = ExtResource("6_x77a5")
-region = Rect2(400, 79, 16, 18)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_lfqav"]
 animations = [{
 "frames": [{
@@ -2307,6 +2309,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rb7p")
+}],
+"loop": true,
+"name": &"open",
 "speed": 5.0
 }, {
 "frames": [{
@@ -2489,7 +2499,7 @@ collision_layer = 2
 
 [node name="NorthDoorSprite" type="AnimatedSprite2D" parent="UnlockableDoors/NorthDoor" unique_id=1312192064]
 sprite_frames = SubResource("SpriteFrames_lfqav")
-animation = &"closed"
+animation = &"open"
 autoplay = "closed"
 
 [node name="NorthDoorCollision" type="CollisionShape2D" parent="UnlockableDoors/NorthDoor" unique_id=1213164347]
@@ -2502,7 +2512,7 @@ collision_layer = 2
 position = Vector2(88, -7.9999995)
 scale = Vector2(1, 0.9444445)
 sprite_frames = SubResource("SpriteFrames_lfqav")
-animation = &"closed"
+animation = &"open"
 autoplay = "closed"
 
 [node name="ChestDoorCollision" type="CollisionShape2D" parent="UnlockableDoors/ChestDoor" unique_id=1904600459]
