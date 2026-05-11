@@ -2,10 +2,11 @@ extends Node
 
 const scene_dict = {
 	"main" : preload("res://scenes/rooms/main.tscn"),
-	"room1": preload("res://scenes/rooms/library/library.tscn"),
+	"library": preload("res://scenes/rooms/library/library.tscn"),
 	"armory" : preload("res://scenes/rooms/armory/armory.tscn"),
 	"room4" : preload("res://scenes/rooms/livingroom/livingroom.tscn"),
-	"dungeon" : preload("res://scenes/rooms/dungeon.tscn")
+	"dungeon" : preload("res://scenes/rooms/dungeon.tscn"),
+	"theater": preload("res://scenes/rooms/theater.tscn")
 }
 
 signal on_trigger_player_spawn

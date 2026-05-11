@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dg02lxiongts2"]
+[gd_scene format=4 uid="uid://dg02lxiongts2"]
 
 [ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_6p0bi"]
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_fv4ik"]
@@ -197,8 +197,11 @@ texture = ExtResource("3_87jfu")
 4:1/0 = 0
 5:1/0 = 0
 1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:3/0 = 0
 6:3/0 = 0
 7:3/0 = 0
@@ -211,8 +214,11 @@ texture = ExtResource("3_87jfu")
 17:3/0 = 0
 18:3/0 = 0
 1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:4/0 = 0
 6:4/0 = 0
 7:4/0 = 0
@@ -225,8 +231,11 @@ texture = ExtResource("3_87jfu")
 17:4/0 = 0
 18:4/0 = 0
 1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:5/0 = 0
 6:5/0 = 0
 7:5/0 = 0
@@ -799,7 +808,9 @@ separation = Vector2i(1, 1)
 3:0/0 = 0
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:0/0 = 0
 7:0/0 = 0
 8:0/0 = 0
@@ -850,7 +861,9 @@ separation = Vector2i(1, 1)
 9:3/0 = 0
 9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:3/0 = 0
+11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:4/0 = 0
 1:4/0 = 0
 2:4/0 = 0
@@ -943,37 +956,60 @@ sources/1 = SubResource("TileSetAtlasSource_dtrb7")
 sources/3 = SubResource("TileSetAtlasSource_npsde")
 
 [node name="theater" type="Node2D" unique_id=1465284747]
-position = Vector2(-189, -113)
 script = ExtResource("1_6p0bi")
 
 [node name="Floor" type="TileMap" parent="." unique_id=1234689049]
 position = Vector2(188, 113)
 tile_set = SubResource("TileSet_ml6mh")
 format = 2
-layer_0/name = "Floor"
-layer_0/tile_data = PackedInt32Array(196606, 393217, 7, -65539, 393217, 7, -65538, 393217, 7, -65537, 393217, 7, -131072, 393217, 7, -131071, 393217, 7, -131070, 393217, 7, -131069, 393217, 7, 65539, 393217, 7, 65538, 393217, 7, 65537, 393217, 7, 65536, 393217, 7, 131071, 393217, 7, 131070, 393217, 7, 131069, 393217, 7, 131068, 393217, 7, -4, 393217, 7, -65535, 393217, 7, -65534, 393217, 7, -65533, 393217, 7, 3, 393217, 7, 2, 393217, 7, 1, 393217, 7, 196604, 393217, 7, 196605, 393217, 7, 196607, 393217, 7, 131072, 393217, 7, 131073, 393217, 7, 131074, 393217, 7, 131075, 393217, 7, 196603, 720897, 13, 131067, 720897, 13, 65531, 720897, 13, -5, 720897, 13, -65541, 720897, 13, -131077, 720897, 13, -131076, 393217, 7, -131075, 393217, 7, -131074, 393217, 7, -131073, 393217, 7, -196608, 393217, 7, -196607, 393217, 7, -196606, 393217, 7, -196605, 393217, 7, 196611, 393217, 7, 196610, 393217, 7, 262142, 393217, 7, 262141, 393217, 7, 262140, 393217, 7, 262139, 720897, 13, 262138, 720897, 13, 196602, 720897, 13, 262143, 393217, 7, 196609, 393217, 7, 196608, 393217, 7, -2, 393217, 7, -3, 393217, 7, -65540, 393217, 7, 0, 393217, 7, -65536, 393217, 7, -1, 393217, 7, 65533, 393217, 7, 65534, 393217, 7, 65535, 393217, 7, 65532, 393217, 7)
-layer_1/name = "Walls"
+
+[node name="Floor" type="TileMapLayer" parent="Floor" unique_id=1794277602]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD+/wIAAQAGAAcAAAD9//7/AQAGAAcAAAD+//7/AQAGAAcAAAD///7/AQAGAAcAAAAAAP7/AQAGAAcAAAABAP7/AQAGAAcAAAACAP7/AQAGAAcAAAADAP7/AQAGAAcAAAADAAEAAQAGAAcAAAACAAEAAQAGAAcAAAABAAEAAQAGAAcAAAAAAAEAAQAGAAcAAAD//wEAAQAGAAcAAAD+/wEAAQAGAAcAAAD9/wEAAQAGAAcAAAD8/wEAAQAGAAcAAAD8////AQAGAAcAAAABAP//AQAGAAcAAAACAP//AQAGAAcAAAADAP//AQAGAAcAAAADAAAAAQAGAAcAAAACAAAAAQAGAAcAAAABAAAAAQAGAAcAAAD8/wIAAQAGAAcAAAD9/wIAAQAGAAcAAAD//wIAAQAGAAcAAAAAAAIAAQAGAAcAAAABAAIAAQAGAAcAAAACAAIAAQAGAAcAAAADAAIAAQAGAAcAAAD7/wIAAwALAAQAAAD7/wEAAwALAAQAAAD7/wAAAQALAA0AAAD7////AQALAA0AAAD7//7/AQALAA0AAAD7//3/AQALAA0AAAD8//3/AQAGAAcAAAD9//3/AQAGAAcAAAD+//3/AQAGAAcAAAD///3/AQAGAAcAAAAAAP3/AQAGAAcAAAABAP3/AQAGAAcAAAACAP3/AQAGAAcAAAADAP3/AQAGAAcAAAADAAMAAQAGAAcAAAACAAMAAQAGAAcAAAD+/wMAAQAGAAcAAAD9/wMAAQAGAAcAAAD8/wMAAQAGAAcAAAD7/wMAAwALAAQAAAD6/wMAAQALAA0AAAD6/wIAAQALAA0AAAD//wMAAQAGAAcAAAABAAMAAQAGAAcAAAAAAAMAAQAGAAcAAAD+////AQAGAAcAAAD9////AQAGAAcAAAD8//7/AQAGAAcAAAAAAAAAAQAGAAcAAAAAAP//AQAGAAcAAAD/////AQAGAAcAAAD9/wAAAQAGAAcAAAD+/wAAAQAGAAcAAAD//wAAAQAGAAcAAAD8/wAAAQAGAAcAAAA=")
+tile_set = SubResource("TileSet_ml6mh")
+
+[node name="Walls" type="TileMapLayer" parent="Floor" unique_id=1885502156]
+use_parent_material = true
+tile_set = SubResource("TileSet_ml6mh")
 
 [node name="Walls" type="TileMap" parent="." unique_id=1959825518]
 position = Vector2(188, 114)
 tile_set = SubResource("TileSet_ml6mh")
 format = 2
-layer_0/name = "Floor"
-layer_0/z_index = 1
-layer_0/tile_data = PackedInt32Array(-196614, 65539, 1, -196613, 65537, 3, -196611, 65537, 3, -196610, 65537, 3, -262143, 65537, 3, -262142, 65537, 3, -262141, 65537, 3, -262140, 65537, 3, -262150, 65539, 0, -262149, 131075, 0, -262148, 131075, 0, -262147, 131075, 0, -262146, 131075, 0, -262145, 131075, 0, -327680, 131075, 0, -327679, 131075, 0, -327678, 131075, 0, -327677, 131075, 0, -327676, 131075, 0, 327675, 131075, 2, 327676, 131075, 2, 327677, 131075, 2, 327678, 131075, 2, 262144, 720899, 3, 262145, 131075, 2, 262146, 131075, 2, 262147, 131075, 2, 262148, 131075, 2, -196609, 655363, 2, -262144, 720899, 2, 327674, 65539, 2, -196612, 65537, 3, 262138, 65539, 1, 196602, 65539, 1, 65530, 65539, 1, 4, 589827, 3, 131066, 65539, 1, -6, 65539, 1, -65542, 65539, 1, -131078, 65539, 1, -196604, 65537, 3, -131068, 65537, 3, -65532, 65537, 3, 65540, 65537, 3, 131076, 65537, 3, 196612, 65537, 3, -131077, 65537, 3, -65541, 65537, 3, -5, 65537, 3, 131067, 65537, 3, 196603, 65537, 3, 262139, 65537, 3, -327675, 196611, 0, -262139, 196611, 1, -196603, 196611, 1, -131067, 196611, 1, 5, 196611, 1, -65531, 196611, 1, 65541, 196611, 1, 131077, 196611, 1, 196613, 196611, 1, 262149, 196611, 2, 327679, 655363, 3, 65531, 65537, 3)
-layer_1/name = "Walls"
+
+[node name="Floor" type="TileMapLayer" parent="Walls" unique_id=564527923]
+z_index = 1
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD6//z/AwABAAEAAAD7//z/AwALAAQAAAD9//z/AQABAAMAAAD+//z/AQABAAMAAAABAPz/AQABAAMAAAACAPz/AQABAAMAAAADAPz/AQABAAMAAAAEAPz/AQABAAMAAAD6//v/AwABAAAAAAD7//v/AwACAAAAAAD8//v/AwACAAAAAAD9//v/AwACAAAAAAD+//v/AwACAAAAAAD///v/AwACAAAAAAAAAPv/AwACAAAAAAABAPv/AwACAAAAAAACAPv/AwACAAAAAAADAPv/AwACAAAAAAAEAPv/AwACAAAAAAD7/wQAAwACAAIAAAD8/wQAAwACAAIAAAD9/wQAAwACAAIAAAD+/wQAAwACAAIAAAAAAAQAAwALAAMAAAABAAQAAwACAAIAAAACAAQAAwACAAIAAAADAAQAAwACAAIAAAAEAAQAAwACAAIAAAD///z/AwAKAAIAAAAAAPz/AwALAAIAAAD6/wQAAwABAAIAAAD8//z/AQABAAMAAAD6/wMAAwABAAEAAAD6/wIAAwABAAEAAAD6/wAAAwABAAEAAAAEAAAAAwAJAAMAAAD6/wEAAwABAAEAAAD6////AwABAAEAAAD6//7/AwABAAEAAAD6//3/AwABAAEAAAAEAP3/AQABAAMAAAAEAP7/AQABAAMAAAAEAP//AQABAAMAAAAEAAEAAQABAAMAAAAEAAIAAQABAAMAAAAEAAMAAQABAAMAAAD7//3/AwALAAQAAAD7//7/AwALAAQAAAD7////AwALAAQAAAD7/wEAAwALAAQAAAD7/wIAAwALAAQAAAAFAPv/AwADAAAAAAAFAPz/AwADAAEAAAAFAP3/AwADAAEAAAAFAP7/AwADAAEAAAAFAAAAAwADAAEAAAAFAP//AwADAAEAAAAFAAEAAwADAAEAAAAFAAIAAwADAAEAAAAFAAMAAwADAAEAAAAFAAQAAwADAAIAAAD//wQAAwAKAAMAAAD7/wAAAwALAAQAAAD7/wMAAwALAAQAAAD8//3/AQACAAMAAAD8//7/AQACAAMAAAD8////AQACAAMAAAD8/wEAAQACAAMAAAD8/wMAAQACAAMAAAD8/wAAAQACAAMAAAD8/wIAAQACAAMAAAA=")
+tile_set = SubResource("TileSet_ml6mh")
+
+[node name="Walls" type="TileMapLayer" parent="Walls" unique_id=1905024572]
+use_parent_material = true
+tile_set = SubResource("TileSet_ml6mh")
 
 [node name="Doors" type="Node2D" parent="." unique_id=516601932]
 
-[node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("4_jeqq3")]
-destination_room_name = "main"
+[node name="Door_N" parent="Doors" unique_id=1336069685 instance=ExtResource("4_jeqq3")]
+destination_room_name = "armory"
 destination_door_tag = "1"
 spawn_direction = "down"
 
-[node name="CollisionShape2D" parent="Doors/Door_S" index="0" unique_id=1225352784]
+[node name="CollisionShape2D" parent="Doors/Door_N" index="0" unique_id=1225352784]
 position = Vector2(188, 75)
 
-[node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
+[node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
 position = Vector2(187, 72)
 
-[editable path="Doors/Door_S"]
+[node name="Door_E" parent="Doors" unique_id=1622387379 instance=ExtResource("4_jeqq3")]
+destination_room_name = "library"
+destination_door_tag = "W"
+spawn_direction = "right"
+
+[node name="CollisionShape2D" parent="Doors/Door_E" index="0" unique_id=1225352784]
+position = Vector2(241, 124)
+
+[node name="Spawn" parent="Doors/Door_E" index="1" unique_id=817698842]
+position = Vector2(242, 124)
+
+[editable path="Doors/Door_N"]
+[editable path="Doors/Door_E"]

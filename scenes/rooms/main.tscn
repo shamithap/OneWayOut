@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dydkf4toui63v"]
 
-[ext_resource type="Script" uid="uid://csac02uil303o" path="res://scripts/rooms/main.gd" id="1_3os3j"]
+[ext_resource type="Script" path="res://scripts/rooms/main.gd" id="1_3os3j"]
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="1_oafy4"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="2_3os3j"]
 [ext_resource type="PackedScene" uid="uid://kv8c6b8i08yg" path="res://scenes/player.tscn" id="3_hhji2"]
@@ -199,8 +199,8 @@ tile_set = SubResource("TileSet_0wfyh")
 
 [node name="Door_1" parent="Doors" unique_id=1336069685 instance=ExtResource("2_3os3j")]
 position = Vector2(232, 128)
-destination_room_name = "room1"
-destination_door_tag = "S"
+destination_room_name = "library"
+destination_door_tag = "N"
 spawn_direction = "down"
 
 [node name="Door_2" parent="Doors" unique_id=2009492276 instance=ExtResource("2_3os3j")]

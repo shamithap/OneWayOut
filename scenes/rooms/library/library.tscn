@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dpus0siq28e0w"]
+[gd_scene format=4 uid="uid://dpus0siq28e0w"]
 
 [ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_v1r2p"]
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_mynaw"]
@@ -852,7 +852,9 @@ separation = Vector2i(1, 1)
 9:3/0 = 0
 9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:3/0 = 0
+11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:4/0 = 0
 1:4/0 = 0
 2:4/0 = 0
@@ -863,8 +865,10 @@ separation = Vector2i(1, 1)
 7:4/0 = 0
 8:4/0 = 0
 9:4/0 = 0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:4/0 = 0
 11:4/0 = 0
+11:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:5/0 = 0
 1:5/0 = 0
 2:5/0 = 0
@@ -948,38 +952,60 @@ sources/3 = SubResource("TileSetAtlasSource_npsde")
 size = Vector2(21, 32)
 
 [node name="library" type="Node2D" unique_id=1465284747]
-position = Vector2(-189, -113)
 script = ExtResource("1_v1r2p")
 
 [node name="Floor" type="TileMap" parent="." unique_id=1234689049]
 position = Vector2(188, 113)
 tile_set = SubResource("TileSet_ml6mh")
 format = 2
-layer_0/name = "Floor"
-layer_0/tile_data = PackedInt32Array(196606, 720897, 13, -65539, 720897, 13, -65538, 720897, 13, -65537, 720897, 13, -131072, 720897, 13, -131071, 720897, 13, -131070, 720897, 13, -131069, 720897, 13, 65539, 720897, 13, 65538, 720897, 13, 65537, 720897, 13, 65536, 720897, 13, 131071, 720897, 13, 131070, 720897, 13, 131069, 720897, 13, 131068, 720897, 13, 65532, 720897, 13, -4, 720897, 13, 65533, 720897, 13, -65535, 720897, 13, -65534, 720897, 13, -65533, 720897, 13, 3, 720897, 13, 2, 720897, 13, 1, 720897, 13, 196604, 720897, 13, 196605, 720897, 13, 196607, 720897, 13, 131072, 720897, 13, 131073, 720897, 13, 131074, 720897, 13, 131075, 720897, 13, 196603, 720897, 13, 131067, 720897, 13, 65531, 720897, 13, -5, 720897, 13, -65541, 720897, 13, -131077, 720897, 13, -131076, 720897, 13, -131075, 720897, 13, -131074, 720897, 13, -131073, 720897, 13, -196608, 720897, 13, -196607, 720897, 13, -196606, 720897, 13, -196605, 720897, 13, 196611, 720897, 13, 196610, 720897, 13, 262142, 720897, 13, 262141, 720897, 13, 262140, 720897, 13, 262139, 720897, 13, 262138, 720897, 13, 196602, 720897, 13, 262143, 720897, 13, 196609, 720897, 13, 196608, 720897, 13, -2, 720897, 13, -3, 720897, 13, -65540, 720897, 13, 0, 720897, 13, 65535, 720897, 13, 65534, 720897, 13, -65536, 720897, 13, -1, 720897, 13)
-layer_1/name = "Walls"
+
+[node name="Floor" type="TileMapLayer" parent="Floor" unique_id=77185031]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD+/wIAAQALAA0AAAD9//7/AQALAA0AAAD+//7/AQALAA0AAAD///7/AQALAA0AAAAAAP7/AQALAA0AAAABAP7/AQALAA0AAAACAP7/AQALAA0AAAADAP7/AQALAA0AAAADAAEAAQALAA0AAAACAAEAAQALAA0AAAABAAEAAQALAA0AAAAAAAEAAQALAA0AAAD//wEAAQALAA0AAAD+/wEAAQALAA0AAAD9/wEAAQALAA0AAAD8/wEAAQALAA0AAAD8/wAAAQALAA0AAAD8////AQALAA0AAAD9/wAAAQALAA0AAAABAP//AQALAA0AAAACAP//AQALAA0AAAADAP//AQALAA0AAAADAAAAAQALAA0AAAACAAAAAQALAA0AAAABAAAAAQALAA0AAAD8/wIAAQALAA0AAAD9/wIAAQALAA0AAAD//wIAAQALAA0AAAAAAAIAAQALAA0AAAABAAIAAQALAA0AAAACAAIAAQALAA0AAAADAAIAAQALAA0AAAD7/wIAAQALAA0AAAD7/wEAAQALAA0AAAD7/wAAAQALAA0AAAD7////AQALAA0AAAD7//7/AQALAA0AAAD7//3/AQALAA0AAAD8//3/AQALAA0AAAD9//3/AQALAA0AAAD+//3/AQALAA0AAAD///3/AQALAA0AAAAAAP3/AQALAA0AAAABAP3/AQALAA0AAAACAP3/AQALAA0AAAADAP3/AQALAA0AAAADAAMAAQALAA0AAAACAAMAAQALAA0AAAD+/wMAAQALAA0AAAD9/wMAAQALAA0AAAD8/wMAAQALAA0AAAD7/wMAAQALAA0AAAD//wMAAQALAA0AAAABAAMAAQALAA0AAAAAAAMAAQALAA0AAAD+////AQALAA0AAAD9////AQALAA0AAAD8//7/AQALAA0AAAAAAAAAAQALAA0AAAD//wAAAQALAA0AAAD+/wAAAQALAA0AAAAAAP//AQALAA0AAAD/////AQALAA0AAAA=")
+tile_set = SubResource("TileSet_ml6mh")
+
+[node name="Walls" type="TileMapLayer" parent="Floor" unique_id=2128121906]
+use_parent_material = true
+tile_set = SubResource("TileSet_ml6mh")
 
 [node name="Walls" type="TileMap" parent="." unique_id=1959825518]
 position = Vector2(188, 114)
 tile_set = SubResource("TileSet_ml6mh")
 format = 2
-layer_0/name = "Floor"
-layer_0/z_index = 1
-layer_0/tile_data = PackedInt32Array(-196614, 65539, 1, -196613, 262147, 3, -196611, 131075, 1, -196610, 131075, 1, -262143, 131075, 1, -262142, 131075, 1, -262141, 262147, 3, -262140, 262147, 3, -262150, 65539, 0, -262149, 131075, 0, -262148, 131075, 0, -262147, 131075, 0, -262146, 131075, 0, -262145, 131075, 0, -327680, 131075, 0, -327679, 131075, 0, -327678, 131075, 0, -327677, 131075, 0, -327676, 131075, 0, 327675, 131075, 2, 327676, 131075, 2, 327677, 131075, 2, 327678, 131075, 2, 262144, 720899, 3, 262145, 131075, 2, 262146, 131075, 2, 262147, 131075, 2, 262148, 131075, 2, -196609, 655363, 2, -262144, 720899, 2, 327674, 65539, 2, -196612, 262147, 3, 262138, 65539, 1, 196602, 65539, 1, 65530, 65539, 1, 4, 589827, 3, 131066, 65539, 1, -6, 65539, 1, -65542, 65539, 1, -131078, 65539, 1, -196604, 589827, 4, -131068, 589827, 4, -65532, 589827, 4, 65540, 589827, 4, 131076, 589827, 4, 196612, 589827, 4, -131077, 720899, 4, -65541, 720899, 4, -5, 720899, 4, 65531, 589827, 3, 131067, 720899, 4, 196603, 720899, 4, 262139, 720899, 4, -327675, 196611, 0, -262139, 196611, 1, -196603, 196611, 1, -131067, 196611, 1, 5, 196611, 1, -65531, 196611, 1, 65541, 196611, 1, 131077, 196611, 1, 196613, 196611, 1, 262149, 196611, 2, 327679, 655363, 3)
-layer_1/name = "Walls"
+
+[node name="Floor" type="TileMapLayer" parent="Walls" unique_id=1647302885]
+z_index = 1
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD6//z/AwABAAEAAAD7//z/AwAEAAMAAAD9//z/AwACAAEAAAD+//z/AwACAAEAAAABAPz/AwACAAEAAAACAPz/AwACAAEAAAAEAPz/AwAEAAMAAAD6//v/AwABAAAAAAD7//v/AwACAAAAAAD8//v/AwACAAAAAAD9//v/AwACAAAAAAD+//v/AwACAAAAAAD///v/AwACAAAAAAAAAPv/AwACAAAAAAABAPv/AwACAAAAAAACAPv/AwACAAAAAAADAPv/AwACAAAAAAAEAPv/AwACAAAAAAD7/wQAAwACAAIAAAD8/wQAAwACAAIAAAD+/wQAAwACAAIAAAAAAAQAAwALAAMAAAABAAQAAwACAAIAAAACAAQAAwACAAIAAAADAAQAAwACAAIAAAAEAAQAAwACAAIAAAD///z/AwAKAAIAAAAAAPz/AwALAAIAAAD6/wQAAwABAAIAAAD8//z/AwACAAEAAAD6/wMAAwABAAEAAAD6/wIAAwABAAEAAAD6/wAAAwABAAEAAAAEAAAAAwAJAAMAAAD6/wEAAwABAAEAAAD6////AwABAAEAAAD6//7/AwABAAEAAAD6//3/AwABAAEAAAAEAP3/AwAJAAQAAAAEAP7/AwAJAAQAAAAEAP//AwAJAAQAAAAEAAEAAwAJAAQAAAAEAAMAAwAJAAQAAAD7//3/AwALAAQAAAD7//7/AwALAAQAAAD7////AwALAAQAAAD7/wAAAwAJAAMAAAD7/wEAAwALAAQAAAD7/wIAAwALAAQAAAD7/wMAAwALAAQAAAAFAPv/AwADAAAAAAAFAPz/AwADAAEAAAAFAP3/AwADAAEAAAAFAP7/AwADAAEAAAAFAAAAAwADAAEAAAAFAP//AwADAAEAAAAFAAEAAwADAAEAAAAFAAIAAwADAAEAAAAFAAMAAwADAAEAAAAFAAQAAwADAAIAAAD//wQAAwAKAAMAAAD9/wQAAwACAAIAAAADAPz/AwACAAEAAAAEAAIAAwAJAAQAAAA=")
+tile_set = SubResource("TileSet_ml6mh")
+
+[node name="Walls" type="TileMapLayer" parent="Walls" unique_id=1737584615]
+use_parent_material = true
+tile_set = SubResource("TileSet_ml6mh")
 
 [node name="Doors" type="Node2D" parent="." unique_id=516601932]
 
-[node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("4_uns5t")]
+[node name="Door_N" parent="Doors" unique_id=1336069685 instance=ExtResource("4_uns5t")]
 destination_room_name = "main"
 destination_door_tag = "1"
 spawn_direction = "down"
 
-[node name="CollisionShape2D" parent="Doors/Door_S" index="0" unique_id=1225352784]
+[node name="CollisionShape2D" parent="Doors/Door_N" index="0" unique_id=1225352784]
 position = Vector2(188, 75)
 
-[node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
+[node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
 position = Vector2(187, 72)
+
+[node name="Door_W" parent="Doors" unique_id=320710118 instance=ExtResource("4_uns5t")]
+destination_room_name = "theater"
+destination_door_tag = "E"
+spawn_direction = "left"
+
+[node name="CollisionShape2D" parent="Doors/Door_W" index="0" unique_id=1225352784]
+position = Vector2(134, 123)
+
+[node name="Spawn" parent="Doors/Door_W" index="1" unique_id=817698842]
+position = Vector2(137, 124)
 
 [node name="Broom" type="Node2D" parent="." unique_id=2145047984]
 position = Vector2(12, 13)
@@ -1009,4 +1035,5 @@ horizontal_alignment = 1
 [connection signal="body_entered" from="Broom/TriggerArea" to="Broom" method="_on_trigger_area_body_entered"]
 [connection signal="body_exited" from="Broom/TriggerArea" to="Broom" method="_on_trigger_area_body_exited"]
 
-[editable path="Doors/Door_S"]
+[editable path="Doors/Door_N"]
+[editable path="Doors/Door_W"]
