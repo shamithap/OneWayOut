@@ -1007,6 +1007,17 @@ position = Vector2(134, 123)
 [node name="Spawn" parent="Doors/Door_W" index="1" unique_id=817698842]
 position = Vector2(137, 124)
 
+[node name="Door_S" parent="Doors" unique_id=1617773986 instance=ExtResource("4_uns5t")]
+destination_room_name = "livingroom"
+destination_door_tag = "N"
+spawn_direction = "left"
+
+[node name="CollisionShape2D" parent="Doors/Door_S" index="0" unique_id=1225352784]
+position = Vector2(188, 168)
+
+[node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
+position = Vector2(188, 172)
+
 [node name="Broom" type="Node2D" parent="." unique_id=2145047984]
 position = Vector2(12, 13)
 script = ExtResource("5_75ugr")
@@ -1037,3 +1048,4 @@ horizontal_alignment = 1
 
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_W"]
+[editable path="Doors/Door_S"]

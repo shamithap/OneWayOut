@@ -1927,12 +1927,12 @@ position = Vector2(188, 168)
 position = Vector2(187, 168)
 
 [node name="Door_N" parent="Doors" unique_id=1777423109 instance=ExtResource("4_ofrfw")]
-destination_room_name = "main"
-destination_door_tag = "4"
+destination_room_name = "library"
+destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Doors/Door_N" index="0" unique_id=1225352784]
-position = Vector2(188, 62)
+position = Vector2(189, 75)
 
 [node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
 position = Vector2(188, 71)
