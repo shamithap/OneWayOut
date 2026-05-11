@@ -991,7 +991,7 @@ tile_set = SubResource("TileSet_ml6mh")
 
 [node name="Door_N" parent="Doors" unique_id=1336069685 instance=ExtResource("4_jeqq3")]
 destination_room_name = "armory"
-destination_door_tag = "1"
+destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Doors/Door_N" index="0" unique_id=1225352784]
