@@ -33,9 +33,9 @@ var lever_player_in_range_of : int
 
 func _ready():
 	ensure_player()
-	if FinishedRoomsManager.dungeon_tracker[0]:
+	if Global.dungeon_tracker[0]:
 		chest_door_finished()
-	if FinishedRoomsManager.dungeon_tracker[1]:
+	if Global.dungeon_tracker[1]:
 		north_door_finished()
 		
 	for i in range(lever_interact_areas.size()):
@@ -86,12 +86,12 @@ func check_levers():
 	if levers_active == chest_door_lever_combo:
 		chest_door_sprite.animation = "opening"
 		chest_door_collision.disabled = true
-		FinishedRoomsManager.dungeon_tracker[0] = true
+		Global.dungeon_tracker[0] = true
 		
 	if levers_active == north_door_lever_combo:
 		north_door_sprite.animation = "opening"
 		north_door_collision.disabled = true
-		FinishedRoomsManager.dungeon_tracker[1] = true
+		Global.dungeon_tracker[1] = true
 		
 
 #index : 0

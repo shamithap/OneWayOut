@@ -1,19 +1,79 @@
 [gd_scene format=3 uid="uid://0mhla5afdkpj"]
 
+[ext_resource type="Script" uid="uid://b3fxjxfrptndo" path="res://scripts/global/minimap_manager.gd" id="1_4v8nv"]
 [ext_resource type="Texture2D" uid="uid://bdedccbjkbeyv" path="res://assets/objects/Minimap/unexplored_minimap.png" id="1_lj7mc"]
+[ext_resource type="Texture2D" uid="uid://csf87sivifdl7" path="res://assets/player/player tileset/Player/player_Idle.png" id="2_o13pn"]
 
-[node name="Control" type="Control" unique_id=2013854207]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v8nv"]
+atlas = ExtResource("2_o13pn")
+region = Rect2(13, 7, 22, 24)
+
+[node name="Minimap" type="CanvasLayer" unique_id=244816634]
+layer = 3
+script = ExtResource("1_4v8nv")
+
+[node name="Control" type="Control" parent="." unique_id=1234382152]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
+anchor_top = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 175.0
+offset_bottom = -290.0
+grow_vertical = 0
+scale = Vector2(2.595, 2.595)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=426479161]
+[node name="Map" type="TextureRect" parent="Control" unique_id=426479161]
 layout_mode = 0
-offset_left = -92.0
+offset_left = -87.0
 offset_top = -122.0
-offset_right = 92.0
+offset_right = 97.0
 offset_bottom = 122.0
 texture = ExtResource("1_lj7mc")
+
+[node name="Markers" type="Node2D" parent="Control" unique_id=1064724293]
+position = Vector2(0, -15)
+
+[node name="exit" type="Marker2D" parent="Control/Markers" unique_id=2011063213]
+position = Vector2(0, -62)
+
+[node name="dungeon" type="Marker2D" parent="Control/Markers" unique_id=1995362512]
+position = Vector2(-35, -30)
+
+[node name="graveyard" type="Marker2D" parent="Control/Markers" unique_id=1275822502]
+position = Vector2(0, -30)
+
+[node name="winecellar" type="Marker2D" parent="Control/Markers" unique_id=47438651]
+position = Vector2(35, -30)
+
+[node name="armory" type="Marker2D" parent="Control/Markers" unique_id=649540925]
+position = Vector2(-35, 0)
+
+[node name="recreationalroom" type="Marker2D" parent="Control/Markers" unique_id=858285876]
+
+[node name="kitchen" type="Marker2D" parent="Control/Markers" unique_id=1873035088]
+position = Vector2(35, 0)
+
+[node name="theater" type="Marker2D" parent="Control/Markers" unique_id=183305106]
+position = Vector2(-35, 30)
+
+[node name="library" type="Marker2D" parent="Control/Markers" unique_id=48738102]
+position = Vector2(0, 30)
+
+[node name="diningroom" type="Marker2D" parent="Control/Markers" unique_id=2126654254]
+position = Vector2(35, 30)
+
+[node name="ballroom" type="Marker2D" parent="Control/Markers" unique_id=1339738821]
+position = Vector2(-35, 61)
+
+[node name="livingroom" type="Marker2D" parent="Control/Markers" unique_id=1781196018]
+position = Vector2(0, 61)
+
+[node name="fancybathroom" type="Marker2D" parent="Control/Markers" unique_id=1081525930]
+position = Vector2(35, 61)
+
+[node name="foyer" type="Marker2D" parent="Control/Markers" unique_id=1802261372]
+position = Vector2(0, 92)
+
+[node name="Player" type="Sprite2D" parent="Control" unique_id=1496082495]
+position = Vector2(4.7683716e-07, 77)
+scale = Vector2(0.4090909, 0.4090909)
+texture = SubResource("AtlasTexture_4v8nv")
