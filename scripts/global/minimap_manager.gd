@@ -19,6 +19,23 @@ extends Node
 	"main" : $Control/Markers/foyer
 }
 
+@onready var explored_dict := {
+	"exit" : $Control/Explored/explored_exit,
+	"dungeon" : $Control/Explored/explored_dungeon,
+	"graveyard" : $Control/Explored/explored_graveyard,
+	"winecellar" : $Control/Explored/explored_winecellar,
+	"armory" : $Control/Explored/explored_armory,
+	"recreationalroom" : $Control/Explored/explored_recreationalroom,
+	"kitchen" : $Control/Explored/explored_kitchen,
+	"theater": $Control/Explored/explored_theater,
+	"library" : $Control/Explored/explored_library,
+	"diningroom" : $Control/Explored/explored_diningroom,
+	"ballroom" : $Control/Explored/explored_ballroom,
+	"livingroom" : $Control/Explored/explored_livingroom,
+	"fancybathroom" : $Control/Explored/explored_fancybathroom,
+	"main" : $Control/Explored/explored_foyer
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	NavigationManager.update_minimap_position.connect(update_position)
@@ -30,6 +47,9 @@ func _process(_delta: float) -> void:
 
 func update_position(destination_room_name) -> void:
 	var current_room = layout_dict[destination_room_name]
+	var explored_texture = explored_dict[destination_room_name]
 	
 	if current_room:
 		player.global_position = current_room.global_position
+		explored_texture.visible = true
+		

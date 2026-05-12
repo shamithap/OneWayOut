@@ -29,6 +29,136 @@ offset_right = 97.0
 offset_bottom = 122.0
 texture = ExtResource("1_lj7mc")
 
+[node name="Explored" type="Control" parent="Control" unique_id=471821507]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="explored_foyer" type="ColorRect" parent="Control/Explored" unique_id=1783508731]
+layout_mode = 0
+offset_left = -15.799615
+offset_top = 62.813103
+offset_right = 15.028899
+offset_bottom = 89.4027
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_exit" type="ColorRect" parent="Control/Explored" unique_id=541908103]
+visible = false
+layout_mode = 0
+offset_left = -15.799615
+offset_top = -89.78805
+offset_right = 15.028899
+offset_bottom = -62.813103
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_dungeon" type="ColorRect" parent="Control/Explored" unique_id=2131670454]
+visible = false
+layout_mode = 0
+offset_left = -51.252407
+offset_top = -59.34489
+offset_right = -20.038532
+offset_bottom = -32.75529
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_graveyard" type="ColorRect" parent="Control/Explored" unique_id=880880944]
+visible = false
+layout_mode = 0
+offset_left = -15.799615
+offset_top = -58.959538
+offset_right = 15.028899
+offset_bottom = -32.369938
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_winecellar" type="ColorRect" parent="Control/Explored" unique_id=210242523]
+visible = false
+layout_mode = 0
+offset_left = 18.882465
+offset_top = -58.959538
+offset_right = 49.71098
+offset_bottom = -32.369938
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_armory" type="ColorRect" parent="Control/Explored" unique_id=1074041086]
+visible = false
+layout_mode = 0
+offset_left = -50.867046
+offset_top = -28.51638
+offset_right = -19.653181
+offset_bottom = -1.1560669
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_recreationalroom" type="ColorRect" parent="Control/Explored" unique_id=1748088675]
+visible = false
+layout_mode = 0
+offset_left = -15.799615
+offset_top = -28.901731
+offset_right = 15.028899
+offset_bottom = -1.156065
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_kitchen" type="ColorRect" parent="Control/Explored" unique_id=1690454153]
+visible = false
+layout_mode = 0
+offset_left = 18.882465
+offset_top = -28.516378
+offset_right = 49.71098
+offset_bottom = -0.77070427
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_theater" type="ColorRect" parent="Control/Explored" unique_id=792644187]
+visible = false
+layout_mode = 0
+offset_left = -51.252407
+offset_top = 1.5414281
+offset_right = -20.038532
+offset_bottom = 28.131027
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_library" type="ColorRect" parent="Control/Explored" unique_id=1990465513]
+visible = false
+layout_mode = 0
+offset_left = -15.799615
+offset_top = 1.9267812
+offset_right = 15.028899
+offset_bottom = 28.51638
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_diningroom" type="ColorRect" parent="Control/Explored" unique_id=1013249653]
+visible = false
+layout_mode = 0
+offset_left = 18.882465
+offset_top = 1.9267812
+offset_right = 49.71098
+offset_bottom = 28.51638
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_ballroom" type="ColorRect" parent="Control/Explored" unique_id=1438372695]
+visible = false
+layout_mode = 0
+offset_left = -51.252407
+offset_top = 31.984585
+offset_right = -20.038532
+offset_bottom = 58.95953
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_livingroom" type="ColorRect" parent="Control/Explored" unique_id=96710169]
+visible = false
+layout_mode = 0
+offset_left = -15.799615
+offset_top = 32.369938
+offset_right = 15.028899
+offset_bottom = 59.344883
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
+[node name="explored_fancybathroom" type="ColorRect" parent="Control/Explored" unique_id=609961981]
+visible = false
+layout_mode = 0
+offset_left = 18.882465
+offset_top = 32.369938
+offset_right = 49.71098
+offset_bottom = 59.344883
+color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
+
 [node name="Markers" type="Node2D" parent="Control" unique_id=1064724293]
 position = Vector2(0, -15)
 
