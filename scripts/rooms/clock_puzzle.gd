@@ -37,7 +37,7 @@ func _on_check_button_pressed():
 	var hour = hour_input.text.strip_edges()
 	var minute = minute_input.text.strip_edges()
 
-	if hour == "7" and minute == "30":
+	if hour == "6" and minute == "00":
 		puzzle_solved = true
 		result_label.text = "Correct! The clock reveals a hidden clue."
 		hint_label.visible = false
