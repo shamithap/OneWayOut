@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_sy43q"]
 [ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="3_tcbj0"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="4_ofrfw"]
-[ext_resource type="Texture2D" uid="uid://cgx53o80qyugq" path="res://assets/objects/Livingroom assets/clock2.png" id="5_sy43q"]
 [ext_resource type="Script" uid="uid://u8lqpnhrrdbo" path="res://scripts/rooms/clock_puzzle.gd" id="5_tcbj0"]
+[ext_resource type="Texture2D" uid="uid://bkr27ybysqp1x" path="res://assets/objects/Livingroom assets/grandfather clock-1.png.png" id="6_bkkyl"]
 [ext_resource type="Texture2D" uid="uid://dxb2yeotd2bl7" path="res://assets/objects/Livingroom assets/fireplace.png" id="7_ofrfw"]
 [ext_resource type="Script" uid="uid://evvi6sg82a6e" path="res://scripts/rooms/fireplace_hint.gd" id="8_bkkyl"]
 
@@ -1962,37 +1962,36 @@ position = Vector2(111, 125)
 [node name="ClockPuzzle" type="Node2D" parent="." unique_id=576775565]
 script = ExtResource("5_tcbj0")
 
-[node name="ClockSprite" type="Sprite2D" parent="ClockPuzzle" unique_id=1579439187]
-position = Vector2(243, 122)
-scale = Vector2(0.5, 0.544)
-texture = ExtResource("5_sy43q")
+[node name="ClockSprite" type="Sprite2D" parent="ClockPuzzle" unique_id=924617906]
+position = Vector2(187, 128)
+texture = ExtResource("6_bkkyl")
 
 [node name="InteractArea" type="Area2D" parent="ClockPuzzle" unique_id=797258165]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClockPuzzle/InteractArea" unique_id=1764559903]
-position = Vector2(243, 122)
+position = Vector2(186, 129)
 shape = SubResource("RectangleShape2D_sy43q")
 
 [node name="Hint" type="Label" parent="ClockPuzzle" unique_id=1755194246]
-offset_left = 213.0
-offset_top = 101.0
-offset_right = 392.0
-offset_bottom = 123.333336
+offset_left = 156.0
+offset_top = 123.0
+offset_right = 335.0
+offset_bottom = 145.33334
 scale = Vector2(0.35, 0.35)
 text = "Press E to inspect clock"
 
 [node name="PuzzlePanel" type="Panel" parent="ClockPuzzle" unique_id=574260901]
-offset_left = 190.0
-offset_top = 112.0
-offset_right = 280.0
-offset_bottom = 155.0
+offset_left = 164.0
+offset_top = 111.0
+offset_right = 206.0
+offset_bottom = 146.0
 
 [node name="ClueLabel" type="Label" parent="ClockPuzzle/PuzzlePanel" unique_id=552200085]
 layout_mode = 0
-offset_left = 24.999996
-offset_top = -43.0
-offset_right = 347.0
-offset_bottom = 4.666668
+offset_left = 17.000008
+offset_top = -41.0
+offset_right = 339.0
+offset_bottom = 6.666668
 scale = Vector2(0.4, 0.4)
 text = "Dinner started when 
 the room went dark."
