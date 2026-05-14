@@ -8,6 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://bkr27ybysqp1x" path="res://assets/objects/Livingroom assets/grandfather clock-1.png.png" id="6_bkkyl"]
 [ext_resource type="Texture2D" uid="uid://dxb2yeotd2bl7" path="res://assets/objects/Livingroom assets/fireplace.png" id="7_ofrfw"]
 [ext_resource type="Script" uid="uid://evvi6sg82a6e" path="res://scripts/rooms/fireplace_hint.gd" id="8_bkkyl"]
+[ext_resource type="Texture2D" uid="uid://b03835ek68gws" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(carpet)B.png" id="9_31umg"]
+[ext_resource type="Texture2D" uid="uid://duqmego2lt5ks" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(pouf).png" id="10_qe3uy"]
+[ext_resource type="Texture2D" uid="uid://6jpkmc18i4ig" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(pouf)D.png" id="11_xdu01"]
+[ext_resource type="Texture2D" uid="uid://m3ocvelgj0yg" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(chair)D.png" id="12_uy6pk"]
+[ext_resource type="Texture2D" uid="uid://cfjt17bc233f0" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(couch).png" id="13_31npf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ttfhd"]
 texture = ExtResource("2_sy43q")
@@ -2062,6 +2067,38 @@ offset_top = -583.6269
 offset_right = 646.46423
 offset_bottom = -26.528503
 text = "The fireplace went dark at 7:30."
+
+[node name="LivingroomClassic(carpet)b" type="Sprite2D" parent="." unique_id=523127158]
+position = Vector2(142.73831, 145.255)
+rotation = 0.7853982
+scale = Vector2(0.2306102, 0.40446284)
+texture = ExtResource("9_31umg")
+
+[node name="LivingroomClassic(pouf)" type="Sprite2D" parent="." unique_id=19112801]
+position = Vector2(131, 128)
+scale = Vector2(0.12599976, 0.1410891)
+texture = ExtResource("10_qe3uy")
+
+[node name="LivingroomClassic(pouf)d" type="Sprite2D" parent="." unique_id=503282957]
+position = Vector2(159, 153)
+scale = Vector2(0.11399982, 0.14603962)
+texture = ExtResource("11_xdu01")
+
+[node name="LivingroomClassic(chair)d" type="Sprite2D" parent="." unique_id=638541087]
+position = Vector2(154, 132)
+scale = Vector2(0.12760423, 0.10462552)
+texture = ExtResource("12_uy6pk")
+
+[node name="LivingroomClassic(carpet)b2" type="Sprite2D" parent="." unique_id=2008408503]
+position = Vector2(245.99998, 111.99999)
+rotation = 2.3561945
+scale = Vector2(0.3377708, 0.5773247)
+texture = ExtResource("9_31umg")
+
+[node name="LivingroomClassic(couch)" type="Sprite2D" parent="." unique_id=1464528605]
+position = Vector2(233, 83)
+scale = Vector2(0.11521085, 0.09531773)
+texture = ExtResource("13_31npf")
 
 [connection signal="body_entered" from="ClockPuzzle/InteractArea" to="ClockPuzzle" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="ClockPuzzle/InteractArea" to="ClockPuzzle" method="_on_interact_area_body_exited"]
