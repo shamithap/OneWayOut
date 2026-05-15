@@ -1978,6 +1978,7 @@ position = Vector2(186, 129)
 shape = SubResource("RectangleShape2D_sy43q")
 
 [node name="Hint" type="Label" parent="ClockPuzzle" unique_id=1755194246]
+z_index = 10
 offset_left = 156.0
 offset_top = 123.0
 offset_right = 335.0
@@ -1986,27 +1987,43 @@ scale = Vector2(0.35, 0.35)
 text = "Press E to inspect clock"
 
 [node name="PuzzlePanel" type="Panel" parent="ClockPuzzle" unique_id=574260901]
-offset_left = 164.0
-offset_top = 111.0
-offset_right = 206.0
-offset_bottom = 146.0
+offset_left = 163.0
+offset_top = 110.0
+offset_right = 205.0
+offset_bottom = 145.0
+
+[node name="ClueBackground" type="ColorRect" parent="ClockPuzzle/PuzzlePanel" unique_id=2038706576]
+z_index = 1
+layout_mode = 0
+offset_left = -7.0
+offset_top = -37.0
+offset_right = 71.0
+offset_bottom = -15.0
+color = Color(0.6431373, 0.827451, 0.89411765, 0.7882353)
 
 [node name="ClueLabel" type="Label" parent="ClockPuzzle/PuzzlePanel" unique_id=552200085]
-layout_mode = 0
-offset_left = 17.000008
-offset_top = -41.0
-offset_right = 339.0
-offset_bottom = 6.666668
+z_index = 7
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.712
+anchor_right = 0.5
+anchor_bottom = 0.712
+offset_left = -25.000006
+offset_top = -59.92
+offset_right = 297.0
+offset_bottom = -12.253332
 scale = Vector2(0.4, 0.4)
-text = "Dinner started when 
-the room went dark."
+text = "Dinner began when the 
+daylight disappeared."
 
 [node name="HourInput" type="LineEdit" parent="ClockPuzzle/PuzzlePanel" unique_id=1704982211]
+z_index = 5
 layout_mode = 0
-offset_left = 24.0
-offset_top = -20.0
-offset_right = 92.5
-offset_bottom = 11.0
+offset_left = 6.0
+offset_top = -14.0
+offset_right = 74.5
+offset_bottom = 17.0
 scale = Vector2(0.3, 0.3)
 placeholder_text = "Hour"
 
@@ -2014,23 +2031,24 @@ placeholder_text = "Hour"
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.18400002
-offset_left = 50.0
-offset_top = -12.639999
-offset_right = 118.5
-offset_bottom = 11.0
+offset_left = 27.0
+offset_top = -7.5599976
+offset_right = 95.5
+offset_bottom = 17.000002
 scale = Vector2(0.3, 0.3)
 placeholder_text = "Minute"
 
 [node name="CheckButton" type="Button" parent="ClockPuzzle/PuzzlePanel" unique_id=37745457]
 layout_mode = 0
-offset_left = 25.0
-offset_top = -8.0
-offset_right = 80.0
-offset_bottom = 23.0
+offset_left = 19.0
+offset_top = -1.0
+offset_right = 74.0
+offset_bottom = 30.0
 scale = Vector2(0.3, 0.3)
 text = "Check"
 
 [node name="ResultLabel" type="Label" parent="ClockPuzzle/PuzzlePanel" unique_id=1735613917]
+z_index = 5
 layout_mode = 0
 offset_left = -24.0
 offset_top = 39.0
@@ -2096,7 +2114,7 @@ scale = Vector2(0.3377708, 0.5773247)
 texture = ExtResource("9_31umg")
 
 [node name="LivingroomClassic(couch)" type="Sprite2D" parent="." unique_id=1464528605]
-position = Vector2(233, 83)
+position = Vector2(233, 84)
 scale = Vector2(0.11521085, 0.09531773)
 texture = ExtResource("13_31npf")
 
