@@ -2010,10 +2010,10 @@ size = Vector2(18, 120)
 size = Vector2(220, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xdu01"]
-size = Vector2(11, 43.5)
+size = Vector2(11, 41)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy6pk"]
-size = Vector2(10, 43)
+size = Vector2(10, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31umg"]
 size = Vector2(12, 25)
@@ -2026,16 +2026,19 @@ size = Vector2(12, 25)
 size = Vector2(724.0404, 678.2124)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31npf"]
-size = Vector2(19, 15.5)
+size = Vector2(15.5, 11.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7q3b"]
-size = Vector2(12.625, 13.375)
+size = Vector2(10, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkek4"]
 size = Vector2(31.3125, 25.6875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uojm7"]
 size = Vector2(42, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3tv6"]
+size = Vector2(22.5, 8)
 
 [node name="livingroom" type="Node2D" unique_id=102341009]
 script = ExtResource("1_frly4")
@@ -2094,11 +2097,11 @@ shape = SubResource("RectangleShape2D_ofrfw")
 [node name="FireplaceCollision" type="StaticBody2D" parent="WallCollisions" unique_id=1613083124]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallCollisions/FireplaceCollision" unique_id=207399948]
-position = Vector2(116, 89.75)
+position = Vector2(116, 88.5)
 shape = SubResource("RectangleShape2D_xdu01")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="WallCollisions/FireplaceCollision" unique_id=413689411]
-position = Vector2(164, 89.5)
+position = Vector2(164, 88)
 shape = SubResource("RectangleShape2D_uy6pk")
 
 [node name="Doors" type="Node2D" parent="." unique_id=600286449]
@@ -2298,7 +2301,7 @@ texture = ExtResource("9_31umg")
 [node name="GreenCouchCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=345696677]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/GreenCouchCollision" unique_id=1778044584]
-position = Vector2(155, 131)
+position = Vector2(153.25, 132.875)
 shape = SubResource("RectangleShape2D_31npf")
 
 [node name="GreenPoufCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=756172849]
@@ -2316,7 +2319,7 @@ shape = SubResource("RectangleShape2D_k7q3b")
 [node name="WhitePoufCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=160761691]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/WhitePoufCollision" unique_id=182990629]
-position = Vector2(130.625, 128)
+position = Vector2(131, 127)
 shape = SubResource("RectangleShape2D_k7q3b")
 
 [node name="LampCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=1642859659]
@@ -2336,6 +2339,12 @@ shape = SubResource("RectangleShape2D_lkek4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/SofaCollision" unique_id=1815520218]
 position = Vector2(250, 113)
 shape = SubResource("RectangleShape2D_uojm7")
+
+[node name="TableCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=972980724]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/TableCollision" unique_id=210851355]
+position = Vector2(138.25, 146)
+shape = SubResource("RectangleShape2D_p3tv6")
 
 [connection signal="body_entered" from="ClockPuzzle/InteractArea" to="ClockPuzzle" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="ClockPuzzle/InteractArea" to="ClockPuzzle" method="_on_interact_area_body_exited"]
