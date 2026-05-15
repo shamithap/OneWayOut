@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://u8lqpnhrrdbo" path="res://scripts/rooms/clock_puzzle.gd" id="5_tcbj0"]
 [ext_resource type="Texture2D" uid="uid://bkr27ybysqp1x" path="res://assets/objects/Livingroom assets/grandfather clock-1.png.png" id="6_bkkyl"]
 [ext_resource type="Texture2D" uid="uid://dxb2yeotd2bl7" path="res://assets/objects/Livingroom assets/fireplace.png" id="7_ofrfw"]
-[ext_resource type="Script" uid="uid://evvi6sg82a6e" path="res://scripts/rooms/fireplace_hint.gd" id="8_bkkyl"]
 [ext_resource type="Texture2D" uid="uid://b03835ek68gws" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(carpet)B.png" id="9_31umg"]
 [ext_resource type="Texture2D" uid="uid://duqmego2lt5ks" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(pouf).png" id="10_qe3uy"]
 [ext_resource type="Texture2D" uid="uid://6jpkmc18i4ig" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(pouf)D.png" id="11_xdu01"]
@@ -1868,6 +1867,9 @@ size = Vector2(18, 120)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ofrfw"]
 size = Vector2(220, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31umg"]
+size = Vector2(12, 25)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sy43q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7thh3"]
@@ -1967,14 +1969,20 @@ position = Vector2(111, 125)
 [node name="ClockPuzzle" type="Node2D" parent="." unique_id=576775565]
 script = ExtResource("5_tcbj0")
 
-[node name="ClockSprite" type="Sprite2D" parent="ClockPuzzle" unique_id=924617906]
+[node name="ClockCollsion" type="StaticBody2D" parent="ClockPuzzle" unique_id=1369985651]
+
+[node name="ClockSprite" type="Sprite2D" parent="ClockPuzzle/ClockCollsion" unique_id=924617906]
 position = Vector2(187, 128)
 texture = ExtResource("6_bkkyl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClockPuzzle/ClockCollsion" unique_id=13243746]
+position = Vector2(187, 128.5)
+shape = SubResource("RectangleShape2D_31umg")
 
 [node name="InteractArea" type="Area2D" parent="ClockPuzzle" unique_id=797258165]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClockPuzzle/InteractArea" unique_id=1764559903]
-position = Vector2(186, 129)
+position = Vector2(187, 134)
 shape = SubResource("RectangleShape2D_sy43q")
 
 [node name="Hint" type="Label" parent="ClockPuzzle" unique_id=1755194246]
@@ -1987,10 +1995,10 @@ scale = Vector2(0.35, 0.35)
 text = "Press E to inspect clock"
 
 [node name="PuzzlePanel" type="Panel" parent="ClockPuzzle" unique_id=574260901]
-offset_left = 163.0
-offset_top = 110.0
-offset_right = 205.0
-offset_bottom = 145.0
+offset_left = 167.0
+offset_top = 115.0
+offset_right = 209.0
+offset_bottom = 150.0
 
 [node name="ClueBackground" type="ColorRect" parent="ClockPuzzle/PuzzlePanel" unique_id=2038706576]
 z_index = 1
@@ -2060,31 +2068,11 @@ scale = Vector2(0.3, 0.3)
 position = Vector2(140.00002, 86)
 scale = Vector2(0.03867189, 0.03769532)
 texture = ExtResource("7_ofrfw")
-script = ExtResource("8_bkkyl")
 
 [node name="InteractArea" type="Area2D" parent="Fireplace" unique_id=1896755211]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fireplace/InteractArea" unique_id=1184023200]
 shape = SubResource("RectangleShape2D_7thh3")
-
-[node name="Hint" type="Label" parent="Fireplace" unique_id=971958369]
-offset_right = 698.1814
-offset_bottom = 742.79785
-text = "Press E to inspect fireplace"
-
-[node name="NotePanel" type="Panel" parent="Fireplace" unique_id=391224996]
-offset_left = -387.87903
-offset_top = -291.81345
-offset_right = 413.73694
-offset_bottom = 318.3419
-
-[node name="ClueLabel" type="Label" parent="Fireplace/NotePanel" unique_id=430067111]
-layout_mode = 0
-offset_left = -232.72719
-offset_top = -583.6269
-offset_right = 646.46423
-offset_bottom = -26.528503
-text = "The fireplace went dark at 7:30."
 
 [node name="LivingroomClassic(carpet)b" type="Sprite2D" parent="." unique_id=523127158]
 position = Vector2(142.73831, 145.255)
@@ -2108,9 +2096,9 @@ scale = Vector2(0.12760423, 0.10462552)
 texture = ExtResource("12_uy6pk")
 
 [node name="LivingroomClassic(carpet)b2" type="Sprite2D" parent="." unique_id=2008408503]
-position = Vector2(245.99998, 111.99999)
+position = Vector2(247.00002, 108.99999)
 rotation = 2.3561945
-scale = Vector2(0.3377708, 0.5773247)
+scale = Vector2(0.3200651, 0.55047953)
 texture = ExtResource("9_31umg")
 
 [node name="LivingroomClassic(couch)" type="Sprite2D" parent="." unique_id=1464528605]
