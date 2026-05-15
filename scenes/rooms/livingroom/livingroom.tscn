@@ -2019,6 +2019,7 @@ size = Vector2(10, 40)
 size = Vector2(12, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sy43q"]
+size = Vector2(20, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mldlc"]
 
@@ -2029,13 +2030,16 @@ size = Vector2(724.0404, 678.2124)
 size = Vector2(15.5, 11.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7q3b"]
-size = Vector2(10, 6)
+size = Vector2(10, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkek4"]
-size = Vector2(31.3125, 25.6875)
+size = Vector2(45.65625, 19.84375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lbbh"]
+size = Vector2(10, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uojm7"]
-size = Vector2(42, 8)
+size = Vector2(41, 10.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3tv6"]
 size = Vector2(22.5, 8)
@@ -2066,7 +2070,7 @@ scale = Vector2(0.5, 0.5)
 tile_set = SubResource("TileSet_qe3uy")
 rendering_quadrant_size = 32
 format = 2
-layer_0/tile_data = PackedInt32Array(524321, 0, 10, 524322, 65536, 10, 589857, 0, 11, 589858, 65536, 11, 655393, 0, 12, 655394, 65536, 12, 720929, 0, 13, 720930, 65536, 13, 655391, 0, 12, 720927, 0, 13, 655392, 65536, 12, 720928, 65536, 13, 1114127, 262144, 12, 1179663, 262144, 13, 1114128, 327680, 12, 1179664, 327680, 13, 1114129, 393216, 12, 1179665, 393216, 13, 1114130, 458752, 12, 1179666, 458752, 13, 655389, 262144, 6, 720925, 262144, 7, 655390, 327680, 6, 720926, 327680, 7, 524319, 0, 10, 589855, 0, 11, 524320, 65536, 10, 589856, 65536, 11, 851998, 262144, 10, 917534, 262144, 11, 851999, 327680, 10, 917535, 327680, 11, 852000, 393216, 10, 917536, 393216, 11, 852001, 458752, 10, 917537, 458752, 11, 1114145, 655360, 2, 1179681, 655360, 3, 1114146, 720896, 2, 1179682, 720896, 3, 851996, 131072, 6, 917532, 131072, 7, 851997, 196608, 6, 917533, 196608, 7)
+layer_0/tile_data = PackedInt32Array(524321, 0, 10, 524322, 65536, 10, 589857, 0, 11, 589858, 65536, 11, 655393, 0, 12, 655394, 65536, 12, 720929, 0, 13, 720930, 65536, 13, 655391, 0, 12, 720927, 0, 13, 655392, 65536, 12, 720928, 65536, 13, 1114127, 262144, 12, 1179663, 262144, 13, 1114128, 327680, 12, 1179664, 327680, 13, 1114129, 393216, 12, 1179665, 393216, 13, 1114130, 458752, 12, 1179666, 458752, 13, 655389, 0, 12, 720925, 0, 13, 655390, 65536, 12, 720926, 65536, 13, 524319, 0, 10, 589855, 0, 11, 524320, 65536, 10, 589856, 65536, 11, 1114145, 655360, 2, 1179681, 655360, 3, 1114146, 720896, 2, 1179682, 720896, 3, 524317, 0, 10, 589853, 0, 11, 524318, 65536, 10, 589854, 65536, 11, 851997, 262144, 10, 917533, 262144, 11, 851998, 327680, 10, 917534, 327680, 11, 851999, 393216, 10, 917535, 393216, 11, 852000, 458752, 10, 917536, 458752, 11, 852001, 262144, 6, 917537, 262144, 7, 852002, 327680, 6, 917538, 327680, 7, 851995, 524288, 6, 917531, 524288, 7, 851996, 589824, 6, 917532, 589824, 7, 655387, 0, 2, 720923, 0, 3, 655388, 65536, 2, 720924, 65536, 3)
 
 [node name="WallCollisions" type="Node2D" parent="." unique_id=1603639995]
 
@@ -2156,33 +2160,34 @@ script = ExtResource("5_tcbj0")
 [node name="ClockCollsion" type="StaticBody2D" parent="ClockPuzzle" unique_id=1369985651]
 
 [node name="ClockSprite" type="Sprite2D" parent="ClockPuzzle/ClockCollsion" unique_id=924617906]
-position = Vector2(187, 128)
+position = Vector2(190, 127)
 texture = ExtResource("6_bkkyl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClockPuzzle/ClockCollsion" unique_id=13243746]
-position = Vector2(187, 128.5)
+position = Vector2(190, 126)
 shape = SubResource("RectangleShape2D_31umg")
 
 [node name="InteractArea" type="Area2D" parent="ClockPuzzle" unique_id=797258165]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClockPuzzle/InteractArea" unique_id=1764559903]
-position = Vector2(187, 134)
+position = Vector2(189, 127)
 shape = SubResource("RectangleShape2D_sy43q")
 
 [node name="Hint" type="Label" parent="ClockPuzzle" unique_id=1755194246]
 z_index = 10
-offset_left = 156.0
-offset_top = 123.0
-offset_right = 335.0
-offset_bottom = 145.33334
+offset_left = 160.00005
+offset_top = 104.99999
+offset_right = 339.00006
+offset_bottom = 127.333336
 scale = Vector2(0.35, 0.35)
 text = "Press E to inspect clock"
 
 [node name="PuzzlePanel" type="Panel" parent="ClockPuzzle" unique_id=574260901]
-offset_left = 167.0
-offset_top = 115.0
-offset_right = 209.0
-offset_bottom = 150.0
+z_index = 2
+offset_left = 168.0
+offset_top = 110.0
+offset_right = 210.0
+offset_bottom = 145.0
 
 [node name="ClueBackground" type="ColorRect" parent="ClockPuzzle/PuzzlePanel" unique_id=2038706576]
 z_index = 1
@@ -2325,19 +2330,23 @@ shape = SubResource("RectangleShape2D_k7q3b")
 [node name="LampCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=1642859659]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/LampCollision" unique_id=1975773714]
-position = Vector2(239, 88)
+position = Vector2(224, 114)
 shape = SubResource("RectangleShape2D_k7q3b")
 
 [node name="BookshelfCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=1251290110]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/BookshelfCollision" unique_id=142774621]
-position = Vector2(264, 82)
+position = Vector2(256.82813, 79.078125)
 shape = SubResource("RectangleShape2D_lkek4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="FurnitureCollision/BookshelfCollision" unique_id=890213084]
+position = Vector2(225, 84)
+shape = SubResource("RectangleShape2D_2lbbh")
 
 [node name="SofaCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=910287323]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/SofaCollision" unique_id=1815520218]
-position = Vector2(250, 113)
+position = Vector2(256.5, 113.25)
 shape = SubResource("RectangleShape2D_uojm7")
 
 [node name="TableCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=972980724]
