@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgx53o80qyugq"
-path="res://.godot/imported/clock2.png-a090de2f17841b66beab0df7e254d171.ctex"
+uid="uid://dkc0l0ln30g63"
+path="res://.godot/imported/tilesheet_itchio.png-3bc5d2269b7db318c0f6859695d00253.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/Livingroom assets/clock2.png"
-dest_files=["res://.godot/imported/clock2.png-a090de2f17841b66beab0df7e254d171.ctex"]
+source_file="res://scenes/rooms/livingroom/tilesheet_itchio.png"
+dest_files=["res://.godot/imported/tilesheet_itchio.png-3bc5d2269b7db318c0f6859695d00253.ctex"]
 
 [params]
 

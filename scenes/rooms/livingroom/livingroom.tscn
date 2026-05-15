@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_frly4"]
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_sy43q"]
 [ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="3_tcbj0"]
+[ext_resource type="Texture2D" uid="uid://dkc0l0ln30g63" path="res://scenes/rooms/livingroom/tilesheet_itchio.png" id="4_mldlc"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="4_ofrfw"]
 [ext_resource type="Script" uid="uid://u8lqpnhrrdbo" path="res://scripts/rooms/clock_puzzle.gd" id="5_tcbj0"]
 [ext_resource type="Texture2D" uid="uid://bkr27ybysqp1x" path="res://assets/objects/Livingroom assets/grandfather clock-1.png.png" id="6_bkkyl"]
@@ -11,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://duqmego2lt5ks" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(pouf).png" id="10_qe3uy"]
 [ext_resource type="Texture2D" uid="uid://6jpkmc18i4ig" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(pouf)D.png" id="11_xdu01"]
 [ext_resource type="Texture2D" uid="uid://m3ocvelgj0yg" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(chair)D.png" id="12_uy6pk"]
-[ext_resource type="Texture2D" uid="uid://cfjt17bc233f0" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(couch).png" id="13_31npf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ttfhd"]
 texture = ExtResource("2_sy43q")
@@ -1858,6 +1858,148 @@ sources/0 = SubResource("TileSetAtlasSource_qg7lp")
 sources/1 = SubResource("TileSetAtlasSource_nojl6")
 sources/3 = SubResource("TileSetAtlasSource_803qg")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31umg"]
+texture = ExtResource("4_mldlc")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qe3uy"]
+sources/0 = SubResource("TileSetAtlasSource_31umg")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frly4"]
 size = Vector2(221, 20)
 
@@ -1867,12 +2009,33 @@ size = Vector2(18, 120)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ofrfw"]
 size = Vector2(220, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdu01"]
+size = Vector2(11, 43.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uy6pk"]
+size = Vector2(10, 43)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31umg"]
 size = Vector2(12, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sy43q"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7thh3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mldlc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qe3uy"]
+size = Vector2(724.0404, 678.2124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31npf"]
+size = Vector2(19, 15.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7q3b"]
+size = Vector2(12.625, 13.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lkek4"]
+size = Vector2(31.3125, 25.6875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uojm7"]
+size = Vector2(42, 8)
 
 [node name="livingroom" type="Node2D" unique_id=102341009]
 script = ExtResource("1_frly4")
@@ -1893,6 +2056,14 @@ layer_0/name = "Floor"
 layer_0/z_index = 1
 layer_0/tile_data = PackedInt32Array(-196614, 131075, 1, -196613, 131075, 1, -196612, 131075, 1, -196611, 131075, 1, -196610, 131075, 1, -262143, 262147, 3, -262142, 131075, 1, -262141, 131075, 1, -262140, 131075, 1, -262139, 131075, 1, -262151, 65539, 0, -196615, 65539, 1, -131079, 65539, 1, -65543, 65539, 1, -7, 65539, 1, 65529, 65539, 1, 131065, 65539, 1, -262150, 131075, 0, -262149, 131075, 0, -262148, 131075, 0, -262147, 131075, 0, -262146, 131075, 0, -262145, 131075, 0, -327680, 131075, 0, -327679, 131075, 0, -327678, 131075, 0, -327677, 131075, 0, -327676, 131075, 0, -327675, 131075, 0, -262138, 131075, 1, -327674, 131075, 0, -327673, 196611, 0, -262137, 196611, 1, -196601, 196611, 1, -131065, 196611, 1, -65529, 196611, 1, 7, 196611, 1, 65543, 196611, 1, 131079, 196611, 1, 196615, 196611, 1, 327673, 65539, 2, 262151, 196611, 2, 327675, 131075, 2, 327676, 131075, 2, 327677, 131075, 2, 327678, 131075, 2, 327679, 655363, 2, 262144, 720899, 2, 262145, 131075, 2, 262146, 131075, 2, 262147, 131075, 2, 262148, 131075, 2, 262149, 131075, 2, 262150, 131075, 2, -196609, 655363, 3, -262144, 720899, 3, 327674, 131075, 2, 262137, 65539, 1, 196601, 65539, 1, 6, 589827, 3, -131078, 131075, 1, -65542, 131075, 1, -6, 131075, 1, 131066, 131075, 1, 196602, 131075, 1, 262138, 131075, 1, 65530, 589827, 3, -196602, 131075, 1, -131066, 131075, 1, -65530, 131075, 1, 65542, 131075, 1, 131078, 131075, 1, 196614, 131075, 1)
 layer_1/name = "Walls"
+
+[node name="Furnitures" type="TileMap" parent="." unique_id=1481844986]
+z_index = 3
+scale = Vector2(0.5, 0.5)
+tile_set = SubResource("TileSet_qe3uy")
+rendering_quadrant_size = 32
+format = 2
+layer_0/tile_data = PackedInt32Array(524321, 0, 10, 524322, 65536, 10, 589857, 0, 11, 589858, 65536, 11, 655393, 0, 12, 655394, 65536, 12, 720929, 0, 13, 720930, 65536, 13, 655391, 0, 12, 720927, 0, 13, 655392, 65536, 12, 720928, 65536, 13, 1114127, 262144, 12, 1179663, 262144, 13, 1114128, 327680, 12, 1179664, 327680, 13, 1114129, 393216, 12, 1179665, 393216, 13, 1114130, 458752, 12, 1179666, 458752, 13, 655389, 262144, 6, 720925, 262144, 7, 655390, 327680, 6, 720926, 327680, 7, 524319, 0, 10, 589855, 0, 11, 524320, 65536, 10, 589856, 65536, 11, 851998, 262144, 10, 917534, 262144, 11, 851999, 327680, 10, 917535, 327680, 11, 852000, 393216, 10, 917536, 393216, 11, 852001, 458752, 10, 917537, 458752, 11, 1114145, 655360, 2, 1179681, 655360, 3, 1114146, 720896, 2, 1179682, 720896, 3, 851996, 131072, 6, 917532, 131072, 7, 851997, 196608, 6, 917533, 196608, 7)
 
 [node name="WallCollisions" type="Node2D" parent="." unique_id=1603639995]
 
@@ -1919,6 +2090,16 @@ shape = SubResource("RectangleShape2D_tcbj0")
 [node name="BottomWallShape" type="CollisionShape2D" parent="WallCollisions/BottomWallCollision" unique_id=1772461679]
 position = Vector2(194, 187)
 shape = SubResource("RectangleShape2D_ofrfw")
+
+[node name="FireplaceCollision" type="StaticBody2D" parent="WallCollisions" unique_id=1613083124]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallCollisions/FireplaceCollision" unique_id=207399948]
+position = Vector2(116, 89.75)
+shape = SubResource("RectangleShape2D_xdu01")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WallCollisions/FireplaceCollision" unique_id=413689411]
+position = Vector2(164, 89.5)
+shape = SubResource("RectangleShape2D_uy6pk")
 
 [node name="Doors" type="Node2D" parent="." unique_id=600286449]
 
@@ -2072,25 +2253,36 @@ texture = ExtResource("7_ofrfw")
 [node name="InteractArea" type="Area2D" parent="Fireplace" unique_id=1896755211]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fireplace/InteractArea" unique_id=1184023200]
-shape = SubResource("RectangleShape2D_7thh3")
+shape = SubResource("RectangleShape2D_mldlc")
+
+[node name="FireplaceBody" type="StaticBody2D" parent="Fireplace" unique_id=248465356]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fireplace/FireplaceBody" unique_id=1952579079]
+position = Vector2(-0.00024414063, 5.7644043)
+scale = Vector2(0.9999999, 1)
+shape = SubResource("RectangleShape2D_qe3uy")
 
 [node name="LivingroomClassic(carpet)b" type="Sprite2D" parent="." unique_id=523127158]
+z_index = 1
 position = Vector2(142.73831, 145.255)
 rotation = 0.7853982
 scale = Vector2(0.2306102, 0.40446284)
 texture = ExtResource("9_31umg")
 
 [node name="LivingroomClassic(pouf)" type="Sprite2D" parent="." unique_id=19112801]
+z_index = 1
 position = Vector2(131, 128)
 scale = Vector2(0.12599976, 0.1410891)
 texture = ExtResource("10_qe3uy")
 
 [node name="LivingroomClassic(pouf)d" type="Sprite2D" parent="." unique_id=503282957]
+z_index = 1
 position = Vector2(159, 153)
 scale = Vector2(0.11399982, 0.14603962)
 texture = ExtResource("11_xdu01")
 
 [node name="LivingroomClassic(chair)d" type="Sprite2D" parent="." unique_id=638541087]
+z_index = 1
 position = Vector2(154, 132)
 scale = Vector2(0.12760423, 0.10462552)
 texture = ExtResource("12_uy6pk")
@@ -2101,10 +2293,49 @@ rotation = 2.3561945
 scale = Vector2(0.3200651, 0.55047953)
 texture = ExtResource("9_31umg")
 
-[node name="LivingroomClassic(couch)" type="Sprite2D" parent="." unique_id=1464528605]
-position = Vector2(233, 84)
-scale = Vector2(0.11521085, 0.09531773)
-texture = ExtResource("13_31npf")
+[node name="FurnitureCollision" type="Node2D" parent="." unique_id=166256836]
+
+[node name="GreenCouchCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=345696677]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/GreenCouchCollision" unique_id=1778044584]
+position = Vector2(155, 131)
+shape = SubResource("RectangleShape2D_31npf")
+
+[node name="GreenPoufCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=756172849]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/GreenPoufCollision" unique_id=1252628038]
+position = Vector2(159, 153)
+shape = SubResource("RectangleShape2D_k7q3b")
+
+[node name="FlowerCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=482541569]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/FlowerCollision" unique_id=1270699766]
+position = Vector2(273, 144)
+shape = SubResource("RectangleShape2D_k7q3b")
+
+[node name="WhitePoufCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=160761691]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/WhitePoufCollision" unique_id=182990629]
+position = Vector2(130.625, 128)
+shape = SubResource("RectangleShape2D_k7q3b")
+
+[node name="LampCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=1642859659]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/LampCollision" unique_id=1975773714]
+position = Vector2(239, 88)
+shape = SubResource("RectangleShape2D_k7q3b")
+
+[node name="BookshelfCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=1251290110]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/BookshelfCollision" unique_id=142774621]
+position = Vector2(264, 82)
+shape = SubResource("RectangleShape2D_lkek4")
+
+[node name="SofaCollision" type="StaticBody2D" parent="FurnitureCollision" unique_id=910287323]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FurnitureCollision/SofaCollision" unique_id=1815520218]
+position = Vector2(250, 113)
+shape = SubResource("RectangleShape2D_uojm7")
 
 [connection signal="body_entered" from="ClockPuzzle/InteractArea" to="ClockPuzzle" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="ClockPuzzle/InteractArea" to="ClockPuzzle" method="_on_interact_area_body_exited"]
