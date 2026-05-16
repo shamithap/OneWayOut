@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://brejwt1qujsai"]
+
+[ext_resource type="Script" uid="uid://bnta4d22bv8n0" path="res://scripts/global/health_manager.gd" id="1_y3kqx"]
+[ext_resource type="Texture2D" uid="uid://ceo1uw7127rn7" path="res://assets/objects/Hearts/PNG/animated/border/heart_animated_1.png" id="2_6opq1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdjhy"]
+atlas = ExtResource("2_6opq1")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srckl"]
+atlas = ExtResource("2_6opq1")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r8bn"]
+atlas = ExtResource("2_6opq1")
+region = Rect2(17, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxn08"]
+atlas = ExtResource("2_6opq1")
+region = Rect2(34, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2qi6"]
+atlas = ExtResource("2_6opq1")
+region = Rect2(51, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5b4h"]
+atlas = ExtResource("2_6opq1")
+region = Rect2(68, 0, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4hq00"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdjhy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srckl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1r8bn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxn08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2qi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5b4h")
+}],
+"loop": false,
+"name": &"lose",
+"speed": 10.0
+}]
+
+[node name="HealthBar" type="CanvasLayer" unique_id=339360066]
+script = ExtResource("1_y3kqx")
+
+[node name="Heart1" type="AnimatedSprite2D" parent="." unique_id=209099214]
+position = Vector2(38, 37)
+scale = Vector2(3.355197, 3.3541195)
+sprite_frames = SubResource("SpriteFrames_4hq00")
+animation = &"lose"
+autoplay = "idle"
+
+[node name="Heart2" type="AnimatedSprite2D" parent="." unique_id=469408551]
+position = Vector2(98, 37)
+scale = Vector2(3.355197, 3.3541195)
+sprite_frames = SubResource("SpriteFrames_4hq00")
+animation = &"lose"
+autoplay = "idle"
+
+[node name="Heart3" type="AnimatedSprite2D" parent="." unique_id=1123339421]
+position = Vector2(158, 37)
+scale = Vector2(3.355197, 3.3541195)
+sprite_frames = SubResource("SpriteFrames_4hq00")
+animation = &"lose"
+autoplay = "idle"

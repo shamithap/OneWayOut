@@ -219,4 +219,5 @@ destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="Player" parent="." unique_id=1424528440 instance=ExtResource("3_hhji2")]
+z_index = 0
 position = Vector2(320, 195)
