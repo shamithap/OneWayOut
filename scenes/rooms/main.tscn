@@ -208,7 +208,7 @@ position = Vector2(296, 128)
 
 [node name="Door_3" parent="Doors" unique_id=1557534416 instance=ExtResource("2_3os3j")]
 position = Vector2(344, 127)
-destination_room_name = "armory"
+destination_room_name = "winecellar"
 destination_door_tag = "S"
 spawn_direction = "down"
 

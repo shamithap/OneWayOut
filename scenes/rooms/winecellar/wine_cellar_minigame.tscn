@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://c36glxl5jg3de"]
+
+[ext_resource type="Texture2D" uid="uid://bvypl7t5twtuh" path="res://assets/SpookyCastleTileset/animation_hazards+walls.png" id="1_jyeqk"]
+[ext_resource type="Texture2D" uid="uid://b1rt7vo3bhm2q" path="res://assets/objects/Winecellar assets/shelf_1.png" id="1_o7wsi"]
+[ext_resource type="Script" uid="uid://boapno0yohfuf" path="res://scripts/rooms/wine_cellar/wine_cellar_minigame.gd" id="1_twubn"]
+[ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_4xd6j"]
+[ext_resource type="Texture2D" uid="uid://djm6sj6mc2q4j" path="res://assets/objects/Winecellar assets/shelf_2.png" id="2_jyeqk"]
+[ext_resource type="Texture2D" uid="uid://la4d11c11o8x" path="res://assets/objects/Winecellar assets/shelf_3.png" id="3_4xd6j"]
+[ext_resource type="Texture2D" uid="uid://caixkptq2qecy" path="res://assets/objects/Winecellar assets/empty_table.png" id="6_kisb1"]
+[ext_resource type="Texture2D" uid="uid://2y2nu1lkre0s" path="res://assets/objects/Winecellar assets/cherry_wine.png" id="7_mi647"]
+[ext_resource type="Texture2D" uid="uid://bcwxn3dt3kqu0" path="res://assets/objects/Winecellar assets/apple_wine.png" id="8_twubn"]
+[ext_resource type="PackedScene" uid="uid://b8b5wh2gmybrr" path="res://scenes/rooms/winecellar/wine_bottle.tscn" id="8_x15xj"]
+[ext_resource type="Texture2D" uid="uid://coaw7hy2a7nfy" path="res://assets/objects/Winecellar assets/grape_wine.png" id="9_0nnmw"]
+[ext_resource type="Texture2D" uid="uid://efuodbctj0po" path="res://assets/objects/Winecellar assets/orange_wine.png" id="10_ts53x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xd6j"]
+atlas = ExtResource("1_jyeqk")
+region = Rect2(256, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kisb1"]
+atlas = ExtResource("2_4xd6j")
+region = Rect2(48, 79, 16, 16)
+
+[node name="WineCellarMinigame" type="Node2D" unique_id=2010134317]
+script = ExtResource("1_twubn")
+
+[node name="Environment" type="Node2D" parent="." unique_id=1301331257]
+
+[node name="Wall" type="Sprite2D" parent="Environment" unique_id=2096074323]
+position = Vector2(135.00003, 66)
+scale = Vector2(17.070549, 17.070549)
+texture = SubResource("AtlasTexture_4xd6j")
+
+[node name="Wall2" type="Sprite2D" parent="Environment" unique_id=1216700004]
+position = Vector2(407.99997, 66)
+scale = Vector2(17.070549, 17.070549)
+texture = SubResource("AtlasTexture_4xd6j")
+
+[node name="Wall3" type="Sprite2D" parent="Environment" unique_id=1533748187]
+position = Vector2(682, 66)
+scale = Vector2(17.070549, 17.070549)
+texture = SubResource("AtlasTexture_4xd6j")
+
+[node name="Wall4" type="Sprite2D" parent="Environment" unique_id=569848002]
+position = Vector2(955, 66)
+scale = Vector2(17.070549, 17.070549)
+texture = SubResource("AtlasTexture_4xd6j")
+
+[node name="Floor" type="Sprite2D" parent="Environment" unique_id=564628247]
+position = Vector2(137, 339)
+scale = Vector2(17, 17)
+texture = SubResource("AtlasTexture_kisb1")
+
+[node name="Floor2" type="Sprite2D" parent="Environment" unique_id=531829087]
+position = Vector2(408, 339)
+scale = Vector2(17, 17)
+texture = SubResource("AtlasTexture_kisb1")
+
+[node name="Floor3" type="Sprite2D" parent="Environment" unique_id=1389663718]
+position = Vector2(680, 339)
+scale = Vector2(17, 17)
+texture = SubResource("AtlasTexture_kisb1")
+
+[node name="Floor4" type="Sprite2D" parent="Environment" unique_id=995195766]
+position = Vector2(950, 339)
+scale = Vector2(17, 17)
+texture = SubResource("AtlasTexture_kisb1")
+
+[node name="Floor5" type="Sprite2D" parent="Environment" unique_id=2034819063]
+position = Vector2(1219, 339)
+scale = Vector2(17, 17)
+texture = SubResource("AtlasTexture_kisb1")
+
+[node name="Floor6" type="Sprite2D" parent="Environment" unique_id=1083281910]
+position = Vector2(137, 611)
+scale = Vector2(17, 17)
+texture = SubResource("AtlasTexture_kisb1")
+
+[node name="Floor7" type="Sprite2D" parent="Environment" unique_id=1891249898]
+position = Vector2(408, 611)
+scale = Vector2(17, 17)
+texture = SubResource("AtlasTexture_kisb1")
+
+[node name="Floor8" type="Sprite2D" parent="Environment" unique_id=1258028501]
+position = Vector2(680, 611)
+scale = Vector2(17, 17)
+texture = SubResource("AtlasTexture_kisb1")
+
+[node name="Floor9" type="Sprite2D" parent="Environment" unique_id=1269844705]
+position = Vector2(950, 611)
+scale = Vector2(17, 17)
+texture = SubResource("AtlasTexture_kisb1")
+
+[node name="Floor10" type="Sprite2D" parent="Environment" unique_id=166433509]
+position = Vector2(1219, 611)
+scale = Vector2(17, 17)
+texture = SubResource("AtlasTexture_kisb1")
+
+[node name="Shelf1" type="Sprite2D" parent="Environment" unique_id=1608344363]
+position = Vector2(150.89433, 141.42242)
+scale = Vector2(6.777948, 6.4819508)
+texture = ExtResource("1_o7wsi")
+
+[node name="Shelf2" type="Sprite2D" parent="Environment" unique_id=690673844]
+position = Vector2(952.8944, 141.42242)
+scale = Vector2(6.7779484, 6.4819508)
+texture = ExtResource("2_jyeqk")
+
+[node name="Shelf3" type="Sprite2D" parent="Environment" unique_id=346185584]
+position = Vector2(552.89435, 141.42242)
+scale = Vector2(6.7779484, 6.4819508)
+texture = ExtResource("3_4xd6j")
+
+[node name="EmptyTable" type="Sprite2D" parent="Environment" unique_id=77326916]
+position = Vector2(564, 445)
+scale = Vector2(17, 17)
+texture = ExtResource("6_kisb1")
+
+[node name="WineBottles" type="Control" parent="." unique_id=1947055450]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WineBottles" unique_id=1988181650]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 163.0
+offset_right = 914.0
+offset_bottom = 496.0
+theme_override_constants/separation = 70
+
+[node name="AppleWine" parent="WineBottles/HBoxContainer" unique_id=1281442476 instance=ExtResource("8_x15xj")]
+layout_mode = 2
+
+[node name="TextureRect" parent="WineBottles/HBoxContainer/AppleWine" index="0" unique_id=1309091218]
+texture = ExtResource("8_twubn")
+
+[node name="CherryWine" parent="WineBottles/HBoxContainer" unique_id=736841211 instance=ExtResource("8_x15xj")]
+layout_mode = 2
+
+[node name="TextureRect" parent="WineBottles/HBoxContainer/CherryWine" index="0" unique_id=1309091218]
+texture = ExtResource("7_mi647")
+
+[node name="GrapeWine" parent="WineBottles/HBoxContainer" unique_id=1366012795 instance=ExtResource("8_x15xj")]
+layout_mode = 2
+
+[node name="TextureRect" parent="WineBottles/HBoxContainer/GrapeWine" index="0" unique_id=1309091218]
+texture = ExtResource("9_0nnmw")
+
+[node name="OrangeWine" parent="WineBottles/HBoxContainer" unique_id=278156659 instance=ExtResource("8_x15xj")]
+layout_mode = 2
+
+[node name="TextureRect" parent="WineBottles/HBoxContainer/OrangeWine" index="0" unique_id=1309091218]
+texture = ExtResource("10_ts53x")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=937274365]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1493940795]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -73.0
+offset_top = -66.0
+offset_right = 73.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to back out"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[editable path="WineBottles/HBoxContainer/AppleWine"]
+[editable path="WineBottles/HBoxContainer/CherryWine"]
+[editable path="WineBottles/HBoxContainer/GrapeWine"]
+[editable path="WineBottles/HBoxContainer/OrangeWine"]

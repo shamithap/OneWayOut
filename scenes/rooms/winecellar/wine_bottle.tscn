@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b8b5wh2gmybrr"]
+
+[ext_resource type="Script" uid="uid://btfxnedpn58kl" path="res://scripts/rooms/wine_cellar/wine_bottle.gd" id="2_a1pev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pd6yl"]
+
+[node name="WineBottle" type="PanelContainer" unique_id=736841211]
+custom_minimum_size = Vector2(122, 275)
+offset_right = 122.0
+offset_bottom = 275.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pd6yl")
+script = ExtResource("2_a1pev")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1309091218]
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6

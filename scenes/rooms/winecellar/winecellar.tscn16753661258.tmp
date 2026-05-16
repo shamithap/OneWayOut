@@ -1,18 +1,20 @@
 [gd_scene format=4 uid="uid://ch2ye28nifw6w"]
 
-[ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="1_cm3gc"]
-[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_jkevc"]
-[ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="2_jkevc"]
-[ext_resource type="Texture2D" uid="uid://b6m6ue4kvlult" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0063.png" id="3_14fty"]
-[ext_resource type="Texture2D" uid="uid://dtdfwaut3er8i" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0082.png" id="4_vha7d"]
-[ext_resource type="Texture2D" uid="uid://b1rt7vo3bhm2q" path="res://assets/objects/Winecellar assets/shelf_1.png" id="6_14fty"]
-[ext_resource type="Texture2D" uid="uid://djm6sj6mc2q4j" path="res://assets/objects/Winecellar assets/shelf_2.png" id="7_vha7d"]
-[ext_resource type="Texture2D" uid="uid://la4d11c11o8x" path="res://assets/objects/Winecellar assets/shelf_3.png" id="8_3v2ry"]
-[ext_resource type="Texture2D" uid="uid://bht46c2kikily" path="res://assets/objects/Winecellar assets/table.png" id="9_ooua8"]
-[ext_resource type="Texture2D" uid="uid://dyfuuqx0xcgpv" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0089.png" id="10_uuq71"]
+[ext_resource type="Script" uid="uid://ew8lopii4inj" path="res://scripts/rooms/wine_cellar.gd" id="1_6j2aj"]
+[ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="2_6j2aj"]
+[ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="3_4d7g4"]
+[ext_resource type="Texture2D" uid="uid://b6m6ue4kvlult" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0063.png" id="4_vhs45"]
+[ext_resource type="Texture2D" uid="uid://dtdfwaut3er8i" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0082.png" id="5_y38e3"]
+[ext_resource type="Texture2D" uid="uid://b1rt7vo3bhm2q" path="res://assets/objects/Winecellar assets/shelf_1.png" id="6_x4arm"]
+[ext_resource type="Texture2D" uid="uid://djm6sj6mc2q4j" path="res://assets/objects/Winecellar assets/shelf_2.png" id="7_jhe0h"]
+[ext_resource type="Texture2D" uid="uid://la4d11c11o8x" path="res://assets/objects/Winecellar assets/shelf_3.png" id="8_reyrc"]
+[ext_resource type="Texture2D" uid="uid://bht46c2kikily" path="res://assets/objects/Winecellar assets/wine_table.png" id="9_lbey0"]
+[ext_resource type="Texture2D" uid="uid://dyfuuqx0xcgpv" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0089.png" id="10_nrhs8"]
+[ext_resource type="Texture2D" uid="uid://ch8in3mw752y2" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_02_ArtOfScrolls_BigWander(16x16).png" id="11_6j2aj"]
+[ext_resource type="Texture2D" uid="uid://cogk382dg1swy" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_01_ArtOfScrolls_BigWander(16x16).png" id="12_4d7g4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fac70"]
-texture = ExtResource("1_cm3gc")
+texture = ExtResource("2_6j2aj")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -148,7 +150,7 @@ separation = Vector2i(1, 1)
 11:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhob4"]
-texture = ExtResource("2_jkevc")
+texture = ExtResource("3_4d7g4")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -753,7 +755,7 @@ sources/0 = SubResource("TileSetAtlasSource_fac70")
 sources/1 = SubResource("TileSetAtlasSource_qhob4")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uomyq"]
-texture = ExtResource("2_jkevc")
+texture = ExtResource("3_4d7g4")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1420,7 +1422,7 @@ texture = ExtResource("2_jkevc")
 16:64/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jjcp"]
-texture = ExtResource("1_cm3gc")
+texture = ExtResource("2_6j2aj")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -1595,8 +1597,14 @@ size = Vector2(48, 19.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uuq71"]
 size = Vector2(18, 14)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6j2aj"]
+size = Vector2(16, 18.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4d7g4"]
+size = Vector2(56, 27.5)
+
 [node name="Wine Cellar" type="Node2D" unique_id=1828012061]
-script = ExtResource("1_jkevc")
+script = ExtResource("1_6j2aj")
 
 [node name="Environment" type="Node2D" parent="." unique_id=1318896545]
 
@@ -1612,51 +1620,51 @@ tile_set = SubResource("TileSet_fac70")
 
 [node name="Box" type="Sprite2D" parent="Environment/Objects" unique_id=340489208]
 position = Vector2(-50, 27)
-texture = ExtResource("3_14fty")
+texture = ExtResource("4_vhs45")
 
 [node name="Box2" type="Sprite2D" parent="Environment/Objects" unique_id=1296094300]
 position = Vector2(-39, 39)
-texture = ExtResource("3_14fty")
+texture = ExtResource("4_vhs45")
 
 [node name="Box3" type="Sprite2D" parent="Environment/Objects" unique_id=397475728]
 position = Vector2(-55, 38)
-texture = ExtResource("3_14fty")
+texture = ExtResource("4_vhs45")
 
 [node name="Barrel" type="Sprite2D" parent="Environment/Objects" unique_id=1177437813]
 position = Vector2(43, 41)
-texture = ExtResource("4_vha7d")
+texture = ExtResource("5_y38e3")
 
 [node name="Barrel2" type="Sprite2D" parent="Environment/Objects" unique_id=812047264]
 position = Vector2(52, 29)
-texture = ExtResource("4_vha7d")
+texture = ExtResource("5_y38e3")
 
 [node name="Barrel3" type="Sprite2D" parent="Environment/Objects" unique_id=1713625923]
 position = Vector2(56, 38)
-texture = ExtResource("4_vha7d")
+texture = ExtResource("5_y38e3")
 
 [node name="Shelf1" type="Sprite2D" parent="Environment/Objects" unique_id=562739805]
 position = Vector2(-42, -64)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("6_14fty")
+texture = ExtResource("6_x4arm")
 
 [node name="Shelf2" type="Sprite2D" parent="Environment/Objects" unique_id=1872777192]
 position = Vector2(42, -64)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("7_vha7d")
+texture = ExtResource("7_jhe0h")
 
 [node name="Shelf3" type="Sprite2D" parent="Environment/Objects" unique_id=1016432933]
 position = Vector2(-1.1920929e-07, -64)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("8_3v2ry")
+texture = ExtResource("8_reyrc")
 
 [node name="Table" type="Sprite2D" parent="Environment/Objects" unique_id=1722698124]
 position = Vector2(-1, -16)
-texture = ExtResource("9_ooua8")
+texture = ExtResource("9_lbey0")
 
 [node name="Chest" type="Sprite2D" parent="Environment/Objects" unique_id=425040109]
 position = Vector2(35, -13)
 scale = Vector2(1.125, 1.125)
-texture = ExtResource("10_uuq71")
+texture = ExtResource("10_nrhs8")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Environment/Objects" unique_id=1925815542]
 visible = false
@@ -1689,3 +1697,92 @@ shape = SubResource("RectangleShape2D_ooua8")
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Environment/Objects/StaticBody2D" unique_id=1289208334]
 position = Vector2(35, -13)
 shape = SubResource("RectangleShape2D_uuq71")
+
+[node name="ScrollArea" type="Area2D" parent="." unique_id=190153656]
+
+[node name="Scroll" type="Sprite2D" parent="ScrollArea" unique_id=798722452]
+position = Vector2(-36, 21)
+texture = ExtResource("11_6j2aj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollArea" unique_id=1197537624]
+position = Vector2(-37, 21.75)
+shape = SubResource("RectangleShape2D_6j2aj")
+
+[node name="TableArea" type="Area2D" parent="." unique_id=512279141]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TableArea" unique_id=464622416]
+position = Vector2(-1, -12.25)
+shape = SubResource("RectangleShape2D_4d7g4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1681542907]
+
+[node name="ScrollHint" type="Label" parent="CanvasLayer" unique_id=2099506488]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -79.5
+offset_top = -66.0
+offset_right = 79.5
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to read note "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TableHint" type="Label" parent="CanvasLayer" unique_id=1758157733]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -70.0
+offset_top = -66.0
+offset_right = 70.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Scroll" type="TextureRect" parent="CanvasLayer" unique_id=1828153977]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -585.0
+offset_top = -8.0
+offset_right = -545.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.745283
+scale = Vector2(18.951332, 18.39979)
+texture = ExtResource("12_4d7g4")
+
+[node name="ScrollText" type="Label" parent="CanvasLayer/Scroll" unique_id=800988992]
+layout_mode = 0
+offset_left = 22.835758
+offset_top = 10.094311
+offset_right = 35.83576
+offset_bottom = 33.094307
+rotation = 0.75629354
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_font_sizes/font_size = 2
+text = "Apple 1973
+Cherry 1962
+Grape 2000
+Orange 1995"
+
+[connection signal="body_entered" from="ScrollArea" to="." method="_on_scroll_area_body_entered"]
+[connection signal="body_exited" from="ScrollArea" to="." method="_on_scroll_area_body_exited"]
+[connection signal="body_entered" from="TableArea" to="." method="_on_table_area_body_entered"]
+[connection signal="body_exited" from="TableArea" to="." method="_on_table_area_body_exited"]

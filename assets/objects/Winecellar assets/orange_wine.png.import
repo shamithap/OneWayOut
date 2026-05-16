@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2y2nu1lkre0s"
-path="res://.godot/imported/wine_1.png-72eac5e960789b5a0e23e4fe5cebb5d1.ctex"
+uid="uid://efuodbctj0po"
+path="res://.godot/imported/orange_wine.png-abb7cedf8d118c1bb760a01c945af7f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/Winecellar assets/wine_1.png"
-dest_files=["res://.godot/imported/wine_1.png-72eac5e960789b5a0e23e4fe5cebb5d1.ctex"]
+source_file="res://assets/objects/Winecellar assets/orange_wine.png"
+dest_files=["res://.godot/imported/orange_wine.png-abb7cedf8d118c1bb760a01c945af7f2.ctex"]
 
 [params]
 

@@ -7,6 +7,9 @@ var player : Player = null
 
 #makes sure the player is in the scene
 func _ready():
+	ensure_player()
+
+func ensure_player():
 	if NavigationManager.player != null:
 		add_child(NavigationManager.player)
 	else :
