@@ -69,6 +69,7 @@ func _on_level_spawn(destination_tag : String):
 func _on_area_body_entered(body: Node2D, area_node: Area2D):
 	if body is Player:
 		player_in_range = true
+		hint.visible = true
 		match area_node.name:
 			"Interact1":
 				lever_player_in_range_of = 0
@@ -80,6 +81,7 @@ func _on_area_body_entered(body: Node2D, area_node: Area2D):
 func _on_interact_body_exited(body: Node2D) -> void:
 	if body is Player:
 		player_in_range = false
+		hint.visible = false
 
 func switch_lever(lever : int):
 	levers_active[lever] = !levers_active[lever]

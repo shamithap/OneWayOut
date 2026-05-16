@@ -1778,19 +1778,17 @@ texture = ExtResource("12_4d7g4")
 
 [node name="ScrollText" type="Label" parent="CanvasLayer/Scroll" unique_id=800988992]
 layout_mode = 0
-offset_left = 22.835758
-offset_top = 10.094311
-offset_right = 35.83576
-offset_bottom = 33.094307
+offset_left = 21.076036
+offset_top = 9.974747
+offset_right = 51.076035
+offset_bottom = 32.974747
 rotation = 0.75629354
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 2
 theme_override_font_sizes/font_size = 2
-text = "Apple 1973
-Cherry 1962
-Grape 2000
-Orange 1995
-Use Mouse"
+text = "Chronological is 
+always easiest
+"
 
 [node name="ScrollHint" type="Label" parent="CanvasLayer" unique_id=2099506488]
 visible = false
