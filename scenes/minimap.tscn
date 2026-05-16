@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0mhla5afdkpj"]
 
 [ext_resource type="Script" uid="uid://b3fxjxfrptndo" path="res://scripts/global/minimap_manager.gd" id="1_4v8nv"]
-[ext_resource type="Texture2D" uid="uid://bdedccbjkbeyv" path="res://assets/objects/Minimap/unexplored_minimap.png" id="1_lj7mc"]
+[ext_resource type="Texture2D" uid="uid://bdedccbjkbeyv" path="res://assets/objects/Minimap/minimap.png" id="1_lj7mc"]
 [ext_resource type="Texture2D" uid="uid://csf87sivifdl7" path="res://assets/player/player tileset/Player/player_Idle.png" id="2_o13pn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4v8nv"]

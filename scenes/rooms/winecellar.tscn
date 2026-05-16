@@ -5,6 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="2_jkevc"]
 [ext_resource type="Texture2D" uid="uid://b6m6ue4kvlult" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0063.png" id="3_14fty"]
 [ext_resource type="Texture2D" uid="uid://dtdfwaut3er8i" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0082.png" id="4_vha7d"]
+[ext_resource type="Texture2D" uid="uid://b1rt7vo3bhm2q" path="res://assets/objects/Winecellar assets/shelf_1.png" id="6_14fty"]
+[ext_resource type="Texture2D" uid="uid://djm6sj6mc2q4j" path="res://assets/objects/Winecellar assets/shelf_2.png" id="7_vha7d"]
+[ext_resource type="Texture2D" uid="uid://la4d11c11o8x" path="res://assets/objects/Winecellar assets/shelf_3.png" id="8_3v2ry"]
+[ext_resource type="Texture2D" uid="uid://bht46c2kikily" path="res://assets/objects/Winecellar assets/table.png" id="9_ooua8"]
+[ext_resource type="Texture2D" uid="uid://dyfuuqx0xcgpv" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0089.png" id="10_uuq71"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fac70"]
 texture = ExtResource("1_cm3gc")
@@ -1055,37 +1060,69 @@ texture = ExtResource("2_jkevc")
 22:30/0 = 0
 23:30/0 = 0
 1:32/0 = 0
+1:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:32/0 = 0
+2:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:32/0 = 0
+3:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:32/0 = 0
+4:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:32/0 = 0
+5:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:32/0 = 0
+6:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:32/0 = 0
+7:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:32/0 = 0
+8:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:32/0 = 0
+9:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:32/0 = 0
+10:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:32/0 = 0
+11:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:32/0 = 0
+12:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:32/0 = 0
+13:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:32/0 = 0
+14:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:32/0 = 0
+15:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:32/0 = 0
+16:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:33/0 = 0
+1:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:33/0 = 0
+2:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:33/0 = 0
+3:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:33/0 = 0
+4:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:33/0 = 0
+5:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:33/0 = 0
+6:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:33/0 = 0
+7:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:33/0 = 0
+8:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:33/0 = 0
+9:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:33/0 = 0
+10:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:33/0 = 0
+11:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:33/0 = 0
+12:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:33/0 = 0
+13:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:33/0 = 0
+14:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:33/0 = 0
+15:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:33/0 = 0
+16:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:35/0 = 0
 2:35/0 = 0
 3:35/0 = 0
@@ -1549,17 +1586,26 @@ size = Vector2(19, 26)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vha7d"]
 size = Vector2(27, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v2ry"]
+size = Vector2(127, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ooua8"]
+size = Vector2(48, 19.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uuq71"]
+size = Vector2(18, 14)
+
 [node name="Wine Cellar" type="Node2D" unique_id=1828012061]
 script = ExtResource("1_jkevc")
 
 [node name="Environment" type="Node2D" parent="." unique_id=1318896545]
 
 [node name="Floor" type="TileMapLayer" parent="Environment" unique_id=1740751093]
-tile_map_data = PackedByteArray("AAD9//3/AQACAAQAAAD9//7/AQACAAQAAAD9////AQACAAQAAAD9/wAAAQACAAQAAAD9/wEAAQACAAQAAAD9/wIAAQACAAQAAAD+//3/AQACAAQAAAD+//7/AQACAAQAAAD+////AQACAAQAAAD+/wAAAQACAAQAAAD+/wEAAQACAAQAAAD+/wIAAQACAAQAAAD///3/AQACAAQAAAD///7/AQACAAQAAAD/////AQACAAQAAAD//wAAAQACAAQAAAD//wEAAQACAAQAAAD//wIAAQACAAQAAAAAAP3/AQACAAQAAAAAAP7/AQACAAQAAAAAAP//AQACAAQAAAAAAAAAAQACAAQAAAAAAAEAAQACAAQAAAAAAAIAAQACAAQAAAABAP3/AQACAAQAAAABAP7/AQACAAQAAAABAP//AQACAAQAAAABAAAAAQACAAQAAAABAAEAAQACAAQAAAABAAIAAQACAAQAAAACAP3/AQACAAQAAAACAP7/AQACAAQAAAACAP//AQACAAQAAAACAAAAAQACAAQAAAACAAEAAQACAAQAAAACAAIAAQACAAQAAAD8//3/AQACAAQAAAD8//7/AQACAAQAAAD8////AQACAAQAAAD8/wAAAQACAAQAAAD8/wEAAQACAAQAAAD8/wIAAQACAAQAAAD8//z/AQACAAQAAAD9//z/AQACAAQAAAD+//z/AQACAAQAAAD///z/AQACAAQAAAAAAPz/AQACAAQAAAABAPz/AQACAAQAAAACAPz/AQACAAQAAAA=")
+tile_map_data = PackedByteArray("AAD9//3/AQACAAQAAAD9//7/AQACAAQAAAD9////AQACAAQAAAD9/wAAAQACAAQAAAD9/wEAAQACAAQAAAD9/wIAAQACAAQAAAD+//3/AQACAAQAAAD+//7/AQACAAQAAAD+////AQACAAQAAAD+/wAAAQACAAQAAAD+/wEAAQACAAQAAAD+/wIAAQACAAQAAAD///3/AQACAAQAAAD///7/AQACAAQAAAD/////AQACAAQAAAD//wAAAQACAAQAAAD//wEAAQACAAQAAAD//wIAAQACAAQAAAAAAP3/AQACAAQAAAAAAP7/AQACAAQAAAAAAP//AQACAAQAAAAAAAAAAQACAAQAAAAAAAEAAQACAAQAAAAAAAIAAQACAAQAAAABAP3/AQACAAQAAAABAP7/AQACAAQAAAABAP//AQACAAQAAAABAAAAAQACAAQAAAABAAEAAQACAAQAAAABAAIAAQACAAQAAAACAP3/AQACAAQAAAACAP7/AQACAAQAAAACAP//AQACAAQAAAACAAAAAQACAAQAAAACAAEAAQACAAQAAAACAAIAAQACAAQAAAD8//3/AQACAAQAAAD8//7/AQACAAQAAAD8////AQACAAQAAAD8/wAAAQACAAQAAAD8/wEAAQACAAQAAAD8/wIAAQACAAQAAAD8//z/AQACAAQAAAD9//z/AQACAAQAAAD+//z/AQACAAQAAAD///z/AQACAAQAAAAAAPz/AQACAAQAAAABAPz/AQACAAQAAAACAPz/AQACAAQAAAADAPz/AQACAAQAAAADAP3/AQACAAQAAAADAP7/AQACAAQAAAADAP//AQACAAQAAAADAAAAAQACAAQAAAADAAEAAQACAAQAAAADAAIAAQACAAQAAAADAPv/AQACAAQAAAA=")
 tile_set = SubResource("TileSet_vp4n4")
 
 [node name="Walls" type="TileMapLayer" parent="Environment" unique_id=608874528]
-tile_map_data = PackedByteArray("AAD8/wMAAAAGACAAAAD9/wMAAAAGACAAAAD+/wMAAAAGACAAAAD//wMAAQAJAAMAAAAAAAMAAAAGACAAAAABAAMAAAAGACAAAAACAAMAAAAGACAAAAADAAMAAAAIABEAAAD7/wMAAAABABEAAAD8//v/AAAFAAwAAAD9//v/AAAFAAwAAAD+//v/AAAFAAwAAAD///v/AAAFAAwAAAAAAPv/AAAFAAwAAAABAPv/AAAFAAwAAAACAPv/AAAFAAwAAAADAPv/AAAIAA8AAAD7//v/AAADAAwAAAD7//z/AAADAA0AAAD7//3/AAADAA0AAAD7//7/AAADAA0AAAD7////AQAJAAMAAAD7/wAAAAADAA0AAAD7/wEAAAADAA0AAAD7/wIAAAADAA0AAAADAPz/AAAIABAAAAADAP3/AAAIABAAAAADAP7/AAAIABAAAAADAP//AAAIABAAAAADAAAAAAAIABAAAAADAAEAAAAIABAAAAADAAIAAAAIABAAAAA=")
+tile_map_data = PackedByteArray("AAD8/wMAAAAGACAAAAD9/wMAAAAGACAAAAD+/wMAAAAFAAwAAAD//wMAAAAFAAwAAAAAAAMAAQAJAAMAAAABAAMAAAAGACAAAAACAAMAAAAGACAAAAADAAMAAAAIABEAAAD7/wMAAAABABEAAAD8//v/AAACABAAAAD9//v/AAAHACEAAAD+//v/AAAHACEAAAD///v/AAAHACEAAAAAAPv/AAAHACEAAAABAPv/AAACABAAAAACAPv/AAAHACEAAAD7//v/AAABABAAAAD7//z/AAADAA0AAAD7//3/AAADAA0AAAD7//7/AQAJAAMAAAD7////AAABABAAAAD7/wAAAAADAA0AAAD7/wEAAAADAA0AAAD7/wIAAAADAA0AAAD7//r/AAABAA8AAAD8//r/AAAHACAAAAD9//r/AAACAA8AAAD+//r/AAAHACAAAAACAPr/AAAHACAAAAABAPr/AAACAA8AAAAAAPr/AAACAA8AAAD///r/AAAHACAAAAADAPr/AAAIAA8AAAAEAPv/AAAGAA0AAAAEAPz/AAAGAA0AAAAEAP3/AAAGAA0AAAAEAP7/AAAGAA0AAAAEAP//AAAGAA0AAAAEAAAAAAAGAA0AAAAEAAEAAAAGAA0AAAAEAAIAAAAGAA0AAAAEAAMAAAAGABMAAAAEAPr/AAAGAAwAAAA=")
 tile_set = SubResource("TileSet_fac70")
 
 [node name="Objects" type="Node2D" parent="Environment" unique_id=1236113901]
@@ -1577,18 +1623,43 @@ position = Vector2(-55, 38)
 texture = ExtResource("3_14fty")
 
 [node name="Barrel" type="Sprite2D" parent="Environment/Objects" unique_id=1177437813]
-position = Vector2(27, 41)
+position = Vector2(43, 41)
 texture = ExtResource("4_vha7d")
 
 [node name="Barrel2" type="Sprite2D" parent="Environment/Objects" unique_id=812047264]
-position = Vector2(36, 29)
+position = Vector2(52, 29)
 texture = ExtResource("4_vha7d")
 
 [node name="Barrel3" type="Sprite2D" parent="Environment/Objects" unique_id=1713625923]
-position = Vector2(40, 38)
+position = Vector2(56, 38)
 texture = ExtResource("4_vha7d")
 
+[node name="Shelf1" type="Sprite2D" parent="Environment/Objects" unique_id=562739805]
+position = Vector2(-42, -64)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_14fty")
+
+[node name="Shelf2" type="Sprite2D" parent="Environment/Objects" unique_id=1872777192]
+position = Vector2(42, -64)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_vha7d")
+
+[node name="Shelf3" type="Sprite2D" parent="Environment/Objects" unique_id=1016432933]
+position = Vector2(-1.1920929e-07, -64)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_3v2ry")
+
+[node name="Table" type="Sprite2D" parent="Environment/Objects" unique_id=1722698124]
+position = Vector2(-1, -16)
+texture = ExtResource("9_ooua8")
+
+[node name="Chest" type="Sprite2D" parent="Environment/Objects" unique_id=425040109]
+position = Vector2(35, -13)
+scale = Vector2(1.125, 1.125)
+texture = ExtResource("10_uuq71")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="Environment/Objects" unique_id=1925815542]
+visible = false
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Objects/StaticBody2D" unique_id=1221366869]
@@ -1600,9 +1671,21 @@ position = Vector2(-41, 39)
 shape = SubResource("RectangleShape2D_jkevc")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Environment/Objects/StaticBody2D" unique_id=787933571]
-position = Vector2(38.5, 34)
+position = Vector2(54, 34)
 shape = SubResource("RectangleShape2D_14fty")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Environment/Objects/StaticBody2D" unique_id=269621149]
-position = Vector2(33.5, 41)
+position = Vector2(49, 41)
 shape = SubResource("RectangleShape2D_vha7d")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Environment/Objects/StaticBody2D" unique_id=1885455313]
+position = Vector2(-0.5, -64)
+shape = SubResource("RectangleShape2D_3v2ry")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Environment/Objects/StaticBody2D" unique_id=419729651]
+position = Vector2(-1, -15.75)
+shape = SubResource("RectangleShape2D_ooua8")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Environment/Objects/StaticBody2D" unique_id=1289208334]
+position = Vector2(35, -13)
+shape = SubResource("RectangleShape2D_uuq71")
