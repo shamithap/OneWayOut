@@ -18,14 +18,17 @@ extends Node2D
 	$Levers/Lever2/Interact2,
 	$Levers/Lever3/Interact3]
 	
-@onready var north_door_sprite : AnimatedSprite2D = $UnlockableDoors/NorthDoor/NorthDoorSprite
-@onready var north_door_collision : CollisionShape2D = $UnlockableDoors/NorthDoor/NorthDoorCollision
-@onready var chest_door_collision : CollisionShape2D = $UnlockableDoors/ChestDoor/ChestDoorCollision
-@onready var chest_door_sprite : AnimatedSprite2D = $UnlockableDoors/ChestDoor/ChestDoorSprite
+@onready var middle_door_sprite : AnimatedSprite2D = $UnlockableDoors/NorthDoor/NorthDoorSprite
+@onready var middle_door_collision : CollisionShape2D = $UnlockableDoors/NorthDoor/NorthDoorCollision
+@onready var middle_chest_sprite : AnimatedSprite2D = $Chests/MiddleChest/Sprite2D
+
+@onready var right_door_collision : CollisionShape2D = $UnlockableDoors/ChestDoor/ChestDoorCollision
+@onready var right_door_sprite : AnimatedSprite2D = $UnlockableDoors/ChestDoor/ChestDoorSprite
+@onready var right_chest_sprite : AnimatedSprite2D = $Chests/RightChest/Sprite2D
 
 var levers_active : Array[bool] = [false, false, false]
-var north_door_lever_combo : Array[bool] = [true, false, false]
-var chest_door_lever_combo : Array[bool] = [false, true, true]
+var middle_door_lever_combo : Array[bool] = [true, false, false]
+var right_door_lever_combo : Array[bool] = [false, true, true]
 
 var player : Player = null
 var player_in_range : bool = false
@@ -34,9 +37,9 @@ var lever_player_in_range_of : int
 func _ready():
 	ensure_player()
 	if Global.dungeon_tracker[0]:
-		chest_door_finished()
+		right_door_finished()
 	if Global.dungeon_tracker[1]:
-		north_door_finished()
+		middle_door_finished()
 		
 	for i in range(lever_interact_areas.size()):
 		lever_interact_areas[i].body_entered.connect(_on_area_body_entered.bind(lever_interact_areas[i]))
@@ -83,23 +86,27 @@ func switch_lever(lever : int):
 	lever_sprites[lever].flip_h = !lever_sprites[lever].flip_h
 
 func check_levers():
-	if levers_active == chest_door_lever_combo:
-		chest_door_sprite.animation = "opening"
-		chest_door_collision.disabled = true
+	if levers_active == right_door_lever_combo and not Global.dungeon_tracker[0]:
+		right_door_sprite.animation = "opening"
+		right_chest_sprite.animation = "opening"
+		right_door_collision.disabled = true
 		Global.dungeon_tracker[0] = true
 		
-	if levers_active == north_door_lever_combo:
-		north_door_sprite.animation = "opening"
-		north_door_collision.disabled = true
+	if levers_active == middle_door_lever_combo and not Global.dungeon_tracker[1]:
+		middle_door_sprite.animation = "opening"
+		middle_chest_sprite.animation = "opening"
+		middle_door_collision.disabled = true
 		Global.dungeon_tracker[1] = true
 		
 
 #index : 0
-func chest_door_finished():
-	chest_door_sprite.animation = "open"
-	chest_door_collision.disabled = true
+func right_door_finished():
+	right_door_sprite.animation = "open"
+	right_chest_sprite.animation = "open"
+	right_door_collision.disabled = true
 	
 #index : 1
-func north_door_finished():
-	north_door_sprite.animation = "open"
-	north_door_collision.disabled = true
+func middle_door_finished():
+	middle_door_sprite.animation = "open"
+	middle_chest_sprite.animation = "open"
+	middle_door_collision.disabled = true

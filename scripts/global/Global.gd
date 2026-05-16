@@ -1,6 +1,7 @@
 extends Node
 
 #track completed rooms
-#[chest door, north door]
+#[right chest, middle chest]
 var dungeon_tracker : Array[bool] = [false, false]
 var wine_cellar_complete : bool = false
+var armory_complete : bool = false

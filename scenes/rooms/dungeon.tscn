@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="3_a1hri"]
 [ext_resource type="Texture2D" uid="uid://bjsmqnx3roske" path="res://assets/objects/Dungeon assets/PNG/Lever/Outline/Lever_outline_black.png" id="5_422x5"]
 [ext_resource type="Texture2D" uid="uid://dni46tbd12sop" path="res://assets/SpookyCastleTileset/animation_breakable+doors.png" id="6_x77a5"]
+[ext_resource type="Texture2D" uid="uid://dyfuuqx0xcgpv" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0089.png" id="7_1qag5"]
+[ext_resource type="Texture2D" uid="uid://c6yyr18uvr46b" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0091.png" id="8_d64og"]
+[ext_resource type="Texture2D" uid="uid://dmlcoknkqo0wq" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0090.png" id="9_g0x3l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_blvdk"]
 texture = ExtResource("1_84bop")
@@ -2360,6 +2363,42 @@ size = Vector2(16, 7.411764)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6rb7p"]
 size = Vector2(16, 8)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_qjnj2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_1qag5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_d64og")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_1qag5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_g0x3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d64og")
+}],
+"loop": false,
+"name": &"opening",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhoau"]
+size = Vector2(13, 10)
+
 [node name="Dungeon" type="Node2D" unique_id=1974248255]
 script = ExtResource("1_422x5")
 
@@ -2374,7 +2413,7 @@ tile_map_data = PackedByteArray("AAD8//z/AQAEAAMAAAD9//z/AQADAAEAAAD+//z/AQABAAE
 tile_set = SubResource("TileSet_1qag5")
 
 [node name="Objects" type="TileMapLayer" parent="TileMaps" unique_id=1223501134]
-tile_map_data = PackedByteArray("AAAEAP3/AQAFAAcAAAD7//3/AQAAAAYAAAD8//3/AQABAAYAAAD8//7/AQAEAAoAAAD7/wMAAQAKAAYAAAD8/wMAAQADAAUAAAADAAMAAQABAAYAAAAEAAMAAQAAAAYAAAAAAP3/AQAFAAcAAAAFAP3/AQACAAoAAAA=")
+tile_map_data = PackedByteArray("AAD7//3/AQAAAAYAAAD8//3/AQABAAYAAAD8//7/AQAEAAoAAAD7/wMAAQAKAAYAAAD8/wMAAQADAAUAAAADAAMAAQABAAYAAAAEAAMAAQAAAAYAAAAFAP3/AQACAAoAAAA=")
 tile_set = SubResource("TileSet_qjnj2")
 
 [node name="Doors" type="Node2D" parent="." unique_id=1975264197]
@@ -2510,6 +2549,36 @@ autoplay = "closed"
 [node name="ChestDoorCollision" type="CollisionShape2D" parent="UnlockableDoors/ChestDoor" unique_id=1904600459]
 position = Vector2(88, -8)
 shape = SubResource("RectangleShape2D_6rb7p")
+
+[node name="Chests" type="Node2D" parent="." unique_id=1228293290]
+
+[node name="MiddleChest" type="StaticBody2D" parent="Chests" unique_id=592573954]
+position = Vector2(8, -46)
+collision_layer = 4
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Chests/MiddleChest" unique_id=2139998359]
+sprite_frames = SubResource("SpriteFrames_qjnj2")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chests/MiddleChest" unique_id=1186950112]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_nhoau")
+
+[node name="RightChest" type="StaticBody2D" parent="Chests" unique_id=186487469]
+position = Vector2(72, -46)
+collision_layer = 4
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Chests/RightChest" unique_id=1329438943]
+sprite_frames = SubResource("SpriteFrames_qjnj2")
+animation = &"opening"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chests/RightChest" unique_id=1465167543]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_nhoau")
 
 [connection signal="body_exited" from="Levers/Lever1/Interact1" to="." method="_on_interact_body_exited"]
 [connection signal="body_exited" from="Levers/Lever2/Interact2" to="." method="_on_interact_body_exited"]

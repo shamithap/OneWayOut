@@ -43,6 +43,7 @@ func _process(_delta) -> void:
 	elif round_count > 3 or player_win_count == 2:
 		$EndPanel.visible = true
 		if(player_win_count == 2):
+			Global.armory_complete = true
 			game_win_or_lose.text = "Congrats you won!"
 		else:
 			game_win_or_lose.text = "You lost..."
