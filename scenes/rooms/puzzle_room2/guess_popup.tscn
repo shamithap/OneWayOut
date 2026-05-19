@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://8v6ewggwmu2s"]
+
+[ext_resource type="Script" uid="uid://bgscr6086rds8" path="res://scenes/rooms/puzzle_room2/guess_popup.gd" id="1_i483q"]
+
+[node name="GuessPopup" type="Control" unique_id=21247487]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_i483q")
+
+[node name="Panel" type="Panel" parent="." unique_id=867366206]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LineEdit" type="LineEdit" parent="Panel" unique_id=1737279002]
+layout_mode = 0
+offset_right = 68.5
+offset_bottom = 30.333334
+
+[node name="Feedback" type="Label" parent="Panel" unique_id=1486231090]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
