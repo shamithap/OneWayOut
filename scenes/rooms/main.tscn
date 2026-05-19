@@ -5,9 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="2_3os3j"]
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="3_4pw6x"]
 [ext_resource type="PackedScene" uid="uid://kv8c6b8i08yg" path="res://scenes/player.tscn" id="3_hhji2"]
+[ext_resource type="Script" uid="uid://dot82e6bvhe1a" path="res://scripts/foyer_table.gd" id="6_kdwso"]
 [ext_resource type="Texture2D" uid="uid://caixkptq2qecy" path="res://assets/objects/Winecellar assets/empty_table.png" id="6_p63b6"]
 [ext_resource type="Texture2D" uid="uid://brxrq0bfcvhte" path="res://assets/kenney_roguelike-indoors/Tilesheets/roguelikeIndoor_transparent.png" id="7_kdwso"]
 [ext_resource type="Texture2D" uid="uid://ch8in3mw752y2" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_02_ArtOfScrolls_BigWander(16x16).png" id="7_l2hhy"]
+[ext_resource type="Texture2D" uid="uid://cogk382dg1swy" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_01_ArtOfScrolls_BigWander(16x16).png" id="9_2fptk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5qli"]
 texture = ExtResource("1_oafy4")
@@ -78,7 +80,9 @@ separation = Vector2i(1, 1)
 9:3/0 = 0
 9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:3/0 = 0
+11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:4/0 = 0
 1:4/0 = 0
 2:4/next_alternative_id = 5
@@ -830,9 +834,6 @@ separation = Vector2i(1, 1)
 sources/0 = SubResource("TileSetAtlasSource_2fptk")
 sources/1 = SubResource("TileSetAtlasSource_10tn2")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdwso"]
-size = Vector2(44, 17)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgppd"]
 texture = ExtResource("7_kdwso")
 separation = Vector2i(1, 1)
@@ -1468,6 +1469,12 @@ physics_layer_0/collision_layer = 4
 sources/0 = SubResource("TileSetAtlasSource_dgppd")
 sources/1 = SubResource("TileSetAtlasSource_kdwso")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdwso"]
+size = Vector2(44, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2hhy"]
+size = Vector2(20.833328, 31)
+
 [node name="Main" type="Node2D" unique_id=1807837972]
 script = ExtResource("1_3os3j")
 
@@ -1485,28 +1492,12 @@ tile_set = SubResource("TileSet_kdwso")
 tile_map_data = PackedByteArray("AAATAAgAAAAPAAwAAAATAAkAAAAQAA4AAAATAAoAAAALAA0AAAATAAsAAAALAA0AAAATAA0AAAAPAA0AAAATAA4AAAALAA0AAAATAA8AAAALAA4AAAAUAAgAAAALAAwAAAAUAAkAAAALAA0AAAAUAAoAAAALAA0AAAAUAAsAAAAQAA0AAAAUAA0AAAALAA0AAAAUAA4AAAALAA0AAAAUAA8AAAAPAA8AAAASAAgAAAAKAAwAAAASAAkAAAAKAA0AAAASAAoAAAAKAA0AAAASAAsAAAAOAA0AAAASAAwAAAAKAA0AAAASAA4AAAAOAA4AAAASAA8AAAAOAA8AAAAVAAgAAAARAAwAAAAVAAkAAAAMAA0AAAAVAAoAAAARAA0AAAAVAAwAAAAMAA0AAAAVAA4AAAARAA4AAAAVAA8AAAAMAA4AAAASAA0AAAAKAA0AAAATAAwAAAALAA0AAAAUAAwAAAALAA0AAAAVAAsAAAAMAA0AAAAVAA0AAAAMAA0AAAA=")
 tile_set = SubResource("TileSet_dgppd")
 
+[node name="Details" type="TileMapLayer" parent="TileMaps" unique_id=793532192]
+position = Vector2(0, 12)
+tile_map_data = PackedByteArray("AAAYAAkAAAAWAAEAAAAYAAoAAAAaAA8AAAAYAAsAAAAYABAAAAAYAAwAAAAaABAAAAAYAA0AAAAWAAEAAAAPAAkAAAAVAAEAAAAPAAoAAAAZAA8AAAAPAAsAAAAXABAAAAAPAAwAAAAZABAAAAAPAA0AAAAVAAEAAAAXAAgAAAAFAAUAAAAQAAgAAAAFAAUAAAA=")
+tile_set = SubResource("TileSet_88koh")
+
 [node name="Doors" type="Node2D" parent="." unique_id=21940026]
-
-[node name="Door_1" parent="Doors" unique_id=1336069685 instance=ExtResource("2_3os3j")]
-visible = false
-position = Vector2(232, 128)
-destination_room_name = "library"
-destination_door_tag = "N"
-spawn_direction = "down"
-
-[node name="Door_2" parent="Doors" unique_id=2009492276 instance=ExtResource("2_3os3j")]
-visible = false
-position = Vector2(296, 128)
-destination_room_name = "recreationalroom"
-destination_door_tag = "S"
-spawn_direction = "down"
-
-[node name="Door_3" parent="Doors" unique_id=1557534416 instance=ExtResource("2_3os3j")]
-visible = false
-position = Vector2(344, 127)
-destination_room_name = "armory"
-destination_door_tag = "S"
-spawn_direction = "down"
 
 [node name="Door_4" parent="Doors" unique_id=2129524922 instance=ExtResource("2_3os3j")]
 position = Vector2(320, 126)
@@ -1514,30 +1505,83 @@ destination_room_name = "livingroom"
 destination_door_tag = "S"
 spawn_direction = "down"
 
-[node name="Objects" type="Node2D" parent="." unique_id=763246360]
-position = Vector2(0, 12)
+[node name="Table" type="StaticBody2D" parent="." unique_id=222286363]
+position = Vector2(0, 5)
+collision_layer = 4
+script = ExtResource("6_kdwso")
 
-[node name="EmptyTable" type="Sprite2D" parent="Objects" unique_id=997140102]
-position = Vector2(321, 176)
+[node name="EmptyTable" type="Sprite2D" parent="Table" unique_id=997140102]
+position = Vector2(321, 183)
 scale = Vector2(0.921875, 0.921875)
 texture = ExtResource("6_p63b6")
 
-[node name="Scroll" type="Sprite2D" parent="Objects" unique_id=1657848336]
-position = Vector2(321, 176)
+[node name="Scroll" type="Sprite2D" parent="Table" unique_id=1657848336]
+position = Vector2(321, 183)
 texture = ExtResource("7_l2hhy")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Objects" unique_id=222286363]
-position = Vector2(0, -7)
-collision_layer = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/StaticBody2D" unique_id=1457820150]
+[node name="HitBox" type="CollisionShape2D" parent="Table" unique_id=1457820150]
 position = Vector2(321, 183.5)
 shape = SubResource("RectangleShape2D_kdwso")
 
-[node name="Details" type="TileMapLayer" parent="Objects" unique_id=793532192]
-tile_map_data = PackedByteArray("AAAYAAkAAAAWAAEAAAAYAAoAAAAaAA8AAAAYAAsAAAAYABAAAAAYAAwAAAAaABAAAAAYAA0AAAAWAAEAAAAPAAkAAAAVAAEAAAAPAAoAAAAZAA8AAAAPAAsAAAAXABAAAAAPAAwAAAAZABAAAAAPAA0AAAAVAAEAAAAXAAgAAAAFAAUAAAAQAAgAAAAFAAUAAAA=")
-tile_set = SubResource("TileSet_88koh")
+[node name="TriggerArea" type="Area2D" parent="Table" unique_id=1236913098]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table/TriggerArea" unique_id=756731256]
+position = Vector2(321, 186.5)
+scale = Vector2(2.4, 1)
+shape = SubResource("RectangleShape2D_l2hhy")
+debug_color = Color(0.65512204, 0.5176298, 0, 0.41960785)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=489230344]
+
+[node name="Scroll" type="TextureRect" parent="CanvasLayer" unique_id=1967827717]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -585.0
+offset_top = -8.0
+offset_right = -545.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.745283
+scale = Vector2(18.951332, 18.39979)
+texture = ExtResource("9_2fptk")
+
+[node name="ScrollText" type="Label" parent="CanvasLayer/Scroll" unique_id=463669486]
+layout_mode = 0
+offset_left = 23.130768
+offset_top = 8.082136
+offset_right = 48.13078
+offset_bottom = 29.062136
+rotation = 0.75629354
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_font_sizes/font_size = 2
+text = "Instructions (placeholder)"
+
+[node name="Hint" type="Label" parent="CanvasLayer" unique_id=2074003784]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.5
+offset_top = -48.0
+offset_right = 57.5
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to interact with note"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Player" parent="." unique_id=1424528440 instance=ExtResource("3_hhji2")]
 z_index = 0
 position = Vector2(321, 249)
+
+[connection signal="body_entered" from="Table/TriggerArea" to="Table" method="_on_trigger_area_body_entered"]
+[connection signal="body_exited" from="Table/TriggerArea" to="Table" method="_on_trigger_area_body_exited"]

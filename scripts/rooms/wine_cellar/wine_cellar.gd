@@ -10,7 +10,6 @@ extends Node2D
 
 var player : Player = null
 var in_scroll_range : bool = false
-var scroll_active : bool = false
 var in_table_range : bool = false
 
 func _ready():
@@ -20,8 +19,8 @@ func _ready():
 	
 func _process(_delta: float) -> void:
 	if in_scroll_range and Input.is_action_just_pressed("interact") and not Global.wine_cellar_complete:
-		scroll.visible = !scroll_active
-		scroll_active = !scroll_active
+		scroll.visible = !scroll.visible
+		player.can_move = !player.can_move
 	
 	if in_table_range and Input.is_action_just_pressed("interact") and not Global.wine_cellar_complete:
 		get_tree().change_scene_to_file("res://scenes/rooms/winecellar/wine_cellar_minigame.tscn")

@@ -6,32 +6,34 @@ class_name Player
 @onready var anim = $AnimatedSprite2D
 
 var last_direction = "down"
+var can_move : bool = true
 
 func _ready():
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
 
 func _physics_process(_delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
+	
+	if can_move:
+		velocity = direction * speed
+		move_and_slide()
 
-	velocity = direction * speed
-	move_and_slide()
-
-	if direction != Vector2.ZERO:
-		if abs(direction.x) > abs(direction.y):
-			if direction.x > 0:
-				last_direction = "right"
+		if direction != Vector2.ZERO:
+			if abs(direction.x) > abs(direction.y):
+				if direction.x > 0:
+					last_direction = "right"
+				else:
+					last_direction = "left"
 			else:
-				last_direction = "left"
+				if direction.y > 0:
+					last_direction = "down"
+				else:
+					last_direction = "up"
+
+			anim.play("walk_" + last_direction)
 		else:
-			if direction.y > 0:
-				last_direction = "down"
-			else:
-				last_direction = "up"
-
-		anim.play("walk_" + last_direction)
-	else:
-		anim.play("idle_" + last_direction)
-		
+			anim.play("idle_" + last_direction)
+			
 
 #is triggered from navigation manager
 func _on_spawn(spawn_position : Vector2, direction : String):
