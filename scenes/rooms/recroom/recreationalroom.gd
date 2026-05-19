@@ -1,6 +1,6 @@
 extends Node2D
 
-class_name Room2
+class_name RecreationalRoom
 
 @onready var player_packed_scene = preload("res://scenes/player.tscn")
 var player : Player = null

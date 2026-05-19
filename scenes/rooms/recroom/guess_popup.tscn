@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8v6ewggwmu2s"]
 
-[ext_resource type="Script" uid="uid://bgscr6086rds8" path="res://scenes/rooms/puzzle_room2/guess_popup.gd" id="1_i483q"]
+[ext_resource type="Script" uid="uid://bgscr6086rds8" path="res://scenes/rooms/recroom/guess_popup.gd" id="1_i483q"]
 
 [node name="GuessPopup" type="Control" unique_id=21247487]
 layout_mode = 3

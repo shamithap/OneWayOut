@@ -1,15 +1,15 @@
 [gd_scene format=4 uid="uid://b5golwofx2sd2"]
 
-[ext_resource type="Script" uid="uid://b1x76ilrdj8q6" path="res://scenes/rooms/puzzle_room2/room_2.gd" id="1_42ah2"]
-[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="1_s5msr"]
-[ext_resource type="PackedScene" uid="uid://8v6ewggwmu2s" path="res://scenes/rooms/puzzle_room2/guess_popup.tscn" id="2_4w0uv"]
-[ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="3_dspyi"]
-[ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="4_vx4m7"]
-[ext_resource type="Script" uid="uid://dwyis1jprbsqp" path="res://scenes/rooms/puzzle_room2/wizard.gd" id="6_42ah2"]
-[ext_resource type="Texture2D" uid="uid://srennupptqf" path="res://assets/UI/Chat BalloonsBubbles - Pixel Art/Icons-1.png" id="6_dj5if"]
+[ext_resource type="Script" uid="uid://b1x76ilrdj8q6" path="res://scenes/rooms/recroom/recreationalroom.gd" id="1_mrcfk"]
+[ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="2_46m43"]
+[ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="3_7emkf"]
+[ext_resource type="Script" uid="uid://dwyis1jprbsqp" path="res://scenes/rooms/recroom/wizard.gd" id="4_jtluc"]
+[ext_resource type="Texture2D" uid="uid://srennupptqf" path="res://assets/UI/Chat BalloonsBubbles - Pixel Art/Icons-1.png" id="5_t1vrs"]
+[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="6_pp0hg"]
+[ext_resource type="PackedScene" uid="uid://8v6ewggwmu2s" path="res://scenes/rooms/recroom/guess_popup.tscn" id="7_b1dg8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6hwbr"]
-texture = ExtResource("3_dspyi")
+texture = ExtResource("2_46m43")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -145,7 +145,7 @@ separation = Vector2i(1, 1)
 11:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wh2u2"]
-texture = ExtResource("4_vx4m7")
+texture = ExtResource("3_7emkf")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -750,7 +750,7 @@ sources/0 = SubResource("TileSetAtlasSource_6hwbr")
 sources/1 = SubResource("TileSetAtlasSource_wh2u2")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1x7t"]
-texture = ExtResource("4_vx4m7")
+texture = ExtResource("3_7emkf")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1353,7 +1353,7 @@ texture = ExtResource("4_vx4m7")
 12:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0yq2"]
-texture = ExtResource("3_dspyi")
+texture = ExtResource("2_46m43")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -1493,7 +1493,7 @@ sources/0 = SubResource("TileSetAtlasSource_f1x7t")
 sources/1 = SubResource("TileSetAtlasSource_a0yq2")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7albf"]
-texture = ExtResource("4_vx4m7")
+texture = ExtResource("3_7emkf")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -2094,7 +2094,7 @@ texture = ExtResource("4_vx4m7")
 16:64/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xl1v7"]
-texture = ExtResource("3_dspyi")
+texture = ExtResource("2_46m43")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -2251,7 +2251,7 @@ sources/0 = SubResource("TileSetAtlasSource_7albf")
 sources/1 = SubResource("TileSetAtlasSource_xl1v7")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8roa6"]
-atlas = ExtResource("3_dspyi")
+atlas = ExtResource("2_46m43")
 region = Rect2(0.030448914, 118.42963, 15.1132965, 18.570358)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyklu"]
@@ -2268,15 +2268,15 @@ atlas = SubResource("CompressedTexture2D_2dixu")
 region = Rect2(80, 208, 48, 21)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ketqm"]
-atlas = ExtResource("6_dj5if")
+atlas = ExtResource("5_t1vrs")
 region = Rect2(233, 80, 33, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nuaid"]
-atlas = ExtResource("6_dj5if")
+atlas = ExtResource("5_t1vrs")
 region = Rect2(233, 96, 33, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_risbr"]
-atlas = ExtResource("6_dj5if")
+atlas = ExtResource("5_t1vrs")
 region = Rect2(233, 112, 33, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sgurc"]
@@ -2296,8 +2296,8 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="Room2" type="Node2D" unique_id=1244363592]
-script = ExtResource("1_42ah2")
+[node name="RecreationalRoom" type="Node2D" unique_id=1244363592]
+script = ExtResource("1_mrcfk")
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=1854512655]
 position = Vector2(-8, -32)
@@ -2324,7 +2324,7 @@ metadata/_edit_lock_ = true
 position = Vector2(-10, -39)
 scale = Vector2(1.405, 1.405)
 collision_layer = 4
-script = ExtResource("6_42ah2")
+script = ExtResource("4_jtluc")
 metadata/_edit_group_ = true
 
 [node name="WizardSprite" type="Sprite2D" parent="Wizard" unique_id=1105236620]
@@ -2374,7 +2374,7 @@ autoplay = "idle"
 [node name="Doors" type="Node2D" parent="." unique_id=696207225]
 position = Vector2(-8, -32)
 
-[node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("1_s5msr")]
+[node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("6_pp0hg")]
 position = Vector2(8, 51)
 destination_room_name = "main"
 destination_door_tag = "3"
@@ -2383,13 +2383,13 @@ spawn_direction = "up"
 [node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
 position = Vector2(0, -8)
 
-[node name="Door_N" parent="Doors" unique_id=851256492 instance=ExtResource("1_s5msr")]
+[node name="Door_N" parent="Doors" unique_id=851256492 instance=ExtResource("6_pp0hg")]
 position = Vector2(8, -49)
 
 [node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
 position = Vector2(0, 16)
 
-[node name="Door_E" parent="Doors" unique_id=342304655 instance=ExtResource("1_s5msr")]
+[node name="Door_E" parent="Doors" unique_id=342304655 instance=ExtResource("6_pp0hg")]
 position = Vector2(83, -2)
 rotation = 1.5707964
 spawn_direction = "left"
@@ -2413,7 +2413,7 @@ text = "Press E to talk"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="GuessPopup" parent="CanvasLayer" unique_id=21247487 instance=ExtResource("2_4w0uv")]
+[node name="GuessPopup" parent="CanvasLayer" unique_id=21247487 instance=ExtResource("7_b1dg8")]
 visible = false
 script = null
 
