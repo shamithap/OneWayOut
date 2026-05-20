@@ -18,9 +18,12 @@ func _ready():
 	check_button.pressed.connect(_on_check_button_pressed)
 
 func _process(_delta):
-	if player_near and Input.is_action_just_pressed("interact") and not puzzle_solved:
-		puzzle_panel.visible = true
-		hint_label.visible = false
+	if player_near and Input.is_action_just_pressed("interact"):
+		if not puzzle_solved:
+			puzzle_panel.visible = true
+			hint_label.visible = false
+		else:
+			puzzle_panel.visible = false
 
 func _on_interact_area_body_entered(body):
 	if body is Player:
@@ -39,7 +42,12 @@ func _on_check_button_pressed():
 
 	if hour == "6" and minute == "00":
 		puzzle_solved = true
-		result_label.text = "Correct! The clock reveals a hidden clue."
+		
+		hour_input.visible = false
+		minute_input.visible = false
+		check_button.visible = false
 		hint_label.visible = false
+		
+		result_label.text = "Correct! \nA hidden note:\n\"Dinner is waiting in the Dining Room.\"\nPress E to close."
 	else:
 		result_label.text = "That time does not seem right. Try again."
