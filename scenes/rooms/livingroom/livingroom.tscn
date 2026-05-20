@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://6jpkmc18i4ig" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(pouf)D.png" id="11_xdu01"]
 [ext_resource type="Texture2D" uid="uid://m3ocvelgj0yg" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(chair)D.png" id="12_uy6pk"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ttfhd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mldlc"]
 texture = ExtResource("2_sy43q")
 1:0/0 = 0
 2:0/0 = 0
@@ -192,7 +192,7 @@ texture = ExtResource("2_sy43q")
 5:19/0 = 0
 6:19/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0pl5x"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31umg"]
 texture = ExtResource("3_tcbj0")
 1:0/0 = 0
 2:0/0 = 0
@@ -796,7 +796,7 @@ texture = ExtResource("3_tcbj0")
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gli6d"]
 load_path = "res://.godot/imported/tilemap.png-5e61b4f08267e3455a4ee95d454c23fa.ctex"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h3m3m"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qe3uy"]
 texture = SubResource("CompressedTexture2D_gli6d")
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -933,11 +933,11 @@ separation = Vector2i(1, 1)
 11:10/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_803qg"]
-sources/0 = SubResource("TileSetAtlasSource_ttfhd")
-sources/1 = SubResource("TileSetAtlasSource_0pl5x")
-sources/3 = SubResource("TileSetAtlasSource_h3m3m")
+sources/0 = SubResource("TileSetAtlasSource_mldlc")
+sources/1 = SubResource("TileSetAtlasSource_31umg")
+sources/3 = SubResource("TileSetAtlasSource_qe3uy")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qg7lp"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdu01"]
 texture = ExtResource("2_sy43q")
 1:0/0 = 0
 2:0/0 = 0
@@ -1116,7 +1116,7 @@ texture = ExtResource("2_sy43q")
 5:19/0 = 0
 6:19/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nojl6"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uy6pk"]
 texture = ExtResource("3_tcbj0")
 1:0/0 = 0
 2:0/0 = 0
@@ -1717,7 +1717,7 @@ texture = ExtResource("3_tcbj0")
 15:64/0 = 0
 16:64/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_803qg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31npf"]
 texture = SubResource("CompressedTexture2D_gli6d")
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -1854,11 +1854,11 @@ separation = Vector2i(1, 1)
 11:10/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_p718m"]
-sources/0 = SubResource("TileSetAtlasSource_qg7lp")
-sources/1 = SubResource("TileSetAtlasSource_nojl6")
-sources/3 = SubResource("TileSetAtlasSource_803qg")
+sources/0 = SubResource("TileSetAtlasSource_xdu01")
+sources/1 = SubResource("TileSetAtlasSource_uy6pk")
+sources/3 = SubResource("TileSetAtlasSource_31npf")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31umg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k7q3b"]
 texture = ExtResource("4_mldlc")
 0:0/0 = 0
 1:0/0 = 0
@@ -1998,7 +1998,7 @@ texture = ExtResource("4_mldlc")
 9:13/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qe3uy"]
-sources/0 = SubResource("TileSetAtlasSource_31umg")
+sources/0 = SubResource("TileSetAtlasSource_k7q3b")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frly4"]
 size = Vector2(221, 20)
@@ -2133,9 +2133,9 @@ position = Vector2(189, 75)
 position = Vector2(188, 71)
 
 [node name="Door_E" parent="Doors" unique_id=1525974212 instance=ExtResource("4_ofrfw")]
-destination_room_name = "main"
-destination_door_tag = "4"
-spawn_direction = "down"
+destination_room_name = "ballroom"
+destination_door_tag = "livingroom"
+spawn_direction = "left"
 
 [node name="CollisionShape2D" parent="Doors/Door_E" index="0" unique_id=1225352784]
 position = Vector2(290, 124)
@@ -2144,9 +2144,9 @@ position = Vector2(290, 124)
 position = Vector2(279, 124)
 
 [node name="Door_W" parent="Doors" unique_id=480234401 instance=ExtResource("4_ofrfw")]
-destination_room_name = "main"
-destination_door_tag = "4"
-spawn_direction = "down"
+destination_room_name = "ballroom"
+destination_door_tag = "E"
+spawn_direction = "right"
 
 [node name="CollisionShape2D" parent="Doors/Door_W" index="0" unique_id=1225352784]
 position = Vector2(99.75, 124.75)
