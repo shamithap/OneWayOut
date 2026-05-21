@@ -9,7 +9,8 @@ const scene_dict = {
 	"theater": preload("res://scenes/rooms/theater.tscn"),
 	"recreationalroom": preload("res://scenes/rooms/recroom/recreationalroom.tscn"),
 	"winecellar": preload("res://scenes/rooms/winecellar/winecellar.tscn"),
-	"ballroom": preload("res://scenes/rooms/ballroom/ballroom.tscn")
+	"ballroom": preload("res://scenes/rooms/ballroom/ballroom.tscn"),
+	"diningroom": preload("res://scenes/rooms/diningroom/diningroom.tscn")
 }
 
 signal on_trigger_player_spawn

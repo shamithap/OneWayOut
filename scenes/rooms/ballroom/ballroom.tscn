@@ -1883,7 +1883,7 @@ layer_1/name = "Walls"
 [node name="Doors" type="Node2D" parent="." unique_id=1716563809]
 
 [node name="Door_N" parent="Doors" unique_id=1336069685 instance=ExtResource("3_8c2ph")]
-destination_room_name = "library"
+destination_room_name = "theater"
 destination_door_tag = "S"
 spawn_direction = "down"
 
