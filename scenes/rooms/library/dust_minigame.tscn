@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://byga157jdcpa3" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C8.png" id="10_c2l5v"]
 [ext_resource type="Texture2D" uid="uid://nrfuff4eoe5b" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C1.png" id="12_hdu0e"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi76s"]
+bg_color = Color(0.22071788, 0.04327791, 0.078138, 1)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d6oqe"]
 texture = ExtResource("2_hdu0e")
 1:0/0 = 0
@@ -3374,8 +3377,74 @@ size = Vector2(8, 5)
 size = Vector2(6, 10)
 
 [node name="DustMinigame" type="Node2D" unique_id=16023897]
-position = Vector2(-8, 7)
 script = ExtResource("1_gp5ab")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=665805293]
+layer = 10
+
+[node name="Instructions" type="Label" parent="CanvasLayer" unique_id=2098018676]
+visible = false
+z_index = 10
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -103.0
+offset_top = -62.0
+offset_right = -121.0
+offset_bottom = -39.666664
+grow_horizontal = 2
+text = "Use the broom to dust the library!"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Instructions" unique_id=871631159]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = -4.0
+offset_right = 275.0
+offset_bottom = 33.0
+color = Color(0.003921569, 0.003921569, 0.003921569, 0.5176471)
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1325055851]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WinPanel" type="Panel" parent="CanvasLayer/Control" unique_id=2113531321]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -33.0
+offset_right = 65.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pi76s")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/WinPanel" unique_id=1664440378]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 8.0
+offset_right = 116.0
+offset_bottom = 34.9375
+theme_override_font_sizes/font_size = 5
+text = "You dusted up the library!
+
+Oh what's that? Looks like you found a key!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/WinPanel" unique_id=1723392514]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 41.0
+offset_right = 103.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 5
+text = "Collect key and return to room
+"
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=780773129]
 tile_map_data = PackedByteArray("AAD/////AAALAA0AAAAAAP//AAALAA0AAAABAP//AAALAA0AAAACAP//AAALAA0AAAD+////AAALAA0AAAD9////AAALAA0AAAD9/wAAAAALAA0AAAD+/wAAAAALAA0AAAD//wAAAAALAA0AAAAAAAAAAAALAA0AAAABAAAAAAALAA0AAAACAAAAAAALAA0AAAADAAAAAAALAA0AAAADAP//AAALAA0AAAADAP7/AAALAA0AAAACAP7/AAALAA0AAAABAP7/AAALAA0AAAAAAP7/AAALAA0AAAD///7/AAALAA0AAAD+//7/AAALAA0AAAD9//7/AAALAA0AAAD9/wEAAAALAA0AAAD+/wEAAAALAA0AAAD//wEAAAALAA0AAAAAAAEAAAALAA0AAAABAAEAAAALAA0AAAACAAEAAAALAA0AAAADAAEAAAALAA0AAAD9//3/AAALAA0AAAD+//3/AAALAA0AAAD///3/AAALAA0AAAAAAP3/AAALAA0AAAABAP3/AAALAA0AAAACAP3/AAALAA0AAAADAP3/AAALAA0AAAAEAAEAAAALAA0AAAAEAAAAAAALAA0AAAAEAP//AAALAA0AAAAEAP7/AAALAA0AAAAEAP3/AAALAA0AAAAEAAIAAAALAA0AAAAEAAMAAAALAA0AAAADAAMAAAALAA0AAAADAAIAAAALAA0AAAD9/wIAAAALAA0AAAD+/wIAAAALAA0AAAD//wIAAAALAA0AAAAAAAIAAAALAA0AAAABAAIAAAALAA0AAAACAAIAAAALAA0AAAACAAMAAAALAA0AAAABAAMAAAALAA0AAAAAAAMAAAALAA0AAAD//wMAAAALAA0AAAD+/wMAAAALAA0AAAD9/wMAAAALAA0AAAD8/wMAAAALAA0AAAD8/wIAAAALAA0AAAD8/wEAAAALAA0AAAD8/wAAAAALAA0AAAD8////AAALAA0AAAD8//7/AAALAA0AAAD8//3/AAALAA0AAAA=")
@@ -3913,18 +3982,7 @@ texture = ExtResource("2_gp5ab")
 position = Vector2(-3, 9)
 shape = SubResource("RectangleShape2D_d6oqe")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=665805293]
-
-[node name="Instructions" type="Label" parent="CanvasLayer" unique_id=1466119732]
-visibility_layer = 9
-offset_left = -55.0
-offset_top = -53.0
-offset_right = 109.0
-offset_bottom = -39.041664
-theme_override_font_sizes/font_size = 5
-text = "Use the broom to dust the library!"
-horizontal_alignment = 1
-
+[connection signal="pressed" from="CanvasLayer/Control/WinPanel/Button" to="." method="_on_button_pressed"]
 [connection signal="area_entered" from="DustGroup/Dust1" to="DustGroup/Dust1" method="_on_area_entered"]
 [connection signal="area_entered" from="DustGroup/Dust2" to="DustGroup/Dust2" method="_on_area_entered"]
 [connection signal="area_entered" from="DustGroup/Dust3" to="DustGroup/Dust3" method="_on_area_entered"]

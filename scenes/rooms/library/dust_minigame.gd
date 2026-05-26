@@ -2,10 +2,13 @@ extends Node2D
 
 @onready var dust_group = $DustGroup
 @onready var instruction = $CanvasLayer/Instructions
+@onready var win_panel = $CanvasLayer/Control/WinPanel
 
 var dust_left = 0
 
 func _ready():
+	win_panel.visible = false
+	
 	dust_left = dust_group.get_child_count()
 
 	for dust in dust_group.get_children():
@@ -18,6 +21,8 @@ func _on_dust_cleaned():
 		win()
 
 func win():
-	instruction.text = "You cleaned the library!"
-	await get_tree().create_timer(1.0).timeout
+	instruction.visible = false
+	win_panel.visible = true
+
+func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/rooms/library/library.tscn")
