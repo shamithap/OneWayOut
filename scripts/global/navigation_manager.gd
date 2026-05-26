@@ -11,7 +11,7 @@ const scene_dict = {
 	"winecellar": preload("res://scenes/rooms/winecellar/winecellar.tscn"),
 	"ballroom": preload("res://scenes/rooms/ballroom/ballroom.tscn"),
 	"diningroom": preload("res://scenes/rooms/diningroom/diningroom.tscn"),
-	"kitchen": preload("res://scenes/rooms/kitchen/kitchen.tscn")
+	"kitchen": preload("res://scenes/rooms/kitchen/kitchen.tscn"),
 	"graveyard": preload("res://scenes/rooms/graveyard/graveyard.tscn")
 }
 
