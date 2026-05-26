@@ -1003,7 +1003,7 @@ position = Vector2(187, 72)
 [node name="Door_E" parent="Doors" unique_id=1622387379 instance=ExtResource("4_jeqq3")]
 destination_room_name = "library"
 destination_door_tag = "W"
-spawn_direction = "right"
+spawn_direction = "left"
 
 [node name="CollisionShape2D" parent="Doors/Door_E" index="0" unique_id=1225352784]
 position = Vector2(241, 124)
@@ -1014,7 +1014,7 @@ position = Vector2(242, 124)
 [node name="Door_S" parent="Doors" unique_id=1686877879 instance=ExtResource("4_jeqq3")]
 destination_room_name = "ballroom"
 destination_door_tag = "N"
-spawn_direction = "right"
+spawn_direction = "up"
 
 [node name="CollisionShape2D" parent="Doors/Door_S" index="0" unique_id=1225352784]
 position = Vector2(188, 169)

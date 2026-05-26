@@ -1830,7 +1830,7 @@ vertical_alignment = 1
 position = Vector2(8, 52)
 destination_room_name = "kitchen"
 destination_door_tag = "N"
-spawn_direction = "south"
+spawn_direction = "up"
 
 [node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
 position = Vector2(0, -13)
@@ -1840,7 +1840,7 @@ position = Vector2(-72, -23)
 rotation = -1.5707964
 destination_room_name = "graveyard"
 destination_door_tag = "E"
-spawn_direction = "left"
+spawn_direction = "right"
 
 [node name="CollisionShape2D" parent="Doors/Door_W" index="0" unique_id=1225352784]
 position = Vector2(-1.7484555e-07, 4)

@@ -2420,8 +2420,8 @@ tile_set = SubResource("TileSet_qjnj2")
 
 [node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("3_a1hri")]
 position = Vector2(8, 68)
-destination_room_name = "main"
-destination_door_tag = "3"
+destination_room_name = "armory"
+destination_door_tag = "N"
 spawn_direction = "up"
 metadata/_edit_group_ = true
 
@@ -2432,7 +2432,7 @@ position = Vector2(0, -13)
 position = Vector2(0, 2)
 destination_room_name = "graveyard"
 destination_door_tag = "W"
-spawn_direction = "right"
+spawn_direction = "left"
 
 [node name="CollisionShape2D" parent="Doors/Door_E" index="0" unique_id=1225352784]
 position = Vector2(98, 13)

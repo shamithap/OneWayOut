@@ -3395,7 +3395,7 @@ position = Vector2(187, 72)
 position = Vector2(54, 49)
 destination_room_name = "diningroom"
 destination_door_tag = "W"
-spawn_direction = "right"
+spawn_direction = "left"
 
 [node name="CollisionShape2D" parent="Doors/Door_E" index="0" unique_id=1225352784]
 position = Vector2(188, 75)
@@ -3406,7 +3406,7 @@ position = Vector2(187, 72)
 [node name="Door_W" parent="Doors" unique_id=320710118 instance=ExtResource("4_uns5t")]
 destination_room_name = "theater"
 destination_door_tag = "E"
-spawn_direction = "left"
+spawn_direction = "right"
 
 [node name="CollisionShape2D" parent="Doors/Door_W" index="0" unique_id=1225352784]
 position = Vector2(134, 123)
@@ -3417,7 +3417,7 @@ position = Vector2(137, 124)
 [node name="Door_S" parent="Doors" unique_id=1617773986 instance=ExtResource("4_uns5t")]
 destination_room_name = "livingroom"
 destination_door_tag = "N"
-spawn_direction = "left"
+spawn_direction = "up"
 
 [node name="CollisionShape2D" parent="Doors/Door_S" index="0" unique_id=1225352784]
 position = Vector2(188, 168)

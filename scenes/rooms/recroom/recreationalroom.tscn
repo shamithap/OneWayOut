@@ -2387,16 +2387,19 @@ position = Vector2(0, -8)
 position = Vector2(-53, -2)
 destination_room_name = "armory"
 destination_door_tag = "E"
-spawn_direction = "left"
+spawn_direction = "right"
+
+[node name="CollisionShape2D" parent="Doors/Door_W" index="0" unique_id=1225352784]
+position = Vector2(2.000006, 139)
 
 [node name="Spawn" parent="Doors/Door_W" index="1" unique_id=817698842]
-position = Vector2(0, -8)
+position = Vector2(2.0000048, 123)
 
 [node name="Door_N" parent="Doors" unique_id=851256492 instance=ExtResource("6_pp0hg")]
 position = Vector2(8, -49)
 destination_room_name = "graveyard"
 destination_door_tag = "S"
-spawn_direction = "up"
+spawn_direction = "down"
 
 [node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
 position = Vector2(0, 16)
@@ -2413,19 +2416,6 @@ position = Vector2(2.0000002, 3)
 
 [node name="Spawn" parent="Doors/Door_E" index="1" unique_id=817698842]
 position = Vector2(2.0000002, 19)
-
-[node name="Door_W" parent="Doors" unique_id=191943540 instance=ExtResource("6_pp0hg")]
-position = Vector2(83, -2)
-rotation = 1.5707964
-destination_room_name = "armory"
-destination_door_tag = "E"
-spawn_direction = "right"
-
-[node name="CollisionShape2D" parent="Doors/Door_W" index="0" unique_id=1225352784]
-position = Vector2(2.000006, 139)
-
-[node name="Spawn" parent="Doors/Door_W" index="1" unique_id=817698842]
-position = Vector2(2.0000048, 123)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1075243557]
 
@@ -2457,4 +2447,3 @@ script = null
 [editable path="Doors/Door_W"]
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_E"]
-[editable path="Doors/Door_W"]
