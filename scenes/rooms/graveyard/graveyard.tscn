@@ -2238,9 +2238,9 @@ tile_set = SubResource("TileSet_ml6mh")
 [node name="Doors" type="Node2D" parent="." unique_id=516601932]
 
 [node name="Door_E" parent="Doors" unique_id=1336069685 instance=ExtResource("6_paowo")]
-destination_room_name = "armory"
-destination_door_tag = "1"
-spawn_direction = "down"
+destination_room_name = "winecellar"
+destination_door_tag = "W"
+spawn_direction = "right"
 
 [node name="CollisionShape2D" parent="Doors/Door_E" index="0" unique_id=1225352784]
 position = Vector2(241, 123)
