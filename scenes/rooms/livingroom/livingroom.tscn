@@ -2149,10 +2149,10 @@ destination_door_tag = "E"
 spawn_direction = "right"
 
 [node name="CollisionShape2D" parent="Doors/Door_W" index="0" unique_id=1225352784]
-position = Vector2(99.75, 124.75)
+position = Vector2(115, 125)
 
 [node name="Spawn" parent="Doors/Door_W" index="1" unique_id=817698842]
-position = Vector2(112, 126)
+position = Vector2(118, 125)
 
 [node name="ClockPuzzle" type="Node2D" parent="." unique_id=576775565]
 script = ExtResource("5_tcbj0")
