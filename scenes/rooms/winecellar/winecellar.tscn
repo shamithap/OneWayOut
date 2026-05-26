@@ -1828,9 +1828,9 @@ vertical_alignment = 1
 
 [node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("16_jhe0h")]
 position = Vector2(8, 52)
-destination_room_name = "main"
-destination_door_tag = "3"
-spawn_direction = "up"
+destination_room_name = "kitchen"
+destination_door_tag = "N"
+spawn_direction = "south"
 
 [node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
 position = Vector2(0, -13)

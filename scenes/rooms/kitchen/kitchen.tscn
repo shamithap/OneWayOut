@@ -2287,7 +2287,7 @@ position = Vector2(0, -8)
 position = Vector2(8, -49)
 destination_room_name = "winecellar"
 destination_door_tag = "S"
-spawn_direction = "down"
+spawn_direction = "up"
 
 [node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
 position = Vector2(0, 16)
