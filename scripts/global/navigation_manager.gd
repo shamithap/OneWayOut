@@ -12,7 +12,8 @@ const scene_dict = {
 	"ballroom": preload("res://scenes/rooms/ballroom/ballroom.tscn"),
 	"diningroom": preload("res://scenes/rooms/diningroom/diningroom.tscn"),
 	"kitchen": preload("res://scenes/rooms/kitchen/kitchen.tscn"),
-	"graveyard": preload("res://scenes/rooms/graveyard/graveyard.tscn")
+	"graveyard": preload("res://scenes/rooms/graveyard/graveyard.tscn"),
+	"fancybathroom": preload("res://scenes/rooms/fancybathroom/fancybathroom.tscn")
 }
 
 signal on_trigger_player_spawn
