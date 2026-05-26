@@ -786,7 +786,6 @@ texture = ExtResource("3_kyd48")
 16:64/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gli6d"]
-load_path = "res://.godot/imported/tilemap.png-5e61b4f08267e3455a4ee95d454c23fa.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sna3j"]
 texture = SubResource("CompressedTexture2D_gli6d")
@@ -1925,8 +1924,8 @@ shape = SubResource("RectangleShape2D_jsr1b")
 [node name="Doors" type="Node2D" parent="." unique_id=1675310022]
 
 [node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("4_xe27j")]
-destination_room_name = "main"
-destination_door_tag = "4"
+destination_room_name = "fancybathroom"
+destination_door_tag = "N"
 spawn_direction = "up"
 
 [node name="CollisionShape2D" parent="Doors/Door_S" index="0" unique_id=1225352784]
