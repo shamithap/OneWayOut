@@ -2383,6 +2383,15 @@ spawn_direction = "up"
 [node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
 position = Vector2(0, -8)
 
+[node name="Door_W" parent="Doors" unique_id=608181502 instance=ExtResource("6_pp0hg")]
+position = Vector2(-53, -2)
+destination_room_name = "armory"
+destination_door_tag = "E"
+spawn_direction = "left"
+
+[node name="Spawn" parent="Doors/Door_W" index="1" unique_id=817698842]
+position = Vector2(0, -8)
+
 [node name="Door_N" parent="Doors" unique_id=851256492 instance=ExtResource("6_pp0hg")]
 position = Vector2(8, -49)
 destination_room_name = "graveyard"
@@ -2445,6 +2454,7 @@ script = null
 [connection signal="body_exited" from="Wizard/TriggerArea" to="Wizard" method="_on_trigger_area_body_exited"]
 
 [editable path="Doors/Door_S"]
+[editable path="Doors/Door_W"]
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_E"]
 [editable path="Doors/Door_W"]
