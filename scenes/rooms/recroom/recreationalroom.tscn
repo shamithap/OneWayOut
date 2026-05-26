@@ -2376,8 +2376,8 @@ position = Vector2(-8, -32)
 
 [node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("6_pp0hg")]
 position = Vector2(8, 51)
-destination_room_name = "main"
-destination_door_tag = "3"
+destination_room_name = "library"
+destination_door_tag = "N"
 spawn_direction = "up"
 
 [node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
@@ -2385,6 +2385,9 @@ position = Vector2(0, -8)
 
 [node name="Door_N" parent="Doors" unique_id=851256492 instance=ExtResource("6_pp0hg")]
 position = Vector2(8, -49)
+destination_room_name = "graveyard"
+destination_door_tag = "S"
+spawn_direction = "up"
 
 [node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
 position = Vector2(0, 16)

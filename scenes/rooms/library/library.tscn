@@ -3381,8 +3381,8 @@ tile_set = SubResource("TileSet_gcw75")
 [node name="Doors" type="Node2D" parent="." unique_id=516601932]
 
 [node name="Door_N" parent="Doors" unique_id=1336069685 instance=ExtResource("4_uns5t")]
-destination_room_name = "main"
-destination_door_tag = "1"
+destination_room_name = "recreationalroom"
+destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Doors/Door_N" index="0" unique_id=1225352784]
