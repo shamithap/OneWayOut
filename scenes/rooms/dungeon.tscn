@@ -2430,9 +2430,9 @@ position = Vector2(0, -13)
 
 [node name="Door_E" parent="Doors" unique_id=941708232 instance=ExtResource("3_a1hri")]
 position = Vector2(0, 2)
-destination_room_name = "armory"
+destination_room_name = "graveyard"
 destination_door_tag = "W"
-spawn_direction = "left"
+spawn_direction = "right"
 
 [node name="CollisionShape2D" parent="Doors/Door_E" index="0" unique_id=1225352784]
 position = Vector2(98, 13)
