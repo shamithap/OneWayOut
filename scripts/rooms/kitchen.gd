@@ -1,7 +1,5 @@
 extends Node2D
 
-class_name FancyBathroom
-
 @onready var player_packed_scene = preload("res://scenes/player.tscn")
 var player : Player = null
 
