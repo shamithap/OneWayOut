@@ -1118,10 +1118,10 @@ destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Doors/Door_N" index="0" unique_id=1225352784]
-position = Vector2(189, 75)
+position = Vector2(208, 67)
 
 [node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
-position = Vector2(188, 71)
+position = Vector2(208, 67)
 
 [node name="Door_E" parent="Doors" unique_id=387196579 instance=ExtResource("3_8c2ph")]
 destination_room_name = "livingroom"
