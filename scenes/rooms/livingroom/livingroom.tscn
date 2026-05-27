@@ -203,11 +203,8 @@ texture = ExtResource("3_31umg")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:0/0 = 0
 5:0/0 = 0
 6:0/0 = 0
@@ -218,11 +215,8 @@ separation = Vector2i(1, 1)
 11:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0 = 0
 5:1/0 = 0
 6:1/0 = 0
@@ -233,11 +227,8 @@ separation = Vector2i(1, 1)
 11:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:2/0 = 0
 5:2/0 = 0
 6:2/0 = 0
@@ -251,17 +242,13 @@ separation = Vector2i(1, 1)
 2:3/0 = 0
 3:3/0 = 0
 4:3/0 = 0
-4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:3/0 = 0
 6:3/0 = 0
 7:3/0 = 0
 8:3/0 = 0
 9:3/0 = 0
-9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:3/0 = 0
-10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:3/0 = 0
-11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:4/0 = 0
 1:4/0 = 0
 2:4/0 = 0
@@ -356,6 +343,7 @@ texture = ExtResource("4_31umg")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31npf"]
 texture = ExtResource("5_xdu01")
+separation = Vector2i(1, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkek4"]
 texture = ExtResource("6_uy6pk")
@@ -690,7 +678,7 @@ destination_door_tag = "4"
 spawn_direction = "up"
 
 [node name="CollisionShape2D" parent="Doors/Door_S" index="0" unique_id=1225352784]
-position = Vector2(188, 168)
+position = Vector2(193, 169)
 
 [node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
 position = Vector2(187, 168)
