@@ -2384,7 +2384,7 @@ spawn_direction = "up"
 position = Vector2(0, -8)
 
 [node name="Door_W" parent="Doors" unique_id=608181502 instance=ExtResource("6_pp0hg")]
-position = Vector2(-53, -2)
+position = Vector2(-69, -139)
 destination_room_name = "armory"
 destination_door_tag = "E"
 spawn_direction = "right"
@@ -2393,7 +2393,7 @@ spawn_direction = "right"
 position = Vector2(2.000006, 139)
 
 [node name="Spawn" parent="Doors/Door_W" index="1" unique_id=817698842]
-position = Vector2(2.0000048, 123)
+position = Vector2(18, 138)
 
 [node name="Door_N" parent="Doors" unique_id=851256492 instance=ExtResource("6_pp0hg")]
 position = Vector2(8, -49)
