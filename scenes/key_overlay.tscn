@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dbwntvgio2pmb"]
+
+[ext_resource type="Texture2D" uid="uid://dt1iy4b5oymnm" path="res://assets/objects/Pixel Art Key Pack - Animated/Key 6/GOLD/Key 6 - Outline.png" id="1_4r3gw"]
+[ext_resource type="Script" uid="uid://cpgf5n1v5cfm1" path="res://scripts/global/key_overlay.gd" id="1_ymlc3"]
+[ext_resource type="Texture2D" uid="uid://ddafx24nak2ca" path="res://assets/objects/Pixel Art Key Pack - Animated/Key 6/GOLD/Key 6 - GOLD - pieces.png" id="3_j8iro"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3xbm"]
+atlas = ExtResource("3_j8iro")
+region = Rect2(16, 0, 16, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c27k3"]
+atlas = ExtResource("3_j8iro")
+region = Rect2(32, 0, 16, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8iro"]
+atlas = ExtResource("3_j8iro")
+region = Rect2(48, 0, 16, 35)
+
+[node name="KeyOverlay" type="Control" unique_id=956588395]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ymlc3")
+
+[node name="Outline" type="TextureRect" parent="." unique_id=2081850875]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 35.0
+scale = Vector2(6.4067507, 6.4067507)
+texture = ExtResource("1_4r3gw")
+
+[node name="KeyPiece1" type="TextureRect" parent="." unique_id=921906666]
+visible = false
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 35.0
+scale = Vector2(6.407, 6.407)
+texture = SubResource("AtlasTexture_y3xbm")
+
+[node name="KeyPiece2" type="TextureRect" parent="." unique_id=2064804842]
+visible = false
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 35.0
+scale = Vector2(6.407, 6.407)
+texture = SubResource("AtlasTexture_c27k3")
+
+[node name="KeyPiece3" type="TextureRect" parent="." unique_id=1942060902]
+visible = false
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 35.0
+scale = Vector2(6.407, 6.407)
+texture = SubResource("AtlasTexture_j8iro")

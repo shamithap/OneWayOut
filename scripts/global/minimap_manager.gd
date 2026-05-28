@@ -1,39 +1,39 @@
 extends Node
 
-@onready var player := $Control/Player
+@onready var player := $Player
 
 @onready var layout_dict := {
-	"exit" : $Control/Markers/exit,
-	"dungeon" : $Control/Markers/dungeon, 
-	"graveyard" : $Control/Markers/graveyard, 
-	"winecellar" : $Control/Markers/winecellar,
-	"armory" : $Control/Markers/armory, 
-	"recreationalroom" : $Control/Markers/recreationalroom, 
-	"kitchen" : $Control/Markers/kitchen,
-	"theater": $Control/Markers/theater, 
-	"library" : $Control/Markers/library, 
-	"diningroom" : $Control/Markers/diningroom,
-	"ballroom" : $Control/Markers/ballroom, 
-	"livingroom" : $Control/Markers/livingroom, 
-	"fancybathroom" : $Control/Markers/fancybathroom,
-	"main" : $Control/Markers/foyer
+	"exit" : $Markers/exit,
+	"dungeon" : $Markers/dungeon, 
+	"graveyard" : $Markers/graveyard, 
+	"winecellar" : $Markers/winecellar,
+	"armory" : $Markers/armory, 
+	"recreationalroom" : $Markers/recreationalroom, 
+	"kitchen" : $Markers/kitchen,
+	"theater": $Markers/theater, 
+	"library" : $Markers/library, 
+	"diningroom" : $Markers/diningroom,
+	"ballroom" : $Markers/ballroom, 
+	"livingroom" : $Markers/livingroom, 
+	"fancybathroom" : $Markers/fancybathroom,
+	"main" : $Markers/foyer
 }
 
 @onready var explored_dict := {
-	"exit" : $Control/Explored/explored_exit,
-	"dungeon" : $Control/Explored/explored_dungeon,
-	"graveyard" : $Control/Explored/explored_graveyard,
-	"winecellar" : $Control/Explored/explored_winecellar,
-	"armory" : $Control/Explored/explored_armory,
-	"recreationalroom" : $Control/Explored/explored_recreationalroom,
-	"kitchen" : $Control/Explored/explored_kitchen,
-	"theater": $Control/Explored/explored_theater,
-	"library" : $Control/Explored/explored_library,
-	"diningroom" : $Control/Explored/explored_diningroom,
-	"ballroom" : $Control/Explored/explored_ballroom,
-	"livingroom" : $Control/Explored/explored_livingroom,
-	"fancybathroom" : $Control/Explored/explored_fancybathroom,
-	"main" : $Control/Explored/explored_foyer
+	"exit" : $Explored/explored_exit,
+	"dungeon" : $Explored/explored_dungeon,
+	"graveyard" : $Explored/explored_graveyard,
+	"winecellar" : $Explored/explored_winecellar,
+	"armory" : $Explored/explored_armory,
+	"recreationalroom" : $Explored/explored_recreationalroom,
+	"kitchen" : $Explored/explored_kitchen,
+	"theater": $Explored/explored_theater,
+	"library" : $Explored/explored_library,
+	"diningroom" : $Explored/explored_diningroom,
+	"ballroom" : $Explored/explored_ballroom,
+	"livingroom" : $Explored/explored_livingroom,
+	"fancybathroom" : $Explored/explored_fancybathroom,
+	"main" : $Explored/explored_foyer
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -42,7 +42,7 @@ func _ready() -> void:
 	self.visible = false
 	
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("map"):
+	if Input.is_action_just_pressed("overlay"):
 		self.visible = !self.visible
 
 func update_position(destination_room_name) -> void:

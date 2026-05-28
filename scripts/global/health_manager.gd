@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node2D
 
 @onready var health : int = 3
 @onready var heart1 := $Heart1
@@ -6,7 +6,7 @@ extends CanvasLayer
 @onready var heart3 := $Heart3
 @export var test = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if test:
 		lose_health()
 

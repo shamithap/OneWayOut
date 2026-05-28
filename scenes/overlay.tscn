@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c2hatf0ihqy07"]
+
+[ext_resource type="PackedScene" uid="uid://0mhla5afdkpj" path="res://scenes/minimap.tscn" id="1_r2eog"]
+[ext_resource type="PackedScene" uid="uid://od2a7045d4i0" path="res://scenes/health_bar.tscn" id="2_sfd0e"]
+[ext_resource type="PackedScene" uid="uid://dbwntvgio2pmb" path="res://scenes/key_overlay.tscn" id="3_sfd0e"]
+
+[node name="Overlay" type="Control" unique_id=1808055294]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=881597247]
+
+[node name="Minimap" parent="CanvasLayer" unique_id=1870375192 instance=ExtResource("1_r2eog")]
+
+[node name="HealthBar" parent="CanvasLayer" unique_id=773332232 instance=ExtResource("2_sfd0e")]
+
+[node name="KeyOverlay" parent="CanvasLayer" unique_id=956588395 instance=ExtResource("3_sfd0e")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+offset_left = -126.0
+offset_top = -411.0
+offset_right = -126.0
+offset_bottom = -411.0
+grow_horizontal = 0
+grow_vertical = 0

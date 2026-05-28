@@ -16,9 +16,18 @@ func get_item(position : Vector2):
 	var item_instance = item_dict[random_item].instantiate()
 	get_parent().add_child(item_instance)
 	item_instance.global_position = position
+	
+	#removes keys from item pool
+	if random_item == "KeyPiece1" or random_item == "KeyPiece2" or random_item == "KeyPiece3":
+		item_dict.erase(random_item)
 
 func pickup_item(item):
 	inventory.append(item)
+	
+	#shows key piece on overlay
+	if item == "KeyPiece1" or item == "KeyPiece2" or item == "KeyPiece3":
+		Overlay.get_node("CanvasLayer/KeyOverlay").unlock_key(item)
+		
 	sound.play()
 	label.text = "You picked up a " + item
 	timer.start()
