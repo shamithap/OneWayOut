@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var player_packed_scene = preload("res://scenes/player.tscn")
 @onready var chest := $RewardChest/Sprite2D
+@onready var chest_marker := $RewardChest/Marker2D
 var player : Player = null
 
 func _ready():
@@ -27,4 +28,7 @@ func _on_level_spawn(destination_tag : String):
 
 func already_won():
 	chest.animation = "open"
+	if not Global.armory_item_collected:
+		ItemManager.get_item(chest_marker.global_position)
+		Global.armory_item_collected = true
 	

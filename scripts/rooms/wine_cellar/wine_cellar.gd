@@ -6,6 +6,7 @@ extends Node2D
 @onready var table_hint := $CanvasLayer/TableHint
 @onready var scroll := $CanvasLayer/Scroll
 @onready var chest := $Environment/Objects/Chest
+@onready var chest_marker := $Environment/Objects/Chest/Marker2D
 @onready var wrong_table := $Environment/Objects/WrongTable
 @onready var correct_table := $Environment/Objects/CorrectTable
 
@@ -47,6 +48,9 @@ func won():
 	chest.animation = "open"
 	wrong_table.visible = false
 	correct_table.visible = true
+	if not Global.wine_cellar_item_collected:
+		ItemManager.get_item(chest_marker.global_position)
+		Global.wine_cellar_item_collected = true
 
 func _on_scroll_area_body_entered(body: Node2D) -> void:
 	if body is Player and not Global.wine_cellar_complete:

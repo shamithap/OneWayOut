@@ -3370,6 +3370,8 @@ autoplay = "idle"
 position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_htjyl")
 
+[node name="Marker2D" type="Marker2D" parent="RewardChest" unique_id=229169430]
+
 [node name="Doors" type="Node2D" parent="." unique_id=1400196794]
 position = Vector2(-8, -32)
 

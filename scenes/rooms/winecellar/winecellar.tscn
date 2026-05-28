@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dmlcoknkqo0wq" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0090.png" id="11_y38e3"]
 [ext_resource type="Texture2D" uid="uid://cogk382dg1swy" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_01_ArtOfScrolls_BigWander(16x16).png" id="12_4d7g4"]
 [ext_resource type="Texture2D" uid="uid://c6yyr18uvr46b" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0091.png" id="12_x4arm"]
+[ext_resource type="AudioStream" uid="uid://cxwuijcob7htj" path="res://sounds/winecellar/paper_flutter.mp3" id="15_reyrc"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="16_jhe0h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fac70"]
@@ -1709,6 +1710,8 @@ sprite_frames = SubResource("SpriteFrames_jhe0h")
 animation = &"open"
 autoplay = "idle"
 
+[node name="Marker2D" type="Marker2D" parent="Environment/Objects/Chest" unique_id=1389941091]
+
 [node name="StaticBody2D" type="StaticBody2D" parent="Environment/Objects" unique_id=1925815542]
 visible = false
 collision_layer = 4
@@ -1750,6 +1753,9 @@ texture = ExtResource("11_6j2aj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollArea" unique_id=1197537624]
 position = Vector2(-37, 21.75)
 shape = SubResource("RectangleShape2D_6j2aj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ScrollArea" unique_id=428343556]
+stream = ExtResource("15_reyrc")
 
 [node name="TableArea" type="Area2D" parent="." unique_id=512279141]
 
