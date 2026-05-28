@@ -21,6 +21,7 @@ Global="*uid://dfbhhmjirf0l6"
 NavigationManager="*uid://cxy2h5on8o6vl"
 Minimap="*uid://0mhla5afdkpj"
 HealthBar="*uid://brejwt1qujsai"
+ItemManager="*uid://d1hrg57ianij6"
 
 [display]
 

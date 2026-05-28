@@ -2640,6 +2640,9 @@ shape = SubResource("RectangleShape2D_nhoau")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Chests/MiddleChest" unique_id=1503625304]
 stream = ExtResource("11_g0x3l")
 
+[node name="MiddleMarker" type="Marker2D" parent="Chests/MiddleChest" unique_id=588246518]
+position = Vector2(0, -3)
+
 [node name="RightChest" type="StaticBody2D" parent="Chests" unique_id=186487469]
 position = Vector2(72, -46)
 collision_layer = 4
@@ -2656,6 +2659,9 @@ shape = SubResource("RectangleShape2D_nhoau")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Chests/RightChest" unique_id=266268991]
 stream = ExtResource("11_g0x3l")
+
+[node name="RightMarker" type="Marker2D" parent="Chests/RightChest" unique_id=250653586]
+position = Vector2(0, -3)
 
 [node name="ScrollArea" type="Area2D" parent="." unique_id=23955263]
 position = Vector2(-33, 19)

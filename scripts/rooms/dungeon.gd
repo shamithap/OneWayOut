@@ -28,12 +28,14 @@ extends Node2D
 @onready var middle_chest_sprite : AnimatedSprite2D = $Chests/MiddleChest/Sprite2D
 @onready var middle_door_sound : AudioStreamPlayer2D = $UnlockableDoors/MiddleDoor/MiddleDoorSound
 @onready var middle_chest_sound : AudioStreamPlayer2D = $Chests/MiddleChest/AudioStreamPlayer2D
+@onready var middle_marker : Marker2D = $Chests/MiddleChest/MiddleMarker
 
 @onready var right_door_collision : CollisionShape2D = $UnlockableDoors/RightDoor/RightDoorCollision
 @onready var right_door_sprite : AnimatedSprite2D = $UnlockableDoors/RightDoor/RightDoorSprite
 @onready var right_chest_sprite : AnimatedSprite2D = $Chests/RightChest/Sprite2D
 @onready var right_door_sound : AudioStreamPlayer2D = $UnlockableDoors/RightDoor/RightDoorSound
 @onready var right_chest_sound : AudioStreamPlayer2D = $Chests/RightChest/AudioStreamPlayer2D
+@onready var right_marker : Marker2D = $Chests/RightChest/RightMarker
 
 @onready var scroll := $CanvasLayer/Scroll
 @onready var scroll_hint := $CanvasLayer/ScrollHint
@@ -107,6 +109,7 @@ func switch_lever(lever : int):
 	lever_sounds[lever].play()
 
 func check_levers():
+	#right door unlock
 	if levers_active == right_door_lever_combo and not Global.dungeon_tracker[0]:
 		right_door_sprite.animation = "opening"
 		right_chest_sprite.animation = "opening"
@@ -115,6 +118,9 @@ func check_levers():
 		right_door_sound.play()
 		right_chest_sound.play()
 		
+		ItemManager.get_item(right_marker.global_position)
+		
+	#middle door unlock
 	if levers_active == middle_door_lever_combo and not Global.dungeon_tracker[1]:
 		middle_door_sprite.animation = "opening"
 		middle_chest_sprite.animation = "opening"
@@ -122,6 +128,8 @@ func check_levers():
 		Global.dungeon_tracker[1] = true
 		middle_door_sound.play()
 		middle_chest_sound.play()
+		
+		ItemManager.get_item(middle_marker.global_position)
 		
 
 #index : 0
