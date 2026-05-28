@@ -10,7 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="6_htjyl"]
 [ext_resource type="PackedScene" uid="uid://vpw14sjthq4h" path="res://scenes/rooms/armory/rps_game.tscn" id="7_2u6x3"]
 [ext_resource type="Texture2D" uid="uid://c6yyr18uvr46b" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0091.png" id="7_htjyl"]
+[ext_resource type="AudioStream" uid="uid://bfxjaweh2b6mq" path="res://sounds/armory/armor_sound1.mp3" id="7_r1i8b"]
 [ext_resource type="Texture2D" uid="uid://dmlcoknkqo0wq" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0090.png" id="8_2u6x3"]
+[ext_resource type="AudioStream" uid="uid://dwqj6ufqicoex" path="res://sounds/armory/armor_sound_2.mp3" id="8_dutd7"]
+[ext_resource type="AudioStream" uid="uid://8strd05ec2b" path="res://sounds/armory/armor_sound_3.mp3" id="9_a5dr2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brib7"]
 texture = ExtResource("2_adsvf")
@@ -3206,6 +3209,12 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6v2k2"]
+streams_count = 3
+stream_0/stream = ExtResource("7_r1i8b")
+stream_1/stream = ExtResource("8_dutd7")
+stream_2/stream = ExtResource("9_a5dr2")
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_r1i8b"]
 animations = [{
 "frames": [{
@@ -3343,6 +3352,9 @@ sprite_frames = SubResource("SpriteFrames_3dnxy")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.070840254
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Knight" unique_id=1621678705]
+stream = SubResource("AudioStreamRandomizer_6v2k2")
 
 [node name="RewardChest" type="StaticBody2D" parent="." unique_id=459733935]
 position = Vector2(12, -37)

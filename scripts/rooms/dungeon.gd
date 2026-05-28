@@ -18,13 +18,27 @@ extends Node2D
 	$Levers/Lever2/Interact2,
 	$Levers/Lever3/Interact3]
 	
-@onready var middle_door_sprite : AnimatedSprite2D = $UnlockableDoors/NorthDoor/NorthDoorSprite
-@onready var middle_door_collision : CollisionShape2D = $UnlockableDoors/NorthDoor/NorthDoorCollision
+@onready var lever_sounds : Array[AudioStreamPlayer2D] = [
+	$Levers/Lever1/AudioStreamPlayer2D,
+	$Levers/Lever2/AudioStreamPlayer2D,
+	$Levers/Lever3/AudioStreamPlayer2D]
+	
+@onready var middle_door_sprite : AnimatedSprite2D = $UnlockableDoors/MiddleDoor/MiddleDoorSprite
+@onready var middle_door_collision : CollisionShape2D = $UnlockableDoors/MiddleDoor/MiddleDoorCollision
 @onready var middle_chest_sprite : AnimatedSprite2D = $Chests/MiddleChest/Sprite2D
+@onready var middle_door_sound : AudioStreamPlayer2D = $UnlockableDoors/MiddleDoor/MiddleDoorSound
+@onready var middle_chest_sound : AudioStreamPlayer2D = $Chests/MiddleChest/AudioStreamPlayer2D
 
-@onready var right_door_collision : CollisionShape2D = $UnlockableDoors/ChestDoor/ChestDoorCollision
-@onready var right_door_sprite : AnimatedSprite2D = $UnlockableDoors/ChestDoor/ChestDoorSprite
+@onready var right_door_collision : CollisionShape2D = $UnlockableDoors/RightDoor/RightDoorCollision
+@onready var right_door_sprite : AnimatedSprite2D = $UnlockableDoors/RightDoor/RightDoorSprite
 @onready var right_chest_sprite : AnimatedSprite2D = $Chests/RightChest/Sprite2D
+@onready var right_door_sound : AudioStreamPlayer2D = $UnlockableDoors/RightDoor/RightDoorSound
+@onready var right_chest_sound : AudioStreamPlayer2D = $Chests/RightChest/AudioStreamPlayer2D
+
+@onready var scroll := $CanvasLayer/Scroll
+@onready var scroll_hint := $CanvasLayer/ScrollHint
+@onready var scroll_sound := $ScrollArea/AudioStreamPlayer2D
+var in_scroll_range = false
 
 var levers_active : Array[bool] = [false, false, false]
 var middle_door_lever_combo : Array[bool] = [true, false, false]
@@ -49,6 +63,10 @@ func _process(_delta: float) -> void:
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		switch_lever(lever_player_in_range_of)
 		check_levers()
+	if in_scroll_range and Input.is_action_just_pressed("interact"):
+		scroll.visible = !scroll.visible
+		player.can_move = !player.can_move
+		scroll_sound.play()
 
 func ensure_player():
 	if NavigationManager.player != null:
@@ -86,6 +104,7 @@ func _on_interact_body_exited(body: Node2D) -> void:
 func switch_lever(lever : int):
 	levers_active[lever] = !levers_active[lever]
 	lever_sprites[lever].flip_h = !lever_sprites[lever].flip_h
+	lever_sounds[lever].play()
 
 func check_levers():
 	if levers_active == right_door_lever_combo and not Global.dungeon_tracker[0]:
@@ -93,12 +112,16 @@ func check_levers():
 		right_chest_sprite.animation = "opening"
 		right_door_collision.disabled = true
 		Global.dungeon_tracker[0] = true
+		right_door_sound.play()
+		right_chest_sound.play()
 		
 	if levers_active == middle_door_lever_combo and not Global.dungeon_tracker[1]:
 		middle_door_sprite.animation = "opening"
 		middle_chest_sprite.animation = "opening"
 		middle_door_collision.disabled = true
 		Global.dungeon_tracker[1] = true
+		middle_door_sound.play()
+		middle_chest_sound.play()
 		
 
 #index : 0
@@ -112,3 +135,15 @@ func middle_door_finished():
 	middle_door_sprite.animation = "open"
 	middle_chest_sprite.animation = "open"
 	middle_door_collision.disabled = true
+
+
+func _on_scroll_area_body_entered(body: Node2D) -> void:
+	if body is Player:
+		scroll_hint.visible = true
+		in_scroll_range = true
+
+
+func _on_scroll_area_body_exited(body: Node2D) -> void:
+	if body is Player:
+		scroll_hint.visible = false
+		in_scroll_range = false

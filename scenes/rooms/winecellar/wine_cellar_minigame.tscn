@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b8b5wh2gmybrr" path="res://scenes/rooms/winecellar/wine_bottle.tscn" id="8_x15xj"]
 [ext_resource type="Texture2D" uid="uid://coaw7hy2a7nfy" path="res://assets/objects/Winecellar assets/grape_wine.png" id="9_0nnmw"]
 [ext_resource type="Texture2D" uid="uid://efuodbctj0po" path="res://assets/objects/Winecellar assets/orange_wine.png" id="10_ts53x"]
+[ext_resource type="AudioStream" uid="uid://w4lvixhi0bch" path="res://sounds/winecellar/bottle_clink.mp3" id="13_ts53x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4xd6j"]
 atlas = ExtResource("1_jyeqk")
@@ -170,6 +171,9 @@ text = "Use mouse to arrange bottles
 Press E to back out"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=48779554]
+stream = ExtResource("13_ts53x")
 
 [editable path="WineBottles/HBoxContainer/AppleWine"]
 [editable path="WineBottles/HBoxContainer/CherryWine"]

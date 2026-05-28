@@ -3,6 +3,7 @@ extends StaticBody2D
 @onready var hint : Label = $"../CanvasLayer/Hint"
 @onready var chat_bubble:= $Bubbles/ChatBubble
 @onready var indicator_bubble := $Bubbles/IndicatorBubble
+@onready var sound := $AudioStreamPlayer2D
 var player_in_range : bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -20,6 +21,7 @@ func _on_trigger_area_body_entered(body: Node2D) -> void:
 		hint.visible = true
 		player_in_range = true
 		hint.text = "Press E to play"
+		sound.play()
 
 func _on_trigger_area_body_exited(body: Node2D) -> void:
 	if body is Player:

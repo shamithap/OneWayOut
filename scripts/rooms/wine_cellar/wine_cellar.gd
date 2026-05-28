@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var player_packed_scene = preload("res://scenes/player.tscn")
 @onready var scroll_hint := $CanvasLayer/ScrollHint
+@onready var scroll_sound := $ScrollArea/AudioStreamPlayer2D
 @onready var table_hint := $CanvasLayer/TableHint
 @onready var scroll := $CanvasLayer/Scroll
 @onready var chest := $Environment/Objects/Chest
@@ -21,6 +22,7 @@ func _process(_delta: float) -> void:
 	if in_scroll_range and Input.is_action_just_pressed("interact") and not Global.wine_cellar_complete:
 		scroll.visible = !scroll.visible
 		player.can_move = !player.can_move
+		scroll_sound.play()
 	
 	if in_table_range and Input.is_action_just_pressed("interact") and not Global.wine_cellar_complete:
 		get_tree().change_scene_to_file("res://scenes/rooms/winecellar/wine_cellar_minigame.tscn")
@@ -40,9 +42,6 @@ func _on_level_spawn(destination_tag : String):
 	var door_path = "Doors/Door_" + destination_tag
 	var door = get_node(door_path) as Door
 	NavigationManager.trigger_player_spawn(door.spawn.global_position, door.spawn_direction)
-
-func just_won():
-	chest.animation = "opening"
 
 func won():
 	chest.animation = "open"
