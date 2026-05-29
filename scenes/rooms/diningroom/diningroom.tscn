@@ -2781,6 +2781,12 @@ texture = ExtResource("5_kyd48")
 [sub_resource type="TileSet" id="TileSet_revjw"]
 sources/0 = SubResource("TileSetAtlasSource_1jc7m")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kyd48"]
+size = Vector2(138, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xe27j"]
+size = Vector2(11, 12)
+
 [node name="diningroom" type="Node2D" unique_id=703094713]
 script = ExtResource("1_nr1m3")
 
@@ -2839,6 +2845,40 @@ position = Vector2(99.75, 124.75)
 
 [node name="Spawn" parent="Doors/Door_W" index="1" unique_id=817698842]
 position = Vector2(104, 125)
+
+[node name="Collisions" type="Node2D" parent="." unique_id=2002587830]
+
+[node name="TableCollision" type="StaticBody2D" parent="Collisions" unique_id=1188312268]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/TableCollision" unique_id=364722632]
+position = Vector2(201, 116)
+shape = SubResource("RectangleShape2D_kyd48")
+
+[node name="ChairCollision" type="StaticBody2D" parent="Collisions" unique_id=1463702544]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/ChairCollision" unique_id=1469001720]
+position = Vector2(152, 134)
+shape = SubResource("RectangleShape2D_xe27j")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions/ChairCollision" unique_id=1494875110]
+position = Vector2(184, 135)
+shape = SubResource("RectangleShape2D_xe27j")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Collisions/ChairCollision" unique_id=1868990603]
+position = Vector2(216, 135)
+shape = SubResource("RectangleShape2D_xe27j")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Collisions/ChairCollision" unique_id=1151807833]
+position = Vector2(248, 135)
+shape = SubResource("RectangleShape2D_xe27j")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Collisions/ChairCollision" unique_id=1975599750]
+position = Vector2(144, 98)
+shape = SubResource("RectangleShape2D_xe27j")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Collisions/ChairCollision" unique_id=15988929]
+position = Vector2(256, 98)
+shape = SubResource("RectangleShape2D_xe27j")
 
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_N"]
