@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dyijq0dfnoj"]
 
-[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_1eqxy"]
+[ext_resource type="Script" uid="uid://5ma8adv5x6nm" path="res://scripts/rooms/graveyard.gd" id="1_o855y"]
 [ext_resource type="Texture2D" uid="uid://7ma2neu25p2v" path="res://assets/Graveyardassets/Pixel-16px Graveyard/tileset/tileset.png" id="2_jqof6"]
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_ugv31"]
 [ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="3_0oy0h"]
@@ -36,6 +36,11 @@
 [ext_resource type="Texture2D" uid="uid://0ha5usd65a53" path="res://assets/Graveyardassets/Pixel-16px Graveyard/grass1.png" id="31_cy50f"]
 [ext_resource type="Texture2D" uid="uid://bp23ifulru8m0" path="res://assets/Graveyardassets/Pixel-16px Graveyard/grass2.png" id="32_epw2w"]
 [ext_resource type="Texture2D" uid="uid://dpdti3a1pkdhf" path="res://assets/Graveyardassets/Pixel-16px Graveyard/gravestone2.png" id="33_7rwkv"]
+[ext_resource type="Script" uid="uid://ofv4x2v026w0" path="res://scripts/elements/exit_door.gd" id="37_jk6co"]
+[ext_resource type="Texture2D" uid="uid://8k8na0w7evoy" path="res://assets/objects/Pixel Art Padlock Pack - Animated/Small Sturdy Padlock/GOLD/Small Sturdy Padlock - GOLD - Spritesheet.png" id="37_pv4vx"]
+[ext_resource type="PackedScene" uid="uid://ckgr2mj52w8uf" path="res://scenes/items/key_piece_1.tscn" id="38_qqc0v"]
+[ext_resource type="PackedScene" uid="uid://r1fjyu82c8t5" path="res://scenes/items/key_piece_2.tscn" id="39_jk6co"]
+[ext_resource type="PackedScene" uid="uid://dxttx4nbhhvlu" path="res://scenes/items/key_piece_3.tscn" id="40_nxyc8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esgd0"]
 texture = ExtResource("2_jqof6")
@@ -2224,8 +2229,82 @@ sources/3 = SubResource("TileSetAtlasSource_npsde")
 sources/2 = SubResource("TileSetAtlasSource_uns5t")
 sources/4 = SubResource("TileSetAtlasSource_jqof6")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv4vx"]
+atlas = ExtResource("37_pv4vx")
+region = Rect2(0, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o855y"]
+atlas = ExtResource("37_pv4vx")
+region = Rect2(80, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvyt5"]
+atlas = ExtResource("37_pv4vx")
+region = Rect2(0, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqc0v"]
+atlas = ExtResource("37_pv4vx")
+region = Rect2(16, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jk6co"]
+atlas = ExtResource("37_pv4vx")
+region = Rect2(32, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxyc8"]
+atlas = ExtResource("37_pv4vx")
+region = Rect2(48, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihyty"]
+atlas = ExtResource("37_pv4vx")
+region = Rect2(64, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0em5"]
+atlas = ExtResource("37_pv4vx")
+region = Rect2(80, 0, 16, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gauco"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv4vx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o855y")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvyt5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqc0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jk6co")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxyc8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihyty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0em5")
+}],
+"loop": false,
+"name": &"opening",
+"speed": 10.0
+}]
+
 [node name="graveyard" type="Node2D" unique_id=1465284747]
-script = ExtResource("1_1eqxy")
+script = ExtResource("1_o855y")
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=381996933]
 
@@ -2238,7 +2317,7 @@ tile_set = SubResource("TileSet_wjhuj")
 z_index = 1
 use_parent_material = true
 position = Vector2(188, 114)
-tile_map_data = PackedByteArray("AAD6//z/AwABAAEAAAD7//z/AwAEAAMAAAD9//z/AwAEAAIAAAD+//z/AwAEAAIAAAABAPz/AwAEAAIAAAACAPz/AwAEAAIAAAAEAPz/AwAEAAMAAAD6//v/AwABAAAAAAD7//v/AwACAAAAAAD8//v/AwACAAAAAAD9//v/AwACAAAAAAD+//v/AwACAAAAAAD///v/AwACAAAAAAAAAPv/AwACAAAAAAABAPv/AwACAAAAAAACAPv/AwACAAAAAAADAPv/AwACAAAAAAAEAPv/AwACAAAAAAD7/wQAAwACAAIAAAD8/wQAAwACAAIAAAD+/wQAAwACAAIAAAAAAAQAAwALAAMAAAABAAQAAwACAAIAAAACAAQAAwACAAIAAAADAAQAAwACAAIAAAAEAAQAAwACAAIAAAD6/wQAAwABAAIAAAD8//z/AwAIAAAAAAD6/wMAAwABAAEAAAD6/wIAAwABAAEAAAD6/wAAAwABAAEAAAAEAAAAAwAJAAMAAAD6/wEAAwABAAEAAAD6////AwABAAEAAAD6//7/AwABAAEAAAD6//3/AwABAAEAAAAEAP3/AwAJAAQAAAAEAP7/AwAJAAQAAAAEAP//AwAJAAQAAAAEAAEAAwAJAAQAAAAEAAMAAwAJAAQAAAD7//3/AwALAAQAAAD7//7/AwALAAQAAAD7////AwALAAQAAAD7/wAAAwAJAAMAAAD7/wEAAwALAAQAAAD7/wIAAwALAAQAAAD7/wMAAwALAAQAAAAFAPv/AwADAAAAAAAFAPz/AwADAAEAAAAFAP3/AwADAAEAAAAFAP7/AwADAAEAAAAFAAAAAwADAAEAAAAFAP//AwADAAEAAAAFAAEAAwADAAEAAAAFAAIAAwADAAEAAAAFAAMAAwADAAEAAAAFAAQAAwADAAIAAAD//wQAAwAKAAMAAAD9/wQAAwACAAIAAAADAPz/AwAIAAAAAAAEAAIAAwAJAAQAAAAAAPz/BAAGAAIAAAD///z/AwAEAAIAAAD///3/BAAFAAAAAAAAAP3/BAAGAAAAAAABAP3/BAAHAAAAAAA=")
+tile_map_data = PackedByteArray("AAD6//z/AwABAAEAAAD7//z/AwAEAAMAAAD9//z/AwAEAAIAAAD+//z/AwAEAAIAAAACAPz/AwAEAAIAAAAEAPz/AwAEAAMAAAD6//v/AwABAAAAAAD7//v/AwACAAAAAAD8//v/AwACAAAAAAD9//v/AwACAAAAAAD+//v/AwACAAAAAAD///v/AwACAAAAAAAAAPv/AwACAAAAAAABAPv/AwACAAAAAAACAPv/AwACAAAAAAADAPv/AwACAAAAAAAEAPv/AwACAAAAAAD7/wQAAwACAAIAAAD8/wQAAwACAAIAAAD+/wQAAwACAAIAAAAAAAQAAwALAAMAAAABAAQAAwACAAIAAAACAAQAAwACAAIAAAADAAQAAwACAAIAAAAEAAQAAwACAAIAAAD6/wQAAwABAAIAAAD8//z/AwAIAAAAAAD6/wMAAwABAAEAAAD6/wIAAwABAAEAAAD6/wAAAwABAAEAAAAEAAAAAwAJAAMAAAD6/wEAAwABAAEAAAD6////AwABAAEAAAD6//7/AwABAAEAAAD6//3/AwABAAEAAAAEAP3/AwAJAAQAAAAEAP7/AwAJAAQAAAAEAP//AwAJAAQAAAAEAAEAAwAJAAQAAAAEAAMAAwAJAAQAAAD7//3/AwALAAQAAAD7//7/AwALAAQAAAD7////AwALAAQAAAD7/wAAAwAJAAMAAAD7/wEAAwALAAQAAAD7/wIAAwALAAQAAAD7/wMAAwALAAQAAAAFAPv/AwADAAAAAAAFAPz/AwADAAEAAAAFAP3/AwADAAEAAAAFAP7/AwADAAEAAAAFAAAAAwADAAEAAAAFAP//AwADAAEAAAAFAAEAAwADAAEAAAAFAAIAAwADAAEAAAAFAAMAAwADAAEAAAAFAAQAAwADAAIAAAD//wQAAwAKAAMAAAD9/wQAAwACAAIAAAADAPz/AwAIAAAAAAAEAAIAAwAJAAQAAAAAAPz/AwALAAMAAAD///3/BAAFAAAAAAAAAP3/BAAGAAAAAAABAP3/BAAHAAAAAAD///z/AwAKAAMAAAABAPz/AwAEAAIAAAA=")
 tile_set = SubResource("TileSet_ml6mh")
 
 [node name="Doors" type="Node2D" parent="." unique_id=516601932]
@@ -2275,6 +2354,29 @@ position = Vector2(188, 168)
 
 [node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
 position = Vector2(188, 172)
+
+[node name="Door_N" parent="Doors" unique_id=937219007 instance=ExtResource("6_paowo")]
+position = Vector2(188, 63)
+script = ExtResource("37_jk6co")
+destination_room_name = "exitroom"
+destination_door_tag = "S"
+spawn_direction = "down"
+
+[node name="ExitLock" type="AnimatedSprite2D" parent="." unique_id=1224127506]
+light_mask = 4
+z_index = 1
+position = Vector2(188, 59.000004)
+scale = Vector2(0.5312501, 0.5312501)
+sprite_frames = SubResource("SpriteFrames_gauco")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="KeyPiece1" parent="." unique_id=1191978857 instance=ExtResource("38_qqc0v")]
+position = Vector2(148, 144)
+
+[node name="KeyPiece3" parent="KeyPiece1" unique_id=987445248 instance=ExtResource("40_nxyc8")]
+
+[node name="KeyPiece2" parent="KeyPiece1/KeyPiece3" unique_id=439213809 instance=ExtResource("39_jk6co")]
 
 [editable path="Doors/Door_E"]
 [editable path="Doors/Door_W"]
