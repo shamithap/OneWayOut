@@ -1948,6 +1948,8 @@ texture = ExtResource("6_0txoy")
 sources/0 = SubResource("TileSetAtlasSource_wd2jt")
 sources/1 = SubResource("TileSetAtlasSource_5kief")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5utf"]
+
 [node name="ballroom" type="Node2D" unique_id=1778914266]
 script = ExtResource("1_g8qkb")
 
@@ -1989,6 +1991,12 @@ position = Vector2(273, 125)
 
 [node name="Spawn" parent="Doors/Door_E" index="1" unique_id=817698842]
 position = Vector2(272, 125)
+
+[node name="DanceArea" type="Area2D" parent="." unique_id=1962577780]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DanceArea" unique_id=358708012]
+position = Vector2(160, 131)
+shape = SubResource("RectangleShape2D_a5utf")
 
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_E"]
