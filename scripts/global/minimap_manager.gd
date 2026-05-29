@@ -16,7 +16,8 @@ extends Node
 	"ballroom" : $Markers/ballroom, 
 	"livingroom" : $Markers/livingroom, 
 	"fancybathroom" : $Markers/fancybathroom,
-	"main" : $Markers/foyer
+	"main" : $Markers/foyer,
+	"exitroom" : $Markers/exit
 }
 
 @onready var explored_dict := {
@@ -33,7 +34,8 @@ extends Node
 	"ballroom" : $Explored/explored_ballroom,
 	"livingroom" : $Explored/explored_livingroom,
 	"fancybathroom" : $Explored/explored_fancybathroom,
-	"main" : $Explored/explored_foyer
+	"main" : $Explored/explored_foyer,
+	"exitroom" : $Explored/explored_exit
 }
 
 # Called when the node enters the scene tree for the first time.
