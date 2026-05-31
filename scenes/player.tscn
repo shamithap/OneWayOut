@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://duspk4araaihp" path="res://scripts/characters/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://csf87sivifdl7" path="res://assets/player/player tileset/Player/player_Idle.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://blq3biqh1a2w6" path="res://assets/player/player tileset/Player/player_Walk.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://cu4uhuwcrv2qv" path="res://assets/UI/background1.png" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbgi4"]
 atlas = ExtResource("2_dqkch")
@@ -320,3 +321,13 @@ shape = SubResource("RectangleShape2D_ml6mh")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1900570101]
 zoom = Vector2(3.5, 3.5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1770807260]
+layer = -2
+
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=728594925]
+modulate = Color(0.41521448, 0.4152145, 0.41521448, 1)
+z_index = -3
+offset_right = 1152.0
+offset_bottom = 646.0
+texture = ExtResource("4_dqkch")
