@@ -2677,6 +2677,9 @@ shape = SubResource("RectangleShape2D_lfqav")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ScrollArea" unique_id=989122017]
 stream = ExtResource("15_ypmp6")
 
+[node name="GhostPoint" type="Marker2D" parent="." unique_id=1968288944 groups=["ghost_point"]]
+position = Vector2(53, 31)
+
 [connection signal="body_exited" from="Levers/Lever1/Interact1" to="." method="_on_interact_body_exited"]
 [connection signal="body_exited" from="Levers/Lever2/Interact2" to="." method="_on_interact_body_exited"]
 [connection signal="body_exited" from="Levers/Lever3/Interact3" to="." method="_on_interact_body_exited"]

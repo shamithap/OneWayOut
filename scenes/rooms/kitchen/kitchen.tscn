@@ -2305,6 +2305,9 @@ position = Vector2(2.000006, 139)
 [node name="Spawn" parent="Doors/Door_W" index="1" unique_id=817698842]
 position = Vector2(2.0000048, 123)
 
+[node name="GhostPoint" type="Marker2D" parent="." unique_id=3982059]
+position = Vector2(0, -56)
+
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_W"]

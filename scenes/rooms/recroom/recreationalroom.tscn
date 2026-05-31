@@ -2440,6 +2440,9 @@ vertical_alignment = 2
 visible = false
 script = null
 
+[node name="GhostPoint" type="Marker2D" parent="." unique_id=364784701]
+position = Vector2(40, -40)
+
 [connection signal="body_entered" from="Wizard/TriggerArea" to="Wizard" method="_on_trigger_area_body_entered"]
 [connection signal="body_exited" from="Wizard/TriggerArea" to="Wizard" method="_on_trigger_area_body_exited"]
 

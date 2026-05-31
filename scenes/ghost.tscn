@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://v57rlikcqcxr"]
 
+[ext_resource type="Script" uid="uid://besfngjtko0ud" path="res://scripts/characters/ghost.gd" id="1_bbnym"]
 [ext_resource type="Texture2D" uid="uid://csf87sivifdl7" path="res://assets/player/player tileset/Player/player_Idle.png" id="1_l5lq6"]
 [ext_resource type="Texture2D" uid="uid://blq3biqh1a2w6" path="res://assets/player/player tileset/Player/player_Walk.png" id="2_bbnym"]
 
@@ -301,7 +302,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mfnq"]
 size = Vector2(9, 14)
 
-[node name="Ghost" type="Node2D" unique_id=2003514600]
+[node name="Ghost" type="Node2D" unique_id=1906987650]
+script = ExtResource("1_bbnym")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1805342997]
 position = Vector2(0, 4)
@@ -313,5 +315,5 @@ animation = &"walk_up"
 position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_5mfnq")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=82477724]
-zoom = Vector2(3.5, 3.5)
+[node name="Timer" type="Timer" parent="." unique_id=1559917584]
+wait_time = 2.0

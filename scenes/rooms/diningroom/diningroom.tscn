@@ -2880,6 +2880,9 @@ shape = SubResource("RectangleShape2D_xe27j")
 position = Vector2(256, 98)
 shape = SubResource("RectangleShape2D_xe27j")
 
+[node name="GhostPoint" type="Marker2D" parent="." unique_id=1599243229]
+position = Vector2(232, 80)
+
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_W"]

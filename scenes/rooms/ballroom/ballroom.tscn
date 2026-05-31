@@ -1995,6 +1995,7 @@ tile_set = SubResource("TileSet_sq41c")
 [node name="Doors" type="Node2D" parent="." unique_id=1716563809]
 
 [node name="Door_N" parent="Doors" unique_id=1336069685 instance=ExtResource("3_8c2ph")]
+visible = false
 destination_room_name = "theater"
 destination_door_tag = "S"
 spawn_direction = "down"
@@ -2006,6 +2007,7 @@ position = Vector2(208, 67)
 position = Vector2(208, 67)
 
 [node name="Door_E" parent="Doors" unique_id=387196579 instance=ExtResource("3_8c2ph")]
+visible = false
 destination_room_name = "livingroom"
 destination_door_tag = "W"
 spawn_direction = "left"
@@ -2017,12 +2019,14 @@ position = Vector2(273, 125)
 position = Vector2(272, 125)
 
 [node name="DanceArea" type="Area2D" parent="." unique_id=1962577780]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DanceArea" unique_id=358708012]
 position = Vector2(160, 131)
 shape = SubResource("RectangleShape2D_a5utf")
 
 [node name="Collisions" type="Node2D" parent="." unique_id=1722220901]
+visible = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Collisions" unique_id=181769126]
 
@@ -2069,6 +2073,9 @@ shape = SubResource("RectangleShape2D_u0n06")
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Collisions/StaticBody2D" unique_id=1321617456]
 position = Vector2(148, 70)
 shape = SubResource("RectangleShape2D_7bacp")
+
+[node name="GhostPoint" type="Marker2D" parent="." unique_id=2064991016]
+position = Vector2(208, 80)
 
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_E"]

@@ -26,6 +26,10 @@ Overlay="*uid://c2hatf0ihqy07"
 
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+ghost_point=""
+
 [gui]
 
 theme/default_font_multichannel_signed_distance_field=true

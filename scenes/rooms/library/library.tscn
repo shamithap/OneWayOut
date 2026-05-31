@@ -2118,6 +2118,7 @@ tile_map_data = PackedByteArray("AAAYABYAAAADAA8AAAAYABcAAAADABAAAAAYABgAAAADABE
 tile_set = SubResource("TileSet_75ugr")
 
 [node name="Doors" type="Node2D" parent="." unique_id=516601932]
+visible = false
 
 [node name="Door_N" parent="Doors" unique_id=1336069685 instance=ExtResource("4_uns5t")]
 destination_room_name = "recreationalroom"
@@ -2165,6 +2166,7 @@ position = Vector2(188, 168)
 position = Vector2(188, 172)
 
 [node name="Broom" type="Node2D" parent="." unique_id=2145047984]
+visible = false
 position = Vector2(12, 13)
 script = ExtResource("5_75ugr")
 
@@ -2188,6 +2190,9 @@ offset_bottom = 159.33334
 theme_override_font_sizes/font_size = 5
 text = "Press E to play"
 horizontal_alignment = 1
+
+[node name="GhostPoint" type="Marker2D" parent="." unique_id=104752670]
+position = Vector2(192, 80)
 
 [connection signal="body_entered" from="Broom/TriggerArea" to="Broom" method="_on_trigger_area_body_entered"]
 [connection signal="body_exited" from="Broom/TriggerArea" to="Broom" method="_on_trigger_area_body_exited"]

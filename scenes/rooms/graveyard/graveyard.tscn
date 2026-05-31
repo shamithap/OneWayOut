@@ -2321,6 +2321,7 @@ tile_map_data = PackedByteArray("AAD6//z/AwABAAEAAAD7//z/AwAEAAMAAAD9//z/AwAEAAI
 tile_set = SubResource("TileSet_ml6mh")
 
 [node name="Doors" type="Node2D" parent="." unique_id=516601932]
+visible = false
 
 [node name="Door_E" parent="Doors" unique_id=1336069685 instance=ExtResource("6_paowo")]
 destination_room_name = "winecellar"
@@ -2363,6 +2364,7 @@ destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="ExitLock" type="AnimatedSprite2D" parent="." unique_id=1224127506]
+visible = false
 light_mask = 4
 z_index = 1
 position = Vector2(188, 59.000004)
@@ -2372,11 +2374,15 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="KeyPiece1" parent="." unique_id=1191978857 instance=ExtResource("38_qqc0v")]
+visible = false
 position = Vector2(148, 144)
 
 [node name="KeyPiece3" parent="KeyPiece1" unique_id=987445248 instance=ExtResource("40_nxyc8")]
 
 [node name="KeyPiece2" parent="KeyPiece1/KeyPiece3" unique_id=439213809 instance=ExtResource("39_jk6co")]
+
+[node name="GhostPoint" type="Marker2D" parent="." unique_id=554116051]
+position = Vector2(189, 155)
 
 [editable path="Doors/Door_E"]
 [editable path="Doors/Door_W"]

@@ -917,6 +917,9 @@ shape = SubResource("RectangleShape2D_uojm7")
 position = Vector2(138.25, 146)
 shape = SubResource("RectangleShape2D_p3tv6")
 
+[node name="GhostPoint" type="Marker2D" parent="." unique_id=1050814712]
+position = Vector2(229, 162)
+
 [connection signal="body_entered" from="ClockPuzzle/InteractArea" to="ClockPuzzle" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="ClockPuzzle/InteractArea" to="ClockPuzzle" method="_on_interact_area_body_exited"]
 [connection signal="body_entered" from="Fireplace/InteractArea" to="Fireplace" method="_on_interact_area_body_entered"]

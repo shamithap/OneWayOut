@@ -19,11 +19,14 @@ const scene_dict = {
 
 signal on_trigger_player_spawn
 signal update_minimap_position
+signal room_changed(room_name)
 
 var spawn_door_tag
 var scene_to_load
 
 var player : Player = null
+
+var current_room_name := "main"
 
 #input the room that you want to go to and the tag of the 
 #door the player should be spawning at
@@ -31,8 +34,10 @@ func go_to_level(destination_room_name, destination_door_tag):
 	scene_to_load = scene_dict[destination_room_name]
 	
 	if scene_to_load != null:
+		current_room_name = destination_room_name
 		spawn_door_tag = destination_door_tag
 		update_minimap_position.emit(destination_room_name)
+		room_changed.emit(destination_room_name)
 		get_tree().change_scene_to_packed(scene_to_load)
 
 #sends signal to player to spawn at given position w/ given direction

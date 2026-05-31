@@ -1861,6 +1861,9 @@ spawn_direction = "up"
 [node name="Spawn" parent="Doors/Door_T" index="1" unique_id=817698842]
 position = Vector2(0, 20)
 
+[node name="GhostPoint" type="Marker2D" parent="." unique_id=1112383777]
+position = Vector2(0, 24)
+
 [connection signal="body_entered" from="ScrollArea" to="." method="_on_scroll_area_body_entered"]
 [connection signal="body_exited" from="ScrollArea" to="." method="_on_scroll_area_body_exited"]
 [connection signal="body_entered" from="TableArea" to="." method="_on_table_area_body_entered"]
