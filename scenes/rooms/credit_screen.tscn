@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://cbgkmwy8jjhil"]
+
+[ext_resource type="Texture2D" uid="uid://cu4uhuwcrv2qv" path="res://assets/UI/background1.png" id="1_wy1bd"]
+[ext_resource type="Script" uid="uid://655b7c8p0c4j" path="res://scripts/credit_screen.gd" id="1_yvibv"]
+[ext_resource type="Texture2D" uid="uid://ddxd875dlhwg8" path="res://assets/UI/FreeHorrorUi.png" id="2_36tqx"]
+[ext_resource type="FontFile" uid="uid://d208f377vxcrw" path="res://assets/UI/ThaleahFat.ttf" id="3_yvibv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a68a"]
+atlas = ExtResource("2_36tqx")
+region = Rect2(128, 131, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36tqx"]
+atlas = ExtResource("2_36tqx")
+region = Rect2(6, 234, 52, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvibv"]
+atlas = ExtResource("2_36tqx")
+region = Rect2(70, 234, 52, 15)
+
+[node name="CreditScreen" type="Control" unique_id=985074208]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yvibv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1713056130]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=775446001]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wy1bd")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1767737560]
+offset_left = 350.0
+offset_top = 80.0
+offset_right = 802.0
+offset_bottom = 568.0
+texture = SubResource("AtlasTexture_4a68a")
+
+[node name="Title" type="Label" parent="CanvasLayer/TextureRect" unique_id=458281315]
+layout_mode = 0
+offset_top = 11.0
+offset_right = 452.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("3_yvibv")
+theme_override_font_sizes/font_size = 49
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits" type="Label" parent="CanvasLayer/TextureRect" unique_id=1874190835]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 110.0
+offset_right = 411.0
+offset_bottom = 345.0
+theme_override_fonts/font = ExtResource("3_yvibv")
+theme_override_font_sizes/font_size = 46
+text = "Created by:
+Abby Doinog
+Shamitha Pichika
+Hritika Naik
+Chengfei Jiang"
+horizontal_alignment = 1
+
+[node name="BackButton" type="TextureButton" parent="CanvasLayer/TextureRect" unique_id=31424613]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 372.0
+offset_right = 319.0
+offset_bottom = 421.0
+texture_normal = SubResource("AtlasTexture_36tqx")
+texture_hover = SubResource("AtlasTexture_yvibv")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect/BackButton" unique_id=913117079]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -7.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_yvibv")
+theme_override_font_sizes/font_size = 53
+text = "Back
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="CanvasLayer/TextureRect/BackButton" to="." method="_on_back_button_button_down"]

@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://fgns7vea2c8l"]
+
+[ext_resource type="Script" uid="uid://bnr1u1poag1x2" path="res://scripts/start_screen.gd" id="1_he1sj"]
+[ext_resource type="Texture2D" uid="uid://cu4uhuwcrv2qv" path="res://assets/UI/background1.png" id="1_o7i0r"]
+[ext_resource type="Texture2D" uid="uid://ddxd875dlhwg8" path="res://assets/UI/FreeHorrorUi.png" id="2_he1sj"]
+[ext_resource type="FontFile" uid="uid://d208f377vxcrw" path="res://assets/UI/ThaleahFat.ttf" id="3_r2jwc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2jwc"]
+atlas = ExtResource("2_he1sj")
+region = Rect2(6, 234, 52, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hm208"]
+atlas = ExtResource("2_he1sj")
+region = Rect2(70, 234, 52, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pab1"]
+atlas = ExtResource("2_he1sj")
+region = Rect2(6, 234, 52, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o30b1"]
+atlas = ExtResource("2_he1sj")
+region = Rect2(70, 234, 53, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ka6nf"]
+atlas = ExtResource("2_he1sj")
+region = Rect2(6, 234, 52, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws7p0"]
+atlas = ExtResource("2_he1sj")
+region = Rect2(70, 234, 52, 15)
+
+[node name="StartScreen" type="Control" unique_id=1079307591]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_he1sj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2051483162]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=1337835432]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_o7i0r")
+
+[node name="Title" type="Label" parent="CanvasLayer" unique_id=1603496305]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -307.5
+offset_top = 88.0
+offset_right = 307.5
+offset_bottom = 222.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_r2jwc")
+theme_override_font_sizes/font_size = 165
+text = "One Way Out"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1843058679]
+custom_minimum_size = Vector2(0, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.0
+offset_top = -40.0
+offset_right = 128.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+alignment = 1
+
+[node name="PlayButton" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=601741335]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = SubResource("AtlasTexture_r2jwc")
+texture_hover = SubResource("AtlasTexture_hm208")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/PlayButton" unique_id=1319427238]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_r2jwc")
+theme_override_font_sizes/font_size = 80
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=1389785816]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = SubResource("AtlasTexture_5pab1")
+texture_hover = SubResource("AtlasTexture_o30b1")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Credits" unique_id=687415751]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_r2jwc")
+theme_override_font_sizes/font_size = 75
+text = "credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="TextureButton" parent="CanvasLayer/VBoxContainer" unique_id=72396525]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = SubResource("AtlasTexture_ka6nf")
+texture_hover = SubResource("AtlasTexture_ws7p0")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Quit" unique_id=356098149]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_r2jwc")
+theme_override_font_sizes/font_size = 80
+text = "Quit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/PlayButton" to="." method="_on_play_button_button_down"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/Credits" to="." method="_on_credits_button_down"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/Quit" to="." method="_on_quit_button_down"]
