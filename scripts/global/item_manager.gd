@@ -29,6 +29,7 @@ func get_item(position : Vector2):
 
 func pickup_item(item):
 	inventory.append(item)
+	print(inventory)
 	
 	#shows key piece on overlay
 	if item == "KeyPiece1" or item == "KeyPiece2" or item == "KeyPiece3":
