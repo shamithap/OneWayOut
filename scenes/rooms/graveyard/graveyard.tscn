@@ -2361,7 +2361,6 @@ destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="ExitLock" type="AnimatedSprite2D" parent="." unique_id=1224127506]
-visible = false
 light_mask = 4
 z_index = 1
 position = Vector2(188, 59.000004)
