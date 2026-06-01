@@ -23,6 +23,7 @@ func _on_dust_cleaned():
 func win():
 	instruction.visible = false
 	win_panel.visible = true
+	Global.library_complete = true
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/rooms/library/library.tscn")

@@ -14,6 +14,7 @@ var player : Player = null
 var in_scroll_range : bool = false
 var in_table_range : bool = false
 
+
 func _ready():
 	ensure_player()
 	if Global.wine_cellar_complete:
