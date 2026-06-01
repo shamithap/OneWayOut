@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://lt2c4hq3cdn3" path="res://scenes/rooms/library/broom.gd" id="5_75ugr"]
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="5_gcw75"]
 [ext_resource type="Texture2D" uid="uid://bqy1gube14ng4" path="res://scenes/rooms/library/Broomsprite.png" id="6_mlruy"]
+[ext_resource type="AudioStream" uid="uid://d3qsnrmppdj8p" path="res://sounds/library/broompickup_sound.wav" id="10_gcw75"]
 [ext_resource type="Texture2D" uid="uid://cogk382dg1swy" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_01_ArtOfScrolls_BigWander(16x16).png" id="10_mlruy"]
 [ext_resource type="Texture2D" uid="uid://ch8in3mw752y2" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_02_ArtOfScrolls_BigWander(16x16).png" id="11_gcw75"]
 [ext_resource type="AudioStream" uid="uid://cxwuijcob7htj" path="res://sounds/winecellar/paper_flutter.mp3" id="12_o3y1h"]
@@ -2198,6 +2199,9 @@ offset_bottom = 159.33334
 theme_override_font_sizes/font_size = 5
 text = "Press E to pickup"
 horizontal_alignment = 1
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="Broom" unique_id=272313632]
+stream = ExtResource("10_gcw75")
 
 [node name="GhostPoint" type="Marker2D" parent="." unique_id=104752670]
 position = Vector2(192, 80)

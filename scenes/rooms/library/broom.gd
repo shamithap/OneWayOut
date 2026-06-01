@@ -3,6 +3,7 @@ extends Node2D
 class_name Broom
 
 @onready var hint : Label = $Hint
+@onready var pickup_sound = $PickupSound
 
 var player_in_range = false
 
@@ -15,6 +16,9 @@ func _process(_delta):
 		return
 
 	if player_in_range and Input.is_action_just_pressed("interact"):
+		if pickup_sound != null:
+			pickup_sound.play()
+		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file("res://scenes/rooms/library/dust_minigame.tscn")
 
 func _on_trigger_area_body_entered(body: Node2D) -> void:

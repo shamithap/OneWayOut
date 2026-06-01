@@ -3,6 +3,7 @@ extends Node2D
 @onready var dust_group = $DustGroup
 @onready var instruction = $CanvasLayer/Instructions
 @onready var win_panel = $CanvasLayer/Control/WinPanel
+@onready var clean_sound = $CleanSound
 
 var dust_left = 0
 
@@ -27,3 +28,7 @@ func win():
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/rooms/library/library.tscn")
+	
+func play_clean_sound():
+	if clean_sound:
+		clean_sound.play()

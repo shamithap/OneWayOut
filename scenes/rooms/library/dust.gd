@@ -11,11 +11,14 @@ func _ready():
 	smoke.visible = false
 
 func _on_area_entered(area):
+	print("Dust touched by: ", area.name)
+
 	if cleaned:
 		return
 
 	if area.name == "Hitbox":
 		cleaned = true
+		get_parent().get_parent().play_clean_sound()
 		dust_sprite.visible = false
 		smoke.visible = true
 		smoke.play("dust")
@@ -23,3 +26,5 @@ func _on_area_entered(area):
 		await smoke.animation_finished
 		dust_cleaned.emit()
 		queue_free()
+
+		

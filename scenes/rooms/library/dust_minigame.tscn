@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://26tq1bj63jko" path="res://scenes/rooms/library/dust_minigame.gd" id="1_gp5ab"]
 [ext_resource type="Texture2D" uid="uid://bqy1gube14ng4" path="res://scenes/rooms/library/Broomsprite.png" id="2_gp5ab"]
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_hdu0e"]
-[ext_resource type="Script" uid="uid://dcp44npfrcf1b" path="res://scenes/rooms/library/dust_1.gd" id="3_nr32u"]
+[ext_resource type="Script" uid="uid://dcp44npfrcf1b" path="res://scenes/rooms/library/dust.gd" id="3_nr32u"]
 [ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="3_pi76s"]
 [ext_resource type="Texture2D" uid="uid://b2rhtm8slwf6w" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C2.png" id="4_8cvr3"]
 [ext_resource type="Texture2D" uid="uid://dni46tbd12sop" path="res://assets/SpookyCastleTileset/animation_breakable+doors.png" id="4_8kl6k"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cg0tkcv1x3rxf" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C7.png" id="9_tepd4"]
 [ext_resource type="Texture2D" uid="uid://byga157jdcpa3" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C8.png" id="10_c2l5v"]
 [ext_resource type="Texture2D" uid="uid://nrfuff4eoe5b" path="res://scenes/rooms/library/Smoke Effect/VFX 3 Seprated Frames/Smoke VFX C1.png" id="12_hdu0e"]
+[ext_resource type="AudioStream" uid="uid://b2fmemb628hl" path="res://sounds/library/dust_clean.wav" id="17_8kl6k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi76s"]
 bg_color = Color(0.22071788, 0.04327791, 0.078138, 1)
@@ -3967,6 +3968,9 @@ shape = SubResource("RectangleShape2D_8cvr3")
 rotation = 3.1415927
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("12_hdu0e")
+
+[node name="CleanSound" type="AudioStreamPlayer2D" parent="." unique_id=1781782509]
+stream = ExtResource("17_8kl6k")
 
 [node name="Player" parent="." unique_id=1424528440 instance=ExtResource("1_8cvr3")]
 z_index = 5
