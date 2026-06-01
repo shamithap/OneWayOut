@@ -20,16 +20,17 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -135.82
-offset_top = -70.91699
+offset_left = -364.0
+offset_top = -121.0
 offset_right = -19.819824
 offset_bottom = -43.000305
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
 
 [node name="Timer" type="Timer" parent="." unique_id=890797691]
-wait_time = 2.0
+wait_time = 5.0
 one_shot = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1167793165]

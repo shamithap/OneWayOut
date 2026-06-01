@@ -1,6 +1,8 @@
 extends Node
 
 @onready var player := $Player
+@onready var ghost := $Ghost
+var compass_activated = false
 
 @onready var layout_dict := {
 	"exit" : $Markers/exit,
@@ -40,14 +42,14 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	NavigationManager.update_minimap_position.connect(update_position)
+	NavigationManager.update_minimap_position.connect(update_player_position)
 	self.visible = false
 	
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("overlay"):
 		self.visible = !self.visible
 
-func update_position(destination_room_name) -> void:
+func update_player_position(destination_room_name) -> void:
 	var current_room = layout_dict[destination_room_name]
 	var explored_texture = explored_dict[destination_room_name]
 	
@@ -55,3 +57,9 @@ func update_position(destination_room_name) -> void:
 		player.global_position = current_room.global_position
 		explored_texture.visible = true
 		
+
+func update_ghost_position(destination_room_name) -> void:
+	if compass_activated:
+		var current_room = layout_dict[destination_room_name]
+		if current_room:
+			ghost.global_position = current_room.global_position

@@ -98,6 +98,7 @@ func chase_player():
 	print("Ghost moves:", current_room, "->", next_room)
 
 	current_room = next_room
+	Overlay.get_node("CanvasLayer/Minimap").update_ghost_position(current_room)
 	
 	var scene = get_tree().current_scene
 	var point = scene.get_node_or_null("GhostPoint")
