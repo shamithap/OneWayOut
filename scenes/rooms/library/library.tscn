@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dpus0siq28e0w"]
 
-[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_v1r2p"]
+[ext_resource type="Script" uid="uid://dd8rqlaxp1md3" path="res://scenes/rooms/library/library.gd" id="1_mlruy"]
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_mynaw"]
 [ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="3_75ugr"]
 [ext_resource type="Texture2D" uid="uid://dni46tbd12sop" path="res://assets/SpookyCastleTileset/animation_breakable+doors.png" id="4_mlruy"]
@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://lt2c4hq3cdn3" path="res://scenes/rooms/library/broom.gd" id="5_75ugr"]
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="5_gcw75"]
 [ext_resource type="Texture2D" uid="uid://bqy1gube14ng4" path="res://scenes/rooms/library/Broomsprite.png" id="6_mlruy"]
+[ext_resource type="Texture2D" uid="uid://cogk382dg1swy" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_01_ArtOfScrolls_BigWander(16x16).png" id="10_mlruy"]
+[ext_resource type="Texture2D" uid="uid://ch8in3mw752y2" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_02_ArtOfScrolls_BigWander(16x16).png" id="11_gcw75"]
+[ext_resource type="AudioStream" uid="uid://cxwuijcob7htj" path="res://sounds/winecellar/paper_flutter.mp3" id="12_o3y1h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mynaw"]
 texture = ExtResource("2_mynaw")
@@ -2097,10 +2100,13 @@ sources/0 = SubResource("TileSetAtlasSource_uns5t")
 sources/1 = SubResource("TileSetAtlasSource_gcw75")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_geole"]
-size = Vector2(21, 32)
+size = Vector2(12, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0m1h"]
+size = Vector2(15, 10)
 
 [node name="library" type="Node2D" unique_id=1465284747]
-script = ExtResource("1_v1r2p")
+script = ExtResource("1_mlruy")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1162560353]
 
@@ -2177,7 +2183,7 @@ texture = ExtResource("6_mlruy")
 position = Vector2(196, 140)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Broom/TriggerArea" unique_id=799725445]
-position = Vector2(-17, -28)
+position = Vector2(-20, -21.5)
 shape = SubResource("RectangleShape2D_geole")
 
 [node name="Hint" type="Label" parent="Broom" unique_id=123495810]
@@ -2187,14 +2193,98 @@ offset_top = 137.0
 offset_right = 251.0
 offset_bottom = 159.33334
 theme_override_font_sizes/font_size = 5
-text = "Press E to play"
+text = "Press E to pickup"
 horizontal_alignment = 1
 
 [node name="GhostPoint" type="Marker2D" parent="." unique_id=104752670]
 position = Vector2(192, 80)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2003466856]
+
+[node name="Hint" type="Label" parent="CanvasLayer" unique_id=1531714513]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.5
+offset_top = -220.0
+offset_right = 60.5
+offset_bottom = -197.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to interact"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Scroll" type="TextureRect" parent="CanvasLayer" unique_id=1018330533]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -585.0
+offset_top = -8.0
+offset_right = -545.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.745283
+scale = Vector2(18.951332, 18.39979)
+texture = ExtResource("10_mlruy")
+
+[node name="ScrollText" type="Label" parent="CanvasLayer/Scroll" unique_id=1679617308]
+layout_mode = 0
+offset_left = 23.30969
+offset_top = 7.8824306
+offset_right = 41.787895
+offset_bottom = 29.883701
+rotation = 0.75629354
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_font_sizes/font_size = 2
+text = "Formidable is the one who sweeps obstacles away into oblivion…
+"
+autowrap_mode = 3
+
+[node name="ScrollHint" type="Label" parent="CanvasLayer" unique_id=1746741295]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -111.0
+offset_top = -66.0
+offset_right = 111.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to interact with note "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollArea" type="Area2D" parent="." unique_id=91139448]
+position = Vector2(248, 99)
+
+[node name="Scroll" type="Sprite2D" parent="ScrollArea" unique_id=223972660]
+position = Vector2(-17.5, -2.861023e-06)
+scale = Vector2(0.5625, 0.37499964)
+texture = ExtResource("11_gcw75")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollArea" unique_id=1563160552]
+position = Vector2(-17.5, 0)
+shape = SubResource("RectangleShape2D_f0m1h")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ScrollArea" unique_id=1228163736]
+stream = ExtResource("12_o3y1h")
+
 [connection signal="body_entered" from="Broom/TriggerArea" to="Broom" method="_on_trigger_area_body_entered"]
 [connection signal="body_exited" from="Broom/TriggerArea" to="Broom" method="_on_trigger_area_body_exited"]
+[connection signal="body_entered" from="ScrollArea" to="." method="_on_scroll_area_body_entered"]
+[connection signal="body_exited" from="ScrollArea" to="." method="_on_scroll_area_body_exited"]
 
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_E"]

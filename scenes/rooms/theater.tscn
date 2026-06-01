@@ -2110,11 +2110,6 @@ texture = ExtResource("12_0jpy2")
 region_enabled = true
 region_rect = Rect2(0, 0, 16.611473, 34)
 
-[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1346917754]
-position = Vector2(266, 66.00001)
-scale = Vector2(0.1, 0.071)
-texture = ExtResource("13_be1h0")
-
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_E"]
 [editable path="Doors/Door_S"]
