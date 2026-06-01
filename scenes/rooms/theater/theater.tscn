@@ -1,22 +1,25 @@
 [gd_scene format=4 uid="uid://dg02lxiongts2"]
 
-[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_6p0bi"]
-[ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_fv4ik"]
-[ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="3_044kj"]
-[ext_resource type="Texture2D" uid="uid://cntl6mimgo8wa" path="res://assets/Library #01/Lecter-00.png" id="4_044kj"]
-[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="4_jeqq3"]
-[ext_resource type="Texture2D" uid="uid://pp0swwhvxu0n" path="res://assets/Theater assets/New Piskel.png" id="5_k30dj"]
-[ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="6_0sgj6"]
-[ext_resource type="Texture2D" uid="uid://dbct2jqq35lxo" path="res://assets/HouseInteriorA/HouseInteriorA.png" id="7_76e82"]
-[ext_resource type="Texture2D" uid="uid://c7hdx6hnrwq2v" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_07.png" id="10_76e82"]
-[ext_resource type="Texture2D" uid="uid://w750phq15drm" path="res://assets/Theater assets/Lamp_post.png" id="12_0jpy2"]
-[ext_resource type="Texture2D" uid="uid://bxwkert4ngjfc" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_01.png" id="12_76e82"]
-[ext_resource type="Texture2D" uid="uid://coyxxq7dlko6c" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_23.png" id="12_gr1c5"]
-[ext_resource type="Texture2D" uid="uid://dlhbjpbmetc6b" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_08.png" id="13_0jpy2"]
-[ext_resource type="Texture2D" uid="uid://bdpr3t6bmqwke" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_24.png" id="13_gr1c5"]
+[ext_resource type="Script" uid="uid://3pagg5occjkc" path="res://scenes/rooms/theater/theater.gd" id="1_yx0x4"]
+[ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_7pye8"]
+[ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="3_3gr6x"]
+[ext_resource type="Texture2D" uid="uid://cntl6mimgo8wa" path="res://assets/Library #01/Lecter-00.png" id="4_6d7te"]
+[ext_resource type="Texture2D" uid="uid://pp0swwhvxu0n" path="res://assets/Theater assets/New Piskel.png" id="5_hxhdr"]
+[ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="6_oowkj"]
+[ext_resource type="Texture2D" uid="uid://dbct2jqq35lxo" path="res://assets/HouseInteriorA/HouseInteriorA.png" id="7_3h8ks"]
+[ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="8_rr10b"]
+[ext_resource type="Texture2D" uid="uid://b6fkhg5rxn0fh" path="res://scenes/rooms/theater/minigame_masks/mask_07.png" id="9_yx0x4"]
+[ext_resource type="Texture2D" uid="uid://csuprp58o73l3" path="res://scenes/rooms/theater/minigame_masks/mask_24.png" id="10_yx0x4"]
+[ext_resource type="Texture2D" uid="uid://dud4tqio24pih" path="res://scenes/rooms/theater/minigame_masks/mask_01.png" id="11_yx0x4"]
+[ext_resource type="Texture2D" uid="uid://coywdb17gg3u3" path="res://scenes/rooms/theater/minigame_masks/mask_23.png" id="12_yx0x4"]
+[ext_resource type="Texture2D" uid="uid://c3gjlpj570t6x" path="res://scenes/rooms/theater/minigame_masks/mask_08.png" id="13_yx0x4"]
+[ext_resource type="Texture2D" uid="uid://w750phq15drm" path="res://assets/Theater assets/Lamp_post.png" id="14_csy4e"]
+[ext_resource type="Texture2D" uid="uid://cogk382dg1swy" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_01_ArtOfScrolls_BigWander(16x16).png" id="15_l7n7f"]
+[ext_resource type="Texture2D" uid="uid://ch8in3mw752y2" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_02_ArtOfScrolls_BigWander(16x16).png" id="16_nnju3"]
+[ext_resource type="AudioStream" uid="uid://cxwuijcob7htj" path="res://sounds/winecellar/paper_flutter.mp3" id="17_80403"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xgwt6"]
-texture = ExtResource("2_fv4ik")
+texture = ExtResource("2_7pye8")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -198,7 +201,7 @@ texture = ExtResource("2_fv4ik")
 sources/0 = SubResource("TileSetAtlasSource_xgwt6")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_044kj"]
-texture = ExtResource("2_fv4ik")
+texture = ExtResource("2_7pye8")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -380,7 +383,7 @@ texture = ExtResource("2_fv4ik")
 sources/0 = SubResource("TileSetAtlasSource_044kj")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k30dj"]
-texture = ExtResource("2_fv4ik")
+texture = ExtResource("2_7pye8")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -568,7 +571,7 @@ texture = ExtResource("2_fv4ik")
 6:19/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_who6k"]
-texture = ExtResource("3_044kj")
+texture = ExtResource("3_3gr6x")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -718,7 +721,7 @@ separation = Vector2i(1, 1)
 11:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0sgj6"]
-texture = ExtResource("4_044kj")
+texture = ExtResource("4_6d7te")
 6:0/0 = 0
 7:0/0 = 0
 4:1/0 = 0
@@ -807,7 +810,7 @@ sources/1 = SubResource("TileSetAtlasSource_who6k")
 sources/2 = SubResource("TileSetAtlasSource_0sgj6")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k2m08"]
-texture = ExtResource("4_044kj")
+texture = ExtResource("4_6d7te")
 6:0/0 = 0
 7:0/0 = 0
 4:1/0 = 0
@@ -890,11 +893,11 @@ texture = ExtResource("4_044kj")
 13:9/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqfg4"]
-texture = ExtResource("5_k30dj")
+texture = ExtResource("5_hxhdr")
 separation = Vector2i(1, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8q1ng"]
-texture = ExtResource("2_fv4ik")
+texture = ExtResource("2_7pye8")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1073,7 +1076,7 @@ texture = ExtResource("2_fv4ik")
 6:19/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsahx"]
-texture = ExtResource("6_0sgj6")
+texture = ExtResource("6_oowkj")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1674,7 +1677,7 @@ texture = ExtResource("6_0sgj6")
 16:64/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gr1c5"]
-texture = ExtResource("7_76e82")
+texture = ExtResource("7_3h8ks")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -1861,7 +1864,7 @@ sources/5 = SubResource("TileSetAtlasSource_nsahx")
 sources/6 = SubResource("TileSetAtlasSource_gr1c5")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_teekm"]
-texture = ExtResource("7_76e82")
+texture = ExtResource("7_3h8ks")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -2025,8 +2028,14 @@ texture = ExtResource("7_76e82")
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_teekm")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1s8tn"]
+size = Vector2(23.75, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_be1h0"]
+size = Vector2(26, 20)
+
 [node name="theater" type="Node2D" unique_id=1465284747]
-script = ExtResource("1_6p0bi")
+script = ExtResource("1_yx0x4")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1967623849]
 
@@ -2044,17 +2053,17 @@ tile_set = SubResource("TileSet_0sgj6")
 
 [node name="Theater_Decor" type="TileMapLayer" parent="Node2D" unique_id=1612752191]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAAYAAsABgANAAAAAAAYAAwABgANAAEAAAAXAAwABgAMAAEAAAAbAAsABgANAAAAAAAbAAwABgANAAEAAAAaAAwABgAMAAEAAAAbAA8ABgANAAAAAAAbABAABgANAAEAAAAaABAABgAMAAEAAAAVAAwABgANAAAAAAAVAA0ABgANAAEAAAAUAA0ABgAMAAEAAAAQAAkABgACAAQAAAAQAAoABgAMAAYAAAAQAAsABgAMAAYAAAAQAAwABgAMAAYAAAAQAA0ABgAMAAYAAAAQAA4ABgAMAAYAAAAQAA8ABgAMAAYAAAAQABAABgAMAAYAAAAQABEABgAMAAYAAAAQABIABgAMAAYAAAARABIABgAMAAYAAAARABMABgAMAAYAAAARABQABgAMAAgAAAAQABQABgAMAAgAAAAQABMABgAMAAYAAAARABEABgAMAAYAAAARABAABgAMAAYAAAARAA8ABgAMAAYAAAARAA4ABgAMAAYAAAARAA0ABgAMAAYAAAARAAwABgAMAAYAAAARAAsABgAMAAYAAAARAAoABgAMAAYAAAARAAkABgADAAQAAAAQAAcABgAIAAAAAAARAAcABgAJAAAAAAAQAAgABgAIAAEAAAARAAgABgAJAAEAAAAUAAYABgAGAAgAAAAUAAcABgAGAAkAAAAVAAYABgAHAAgAAAAVAAcABgAHAAkAAAAfABAABgAHAAAAAAAfABEABgAHAAEAAAAeABEABgAGAAEAAAAfABIABgAHAAAAAAAfABMABgAHAAEAAAAeABMABgAGAAEAAAAfABQABgAHAAAAAAAfABUABgAHAAEAAAAeABUABgAGAAEAAAAfAAkABgAHAAEAAAAeAAkABgAGAAEAAAAfAAgABgAHAAAAAAAfAAsABgAHAAEAAAAeAAsABgAGAAEAAAAfAAoABgAHAAAAAAAfAA0ABgAHAAEAAAAeAA0ABgAGAAEAAAAfAAwABgAHAAAAAAAZABIABgANAAAAAAAYABMABgAMAAEAAAAZABMABgANAAEAAAAXAA8ABgANAAAAAAAWABAABgAMAAEAAAAXABAABgANAAEAAAAUABMABgAMAAEAAAAVABIABgANAAAAAAAVABMABgANAAEAAAA=")
+tile_map_data = PackedByteArray("AAAYAAsABgANAAAAAAAYAAwABgANAAEAAAAXAAwABgAMAAEAAAAbAAsABgANAAAAAAAbAAwABgANAAEAAAAaAAwABgAMAAEAAAAbAA8ABgANAAAAAAAbABAABgANAAEAAAAaABAABgAMAAEAAAAVAAwABgANAAAAAAAVAA0ABgANAAEAAAAUAA0ABgAMAAEAAAAQAAkABgACAAQAAAAQAAoABgAMAAYAAAAQAAsABgAMAAYAAAAQAAwABgAMAAYAAAAQAA0ABgAMAAYAAAAQAA4ABgAMAAYAAAAQAA8ABgAMAAYAAAAQABAABgAMAAYAAAAQABEABgAMAAYAAAAQABIABgAMAAYAAAARABIABgAMAAYAAAARABMABgAMAAYAAAARABQABgAMAAgAAAAQABQABgAMAAgAAAAQABMABgAMAAYAAAARABEABgAMAAYAAAARABAABgAMAAYAAAARAA8ABgAMAAYAAAARAA4ABgAMAAYAAAARAA0ABgAMAAYAAAARAAwABgAMAAYAAAARAAsABgAMAAYAAAARAAoABgAMAAYAAAARAAkABgADAAQAAAAQAAcABgAIAAAAAAARAAcABgAJAAAAAAAQAAgABgAIAAEAAAARAAgABgAJAAEAAAAfABAABgAHAAAAAAAfABEABgAHAAEAAAAeABEABgAGAAEAAAAfABIABgAHAAAAAAAfABMABgAHAAEAAAAeABMABgAGAAEAAAAfABQABgAHAAAAAAAfABUABgAHAAEAAAAeABUABgAGAAEAAAAfAAkABgAHAAEAAAAeAAkABgAGAAEAAAAfAAgABgAHAAAAAAAfAAsABgAHAAEAAAAeAAsABgAGAAEAAAAfAAoABgAHAAAAAAAfAA0ABgAHAAEAAAAeAA0ABgAGAAEAAAAfAAwABgAHAAAAAAAZABIABgANAAAAAAAYABMABgAMAAEAAAAZABMABgANAAEAAAAXAA8ABgANAAAAAAAWABAABgAMAAEAAAAXABAABgANAAEAAAAUABMABgAMAAEAAAAVABIABgANAAAAAAAVABMABgANAAEAAAA=")
 tile_set = SubResource("TileSet_wqfg4")
 
 [node name="Extra_Decor" type="TileMapLayer" parent="Node2D" unique_id=1125228715]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAAQABQAAAAAAAQAAAARABQAAAABAAQAAAA=")
+tile_map_data = PackedByteArray("AAAUAAYAAAAGAAgAAAAVAAYAAAAHAAgAAAAUAAcAAAAGAAkAAAAVAAcAAAAHAAkAAAAQABQAAAAAAAQAAAARABQAAAABAAQAAAA=")
 tile_set = SubResource("TileSet_76e82")
 
 [node name="Doors" type="Node2D" parent="." unique_id=516601932]
 
-[node name="Door_N" parent="Doors" unique_id=1336069685 instance=ExtResource("4_jeqq3")]
+[node name="Door_N" parent="Doors" unique_id=1336069685 instance=ExtResource("8_rr10b")]
 destination_room_name = "armory"
 destination_door_tag = "S"
 spawn_direction = "down"
@@ -2065,7 +2074,7 @@ position = Vector2(188, 75)
 [node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
 position = Vector2(187, 72)
 
-[node name="Door_E" parent="Doors" unique_id=1622387379 instance=ExtResource("4_jeqq3")]
+[node name="Door_E" parent="Doors" unique_id=1622387379 instance=ExtResource("8_rr10b")]
 destination_room_name = "library"
 destination_door_tag = "W"
 spawn_direction = "left"
@@ -2076,7 +2085,7 @@ position = Vector2(241, 124)
 [node name="Spawn" parent="Doors/Door_E" index="1" unique_id=817698842]
 position = Vector2(242, 124)
 
-[node name="Door_S" parent="Doors" unique_id=1686877879 instance=ExtResource("4_jeqq3")]
+[node name="Door_S" parent="Doors" unique_id=1686877879 instance=ExtResource("8_rr10b")]
 destination_room_name = "ballroom"
 destination_door_tag = "N"
 spawn_direction = "up"
@@ -2090,39 +2099,149 @@ position = Vector2(188, 165)
 [node name="GhostPoint" type="Marker2D" parent="." unique_id=398540598]
 position = Vector2(164, 112)
 
-[node name="mask1" type="Sprite2D" parent="." unique_id=438691723]
-position = Vector2(251.00002, 54.999996)
-scale = Vector2(0.29150346, 0.23509225)
-texture = ExtResource("10_76e82")
+[node name="Sprites" type="Control" parent="." unique_id=1630276452]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="mask2" type="Sprite2D" parent="." unique_id=299252165]
+[node name="mask1" type="Sprite2D" parent="Sprites" unique_id=438691723]
+position = Vector2(252, 54.999992)
+scale = Vector2(0.29150346, 0.23509225)
+texture = ExtResource("9_yx0x4")
+
+[node name="mask2" type="Sprite2D" parent="Sprites" unique_id=299252165]
 position = Vector2(149, 54.5)
 scale = Vector2(0.28125, 0.23437501)
-texture = ExtResource("13_gr1c5")
+texture = ExtResource("10_yx0x4")
 
-[node name="mask3" type="Sprite2D" parent="." unique_id=1963435749]
+[node name="mask3" type="Sprite2D" parent="Sprites" unique_id=1963435749]
 position = Vector2(224, 55)
 scale = Vector2(0.27539048, 0.23724388)
-texture = ExtResource("12_76e82")
+texture = ExtResource("11_yx0x4")
 
-[node name="mask5" type="Sprite2D" parent="." unique_id=1181233578]
+[node name="mask5" type="Sprite2D" parent="Sprites" unique_id=1181233578]
 position = Vector2(137, 93.00001)
-rotation = 4.712389
+rotation = -1.5707964
 scale = Vector2(0.27539048, 0.23724388)
-texture = ExtResource("12_gr1c5")
+texture = ExtResource("12_yx0x4")
 
-[node name="mask6" type="Sprite2D" parent="." unique_id=1048414612]
+[node name="mask6" type="Sprite2D" parent="Sprites" unique_id=1048414612]
 position = Vector2(136, 140.00002)
-rotation = 4.712389
+rotation = -1.5707964
 scale = Vector2(0.27539048, 0.23724388)
-texture = ExtResource("13_0jpy2")
+texture = ExtResource("13_yx0x4")
 
-[node name="lamp" type="Sprite2D" parent="." unique_id=2014424113]
+[node name="lamp" type="Sprite2D" parent="Sprites" unique_id=2014424113]
 position = Vector2(135, 114)
 scale = Vector2(1, 0.5)
-texture = ExtResource("12_0jpy2")
+texture = ExtResource("14_csy4e")
 region_enabled = true
 region_rect = Rect2(0, 0, 16.611473, 34)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=968763984]
+
+[node name="Hint" type="Label" parent="CanvasLayer" unique_id=386421307]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.5
+offset_top = -220.0
+offset_right = 60.5
+offset_bottom = -197.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to interact"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Scroll" type="TextureRect" parent="CanvasLayer" unique_id=611318479]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -585.0
+offset_top = -8.0
+offset_right = -545.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.745283
+scale = Vector2(18.951332, 18.39979)
+texture = ExtResource("15_l7n7f")
+
+[node name="ScrollText" type="Label" parent="CanvasLayer/Scroll" unique_id=239956620]
+layout_mode = 0
+offset_left = 23.30969
+offset_top = 7.8824306
+offset_right = 41.787895
+offset_bottom = 29.883701
+rotation = 0.75629354
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 2
+theme_override_font_sizes/font_size = 2
+text = "Not every reflection tells the truth...
+"
+autowrap_mode = 3
+
+[node name="ScrollHint" type="Label" parent="CanvasLayer" unique_id=1658079642]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -586.0
+offset_top = -648.0
+offset_right = -121.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to interact with note "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollArea" type="Area2D" parent="." unique_id=739065714]
+position = Vector2(263, 152)
+
+[node name="Scroll" type="Sprite2D" parent="ScrollArea" unique_id=32873150]
+position = Vector2(-16.499996, 0.9999924)
+scale = Vector2(0.4374994, 0.25000024)
+texture = ExtResource("16_nnju3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollArea" unique_id=93383662]
+position = Vector2(-21, 0)
+shape = SubResource("RectangleShape2D_1s8tn")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ScrollArea" unique_id=2087737889]
+stream = ExtResource("17_80403")
+
+[node name="MirrorArea" type="Area2D" parent="." unique_id=1982782093]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MirrorArea" unique_id=1035262465]
+position = Vector2(167, 64)
+shape = SubResource("RectangleShape2D_be1h0")
+
+[node name="MirrorHint" type="Label" parent="MirrorArea" unique_id=1929389512]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Press E to enter"
+
+[node name="MirrorReturnPoint" type="Marker2D" parent="." unique_id=1980729348]
+position = Vector2(167, 71)
+
+[node name="theaterMarker" type="Marker2D" parent="." unique_id=731070488]
+position = Vector2(173, 67)
+
+[connection signal="body_entered" from="ScrollArea" to="." method="_on_scroll_area_body_entered"]
+[connection signal="body_exited" from="ScrollArea" to="." method="_on_scroll_area_body_exited"]
+[connection signal="body_entered" from="MirrorArea" to="." method="_on_mirror_area_body_entered"]
+[connection signal="body_exited" from="MirrorArea" to="." method="_on_mirror_area_body_exited"]
 
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_E"]

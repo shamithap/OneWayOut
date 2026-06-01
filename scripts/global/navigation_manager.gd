@@ -6,7 +6,7 @@ const scene_dict = {
 	"armory" : preload("res://scenes/rooms/armory/armory.tscn"),
 	"livingroom" : preload("res://scenes/rooms/livingroom/livingroom.tscn"),
 	"dungeon" : preload("res://scenes/rooms/dungeon.tscn"),
-	"theater": preload("res://scenes/rooms/theater.tscn"),
+	"theater": preload("res://scenes/rooms/theater/theater.tscn"),
 	"recreationalroom": preload("res://scenes/rooms/recroom/recreationalroom.tscn"),
 	"winecellar": preload("res://scenes/rooms/winecellar/winecellar.tscn"),
 	"ballroom": preload("res://scenes/rooms/ballroom/ballroom.tscn"),

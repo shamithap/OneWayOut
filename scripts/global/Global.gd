@@ -9,6 +9,9 @@ var armory_complete : bool = false
 var armory_item_collected : bool = false
 var library_complete = false
 var library_item_collected = false
+var theater_complete = false
+var theater_item_collected = false
+
 
 #0 pieces collected
 var key_tracker = 0

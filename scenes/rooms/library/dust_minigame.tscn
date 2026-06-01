@@ -3375,7 +3375,6 @@ size = Vector2(8, 5)
 size = Vector2(6, 10)
 
 [node name="DustMinigame" type="Node2D" unique_id=16023897]
-position = Vector2(308, 255)
 script = ExtResource("1_gp5ab")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=665805293]

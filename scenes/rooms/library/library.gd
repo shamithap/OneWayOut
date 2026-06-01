@@ -3,7 +3,6 @@ extends Node2D
 class_name Library
 
 @onready var player_packed_scene = preload("res://scenes/player.tscn")
-
 @onready var scroll := get_node_or_null("CanvasLayer/Scroll")
 @onready var scroll_hint := $CanvasLayer/ScrollHint
 @onready var scroll_sound := get_node_or_null("ScrollArea/AudioStreamPlayer2D")

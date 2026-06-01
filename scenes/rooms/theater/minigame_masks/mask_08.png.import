@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7hdx6hnrwq2v"
-path="res://.godot/imported/mask_07.png-abe0935e6de9ed1fa49c4d3fd303f009.ctex"
+uid="uid://c3gjlpj570t6x"
+path="res://.godot/imported/mask_08.png-8e7607f1dd83bbbf6f92860bf704b124.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_07.png"
-dest_files=["res://.godot/imported/mask_07.png-abe0935e6de9ed1fa49c4d3fd303f009.ctex"]
+source_file="res://scenes/rooms/theater/minigame_masks/mask_08.png"
+dest_files=["res://.godot/imported/mask_08.png-8e7607f1dd83bbbf6f92860bf704b124.ctex"]
 
 [params]
 
