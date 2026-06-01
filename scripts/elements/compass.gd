@@ -1,6 +1,5 @@
 extends Item
 
-@onready var timer := $Timer
 @onready var texture := $TextureRect
 @onready var collision := $CollisionShape2D
 
@@ -13,11 +12,7 @@ func _process(_delta: float) -> void:
 		texture.visible = false
 		collision.disabled = true
 		
-		timer.start()
-		await timer.timeout
-		
-		Overlay.get_node("CanvasLayer/Minimap").compass_activated = false
-		Overlay.get_node("CanvasLayer/Minimap").ghost.visible = false
+		Overlay.get_node("CanvasLayer/Minimap").timer.start()
 		
 		queue_free()
 		

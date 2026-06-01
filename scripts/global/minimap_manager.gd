@@ -2,6 +2,7 @@ extends Node
 
 @onready var player := $Player
 @onready var ghost := $Ghost
+@onready var timer := $CompassTimer
 var compass_activated = false
 
 @onready var layout_dict := {
@@ -63,3 +64,8 @@ func update_ghost_position(destination_room_name) -> void:
 		var current_room = layout_dict[destination_room_name]
 		if current_room:
 			ghost.global_position = current_room.global_position
+			
+
+func turn_off_compass() -> void:
+	Overlay.get_node("CanvasLayer/Minimap").compass_activated = false
+	Overlay.get_node("CanvasLayer/Minimap").ghost.visible = false

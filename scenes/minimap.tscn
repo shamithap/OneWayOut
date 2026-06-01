@@ -212,3 +212,9 @@ visible = false
 position = Vector2(0, -45.47206)
 scale = Vector2(0.079, 0.079)
 texture = ExtResource("4_dsx0k")
+
+[node name="CompassTimer" type="Timer" parent="." unique_id=495479696]
+wait_time = 240.0
+one_shot = true
+
+[connection signal="timeout" from="CompassTimer" to="." method="turn_off_compass"]

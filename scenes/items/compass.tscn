@@ -39,9 +39,5 @@ text = "Press E to pick up "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Timer" type="Timer" parent="." unique_id=1953985453]
-wait_time = 240.0
-one_shot = true
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
