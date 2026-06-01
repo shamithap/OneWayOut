@@ -31,7 +31,7 @@ func _ready():
 	
 func _process(_delta):
 	if in_mirror_exit_range and Input.is_action_just_pressed("interact"):
-		NavigationManager.spawn_door_tag = "MirrorReturn"
+		#NavigationManager.spawn_door_tag = "MirrorReturn"
 		get_tree().change_scene_to_file("res://scenes/rooms/theater/theater.tscn")
 	
 func pulse_glow():

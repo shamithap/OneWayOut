@@ -1555,13 +1555,16 @@ texture = ExtResource("9_2fptk")
 layout_mode = 0
 offset_left = 23.130768
 offset_top = 8.082136
-offset_right = 48.13078
-offset_bottom = 29.062136
+offset_right = 38.99106
+offset_bottom = 53.998802
 rotation = 0.75629354
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 2
-theme_override_font_sizes/font_size = 2
-text = "Instructions (placeholder)"
+theme_override_font_sizes/font_size = 1
+text = "You wake up in an unknown mansion... try to find your way out while avoiding the ghost haunting you. 
+
+(Press tab to open the overlay)"
+autowrap_mode = 3
 
 [node name="Hint" type="Label" parent="CanvasLayer" unique_id=2074003784]
 visible = false
