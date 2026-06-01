@@ -300,7 +300,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mfnq"]
-size = Vector2(9, 14)
+size = Vector2(10, 15)
 
 [node name="Ghost" type="Node2D" unique_id=1906987650]
 script = ExtResource("1_bbnym")
@@ -312,8 +312,8 @@ sprite_frames = SubResource("SpriteFrames_veat2")
 animation = &"walk_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1111953300]
-position = Vector2(0.5, 1)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_5mfnq")
 
 [node name="Timer" type="Timer" parent="." unique_id=1559917584]
-wait_time = 2.0
+wait_time = 4096.0

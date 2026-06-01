@@ -8,9 +8,9 @@ var player_room := ""
 
 var move_timer: Timer
 
-var speed := 1.2
-var min_speed := 0.4
-var speed_decay := 0.98
+var speed := 1.0
+var min_speed := 0.2
+# var speed_decay := 0.98
 
 func setup_graph():
 	astar.clear()
@@ -69,20 +69,54 @@ func connect_rooms(a, b):
 		return
 
 	astar.connect_points(room_ids[a], room_ids[b])
-	
-func _on_room_changed(room_name: String):
+
+func _on_room_changed(room_name:String):
 	if room_ids.has(room_name):
 		player_room = room_name
 	else:
-		print("Bad room signal:", room_name)
+		print("Unknown player room:", room_name)
+
+	# immediately re-evaluate ghost appearance
+	update_visual_position()
 
 func _on_timer_timeout() -> void:
-	player_room = NavigationManager.current_room_name
+	#player_room = NavigationManager.current_room_name	
+	print(
+		"Player room:", player_room,
+		"| Ghost room:", current_room
+	)
 	chase_player()
+	
+func update_visual_position():
+
+	# Ghost only appears if player and ghost share room
+	if current_room != player_room:
+		hide()
+		return
+
+	var scene = get_tree().current_scene
+
+	if scene == null:
+		hide()
+		return
+
+	var point = scene.find_child("GhostPoint", true, false)
+
+	if point == null:
+		print("No GhostPoint in:", scene.name)
+		hide()
+		return
+
+	global_position = point.global_position
+	show()
 
 func chase_player():
-	print("Chase:", current_room, "->", player_room)
-	if not room_ids.has(current_room) or not room_ids.has(player_room):
+	print("CHASE:",current_room,"->",player_room)
+
+	if !room_ids.has(current_room):
+		return
+
+	if !room_ids.has(player_room):
 		return
 
 	var path = astar.get_id_path(
@@ -90,26 +124,22 @@ func chase_player():
 		room_ids[player_room]
 	)
 
-	if path.size() <= 1:
-		return
+	if path.size() > 1:
+		var next_room = get_room_name(path[1])
 
-	var next_room = get_room_name(path[1])
+		print("Ghost moves:", current_room, "->", next_room)
 
-	print("Ghost moves:", current_room, "->", next_room)
+		current_room = next_room
+		Overlay.get_node("CanvasLayer/Minimap").update_ghost_position(current_room)
 
-	current_room = next_room
-	Overlay.get_node("CanvasLayer/Minimap").update_ghost_position(current_room)
-	
-	var scene = get_tree().current_scene
-	var point = scene.get_node_or_null("GhostPoint")
-	if point == null:
-		print("No GhostPoint in current scene:", scene.name)
-		return
+	# Show ghost only if ghost and player share room
+	if current_room == player_room:
+		update_visual_position()
+	else:
+		hide()
 
-	global_position = point.global_position
-
-	# Speed increase over time
-	speed = max(min_speed, speed * speed_decay)
+	# speed scaling
+	#speed = max(min_speed, speed * speed_decay)
 	move_timer.wait_time = speed
 
 func get_room_name(id: int) -> String:
