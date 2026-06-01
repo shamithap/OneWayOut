@@ -13,6 +13,7 @@ class_name Theater
 @onready var mirror_decor := $Node2D/Extra_Decor
 @onready var theater_marker := $theaterMarker
 
+
 var player : Player = null
 var in_scroll_range = false
 var in_mirror_range = false

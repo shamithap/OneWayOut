@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://bdrbr8qnj7snj" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_21.png" id="12_nuh2i"]
 [ext_resource type="Texture2D" uid="uid://w750phq15drm" path="res://assets/Theater assets/Lamp_post.png" id="13_t00hd"]
 [ext_resource type="Script" uid="uid://bnqt3sj4j8n6p" path="res://scenes/rooms/theater/animation_player.gd" id="14_q25aq"]
+[ext_resource type="AudioStream" uid="uid://dn215yeorjclr" path="res://sounds/theater/mask_switch.wav" id="15_ocbb3"]
+[ext_resource type="AudioStream" uid="uid://cy3b6qsglunv7" path="res://sounds/theater/mirror_shatter.wav" id="16_6g5wd"]
+[ext_resource type="AudioStream" uid="uid://yg2s6wksry66" path="res://sounds/theater/enter_mirror.wav" id="16_gsr4e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xgwt6"]
 texture = ExtResource("2_ot46u")
@@ -890,6 +893,144 @@ texture = ExtResource("4_gsr4e")
 12:9/0 = 0
 13:9/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ocbb3"]
+texture = ExtResource("3_ocbb3")
+separation = Vector2i(1, 1)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:3/0 = 0
+11:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqfg4"]
 texture = ExtResource("5_6g5wd")
 separation = Vector2i(1, 1)
@@ -1691,6 +1832,7 @@ texture = ExtResource("7_rnny8")
 2:1/0 = 0
 3:1/0 = 0
 4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:1/0 = 0
 6:1/0 = 0
 7:1/0 = 0
@@ -1700,6 +1842,7 @@ texture = ExtResource("7_rnny8")
 9:1/0 = 0
 9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:1/0 = 0
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:1/0 = 0
 12:1/0 = 0
 13:1/0 = 0
@@ -1860,6 +2003,7 @@ sources/3 = SubResource("TileSetAtlasSource_wqfg4")
 sources/4 = SubResource("TileSetAtlasSource_8q1ng")
 sources/5 = SubResource("TileSetAtlasSource_nsahx")
 sources/6 = SubResource("TileSetAtlasSource_gr1c5")
+sources/1 = SubResource("TileSetAtlasSource_ocbb3")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_teekm"]
 texture = ExtResource("7_rnny8")
@@ -2310,6 +2454,15 @@ offset_right = 342.0
 offset_bottom = 66.0
 theme_override_font_sizes/font_size = 4
 text = "Press E to return"
+
+[node name="MirrorCrackSound" type="AudioStreamPlayer2D" parent="." unique_id=1547862045]
+stream = ExtResource("16_6g5wd")
+
+[node name="MirrorSound" type="AudioStreamPlayer2D" parent="." unique_id=933471396]
+stream = ExtResource("16_gsr4e")
+
+[node name="MaskSwitchSound" type="AudioStreamPlayer2D" parent="." unique_id=1086471964]
+stream = ExtResource("15_ocbb3")
 
 [connection signal="body_entered" from="Mask1/Area2D" to="Mask1" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Mask1/Area2D" to="Mask1" method="_on_area_2d_body_exited"]

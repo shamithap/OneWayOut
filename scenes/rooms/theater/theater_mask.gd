@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var sprite := $mask
+@onready var mask_switch_sound = $"../MaskSwitchSound"
 
 @onready var hint := $Hint
 @export var correct_index : int = 0
@@ -27,6 +28,9 @@ func _process(_delta):
 		
 		if current_index >= mask_textures.size():
 			current_index = 0
+
+		if mask_switch_sound:
+			mask_switch_sound.play()
 		
 		sprite.texture = mask_textures[current_index]
 		get_parent().check_win()

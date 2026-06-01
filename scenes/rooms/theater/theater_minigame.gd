@@ -7,6 +7,8 @@ extends Node2D
 @onready var animation_player := $CanvasLayer/MirrorGlow/AnimationPlayer
 var player : Player = null
 @onready var mirror_exit_hint := $MirrorExitArea/MirrorHint
+@onready var mirror_sound = $MirrorSound
+@onready var mirror_crack_sound = $MirrorCrackSound
 
 var in_mirror_exit_range = false
 
@@ -22,6 +24,8 @@ func _ready():
 	ensure_player()
 	win_panel.visible = false
 	mirror_exit_hint.visible = false
+	if mirror_sound:
+		mirror_sound.play()
 	print("Playing mirror glow animation")
 	pulse_glow()
 	
@@ -55,6 +59,8 @@ func check_win():
 	
 	Global.theater_complete = true
 	player.can_move = false
+	if mirror_crack_sound:
+		mirror_crack_sound.play()
 	
 	await get_tree().create_timer(1.5).timeout
 	
