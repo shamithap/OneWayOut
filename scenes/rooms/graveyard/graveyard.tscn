@@ -38,6 +38,10 @@
 [ext_resource type="Texture2D" uid="uid://dpdti3a1pkdhf" path="res://assets/Graveyardassets/Pixel-16px Graveyard/gravestone2.png" id="33_7rwkv"]
 [ext_resource type="Script" uid="uid://ofv4x2v026w0" path="res://scripts/elements/exit_door.gd" id="37_jk6co"]
 [ext_resource type="Texture2D" uid="uid://8k8na0w7evoy" path="res://assets/objects/Pixel Art Padlock Pack - Animated/Small Sturdy Padlock/GOLD/Small Sturdy Padlock - GOLD - Spritesheet.png" id="37_pv4vx"]
+[ext_resource type="PackedScene" uid="uid://r1fjyu82c8t5" path="res://scenes/items/key_piece_2.tscn" id="39_jk6co"]
+[ext_resource type="PackedScene" uid="uid://dxttx4nbhhvlu" path="res://scenes/items/key_piece_3.tscn" id="40_nxyc8"]
+[ext_resource type="PackedScene" uid="uid://ckgr2mj52w8uf" path="res://scenes/items/key_piece_1.tscn" id="41_ihyty"]
+[ext_resource type="PackedScene" uid="uid://kv8c6b8i08yg" path="res://scenes/player.tscn" id="42_nxyc8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esgd0"]
 texture = ExtResource("2_jqof6")
@@ -2421,6 +2425,20 @@ autoplay = "idle"
 
 [node name="GhostPoint" type="Marker2D" parent="." unique_id=554116051]
 position = Vector2(189, 155)
+
+[node name="KeyPiece1" parent="." unique_id=1934945490 instance=ExtResource("41_ihyty")]
+position = Vector2(147, 153)
+scale = Vector2(0.20460463, 0.20460463)
+
+[node name="KeyPiece3" parent="." unique_id=2104653381 instance=ExtResource("40_nxyc8")]
+position = Vector2(228.00003, 164.00002)
+scale = Vector2(0.34722444, 0.34722444)
+
+[node name="KeyPiece2" parent="." unique_id=1191978857 instance=ExtResource("39_jk6co")]
+position = Vector2(203, 149)
+
+[node name="Player" parent="." unique_id=1424528440 instance=ExtResource("42_nxyc8")]
+position = Vector2(138, 127)
 
 [node name="FadeOut" type="CanvasLayer" parent="." unique_id=1393954123]
 

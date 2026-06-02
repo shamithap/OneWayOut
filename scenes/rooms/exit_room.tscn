@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bged5ikqfjv0f" path="res://assets/kenney_tiny-dungeon/Tiles/tile_3_transparent.png" id="9_a1sov"]
 [ext_resource type="Texture2D" uid="uid://cdswjfe46c3nn" path="res://assets/kenney_tiny-dungeon/Tiles/tile_13_transparent.png" id="10_x2tqw"]
 [ext_resource type="Texture2D" uid="uid://ceapf07a43v8m" path="res://assets/kenney_tiny-dungeon/Tiles/tile_15_transparent.png" id="11_mm2v8"]
+[ext_resource type="AudioStream" uid="uid://cna7fwgn06m5k" path="res://sounds/door_open.mp3" id="13_yq4ln"]
+[ext_resource type="AudioStream" uid="uid://cvcy6whyxchlj" path="res://sounds/walk_grass.mp3" id="14_550kv"]
 
 [sub_resource type="Animation" id="Animation_550kv"]
 resource_name = "ExitCutscene"
@@ -19,7 +21,7 @@ length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Player:position")
+tracks/0/path = NodePath("Layers/Player:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -31,7 +33,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Player:animation")
+tracks/1/path = NodePath("Layers/Player:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -43,7 +45,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/2/path = NodePath("FadeIn/ColorRect:color")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -52,13 +54,25 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sounds/GrassFootSteps:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.0666667, 2, 2.9666667, 5.8333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false]
+}
 
 [sub_resource type="Animation" id="Animation_bfebd"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Player:position")
+tracks/0/path = NodePath("Layers/Player:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -70,7 +84,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Player:animation")
+tracks/1/path = NodePath("Layers/Player:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -82,7 +96,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/2/path = NodePath("FadeIn/ColorRect:color")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -90,6 +104,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sounds/GrassFootSteps:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_viq1c"]
@@ -2200,26 +2226,34 @@ animations = [{
 [node name="ExitRoom" type="Node2D" unique_id=2037649305]
 metadata/_edit_horizontal_guides_ = [96.0]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1931901751]
+position = Vector2(-1, 1)
+offset = Vector2(0, 20.515)
+zoom = Vector2(4.37, 4.37)
+limit_bottom = 96
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2016366445]
 libraries/ = SubResource("AnimationLibrary_viq1c")
 autoplay = &"ExitCutscene"
 
-[node name="Floor" type="TileMapLayer" parent="." unique_id=1811170550]
+[node name="Layers" type="Node2D" parent="." unique_id=1886056312]
+
+[node name="Floor" type="TileMapLayer" parent="Layers" unique_id=1811170550]
 tile_map_data = PackedByteArray("AAD8//3/AgARAAUAAQD8//7/AgARAAUAAQD8////AgARAAUAAQD8/wAAAgARAAUAAQD8/wEAAgARAAUAAQD8/wIAAgARAAUAAQD8/wMAAgARAAUAAQD9//3/AgARAAUAAQD9//7/AgARAAUAAQD9////AgARAAUAAQD9/wAAAgARAAUAAQD9/wEAAgARAAUAAQD9/wIAAgARAAUAAQD9/wMAAgARAAUAAQD+//3/AgARAAUAAQD+//7/AgARAAUAAQD+////AgARAAUAAQD+/wAAAgARAAUAAQD+/wEAAgARAAUAAQD+/wIAAgARAAUAAQD+/wMAAgARAAUAAQD3//z/AgARAAUAAQD3//3/AgARAAUAAQD3//7/AgARAAUAAQD3////AgARAAUAAQD3/wAAAgARAAUAAQD3/wEAAgARAAUAAQD3/wIAAgARAAUAAQD3/wMAAgARAAUAAQD4//z/AgARAAUAAQD4//3/AgARAAUAAQD4//7/AgARAAUAAQD4////AgARAAUAAQD4/wAAAgARAAUAAQD4/wEAAgARAAUAAQD4/wIAAgARAAUAAQD4/wMAAgARAAUAAQD5//z/AgARAAUAAQD5//3/AgARAAUAAQD5//7/AgARAAUAAQD5////AgARAAUAAQD5/wAAAgARAAUAAQD5/wEAAgARAAUAAQD5/wIAAgARAAUAAQD5/wMAAgARAAUAAQD6//z/AgARAAUAAQD6//3/AgARAAUAAQD6//7/AgARAAUAAQD6////AgARAAUAAQD6/wAAAgARAAUAAQD6/wEAAgARAAUAAQD6/wIAAgARAAUAAQD6/wMAAgARAAUAAQD7//z/AgARAAUAAQD7//3/AgARAAUAAQD7//7/AgARAAUAAQD7////AgARAAUAAQD7/wAAAgARAAUAAQD7/wEAAgARAAUAAQD7/wIAAgARAAUAAQD7/wMAAgARAAUAAQD8//z/AgARAAUAAQD9//z/AgARAAUAAQD+//z/AgARAAUAAQD///z/AgARAAUAAQD///3/AgARAAUAAQD///7/AgARAAUAAQD/////AgARAAUAAQD//wAAAgARAAUAAQD//wEAAgARAAUAAQD//wIAAgARAAUAAQD//wMAAgARAAUAAQAAAPz/AgARAAUAAQAAAP3/AgARAAUAAQAAAP7/AgARAAUAAQAAAP//AgARAAUAAQAAAAAAAgARAAUAAQAAAAEAAgARAAUAAQAAAAIAAgARAAUAAQAAAAMAAgARAAUAAQABAPz/AgARAAUAAQABAP3/AgARAAUAAQABAP7/AgARAAUAAQABAP//AgARAAUAAQABAAAAAgARAAUAAQABAAEAAgARAAUAAQABAAIAAgARAAUAAQABAAMAAgARAAUAAQACAPz/AgARAAUAAQACAP3/AgARAAUAAQACAP7/AgARAAUAAQACAP//AgARAAUAAQACAAAAAgARAAUAAQACAAEAAgARAAUAAQACAAIAAgARAAUAAQACAAMAAgARAAUAAQADAPz/AgARAAUAAQADAP3/AgARAAUAAQADAP7/AgARAAUAAQADAP//AgARAAUAAQADAAAAAgARAAUAAQADAAEAAgARAAUAAQADAAIAAgARAAUAAQADAAMAAgARAAUAAQAEAPz/AgARAAUAAQAEAP3/AgARAAUAAQAEAP7/AgARAAUAAQAEAP//AgARAAUAAQAEAAAAAgARAAUAAQAEAAEAAgARAAUAAQAEAAIAAgARAAUAAQAEAAMAAgARAAUAAQAFAPz/AgARAAUAAQAFAP3/AgARAAUAAQAFAP7/AgARAAUAAQAFAP//AgARAAUAAQAFAAAAAgARAAUAAQAFAAEAAgARAAUAAQAFAAIAAgARAAUAAQAFAAMAAgARAAUAAQAGAPz/AgARAAUAAQAGAP3/AgARAAUAAQAGAP7/AgARAAUAAQAGAP//AgARAAUAAQAGAAAAAgARAAUAAQAGAAEAAgARAAUAAQAGAAIAAgARAAUAAQAGAAMAAgARAAUAAQAHAPz/AgARAAUAAQAHAP3/AgARAAUAAQAHAP7/AgARAAUAAQAHAP//AgARAAUAAQAHAAAAAgARAAUAAQAHAAEAAgARAAUAAQAHAAIAAgARAAUAAQAHAAMAAgARAAUAAQAIAPz/AgARAAUAAQAIAP3/AgARAAUAAQAIAP7/AgARAAUAAQAIAP//AgARAAUAAQAIAAAAAgARAAUAAQAIAAEAAgARAAUAAQAIAAIAAgARAAUAAQAIAAMAAgARAAUAAQD3/wQAAgARAAUAAQD4/wQAAgARAAUAAQD5/wQAAgARAAUAAQD6/wQAAgARAAUAAQD7/wQAAgARAAUAAQD8/wQAAgARAAUAAQD9/wQAAgARAAUAAQD+/wQAAgARAAUAAQD//wQAAgARAAUAAQAAAAQAAgARAAUAAQABAAQAAgARAAUAAQACAAQAAgARAAUAAQADAAQAAgARAAUAAQAEAAQAAgARAAUAAQAFAAQAAgARAAUAAQAGAAQAAgARAAUAAQAHAAQAAgARAAUAAQAIAAQAAgARAAUAAQA=")
 tile_set = SubResource("TileSet_donni")
 
-[node name="Player" type="AnimatedSprite2D" parent="." unique_id=1397849714]
+[node name="Player" type="AnimatedSprite2D" parent="Layers" unique_id=1397849714]
 position = Vector2(0, 87)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_a1sov")
 animation = &"idle_down"
 autoplay = "walk_up"
 
-[node name="Walls" type="TileMapLayer" parent="." unique_id=959071429]
+[node name="Walls" type="TileMapLayer" parent="Layers" unique_id=959071429]
 tile_map_data = PackedByteArray("AAD9/wUAAAAEAAIAAAD+/wUAAAAEAAIAAAACAAUAAAAEAAIAAAADAAUAAAAEAAMAAAABAAUAAAAEAAIAAAD6/wUAAAACAAEAAAAFAAUAAAACAAEAAAAGAAUAAAACAAEAAAD4/wUAAAAEAAMAAAAHAAUAAAAEAAMAAAAEAAUAAAAEAAMAAAD8/wUAAAAEAAMAAAD5/wUAAAAEAAMAAAD7/wUAAAAEAAMAAAD3//7/AQAGAAAAAAD4//7/AQAGAAAAAAD5//7/AQAGAAAAAAD6//7/AQAGAAAAAAD7//7/AQAGAAAAAAD8//7/AQAGAAAAAAD9//7/AQAGAAAAAAD+//7/AQAHAAAAAAABAP7/AQAFAAAAAAACAP7/AQAGAAAAAAADAP7/AQAGAAAAAAAEAP7/AQAGAAAAAAAFAP7/AQAGAAAAAAAGAP7/AQAGAAAAAAAHAP7/AQAGAAAAAAAIAP7/AQAGAAAAAAA=")
 tile_set = SubResource("TileSet_73fx0")
 
-[node name="Details" type="TileMapLayer" parent="." unique_id=1924396047]
+[node name="Details" type="TileMapLayer" parent="Layers" unique_id=1924396047]
 tile_map_data = PackedByteArray("AAD4/wAAAAAIAAEAAAD4/wEAAAAIAAIAAAD4/wIAAAABAAAAAAD5////AAAJAAAAAAD5/wAAAAAJAAEAAAD5/wEAAAAJAAIAAAD5/wIAAAAJAAMAAAD6////AAAKAAAAAAD6/wAAAAAKAAEAAAD6/wEAAAAKAAIAAAAEAAAAAAAIAAEAAAAEAAEAAAAIAAIAAAAEAAIAAAAIAAMAAAAFAP//AAAJAAAAAAAFAAAAAAAJAAEAAAAFAAEAAAAJAAIAAAAFAAIAAAAJAAMAAAAGAP//AAAKAAAAAAAGAAAAAAAKAAEAAAAGAAEAAAAKAAIAAAD7////AAADAAAAAAACAAMAAAADAAAAAAAGAP3/AAADAAAAAAD4//3/AAADAAAAAAD6/wMAAAAEAAAAAAADAP3/AAAEAAAAAAD7//3/AAAEAAEAAAAHAAMAAAAEAAEAAAD8/wIAAAAAAAAAAAADAAAAAAAAAAAAAAAGAAIAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_bfebd")
 
@@ -2305,32 +2339,37 @@ texture = ExtResource("10_x2tqw")
 position = Vector2(133, 88)
 texture = ExtResource("11_mm2v8")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1931901751]
-position = Vector2(-1, 1)
-offset = Vector2(0, 20.515)
-zoom = Vector2(4.37, 4.37)
-limit_bottom = 96
+[node name="Doors" type="Node2D" parent="." unique_id=263624959]
 
-[node name="Door2" type="Node2D" parent="." unique_id=263624959]
-
-[node name="LeftDoor" type="AnimatedSprite2D" parent="Door2" unique_id=1795792720]
+[node name="LeftDoor" type="AnimatedSprite2D" parent="Doors" unique_id=1795792720]
 position = Vector2(-8, 88)
 sprite_frames = SubResource("SpriteFrames_58inh")
 animation = &"opening"
 autoplay = "opening"
 
-[node name="RightDoor" type="AnimatedSprite2D" parent="Door2" unique_id=238122455]
+[node name="RightDoor" type="AnimatedSprite2D" parent="Doors" unique_id=238122455]
 position = Vector2(8, 88)
 sprite_frames = SubResource("SpriteFrames_lhur5")
 animation = &"opening"
 autoplay = "opening"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=111679365]
+[node name="FadeIn" type="CanvasLayer" parent="." unique_id=111679365]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=952594376]
+[node name="ColorRect" type="ColorRect" parent="FadeIn" unique_id=952594376]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Sounds" type="Node2D" parent="." unique_id=885821225]
+
+[node name="DoorOpen" type="AudioStreamPlayer2D" parent="Sounds" unique_id=425786576]
+stream = ExtResource("13_yq4ln")
+volume_db = -15.0
+autoplay = true
+
+[node name="GrassFootSteps" type="AudioStreamPlayer2D" parent="Sounds" unique_id=270517889]
+stream = ExtResource("14_550kv")
+parameters/looping = true
