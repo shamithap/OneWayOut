@@ -2457,6 +2457,7 @@ position = Vector2(231, 59)
 shape = SubResource("RectangleShape2D_ot46u")
 
 [node name="MirrorHint" type="Label" parent="MirrorExitArea" unique_id=1160775485]
+visible = false
 offset_left = 213.0
 offset_top = 43.0
 offset_right = 342.0

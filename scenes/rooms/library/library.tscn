@@ -2125,7 +2125,7 @@ tile_map_data = PackedByteArray("AAAYABYAAAADAA8AAAAYABcAAAADABAAAAAYABgAAAADABE
 tile_set = SubResource("TileSet_75ugr")
 
 [node name="libraryMarker" type="Marker2D" parent="." unique_id=1274300244]
-position = Vector2(136, 90)
+position = Vector2(190, 121)
 
 [node name="Doors" type="Node2D" parent="." unique_id=516601932]
 visible = false
@@ -2192,10 +2192,10 @@ shape = SubResource("RectangleShape2D_geole")
 
 [node name="Hint" type="Label" parent="Broom" unique_id=123495810]
 visible = false
-offset_left = 139.0
-offset_top = 137.0
-offset_right = 251.0
-offset_bottom = 159.33334
+offset_left = 128.0
+offset_top = 102.0
+offset_right = 222.0
+offset_bottom = 112.0
 theme_override_font_sizes/font_size = 5
 text = "Press E to pickup"
 horizontal_alignment = 1
@@ -2256,30 +2256,30 @@ text = "Formidable is the one who sweeps obstacles away into oblivion…
 "
 autowrap_mode = 3
 
-[node name="ScrollHint" type="Label" parent="CanvasLayer" unique_id=1746741295]
-visible = false
+[node name="ScrollArea" type="Area2D" parent="." unique_id=91139448]
+position = Vector2(180, 103)
+
+[node name="Scroll" type="Sprite2D" parent="ScrollArea" unique_id=223972660]
+position = Vector2(-14.000005, 2.5000024)
+scale = Vector2(0.9999994, 0.6875003)
+texture = ExtResource("11_gcw75")
+
+[node name="ScrollHint" type="Label" parent="ScrollArea" unique_id=1746741295]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -586.0
-offset_top = -648.0
-offset_right = -121.0
-offset_bottom = -66.0
+offset_left = -23.0
+offset_top = 26.0
+offset_right = 47.0
+offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 5
 text = "Press E to interact with note "
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="ScrollArea" type="Area2D" parent="." unique_id=91139448]
-position = Vector2(171, 92)
-
-[node name="Scroll" type="Sprite2D" parent="ScrollArea" unique_id=223972660]
-position = Vector2(-17.5, -2.861023e-06)
-scale = Vector2(0.5625, 0.37499964)
-texture = ExtResource("11_gcw75")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollArea" unique_id=1563160552]
 position = Vector2(-17.5, 0)

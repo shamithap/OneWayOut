@@ -5,7 +5,7 @@ class_name Theater
 @onready var player_packed_scene = preload("res://scenes/player.tscn")
 
 @onready var scroll := $CanvasLayer/Scroll
-@onready var scroll_hint := $CanvasLayer/ScrollHint
+@onready var scroll_hint := $ScrollArea/ScrollHint
 @onready var scroll_sound := $ScrollArea/AudioStreamPlayer2D
 @onready var mirror_hint := $MirrorArea/MirrorHint
 @onready var mirror_return_point := $MirrorReturnPoint

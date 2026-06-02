@@ -23,6 +23,7 @@ func _on_dust_cleaned():
 
 func win():
 	instruction.visible = false
+	await get_tree().create_timer(1).timeout
 	win_panel.visible = true
 	Global.library_complete = true
 
