@@ -5,7 +5,11 @@ extends Node
 	"KeyPiece2" : preload("res://scenes/items/key_piece_2.tscn"),
 	"KeyPiece3" : preload("res://scenes/items/key_piece_3.tscn"),
 	"Compass" : preload("res://scenes/items/compass.tscn"),
+<<<<<<< Updated upstream
 	"Hourglass" : preload("res://scenes/items/hourglass.tscn")
+=======
+	"HealthVial": preload("res://scenes/items/health_vial.tscn")
+>>>>>>> Stashed changes
 }
 
 @onready var pickup_dialogue := {
@@ -13,7 +17,11 @@ extends Node
 	"KeyPiece2" : "You picked up a key piece",
 	"KeyPiece3" : "You picked up a key piece",
 	"Compass" : "You picked up a compass! You'll be able to see where the ghost is on the minimap for the next 4 minutes.",
+<<<<<<< Updated upstream
 	"Hourglass" : "You picked up an hourglass! The ghost will approach you slower for 2 minutes."
+=======
+	"HealthVial": "You picked up a health vial. One heart restored"
+>>>>>>> Stashed changes
 }
 
 @onready var inventory = []
@@ -22,7 +30,14 @@ extends Node
 @onready var sound : AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func get_item(position : Vector2):
-	var random_item = item_dict.keys().pick_random()
+	var possible_items = item_dict.keys()
+	#chooses a random item but if we're at 3 hearts, then you can't get a vial
+	if Global.player_health >= Global.max_health:
+		possible_items.erase("HealthVial")
+
+	var random_item = possible_items.pick_random()
+	#for testing
+	#var random_item = "HealthVial"
 	var item_instance = item_dict[random_item].instantiate()
 	get_parent().add_child(item_instance)
 	item_instance.global_position = position
@@ -38,6 +53,9 @@ func pickup_item(item):
 	#shows key piece on overlay
 	if item == "KeyPiece1" or item == "KeyPiece2" or item == "KeyPiece3":
 		Overlay.get_node("CanvasLayer/KeyOverlay").unlock_key(item)
+	if item == "HealthVial":
+		var health_bar = get_tree().root.get_node("Overlay/CanvasLayer/HealthBar")
+		health_bar.heal_health()
 		
 	sound.play()
 	label.text = pickup_dialogue[item]
