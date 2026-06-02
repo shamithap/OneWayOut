@@ -12,6 +12,7 @@ var library_item_collected = false
 var theater_complete = false
 var theater_item_collected = false
 var return_from_mirror = false
+var theater_mask_states = [-1, -1, -1, -1, -1]
 
 
 #0 pieces collected

@@ -8,11 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="6_ufc05"]
 [ext_resource type="Texture2D" uid="uid://dbct2jqq35lxo" path="res://assets/HouseInteriorA/HouseInteriorA.png" id="7_rnny8"]
 [ext_resource type="Script" uid="uid://c5hx2gp18rl17" path="res://scenes/rooms/theater/theater_mask.gd" id="8_ot46u"]
-[ext_resource type="Texture2D" uid="uid://dyv6nbelwh0nx" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_13.png" id="8_tmxm7"]
-[ext_resource type="Texture2D" uid="uid://baq5y7eoq66im" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_18.png" id="9_f4l8e"]
-[ext_resource type="Texture2D" uid="uid://b8f2v6rp38irq" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_20.png" id="10_a0x85"]
-[ext_resource type="Texture2D" uid="uid://yb1tw7gmclbt" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_28.png" id="11_2hqot"]
-[ext_resource type="Texture2D" uid="uid://bdrbr8qnj7snj" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_21.png" id="12_nuh2i"]
+[ext_resource type="Texture2D" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_13.png" id="8_tmxm7"]
+[ext_resource type="Texture2D" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_18.png" id="9_f4l8e"]
+[ext_resource type="Texture2D" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_20.png" id="10_a0x85"]
+[ext_resource type="Texture2D" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_28.png" id="11_2hqot"]
+[ext_resource type="Texture2D" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_21.png" id="12_nuh2i"]
 [ext_resource type="Texture2D" uid="uid://w750phq15drm" path="res://assets/Theater assets/Lamp_post.png" id="13_t00hd"]
 [ext_resource type="Script" uid="uid://bnqt3sj4j8n6p" path="res://scenes/rooms/theater/animation_player.gd" id="14_q25aq"]
 [ext_resource type="AudioStream" uid="uid://dn215yeorjclr" path="res://sounds/theater/mask_switch.wav" id="15_ocbb3"]
@@ -2250,7 +2250,7 @@ position = Vector2(164, 112)
 
 [node name="Mask1" type="Node2D" parent="." unique_id=1661201614]
 script = ExtResource("8_ot46u")
-correct_index = 4
+correct_index = 9
 
 [node name="mask" type="Sprite2D" parent="Mask1" unique_id=438691723]
 position = Vector2(250, 55.999996)
@@ -2273,7 +2273,9 @@ text = "Press E to switch"
 
 [node name="Mask2" type="Node2D" parent="." unique_id=255592727]
 script = ExtResource("8_ot46u")
-correct_index = 1
+correct_index = 5
+mask_id = 1
+start_index = 1
 
 [node name="mask" type="Sprite2D" parent="Mask2" unique_id=299252165]
 position = Vector2(180, 55)
@@ -2296,6 +2298,9 @@ text = "Press E to switch"
 
 [node name="Mask3" type="Node2D" parent="." unique_id=1761364210]
 script = ExtResource("8_ot46u")
+correct_index = 6
+mask_id = 2
+start_index = 2
 
 [node name="mask" type="Sprite2D" parent="Mask3" unique_id=1963435749]
 position = Vector2(151, 55.000004)
@@ -2318,7 +2323,9 @@ text = "Press E to switch"
 
 [node name="Mask4" type="Node2D" parent="." unique_id=1792418372]
 script = ExtResource("8_ot46u")
-correct_index = 2
+correct_index = 8
+mask_id = 3
+start_index = 3
 
 [node name="mask" type="Sprite2D" parent="Mask4" unique_id=1737649179]
 position = Vector2(264, 96)
@@ -2342,7 +2349,9 @@ text = "Press E to switch"
 
 [node name="Mask5" type="Node2D" parent="." unique_id=561980394]
 script = ExtResource("8_ot46u")
-correct_index = 3
+correct_index = 7
+mask_id = 4
+start_index = 4
 
 [node name="mask" type="Sprite2D" parent="Mask5" unique_id=865900630]
 position = Vector2(265.00003, 143)
