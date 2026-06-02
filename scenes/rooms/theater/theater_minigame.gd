@@ -31,8 +31,7 @@ func _ready():
 	
 func _process(_delta):
 	if in_mirror_exit_range and Input.is_action_just_pressed("interact"):
-		#NavigationManager.spawn_door_tag = "MirrorReturn"
-		get_tree().change_scene_to_file("res://scenes/rooms/theater/theater.tscn")
+		return_to_theater()
 	
 func pulse_glow():
 	var tween = create_tween()
@@ -78,4 +77,8 @@ func _on_mirror_exit_area_body_exited(body: Node2D) -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/rooms/theater/theater.tscn")
+	return_to_theater()
+	
+func return_to_theater():
+	Global.return_from_mirror = true
+	get_tree().change_scene_to_file("res://scenes/rooms/theater/theater.tscn")	

@@ -11,6 +11,7 @@ var library_complete = false
 var library_item_collected = false
 var theater_complete = false
 var theater_item_collected = false
+var return_from_mirror = false
 
 
 #0 pieces collected

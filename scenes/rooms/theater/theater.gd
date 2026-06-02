@@ -51,10 +51,10 @@ func ensure_player():
 		NavigationManager.player = player
 		add_child(player)
 
-	if NavigationManager.spawn_door_tag == "MirrorReturn":
+	if Global.return_from_mirror:
 		player.global_position = mirror_return_point.global_position
-		player.last_direction = Vector2.DOWN
-		NavigationManager.spawn_door_tag = null
+		player.last_direction = "down"
+		Global.return_from_mirror = false
 	elif NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
 
