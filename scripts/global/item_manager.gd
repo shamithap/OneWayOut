@@ -4,14 +4,16 @@ extends Node
 	"KeyPiece1" : preload("res://scenes/items/key_piece_1.tscn"),
 	"KeyPiece2" : preload("res://scenes/items/key_piece_2.tscn"),
 	"KeyPiece3" : preload("res://scenes/items/key_piece_3.tscn"),
-	"Compass" : preload("res://scenes/items/compass.tscn")
+	"Compass" : preload("res://scenes/items/compass.tscn"),
+	"Hourglass" : preload("res://scenes/items/hourglass.tscn")
 }
 
 @onready var pickup_dialogue := {
 	"KeyPiece1" : "You picked up a key piece",
 	"KeyPiece2" : "You picked up a key piece",
 	"KeyPiece3" : "You picked up a key piece",
-	"Compass" : "You picked up a compass! You'll be able to see where the ghost is on the minimap for the next 4 minutes."
+	"Compass" : "You picked up a compass! You'll be able to see where the ghost is on the minimap for the next 4 minutes.",
+	"Hourglass" : "You picked up an hourglass! The ghost will approach you slower for 2 minutes."
 }
 
 @onready var inventory = []

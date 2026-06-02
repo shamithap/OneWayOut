@@ -4,6 +4,7 @@ extends Node
 @onready var ghost := $Ghost
 @onready var timer := $CompassTimer
 var compass_activated = false
+var hourglass_activated = false
 
 @onready var layout_dict := {
 	"dungeon" : $Markers/dungeon, 
@@ -65,3 +66,6 @@ func update_ghost_position(destination_room_name) -> void:
 func turn_off_compass() -> void:
 	Overlay.get_node("CanvasLayer/Minimap").compass_activated = false
 	Overlay.get_node("CanvasLayer/Minimap").ghost.visible = false
+
+func turn_off_hourglass() -> void:
+	Overlay.get_node("CanvasLayer/Minimap").hourglass_activated = false

@@ -2367,6 +2367,14 @@ position = Vector2(40, -40)
 
 [node name="ArrowSpawner" type="Node2D" parent="." unique_id=1138354409]
 
+[node name="Arrow1" type="Sprite2D" parent="ArrowSpawner" unique_id=1764321396]
+position = Vector2(-16, -32)
+scale = Vector2(20.124996, 14.125005)
+
+[node name="Arrow2" type="Node2D" parent="ArrowSpawner" unique_id=618509852]
+
+[node name="Arrow3" type="Node2D" parent="ArrowSpawner" unique_id=2094054536]
+
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_W"]
 [editable path="Doors/Door_N"]

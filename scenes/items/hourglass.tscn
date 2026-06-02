@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://mfng5s73ldo2"]
+
+[ext_resource type="Script" uid="uid://cv4tiyuxlhxxh" path="res://scripts/elements/hourglass.gd" id="1_axr65"]
+[ext_resource type="Texture2D" uid="uid://b0iab1cix2ddj" path="res://assets/objects/hourglass.png" id="2_cq730"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b436p"]
+size = Vector2(20, 32)
+
+[node name="Hourglass" type="Area2D" unique_id=1379588077]
+script = ExtResource("1_axr65")
+metadata/_custom_type_script = "uid://c7qgiwhv1adq"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=369945924]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 23.68
+texture = ExtResource("2_cq730")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=947296747]
+shape = SubResource("RectangleShape2D_b436p")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=323689183]
+
+[node name="Hint" type="Label" parent="CanvasLayer" unique_id=545564213]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -70.0
+offset_top = -66.0
+offset_right = 70.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to pick up "
+horizontal_alignment = 1
+vertical_alignment = 1
