@@ -51,6 +51,7 @@ func _process(_delta):
 			mask_switch_sound.play()
 		
 		sprite.texture = mask_textures[current_index]
+		await get_tree().create_timer(0.3).timeout
 		get_parent().check_win()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
