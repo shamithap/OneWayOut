@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 var astar := AStar2D.new()
 var room_ids := {}
@@ -90,15 +90,15 @@ func _on_timer_timeout() -> void:
 func update_visual_position():
 
 	# Ghost only appears if player and ghost share room
-	if current_room != player_room:
-		hide()
-		return
+	#if current_room != player_room:
+		#hide()
+		#return
 
 	var scene = get_tree().current_scene
 
-	if scene == null:
-		hide()
-		return
+	#if scene == null:
+		#hide()
+		#return
 
 	var point = scene.find_child("GhostPoint", true, false)
 

@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://brxrq0bfcvhte" path="res://assets/kenney_roguelike-indoors/Tilesheets/roguelikeIndoor_transparent.png" id="7_kdwso"]
 [ext_resource type="Texture2D" uid="uid://ch8in3mw752y2" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_02_ArtOfScrolls_BigWander(16x16).png" id="7_l2hhy"]
 [ext_resource type="Texture2D" uid="uid://cogk382dg1swy" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_01_ArtOfScrolls_BigWander(16x16).png" id="9_2fptk"]
-[ext_resource type="PackedScene" uid="uid://v57rlikcqcxr" path="res://scenes/ghost.tscn" id="11_dgppd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5qli"]
 texture = ExtResource("1_oafy4")
@@ -1586,8 +1585,6 @@ vertical_alignment = 1
 [node name="Player" parent="." unique_id=1424528440 instance=ExtResource("3_hhji2")]
 z_index = 0
 position = Vector2(321, 249)
-
-[node name="Ghost" parent="." unique_id=2003514600 instance=ExtResource("11_dgppd")]
 
 [node name="GhostPoint" type="Marker2D" parent="." unique_id=1655420591 groups=["ghost_point"]]
 position = Vector2(270, 179)

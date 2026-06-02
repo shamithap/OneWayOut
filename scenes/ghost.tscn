@@ -302,7 +302,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mfnq"]
 size = Vector2(10, 15)
 
-[node name="Ghost" type="Node2D" unique_id=1906987650]
+[node name="Ghost" type="Area2D" unique_id=53572852]
+z_index = 10
 script = ExtResource("1_bbnym")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1805342997]
