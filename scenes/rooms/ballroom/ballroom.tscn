@@ -1949,6 +1949,7 @@ sources/0 = SubResource("TileSetAtlasSource_wd2jt")
 sources/1 = SubResource("TileSetAtlasSource_5kief")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5utf"]
+size = Vector2(92, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0txoy"]
 size = Vector2(96, 10)
@@ -2019,14 +2020,12 @@ position = Vector2(273, 125)
 position = Vector2(272, 125)
 
 [node name="DanceArea" type="Area2D" parent="." unique_id=1962577780]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DanceArea" unique_id=358708012]
-position = Vector2(160, 131)
+position = Vector2(185, 132)
 shape = SubResource("RectangleShape2D_a5utf")
 
 [node name="Collisions" type="Node2D" parent="." unique_id=1722220901]
-visible = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Collisions" unique_id=181769126]
 
