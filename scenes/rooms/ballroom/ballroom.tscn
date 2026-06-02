@@ -2148,23 +2148,6 @@ text = "Press E to interact with note "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TableHint" type="Label" parent="CanvasLayer" unique_id=647294938]
-visible = false
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -70.0
-offset_top = -66.0
-offset_right = 70.0
-offset_bottom = -43.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Press E to interact"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [connection signal="body_entered" from="ScrollArea" to="." method="_on_scroll_area_body_entered"]
 [connection signal="body_exited" from="ScrollArea" to="." method="_on_scroll_area_body_exited"]
 
