@@ -2148,6 +2148,22 @@ text = "Press E to interact with note "
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="DanceHint" type="Label" parent="CanvasLayer" unique_id=1895153027]
+visible = false
+anchors_preset = -1
+anchor_left = 0.162
+anchor_top = 0.20400001
+anchor_right = 0.162
+anchor_bottom = 0.20400001
+offset_left = -40.623993
+offset_top = -31.192001
+offset_right = 82.37601
+offset_bottom = -8.191994
+theme_override_font_sizes/font_size = 7
+text = "Press E to start the dance"
+
+[connection signal="body_entered" from="DanceArea" to="." method="_on_dance_area_body_entered"]
+[connection signal="body_exited" from="DanceArea" to="." method="_on_dance_area_body_exited"]
 [connection signal="body_entered" from="ScrollArea" to="." method="_on_scroll_area_body_entered"]
 [connection signal="body_exited" from="ScrollArea" to="." method="_on_scroll_area_body_exited"]
 
