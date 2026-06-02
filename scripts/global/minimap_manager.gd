@@ -19,8 +19,7 @@ var compass_activated = false
 	"ballroom" : $Markers/ballroom, 
 	"livingroom" : $Markers/livingroom, 
 	"fancybathroom" : $Markers/fancybathroom,
-	"main" : $Markers/foyer,
-	"exitroom" : $Markers/exit
+	"main" : $Markers/foyer
 }
 
 @onready var explored_dict := {
@@ -37,8 +36,7 @@ var compass_activated = false
 	"ballroom" : $Explored/explored_ballroom,
 	"livingroom" : $Explored/explored_livingroom,
 	"fancybathroom" : $Explored/explored_fancybathroom,
-	"main" : $Explored/explored_foyer,
-	"exitroom" : $Explored/explored_exit
+	"main" : $Explored/explored_foyer
 }
 
 # Called when the node enters the scene tree for the first time.

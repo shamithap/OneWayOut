@@ -41,15 +41,6 @@ offset_right = 15.028899
 offset_bottom = 89.4027
 color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
 
-[node name="explored_exit" type="ColorRect" parent="Explored" unique_id=731247797]
-visible = false
-layout_mode = 0
-offset_left = -15.799615
-offset_top = -89.78805
-offset_right = 15.028899
-offset_bottom = -62.813103
-color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
-
 [node name="explored_dungeon" type="ColorRect" parent="Explored" unique_id=993073828]
 visible = false
 layout_mode = 0
@@ -160,9 +151,6 @@ color = Color(0.5386608, 0.2146354, 1.4439226e-07, 1)
 
 [node name="Markers" type="Node2D" parent="." unique_id=1711688872]
 position = Vector2(0, -15)
-
-[node name="exit" type="Marker2D" parent="Markers" unique_id=498949198]
-position = Vector2(0, -62)
 
 [node name="dungeon" type="Marker2D" parent="Markers" unique_id=1728729625]
 position = Vector2(-35, -30)

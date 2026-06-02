@@ -14,4 +14,4 @@ func _process(_delta):
 		animation_player.play("FadeOut")
 
 func go_to_exit():
-	get_tree().change_scene_to_file("res://scenes/rooms/exit_room.tscn")
+	get_tree().change_scene_to_file("res://scenes/rooms/exit_cutscene.tscn")

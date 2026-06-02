@@ -1,23 +1,25 @@
 [gd_scene format=4 uid="uid://chs2uoemg7yea"]
 
-[ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="1_82ukh"]
-[ext_resource type="Texture2D" uid="uid://brxrq0bfcvhte" path="res://assets/kenney_roguelike-indoors/Tilesheets/roguelikeIndoor_transparent.png" id="2_nnv8w"]
-[ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="3_b7cng"]
-[ext_resource type="Texture2D" uid="uid://csf87sivifdl7" path="res://assets/player/player tileset/Player/player_Idle.png" id="4_bfebd"]
-[ext_resource type="Texture2D" uid="uid://7ma2neu25p2v" path="res://assets/Graveyardassets/Pixel-16px Graveyard/tileset/tileset.png" id="5_bfebd"]
-[ext_resource type="Texture2D" uid="uid://blq3biqh1a2w6" path="res://assets/player/player tileset/Player/player_Walk.png" id="5_yq4ln"]
-[ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="6_yq4ln"]
-[ext_resource type="Texture2D" uid="uid://cotf4y563qnen" path="res://assets/kenney_tiny-dungeon/Tiles/tile_2_transparent.png" id="7_550kv"]
-[ext_resource type="Texture2D" uid="uid://dr55vyhcpedju" path="res://assets/kenney_tiny-dungeon/Tiles/tile_1_transparent.png" id="8_viq1c"]
-[ext_resource type="Texture2D" uid="uid://bged5ikqfjv0f" path="res://assets/kenney_tiny-dungeon/Tiles/tile_3_transparent.png" id="9_a1sov"]
-[ext_resource type="Texture2D" uid="uid://cdswjfe46c3nn" path="res://assets/kenney_tiny-dungeon/Tiles/tile_13_transparent.png" id="10_x2tqw"]
-[ext_resource type="Texture2D" uid="uid://ceapf07a43v8m" path="res://assets/kenney_tiny-dungeon/Tiles/tile_15_transparent.png" id="11_mm2v8"]
-[ext_resource type="AudioStream" uid="uid://cna7fwgn06m5k" path="res://sounds/door_open.mp3" id="13_yq4ln"]
-[ext_resource type="AudioStream" uid="uid://cvcy6whyxchlj" path="res://sounds/walk_grass.mp3" id="14_550kv"]
+[ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="1_h0k38"]
+[ext_resource type="Texture2D" uid="uid://brxrq0bfcvhte" path="res://assets/kenney_roguelike-indoors/Tilesheets/roguelikeIndoor_transparent.png" id="2_vswlc"]
+[ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="3_xceyv"]
+[ext_resource type="Texture2D" uid="uid://csf87sivifdl7" path="res://assets/player/player tileset/Player/player_Idle.png" id="4_tslau"]
+[ext_resource type="Texture2D" uid="uid://blq3biqh1a2w6" path="res://assets/player/player tileset/Player/player_Walk.png" id="5_llrxq"]
+[ext_resource type="Texture2D" uid="uid://dhk7oor33j5qa" path="res://icon.svg" id="6_e0pt5"]
+[ext_resource type="Texture2D" uid="uid://7ma2neu25p2v" path="res://assets/Graveyardassets/Pixel-16px Graveyard/tileset/tileset.png" id="7_fvoks"]
+[ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="8_qosab"]
+[ext_resource type="Texture2D" uid="uid://cotf4y563qnen" path="res://assets/kenney_tiny-dungeon/Tiles/tile_2_transparent.png" id="9_e4n2j"]
+[ext_resource type="Texture2D" uid="uid://dr55vyhcpedju" path="res://assets/kenney_tiny-dungeon/Tiles/tile_1_transparent.png" id="10_f2nlb"]
+[ext_resource type="Texture2D" uid="uid://bged5ikqfjv0f" path="res://assets/kenney_tiny-dungeon/Tiles/tile_3_transparent.png" id="11_1612u"]
+[ext_resource type="Texture2D" uid="uid://cdswjfe46c3nn" path="res://assets/kenney_tiny-dungeon/Tiles/tile_13_transparent.png" id="12_l23pd"]
+[ext_resource type="Texture2D" uid="uid://ceapf07a43v8m" path="res://assets/kenney_tiny-dungeon/Tiles/tile_15_transparent.png" id="13_fkjh4"]
+[ext_resource type="AudioStream" uid="uid://cna7fwgn06m5k" path="res://sounds/door_open.mp3" id="14_vugni"]
+[ext_resource type="AudioStream" uid="uid://cvcy6whyxchlj" path="res://sounds/exit/walk_grass.mp3" id="15_yprxg"]
+[ext_resource type="AudioStream" uid="uid://bvcb2c3ykckxi" path="res://sounds/exit/horror_sting.wav" id="16_yg8ot"]
 
 [sub_resource type="Animation" id="Animation_550kv"]
 resource_name = "ExitCutscene"
-length = 6.0
+length = 7.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -65,6 +67,30 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [true, false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Layers/Ghost:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(5.366667, 6.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 96), Vector2(0, 56.000008)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sounds/GhostSting:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(6.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_bfebd"]
@@ -117,6 +143,30 @@ tracks/3/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Layers/Ghost:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 56.000008)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sounds/GhostSting:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_viq1c"]
 _data = {
@@ -125,7 +175,7 @@ _data = {
 }
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qi33b"]
-texture = ExtResource("1_82ukh")
+texture = ExtResource("1_h0k38")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -261,7 +311,7 @@ separation = Vector2i(1, 1)
 11:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hcwq4"]
-texture = ExtResource("2_nnv8w")
+texture = ExtResource("2_vswlc")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -790,7 +840,7 @@ separation = Vector2i(1, 1)
 27:18/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2f3do"]
-texture = ExtResource("3_b7cng")
+texture = ExtResource("3_xceyv")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -977,147 +1027,147 @@ sources/1 = SubResource("TileSetAtlasSource_hcwq4")
 sources/2 = SubResource("TileSetAtlasSource_2f3do")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbgi4"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tefeu"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6xl0"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tipki"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(0, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_85g3d"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(48, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_choun"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(96, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ya4ey"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(0, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eb6dy"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(48, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trceg"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(96, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a8y0u"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(0, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkv2x"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(48, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbj1t"]
-atlas = ExtResource("4_bfebd")
+atlas = ExtResource("4_tslau")
 region = Rect2(96, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_muem4"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dp3eg"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ld40"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gqmmt"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(144, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yc10j"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(192, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jscy8"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(240, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pm3ni"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(0, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y6deb"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(48, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_og1vs"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(96, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2wyq8"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(144, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vxglm"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(192, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2f3dj"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(240, 48, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yq6so"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(0, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fv21b"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(48, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tel4y"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(96, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qkpxi"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(144, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5q0nq"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(192, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dgi5k"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(240, 144, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8jky"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(0, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kmb1v"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(48, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fuf3a"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(96, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pibwh"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(144, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6pm6"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(192, 96, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5he1u"]
-atlas = ExtResource("5_yq4ln")
+atlas = ExtResource("5_llrxq")
 region = Rect2(240, 96, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a1sov"]
@@ -1272,7 +1322,7 @@ animations = [{
 }]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1d6vf"]
-texture = ExtResource("1_82ukh")
+texture = ExtResource("1_h0k38")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -1422,7 +1472,7 @@ separation = Vector2i(1, 1)
 11:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5iw2c"]
-texture = ExtResource("5_bfebd")
+texture = ExtResource("7_fvoks")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1489,7 +1539,7 @@ texture = ExtResource("5_bfebd")
 10:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_og00e"]
-texture = ExtResource("6_yq4ln")
+texture = ExtResource("8_qosab")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -2096,7 +2146,7 @@ sources/1 = SubResource("TileSetAtlasSource_5iw2c")
 sources/2 = SubResource("TileSetAtlasSource_og00e")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_donni"]
-texture = ExtResource("5_bfebd")
+texture = ExtResource("7_fvoks")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2152,19 +2202,19 @@ texture = ExtResource("5_bfebd")
 sources/0 = SubResource("TileSetAtlasSource_donni")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mm2v8"]
-atlas = ExtResource("1_82ukh")
+atlas = ExtResource("1_h0k38")
 region = Rect2(170, 51, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5iw2c"]
-atlas = ExtResource("1_82ukh")
+atlas = ExtResource("1_h0k38")
 region = Rect2(170, 34, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_og00e"]
-atlas = ExtResource("1_82ukh")
+atlas = ExtResource("1_h0k38")
 region = Rect2(170, 17, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ht0nn"]
-atlas = ExtResource("1_82ukh")
+atlas = ExtResource("1_h0k38")
 region = Rect2(170, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_58inh"]
@@ -2188,19 +2238,19 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5sr76"]
-atlas = ExtResource("1_82ukh")
+atlas = ExtResource("1_h0k38")
 region = Rect2(187, 51, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_474ck"]
-atlas = ExtResource("1_82ukh")
+atlas = ExtResource("1_h0k38")
 region = Rect2(187, 34, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0fl8t"]
-atlas = ExtResource("1_82ukh")
+atlas = ExtResource("1_h0k38")
 region = Rect2(187, 17, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_81sf6"]
-atlas = ExtResource("1_82ukh")
+atlas = ExtResource("1_h0k38")
 region = Rect2(187, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lhur5"]
@@ -2249,6 +2299,11 @@ sprite_frames = SubResource("SpriteFrames_a1sov")
 animation = &"idle_down"
 autoplay = "walk_up"
 
+[node name="Ghost" type="Sprite2D" parent="Layers" unique_id=1508708732]
+position = Vector2(0, 56.000008)
+scale = Vector2(0.140625, 0.140625)
+texture = ExtResource("6_e0pt5")
+
 [node name="Walls" type="TileMapLayer" parent="Layers" unique_id=959071429]
 tile_map_data = PackedByteArray("AAD9/wUAAAAEAAIAAAD+/wUAAAAEAAIAAAACAAUAAAAEAAIAAAADAAUAAAAEAAMAAAABAAUAAAAEAAIAAAD6/wUAAAACAAEAAAAFAAUAAAACAAEAAAAGAAUAAAACAAEAAAD4/wUAAAAEAAMAAAAHAAUAAAAEAAMAAAAEAAUAAAAEAAMAAAD8/wUAAAAEAAMAAAD5/wUAAAAEAAMAAAD7/wUAAAAEAAMAAAD3//7/AQAGAAAAAAD4//7/AQAGAAAAAAD5//7/AQAGAAAAAAD6//7/AQAGAAAAAAD7//7/AQAGAAAAAAD8//7/AQAGAAAAAAD9//7/AQAGAAAAAAD+//7/AQAHAAAAAAABAP7/AQAFAAAAAAACAP7/AQAGAAAAAAADAP7/AQAGAAAAAAAEAP7/AQAGAAAAAAAFAP7/AQAGAAAAAAAGAP7/AQAGAAAAAAAHAP7/AQAGAAAAAAAIAP7/AQAGAAAAAAA=")
 tile_set = SubResource("TileSet_73fx0")
@@ -2261,83 +2316,83 @@ tile_set = SubResource("TileSet_bfebd")
 
 [node name="WallEdge" type="Sprite2D" parent="WallEdges" unique_id=396790491]
 position = Vector2(-40, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge2" type="Sprite2D" parent="WallEdges" unique_id=1160044414]
 position = Vector2(-24, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge8" type="Sprite2D" parent="WallEdges" unique_id=704462380]
 position = Vector2(-56, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge3" type="Sprite2D" parent="WallEdges" unique_id=943705401]
 position = Vector2(-8, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge4" type="Sprite2D" parent="WallEdges" unique_id=89647711]
 position = Vector2(8, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge5" type="Sprite2D" parent="WallEdges" unique_id=566159467]
 position = Vector2(24, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge6" type="Sprite2D" parent="WallEdges" unique_id=319081506]
 position = Vector2(40, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge7" type="Sprite2D" parent="WallEdges" unique_id=1640306068]
 position = Vector2(56, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge9" type="Sprite2D" parent="WallEdges" unique_id=1312790498]
 position = Vector2(72, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge10" type="Sprite2D" parent="WallEdges" unique_id=1346766756]
 position = Vector2(88, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge11" type="Sprite2D" parent="WallEdges" unique_id=1251110301]
 position = Vector2(104, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge12" type="Sprite2D" parent="WallEdges" unique_id=795807518]
 position = Vector2(119, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge13" type="Sprite2D" parent="WallEdges" unique_id=970475385]
 position = Vector2(-72, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge14" type="Sprite2D" parent="WallEdges" unique_id=1696300423]
 position = Vector2(-88, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge15" type="Sprite2D" parent="WallEdges" unique_id=251338111]
 position = Vector2(-104, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallEdge16" type="Sprite2D" parent="WallEdges" unique_id=743183542]
 position = Vector2(-120, 72)
-texture = ExtResource("7_550kv")
+texture = ExtResource("9_e4n2j")
 
 [node name="WallCorner" type="Sprite2D" parent="WallEdges" unique_id=445776153]
 position = Vector2(-135, 72)
-texture = ExtResource("8_viq1c")
+texture = ExtResource("10_f2nlb")
 
 [node name="WallCorner2" type="Sprite2D" parent="WallEdges" unique_id=674644646]
 position = Vector2(133, 72)
-texture = ExtResource("9_a1sov")
+texture = ExtResource("11_1612u")
 
 [node name="WallSide" type="Sprite2D" parent="WallEdges" unique_id=261711676]
 position = Vector2(-135, 88)
-texture = ExtResource("10_x2tqw")
+texture = ExtResource("12_l23pd")
 
 [node name="WallSide2" type="Sprite2D" parent="WallEdges" unique_id=1629596065]
 position = Vector2(133, 88)
-texture = ExtResource("11_mm2v8")
+texture = ExtResource("13_fkjh4")
 
 [node name="Doors" type="Node2D" parent="." unique_id=263624959]
 
@@ -2354,6 +2409,7 @@ animation = &"opening"
 autoplay = "opening"
 
 [node name="FadeIn" type="CanvasLayer" parent="." unique_id=111679365]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="FadeIn" unique_id=952594376]
 anchors_preset = 15
@@ -2366,10 +2422,14 @@ color = Color(0, 0, 0, 1)
 [node name="Sounds" type="Node2D" parent="." unique_id=885821225]
 
 [node name="DoorOpen" type="AudioStreamPlayer2D" parent="Sounds" unique_id=425786576]
-stream = ExtResource("13_yq4ln")
+stream = ExtResource("14_vugni")
 volume_db = -15.0
 autoplay = true
 
 [node name="GrassFootSteps" type="AudioStreamPlayer2D" parent="Sounds" unique_id=270517889]
-stream = ExtResource("14_550kv")
+stream = ExtResource("15_yprxg")
+volume_db = -5.143
 parameters/looping = true
+
+[node name="GhostSting" type="AudioStreamPlayer2D" parent="Sounds" unique_id=774514640]
+stream = ExtResource("16_yg8ot")
