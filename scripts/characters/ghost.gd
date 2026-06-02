@@ -8,7 +8,7 @@ var player_room := ""
 
 var move_timer: Timer
 
-var room_stay_time := 10.0
+var room_stay_time := 60.0
 # var speed_decay := 0.98
 
 func setup_graph():
@@ -154,6 +154,8 @@ func attack_player() -> void:
 	hide()
 	# transport ghost back to graveyard 
 	current_room = "graveyard"
+	if(player_room == "graveyard"):
+		current_room = "main"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
