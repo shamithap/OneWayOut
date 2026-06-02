@@ -4,12 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_7pye8"]
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="3_3gr6x"]
 [ext_resource type="Texture2D" uid="uid://cntl6mimgo8wa" path="res://assets/Library #01/Lecter-00.png" id="4_6d7te"]
-[ext_resource type="Texture2D" uid="uid://pp0swwhvxu0n" path="res://assets/Theater assets/New Piskel.png" id="5_hxhdr"]
 [ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="6_oowkj"]
 [ext_resource type="Texture2D" uid="uid://dbct2jqq35lxo" path="res://assets/HouseInteriorA/HouseInteriorA.png" id="7_3h8ks"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="8_rr10b"]
 [ext_resource type="Texture2D" uid="uid://b6fkhg5rxn0fh" path="res://scenes/rooms/theater/minigame_masks/mask_07.png" id="9_yx0x4"]
-[ext_resource type="Texture2D" uid="uid://csuprp58o73l3" path="res://scenes/rooms/theater/minigame_masks/mask_24.png" id="10_yx0x4"]
 [ext_resource type="Texture2D" uid="uid://dud4tqio24pih" path="res://scenes/rooms/theater/minigame_masks/mask_01.png" id="11_yx0x4"]
 [ext_resource type="Texture2D" uid="uid://coywdb17gg3u3" path="res://scenes/rooms/theater/minigame_masks/mask_23.png" id="12_yx0x4"]
 [ext_resource type="Texture2D" uid="uid://c3gjlpj570t6x" path="res://scenes/rooms/theater/minigame_masks/mask_08.png" id="13_yx0x4"]
@@ -892,8 +890,11 @@ texture = ExtResource("4_6d7te")
 12:9/0 = 0
 13:9/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b6hq4"]
+load_path = "res://.godot/imported/New Piskel.png-97c6ee4dfb890866a97ebb7041fb9209.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqfg4"]
-texture = ExtResource("5_hxhdr")
+texture = SubResource("CompressedTexture2D_b6hq4")
 separation = Vector2i(1, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8q1ng"]
@@ -2116,7 +2117,7 @@ texture = ExtResource("9_yx0x4")
 [node name="mask2" type="Sprite2D" parent="Sprites" unique_id=299252165]
 position = Vector2(149, 54.5)
 scale = Vector2(0.28125, 0.23437501)
-texture = ExtResource("10_yx0x4")
+texture = ExtResource("9_yx0x4")
 
 [node name="mask3" type="Sprite2D" parent="Sprites" unique_id=1963435749]
 position = Vector2(224, 55)
