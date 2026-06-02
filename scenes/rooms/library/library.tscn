@@ -2265,6 +2265,7 @@ scale = Vector2(0.9999994, 0.6875003)
 texture = ExtResource("11_gcw75")
 
 [node name="ScrollHint" type="Label" parent="ScrollArea" unique_id=1746741295]
+visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
