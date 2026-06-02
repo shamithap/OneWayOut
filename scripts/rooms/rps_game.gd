@@ -2,16 +2,21 @@ extends Control
 
 @onready var players_texture := $Sprites/PlayerChoice
 @onready var knights_texture := $Sprites/KnightChoice
-@onready var label := $Label
-@onready var game_win_or_lose := $EndPanel/VBoxContainer/GameWinOrLose
+@onready var label := $Help/Label
+@onready var game_win_or_lose := $EndPanel/GameWinOrLose
+@onready var timer := $NextRoundTimer
+
+@onready var win_sound := $Sounds/Win
+@onready var lose_sound := $Sounds/Lose
+@onready var select_sound := $Sounds/Select
+var sound_triggered = false
 
 @onready var buttons = [
-	$Buttons/HBoxContainer/GridContainer/SwordButton,
-	$Buttons/HBoxContainer/GridContainer/ShieldButton,
-	$Buttons/HBoxContainer/GridContainer/ScrollButton,
-	$NextRoundButton,
-	$Buttons/HBoxContainer/ConfirmationButton,
-	$EndPanel/VBoxContainer/ReturnRoomButton
+	$Buttons/SwordButton,
+	$Buttons/ShieldButton,
+	$Buttons/ScrollButton,
+	$Buttons/ConfirmationButton,
+	$EndPanel/ReturnRoomButton
 ]
 
 @onready var option_pictures := {
@@ -36,17 +41,26 @@ func _ready() -> void:
 func _process(_delta) -> void:
 	if round_count <= 3 and not in_round and player_win_count != 2:
 		in_round = true
-		await buttons[4].pressed #confirmation button - player makes choice
+		await buttons[3].pressed #confirmation button - player makes choice
 		knight_turn() #player done making choice, time for knight
 		round_winner() #see who won
-		await buttons[3].pressed #next round button
+		
+		timer.start()
+		await timer.timeout
+		
+		next_round()
 	elif round_count > 3 or player_win_count == 2:
 		$EndPanel.visible = true
 		if(player_win_count == 2):
 			Global.armory_complete = true
+			if not sound_triggered:
+				win_sound.play()
 			game_win_or_lose.text = "Congrats you won!"
 		else:
+			if not sound_triggered:
+				lose_sound.play()
 			game_win_or_lose.text = "You lost..."
+		sound_triggered = true
 
 func knight_turn() -> void:
 	knights_choice = option_pictures.keys().pick_random()
@@ -85,7 +99,6 @@ func round_winner() -> void:
 	else: 
 		#tie
 		label.text = "It was a tie!"
-	buttons[3].visible = true
 	
 func player_won_round():
 	player_win_count += 1
@@ -98,21 +111,24 @@ func _on_button_pressed(button):
 	match button.name:
 		"SwordButton":
 			if can_make_choice:
+				select_sound.play()
 				players_choice = "sword"
 				players_texture.texture = option_pictures[players_choice]
 		"ShieldButton":
 			if can_make_choice:
+				select_sound.play()
 				players_choice = "shield"
 				players_texture.texture = option_pictures[players_choice]
 		"ScrollButton":
 			if can_make_choice:
+				select_sound.play()
 				players_choice = "scroll"
 				players_texture.texture = option_pictures[players_choice]
-		"NextRoundButton":
-			buttons[3].visible = false
-			round_count += 1
-			reset()
 		"ConfirmationButton":
 			can_make_choice = false
 		"ReturnRoomButton":
 			get_tree().change_scene_to_file("res://scenes/rooms/armory/armory.tscn")
+
+func next_round() -> void:
+	round_count += 1
+	reset()
