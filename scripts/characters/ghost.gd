@@ -8,8 +8,7 @@ var player_room := ""
 
 var move_timer: Timer
 
-var speed := 1.0
-var min_speed := 0.2
+var room_stay_time := 10.0
 # var speed_decay := 0.98
 
 func setup_graph():
@@ -90,15 +89,15 @@ func _on_timer_timeout() -> void:
 func update_visual_position():
 
 	# Ghost only appears if player and ghost share room
-	#if current_room != player_room:
-		#hide()
-		#return
+	if current_room != player_room:
+		hide()
+		return
 
 	var scene = get_tree().current_scene
 
-	#if scene == null:
-		#hide()
-		#return
+	if scene == null:
+		hide()
+		return
 
 	var point = scene.find_child("GhostPoint", true, false)
 
@@ -135,18 +134,26 @@ func chase_player():
 	# Show ghost only if ghost and player share room
 	if current_room == player_room:
 		update_visual_position()
+		attack_player()
 	else:
 		hide()
 
 	# speed scaling
-	#speed = max(min_speed, speed * speed_decay)
-	move_timer.wait_time = speed
+	# speed = max(min_speed, speed * speed_decay)
+	# move_timer.wait_time = room_stay_time
 
 func get_room_name(id: int) -> String:
 	for room in room_ids:
 		if room_ids[room] == id:
 			return room
 	return ""
+	
+func attack_player() -> void:
+	# take one heart away
+	# print ghost got you! dialouge box
+	hide()
+	# transport ghost back to graveyard 
+	current_room = "graveyard"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -161,6 +168,6 @@ func _ready() -> void:
 	
 	# setup timer
 	move_timer = $Timer
-	move_timer.wait_time = speed
+	move_timer.wait_time = room_stay_time
 	move_timer.timeout.connect(_on_timer_timeout)
 	move_timer.start()
