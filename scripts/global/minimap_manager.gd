@@ -6,7 +6,6 @@ extends Node
 var compass_activated = false
 
 @onready var layout_dict := {
-	"exit" : $Markers/exit,
 	"dungeon" : $Markers/dungeon, 
 	"graveyard" : $Markers/graveyard, 
 	"winecellar" : $Markers/winecellar,
@@ -23,7 +22,6 @@ var compass_activated = false
 }
 
 @onready var explored_dict := {
-	"exit" : $Explored/explored_exit,
 	"dungeon" : $Explored/explored_dungeon,
 	"graveyard" : $Explored/explored_graveyard,
 	"winecellar" : $Explored/explored_winecellar,
