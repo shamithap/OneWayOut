@@ -8,11 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="6_ufc05"]
 [ext_resource type="Texture2D" uid="uid://dbct2jqq35lxo" path="res://assets/HouseInteriorA/HouseInteriorA.png" id="7_rnny8"]
 [ext_resource type="Script" uid="uid://c5hx2gp18rl17" path="res://scenes/rooms/theater/theater_mask.gd" id="8_ot46u"]
-[ext_resource type="Texture2D" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_13.png" id="8_tmxm7"]
-[ext_resource type="Texture2D" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_18.png" id="9_f4l8e"]
-[ext_resource type="Texture2D" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_20.png" id="10_a0x85"]
-[ext_resource type="Texture2D" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_28.png" id="11_2hqot"]
-[ext_resource type="Texture2D" path="res://assets/Theater assets/Feeling Masks (3)/Feeling Masks/mask_21.png" id="12_nuh2i"]
+[ext_resource type="Texture2D" uid="uid://bfmu4n11w6sa6" path="res://scenes/rooms/theater/scary_masks/mask_20.png" id="9_gsr4e"]
+[ext_resource type="Texture2D" uid="uid://cwutcwwkgx1dh" path="res://scenes/rooms/theater/scary_masks/mask_18.png" id="10_6g5wd"]
+[ext_resource type="Texture2D" uid="uid://bgl56wbb6paqt" path="res://scenes/rooms/theater/scary_masks/mask_13.png" id="11_ufc05"]
+[ext_resource type="Texture2D" uid="uid://c6p5sopk0epa7" path="res://scenes/rooms/theater/scary_masks/mask_28.png" id="12_6g5wd"]
+[ext_resource type="Texture2D" uid="uid://xofnj1s7l0ux" path="res://scenes/rooms/theater/scary_masks/mask_21.png" id="12_rnny8"]
 [ext_resource type="Texture2D" uid="uid://w750phq15drm" path="res://assets/Theater assets/Lamp_post.png" id="13_t00hd"]
 [ext_resource type="Script" uid="uid://bnqt3sj4j8n6p" path="res://scenes/rooms/theater/animation_player.gd" id="14_q25aq"]
 [ext_resource type="AudioStream" uid="uid://dn215yeorjclr" path="res://sounds/theater/mask_switch.wav" id="15_ocbb3"]
@@ -2255,7 +2255,7 @@ correct_index = 9
 [node name="mask" type="Sprite2D" parent="Mask1" unique_id=438691723]
 position = Vector2(250, 55.999996)
 scale = Vector2(0.29150346, 0.23509225)
-texture = ExtResource("8_tmxm7")
+texture = ExtResource("9_gsr4e")
 
 [node name="Area2D" type="Area2D" parent="Mask1" unique_id=278575874]
 
@@ -2280,7 +2280,7 @@ start_index = 1
 [node name="mask" type="Sprite2D" parent="Mask2" unique_id=299252165]
 position = Vector2(180, 55)
 scale = Vector2(0.28125, 0.23437501)
-texture = ExtResource("9_f4l8e")
+texture = ExtResource("10_6g5wd")
 
 [node name="Area2D" type="Area2D" parent="Mask2" unique_id=1700070334]
 
@@ -2305,7 +2305,7 @@ start_index = 2
 [node name="mask" type="Sprite2D" parent="Mask3" unique_id=1963435749]
 position = Vector2(151, 55.000004)
 scale = Vector2(0.27539048, 0.23724388)
-texture = ExtResource("10_a0x85")
+texture = ExtResource("11_ufc05")
 
 [node name="Area2D" type="Area2D" parent="Mask3" unique_id=143133110]
 
@@ -2331,7 +2331,7 @@ start_index = 3
 position = Vector2(264, 96)
 rotation = 1.5707964
 scale = Vector2(0.27539048, 0.23724388)
-texture = ExtResource("11_2hqot")
+texture = ExtResource("12_6g5wd")
 
 [node name="Area2D" type="Area2D" parent="Mask4" unique_id=1533185033]
 
@@ -2357,7 +2357,7 @@ start_index = 4
 position = Vector2(265.00003, 143)
 rotation = 1.5707964
 scale = Vector2(0.27539048, 0.23724388)
-texture = ExtResource("12_nuh2i")
+texture = ExtResource("12_rnny8")
 
 [node name="Area2D" type="Area2D" parent="Mask5" unique_id=1077550588]
 
