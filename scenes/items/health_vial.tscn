@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c253eqr6x5w3d"]
+
+[ext_resource type="Script" uid="uid://c7qgiwhv1adq" path="res://scripts/elements/item.gd" id="1_r61ij"]
+[ext_resource type="Texture2D" uid="uid://c5vywmp0allsh" path="res://assets/objects/health-potion-bottle.png" id="2_bu1wn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bu1wn"]
+
+[node name="HealthVial" type="Area2D" unique_id=223071435]
+script = ExtResource("1_r61ij")
+metadata/_custom_type_script = "uid://c7qgiwhv1adq"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=576876525]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_bu1wn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1541713801]
+shape = SubResource("RectangleShape2D_bu1wn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1728579712]
+
+[node name="Hint" type="Label" parent="CanvasLayer" unique_id=1710655087]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -70.0
+offset_top = -66.0
+offset_right = 70.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E to pick up "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

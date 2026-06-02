@@ -1,14 +1,29 @@
 extends Node2D
 
-@onready var health : int = 3
+#@onready var health : int = 3
+@onready var health : int = 2 #for testing
+@onready var max_health : int = 3
+
 @onready var heart1 := $Heart1
 @onready var heart2 := $Heart2
 @onready var heart3 := $Heart3
 @onready var hurt_sound := $HurtSound
 
+#for testing
+func _ready():
+	Global.player_health = health
+	
+	if health == 2:
+		heart3.animation = "lose"
+
 func lose_health() -> void:
+	if health <= 0:
+		return
+
 	hurt_sound.play()
-	health = health - 1
+	health -= 1
+	Global.player_health = health
+
 	match health:
 		2:
 			heart3.animation = "lose"
@@ -16,6 +31,22 @@ func lose_health() -> void:
 			heart2.animation = "lose"
 		0:
 			heart1.animation = "lose"
+			death()
+
+func heal_health() -> void:
+	if health >= max_health:
+		return
+
+	health += 1
+	Global.player_health = health
+
+	match health:
+		1:
+			heart1.animation = "idle"
+		2:
+			heart2.animation = "idle"
+		3:
+			heart3.animation = "idle"
 
 func death() -> void:
 	print("dead")

@@ -61,7 +61,6 @@ animations = [{
 
 [node name="HealthBar" type="Node2D" unique_id=773332232]
 script = ExtResource("1_y3kqx")
-test = true
 
 [node name="Heart1" type="AnimatedSprite2D" parent="." unique_id=947964859]
 position = Vector2(38, 37)
