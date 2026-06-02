@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bnta4d22bv8n0" path="res://scripts/global/health_manager.gd" id="1_y3kqx"]
 [ext_resource type="Texture2D" uid="uid://ceo1uw7127rn7" path="res://assets/objects/Hearts/PNG/animated/border/heart_animated_1.png" id="2_6opq1"]
+[ext_resource type="AudioStream" uid="uid://ct4ycxy4agxiq" path="res://sounds/hurt.wav" id="3_6opq1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdjhy"]
 atlas = ExtResource("2_6opq1")
@@ -60,6 +61,7 @@ animations = [{
 
 [node name="HealthBar" type="Node2D" unique_id=773332232]
 script = ExtResource("1_y3kqx")
+test = true
 
 [node name="Heart1" type="AnimatedSprite2D" parent="." unique_id=947964859]
 position = Vector2(38, 37)
@@ -81,3 +83,6 @@ scale = Vector2(3.355197, 3.3541195)
 sprite_frames = SubResource("SpriteFrames_tn5s6")
 animation = &"lose"
 autoplay = "idle"
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="." unique_id=1339923729]
+stream = ExtResource("3_6opq1")

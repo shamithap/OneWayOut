@@ -4,13 +4,10 @@ extends Node2D
 @onready var heart1 := $Heart1
 @onready var heart2 := $Heart2
 @onready var heart3 := $Heart3
-@export var test = false
-
-func _process(_delta: float) -> void:
-	if test:
-		lose_health()
+@onready var hurt_sound := $HurtSound
 
 func lose_health() -> void:
+	hurt_sound.play()
 	health = health - 1
 	match health:
 		2:
