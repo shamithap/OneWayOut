@@ -2064,6 +2064,7 @@ tile_set = SubResource("TileSet_76e82")
 [node name="Doors" type="Node2D" parent="." unique_id=516601932]
 
 [node name="Door_N" parent="Doors" unique_id=1336069685 instance=ExtResource("8_rr10b")]
+position = Vector2(5, -4)
 destination_room_name = "armory"
 destination_door_tag = "S"
 spawn_direction = "down"
@@ -2075,6 +2076,7 @@ position = Vector2(188, 75)
 position = Vector2(187, 72)
 
 [node name="Door_E" parent="Doors" unique_id=1622387379 instance=ExtResource("8_rr10b")]
+position = Vector2(0, -3)
 destination_room_name = "library"
 destination_door_tag = "W"
 spawn_direction = "left"
@@ -2086,6 +2088,7 @@ position = Vector2(241, 124)
 position = Vector2(242, 124)
 
 [node name="Door_S" parent="Doors" unique_id=1686877879 instance=ExtResource("8_rr10b")]
+position = Vector2(4, -2)
 destination_room_name = "ballroom"
 destination_door_tag = "N"
 spawn_direction = "up"
@@ -2207,11 +2210,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ScrollArea" type="Area2D" parent="." unique_id=739065714]
-position = Vector2(263, 152)
+position = Vector2(195, 113)
 
 [node name="Scroll" type="Sprite2D" parent="ScrollArea" unique_id=32873150]
-position = Vector2(-16.499996, 0.9999924)
-scale = Vector2(0.4374994, 0.25000024)
+position = Vector2(-18.999996, -1.5000024)
+scale = Vector2(0.74999946, 0.5624996)
 texture = ExtResource("16_nnju3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollArea" unique_id=93383662]
@@ -2236,7 +2239,7 @@ text = "Press E to enter"
 position = Vector2(167, 71)
 
 [node name="theaterMarker" type="Marker2D" parent="." unique_id=731070488]
-position = Vector2(173, 67)
+position = Vector2(165, 86)
 
 [connection signal="body_entered" from="ScrollArea" to="." method="_on_scroll_area_body_entered"]
 [connection signal="body_exited" from="ScrollArea" to="." method="_on_scroll_area_body_exited"]

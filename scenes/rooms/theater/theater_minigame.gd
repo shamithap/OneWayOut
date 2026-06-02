@@ -58,10 +58,11 @@ func check_win():
 	
 	Global.theater_complete = true
 	player.can_move = false
+	await get_tree().create_timer(1.5).timeout
 	if mirror_crack_sound:
 		mirror_crack_sound.play()
 	
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(1).timeout
 	
 	win_panel.visible = true
 	
