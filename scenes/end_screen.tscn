@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://dq6ekecfqfffc"]
+
+[ext_resource type="Script" uid="uid://dkb8mled7thdq" path="res://scripts/end_screen.gd" id="1_87vmq"]
+[ext_resource type="Texture2D" uid="uid://cu4uhuwcrv2qv" path="res://assets/UI/background1.png" id="1_jc7ji"]
+[ext_resource type="FontFile" uid="uid://d208f377vxcrw" path="res://assets/UI/ThaleahFat.ttf" id="2_87vmq"]
+[ext_resource type="Texture2D" uid="uid://ddxd875dlhwg8" path="res://assets/UI/FreeHorrorUi.png" id="3_g44xs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj8vg"]
+atlas = ExtResource("3_g44xs")
+region = Rect2(128, 131, 64, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plosh"]
+atlas = ExtResource("3_g44xs")
+region = Rect2(6, 234, 52, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j4el"]
+atlas = ExtResource("3_g44xs")
+region = Rect2(70, 234, 52, 15)
+
+[sub_resource type="Animation" id="Animation_wke0n"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_um0j2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fix67"]
+_data = {
+&"FadeIn": SubResource("Animation_wke0n"),
+&"RESET": SubResource("Animation_um0j2")
+}
+
+[node name="EndScreen" type="Control" unique_id=1677911308]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_87vmq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1721465132]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=512316996]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jc7ji")
+
+[node name="Title" type="Label" parent="CanvasLayer" unique_id=849407421]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -398.5
+offset_top = -270.0
+offset_right = 398.5
+offset_bottom = -132.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_87vmq")
+theme_override_font_sizes/font_size = 150
+text = "You Escaped"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=878950725]
+offset_left = 407.66394
+offset_top = 211.3009
+offset_right = 760.0
+offset_bottom = 591.6991
+texture = SubResource("AtlasTexture_vj8vg")
+
+[node name="Credits" type="Label" parent="CanvasLayer/TextureRect2" unique_id=1631415743]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 58.699097
+offset_bottom = 58.699097
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_87vmq")
+theme_override_font_sizes/font_size = 40
+text = "Created by:
+Abby Doinog
+Shamitha Pichika
+Hritika Naik
+Chengfei Jiang"
+horizontal_alignment = 1
+
+[node name="BackButton" type="TextureButton" parent="CanvasLayer/TextureRect2" unique_id=585339127]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -85.0
+offset_top = -105.6991
+offset_right = 85.0
+offset_bottom = -56.699097
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_plosh")
+texture_hover = SubResource("AtlasTexture_4j4el")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect2/BackButton" unique_id=938044702]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.83197
+offset_top = -33.5
+offset_right = 95.16803
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_87vmq")
+theme_override_font_sizes/font_size = 40
+text = "main menu "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2118249478]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=95102849]
+libraries/ = SubResource("AnimationLibrary_fix67")
+autoplay = &"FadeIn"
+
+[connection signal="button_down" from="CanvasLayer/TextureRect2/BackButton" to="." method="_on_back_button_button_down"]
