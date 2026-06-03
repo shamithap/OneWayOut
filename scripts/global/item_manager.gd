@@ -25,13 +25,6 @@ extends Node
 var reward_count = 0
 
 func get_item(position : Vector2):
-	var random_item = "Hourglass"
-
-	var item_instance = item_dict[random_item].instantiate()
-	get_parent().add_child(item_instance)
-	item_instance.global_position = position
-	'''
-
 	reward_count += 1
 	var possible_items = item_dict.keys()
 	
@@ -58,7 +51,7 @@ func get_item(position : Vector2):
 
 	if random_item == "KeyPiece1" or random_item == "KeyPiece2" or random_item == "KeyPiece3":
 		item_dict.erase(random_item)
-		'''
+	
 
 func pickup_item(item):
 	inventory.append(item)
