@@ -30,7 +30,10 @@ func _on_level_spawn(destination_tag : String):
 	
 	
 func already_won():
-	chest.animation = "open"
 	if not Global.kitchen_item_collected:
+		chest.animation = "opening"
+		await chest.animation_finished
 		ItemManager.get_item(chest_marker.global_position)
-		Global.kitchen_item_collected = true
+		Global.armory_item_collected = true
+	else:
+		chest.animation = "open"

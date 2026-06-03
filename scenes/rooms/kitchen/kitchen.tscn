@@ -2894,7 +2894,7 @@ position = Vector2(2.0000048, 123)
 position = Vector2(0, -56)
 
 [node name="RewardChest" type="StaticBody2D" parent="." unique_id=1712241391]
-position = Vector2(-24, -8)
+position = Vector2(0, -14)
 collision_layer = 4
 metadata/_edit_group_ = true
 
