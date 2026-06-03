@@ -31,6 +31,9 @@ func _process(_delta):
 			hint_label.visible = false
 		else:
 			puzzle_panel.visible = false
+	
+	if Input.is_action_just_pressed("interact"):
+		if puzzle_solved and result_panel.visible:
 			result_panel.visible = false
 
 func _on_interact_area_body_entered(body):
