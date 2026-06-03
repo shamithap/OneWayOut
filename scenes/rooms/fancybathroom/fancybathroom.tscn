@@ -4,6 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="2_vob3p"]
 [ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="3_1ywdp"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="4_o3ew4"]
+[ext_resource type="Texture2D" uid="uid://j2bnd7kah1kx" path="res://assets/bathroom/image-1.png (1).png" id="4_qi1si"]
+[ext_resource type="Texture2D" uid="uid://bi5ws40un0ylo" path="res://assets/bathroom/image-1.png (2).png" id="5_cmnej"]
+[ext_resource type="Texture2D" uid="uid://b3e1i6yf0un4y" path="res://assets/bathroom/image-1.png.png" id="6_qhwyt"]
+[ext_resource type="Texture2D" uid="uid://bxkxm6oxb4we2" path="res://assets/bathroom/image-1.png (3).png" id="7_i8av6"]
+[ext_resource type="Texture2D" uid="uid://bosppgj23n654" path="res://assets/bathroom/toilet.png" id="8_wxamw"]
+[ext_resource type="Script" uid="uid://bbe2e5vfjmnec" path="res://scripts/characters/knight.gd" id="10_qhwyt"]
+[ext_resource type="Texture2D" uid="uid://srennupptqf" path="res://assets/UI/Chat BalloonsBubbles - Pixel Art/Icons-1.png" id="11_i8av6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56ggk"]
 texture = ExtResource("2_vob3p")
@@ -2247,6 +2254,136 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_65yjk")
 sources/1 = SubResource("TileSetAtlasSource_88507")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vev1p"]
+texture = ExtResource("4_qi1si")
+7:1/0 = 0
+8:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_60vpl"]
+texture = ExtResource("5_cmnej")
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_u0uwb"]
+sources/0 = SubResource("TileSetAtlasSource_vev1p")
+sources/1 = SubResource("TileSetAtlasSource_60vpl")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bvded"]
+texture = ExtResource("8_wxamw")
+19:5/0 = 0
+21:5/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+19:6/0 = 0
+21:6/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+19:7/0 = 0
+21:7/0 = 0
+18:5/0 = 0
+17:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3nt0b"]
+sources/0 = SubResource("TileSetAtlasSource_bvded")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qi1si"]
+size = Vector2(7, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmnej"]
+size = Vector2(15, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhwyt"]
+size = Vector2(26, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxamw"]
+atlas = ExtResource("2_vob3p")
+region = Rect2(0.3768158, 118.11754, 16.392319, 18.577972)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vev1p"]
+size = Vector2(26.33452, 25.622776)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60vpl"]
+size = Vector2(12.811388, 10.676157)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2dixu"]
+load_path = "res://.godot/imported/Chat-1.png-e863348028d881e23cb84b8ddc4a1084.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0uwb"]
+atlas = SubResource("CompressedTexture2D_2dixu")
+region = Rect2(80, 208, 48, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ketqm"]
+atlas = ExtResource("11_i8av6")
+region = Rect2(233, 80, 33, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuaid"]
+atlas = ExtResource("11_i8av6")
+region = Rect2(233, 96, 33, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_risbr"]
+atlas = ExtResource("11_i8av6")
+region = Rect2(233, 112, 33, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bvded"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ketqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuaid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_risbr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
 [node name="FancyBathroom" type="Node2D" unique_id=1373528116]
 script = ExtResource("1_0u5rj")
 
@@ -2260,7 +2397,7 @@ metadata/_edit_lock_ = true
 
 [node name="FloorDetails" type="TileMapLayer" parent="TileMaps" unique_id=1142349350]
 position = Vector2(-624, -336)
-tile_map_data = PackedByteArray("AAAlABQAAAAPAA0AAAAlABUAAAALAA0AAAAkABQAAAALAA0AAAAkABUAAAALAA0AAAAkABYAAAAPAA4AAAAlABYAAAALAA0AAAAkABcAAAALAA4AAAAlABcAAAAPAA8AAAAjABQAAAAOAA0AAAAjABUAAAAOAA4AAAAjABYAAAAKAA0AAAAjABcAAAAKAA4AAAAqABQAAAALAA0AAAAqABUAAAALAA0AAAAqABYAAAALAA0AAAAqABcAAAAQAA8AAAArABQAAAAMAA0AAAArABUAAAARAA4AAAArABYAAAAMAA0AAAArABcAAAAMAA4AAAAmABUAAAALAA0AAAAmABYAAAALAA0AAAAmABcAAAALAA4AAAAnABUAAAALAA0AAAAnABYAAAALAA0AAAAnABcAAAALAA4AAAAoABUAAAALAA0AAAAoABYAAAALAA0AAAAoABcAAAAQAA8AAAApABQAAAALAA0AAAApABUAAAALAA0AAAApABYAAAALAA0AAAApABcAAAALAA4AAAAmABQAAAALAA0AAAAnABQAAAALAA0AAAAoABQAAAALAA0AAAAjABIAAAAKAAwAAAAkABIAAAALAAwAAAAlABIAAAAPAAwAAAAmABIAAAALAAwAAAAnABIAAAALAAwAAAAoABIAAAALAAwAAAApABIAAAAQAAwAAAAqABIAAAALAAwAAAArABIAAAARAAwAAAAjABMAAAAKAA0AAAArABMAAAAMAA0AAAApABMAAAALAA0AAAAkABMAAAALAA0AAAAnABMAAAALAA0AAAAmABMAAAALAA0AAAAlABMAAAALAA0AAAAoABMAAAALAA0AAAAqABMAAAALAA0AAAA=")
+tile_map_data = PackedByteArray("AAAlABQAAAABACYAAAAlABUAAAABACYAAAAkABQAAAABACYAAAAkABUAAAABACYAAAAkABYAAAABACYAAAAlABYAAAABACYAAAAqABQAAAABACYAAAAqABUAAAABACYAAAAqABYAAAABACYAAAAmABUAAAABACYAAAAmABYAAAABACYAAAAnABUAAAABACYAAAAnABYAAAABACYAAAAoABUAAAABACYAAAAoABYAAAABACYAAAApABQAAAABACYAAAApABUAAAABACYAAAApABYAAAABACYAAAAmABQAAAABACYAAAAnABQAAAABACYAAAAoABQAAAABACYAAAApABMAAAABACYAAAAkABMAAAABACYAAAAnABMAAAABACYAAAAmABMAAAABACYAAAAlABMAAAABACYAAAAoABMAAAABACYAAAAqABMAAAABACYAAAA=")
 tile_set = SubResource("TileSet_qqvcf")
 y_sort_origin = 1
 metadata/_edit_lock_ = true
@@ -2270,6 +2407,35 @@ position = Vector2(-624, -336)
 tile_map_data = PackedByteArray("AAAiABIAAQACAAEAAAAiABMAAQACAAEAAAAiABQAAQAJAAMAAAAiABUAAQACAAEAAAAiABYAAQACAAEAAAAiABcAAQACAAEAAAAiABgAAQACAAIAAAAjABgAAQACAAIAAAAkABgAAQACAAIAAAAlABgAAQACAAIAAAAmABgAAQACAAIAAAAnABgAAQACAAIAAAAoABgAAQACAAIAAAApABgAAQACAAIAAAAqABgAAQACAAIAAAArABgAAQACAAIAAAAsABgAAQADAAIAAAAsABIAAQADAAEAAAAsABMAAQADAAEAAAAsABYAAQADAAEAAAAsABcAAQADAAEAAAAiABEAAQACAAEAAAAsABEAAQADAAEAAAAsABUAAQADAAEAAAAsABQAAQADAAEAAAAjABEAAQAEAAMAAAAlABEAAQACAAEAAAAnABEAAQAJAAMAAAAoABEAAQACAAEAAAApABEAAQAEAAMAAAArABEAAQACAAEAAAAjABAAAQACAAAAAAAlABAAAQACAAAAAAAmABAAAQACAAAAAAAnABAAAQACAAAAAAAoABAAAQACAAAAAAApABAAAQACAAAAAAAqABAAAQACAAAAAAArABAAAQACAAAAAAAsABAAAQADAAAAAAAiABAAAQACAAAAAAAqABEAAQAEAAMAAAAkABEAAQAEAAMAAAAmABEAAQAEAAMAAAAkABAAAQACAAAAAAAhABgAAQABAAIAAAAhABcAAQABAAEAAAAhABYAAQABAAEAAAAhABUAAQABAAEAAAAhABQAAQABAAEAAAAhABMAAQABAAEAAAAhABIAAQABAAEAAAAhABEAAQABAAEAAAAhABAAAQABAAAAAAA=")
 tile_set = SubResource("TileSet_ng5jw")
 metadata/_edit_lock_ = true
+
+[node name="Bathtub" type="TileMapLayer" parent="TileMaps" unique_id=730844225]
+position = Vector2(-624, -336)
+scale = Vector2(0.215, 0.215)
+tile_map_data = PackedByteArray("AAC/AFoAAAABAAIAAAC/AFsAAAABAAMAAAC/AFwAAAABAAQAAAC/AF0AAAABAAUAAADAAFoAAAACAAIAAADAAFsAAAACAAMAAADAAFwAAAACAAQAAADAAF0AAAACAAUAAADBAFoAAAADAAIAAADBAFsAAAADAAMAAADBAFwAAAADAAQAAADBAF0AAAADAAUAAADCAFoAAAAEAAIAAADCAFsAAAAEAAMAAADCAFwAAAAEAAQAAADCAF0AAAAEAAUAAADDAFoAAAAFAAIAAADDAFsAAAAFAAMAAADDAFwAAAAFAAQAAADDAF0AAAAFAAUAAADEAFoAAAAGAAIAAADEAFsAAAAGAAMAAADEAFwAAAAGAAQAAADEAF0AAAAGAAUAAADFAFkAAAAHAAEAAADFAFoAAAAHAAIAAADFAFsAAAAHAAMAAADFAFwAAAAHAAQAAADFAF0AAAAHAAUAAADGAFkAAAAIAAEAAADGAFoAAAAIAAIAAADGAFsAAAAIAAMAAADGAFwAAAAIAAQAAADGAF0AAAAIAAUAAAA=")
+tile_set = SubResource("TileSet_u0uwb")
+
+[node name="Duck" type="Sprite2D" parent="TileMaps" unique_id=228539231]
+position = Vector2(24, -21)
+scale = Vector2(0.22887324, 0.22887324)
+texture = ExtResource("5_cmnej")
+
+[node name="Mirror" type="Sprite2D" parent="TileMaps" unique_id=1869522493]
+position = Vector2(-38, -55)
+scale = Vector2(0.29166666, 0.29166666)
+texture = ExtResource("6_qhwyt")
+
+[node name="Mirror2" type="Sprite2D" parent="TileMaps" unique_id=1807775954]
+position = Vector2(52, -57)
+scale = Vector2(0.32638884, 0.3263889)
+texture = ExtResource("6_qhwyt")
+
+[node name="Plunger" type="Sprite2D" parent="TileMaps" unique_id=1098531921]
+position = Vector2(-35.125, 20.498075)
+scale = Vector2(0.15769234, 0.15769234)
+texture = ExtResource("7_i8av6")
+
+[node name="Toilet" type="TileMapLayer" parent="TileMaps" unique_id=429532969]
+tile_set = SubResource("TileSet_3nt0b")
 
 [node name="Doors" type="Node2D" parent="." unique_id=1188086430]
 position = Vector2(-8, -32)
@@ -2310,6 +2476,78 @@ offset_bottom = -101.0
 
 [node name="GhostPoint" type="Marker2D" parent="." unique_id=1829601008]
 position = Vector2(0, -56)
+
+[node name="Collisions" type="StaticBody2D" parent="." unique_id=1093161602]
+
+[node name="Plunger" type="CollisionShape2D" parent="Collisions" unique_id=650772529]
+position = Vector2(-43.5, -11)
+shape = SubResource("RectangleShape2D_qi1si")
+
+[node name="Duck" type="CollisionShape2D" parent="Collisions" unique_id=578450620]
+position = Vector2(16.5, -52)
+shape = SubResource("RectangleShape2D_cmnej")
+
+[node name="Bathtub" type="CollisionShape2D" parent="Collisions" unique_id=422119669]
+position = Vector2(39, -52.5)
+shape = SubResource("RectangleShape2D_qhwyt")
+
+[node name="Wizard" type="StaticBody2D" parent="." unique_id=2087986412]
+position = Vector2(-10, -39)
+scale = Vector2(1.405, 1.405)
+collision_layer = 4
+script = ExtResource("10_qhwyt")
+metadata/_edit_group_ = true
+
+[node name="WizardSprite" type="Sprite2D" parent="Wizard" unique_id=323327008]
+texture = SubResource("AtlasTexture_wxamw")
+
+[node name="TriggerArea" type="Area2D" parent="Wizard" unique_id=471465721]
+visible = false
+
+[node name="Trigger" type="CollisionShape2D" parent="Wizard/TriggerArea" unique_id=1580934723]
+visible = false
+light_mask = 0
+position = Vector2(0.35587215, 3.5587192)
+shape = SubResource("RectangleShape2D_vev1p")
+debug_color = Color(0.7727886, 0.4400833, 0.14358974, 0.41960785)
+
+[node name="HitBox" type="CollisionShape2D" parent="Wizard" unique_id=1147633982]
+visible = false
+position = Vector2(0.71174383, -0.3558712)
+shape = SubResource("RectangleShape2D_60vpl")
+
+[node name="Bubbles" type="Node2D" parent="Wizard" unique_id=2146487595]
+
+[node name="ChatBubble" type="Sprite2D" parent="Wizard/Bubbles" unique_id=1269075497]
+visible = false
+texture_filter = 1
+position = Vector2(-14.94662, -14.234875)
+scale = Vector2(0.60359067, 0.69738173)
+texture = SubResource("AtlasTexture_u0uwb")
+
+[node name="Label" type="Label" parent="Wizard/Bubbles/ChatBubble" unique_id=101285581]
+texture_filter = 1
+offset_left = -20.46245
+offset_top = -9.479416
+offset_right = 20.80895
+offset_bottom = 9.911873
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -3
+theme_override_font_sizes/font_size = 5
+text = "Get out! I'm using it!!!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="IndicatorBubble" type="AnimatedSprite2D" parent="Wizard/Bubbles" unique_id=987763959]
+visible = false
+position = Vector2(-6.4056926, -9.964413)
+scale = Vector2(0.47449586, 0.4448396)
+sprite_frames = SubResource("SpriteFrames_bvded")
+animation = &"idle"
+autoplay = "idle"
+
+[connection signal="body_entered" from="Wizard/TriggerArea" to="Wizard" method="_on_trigger_area_body_entered"]
+[connection signal="body_exited" from="Wizard/TriggerArea" to="Wizard" method="_on_trigger_area_body_exited"]
 
 [editable path="Doors/Door_N"]
 [editable path="Doors/Door_W"]
