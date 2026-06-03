@@ -304,14 +304,14 @@ func update_danger_audio():
 
 		play_spooky_audio(loud_volume)
 
-		print("LAUGH LOUD |", player_room, "|", current_room)
+		print("Playing loud laugh |", player_room, "|", current_room)
 
 	#medium 
 	elif current_room in room_connections.get(player_room, []):
 
 		play_spooky_audio(medium_volume)
 
-		print("LAUGH MEDIUM |", player_room, "|", current_room)
+		print("Playing medium laugh |", player_room, "|", current_room)
 
 	#stop audio otherwise
 	else:
@@ -328,5 +328,5 @@ func update_danger_audio():
 		if whisper_sound.playing:
 			whisper_sound.stop()
 
-		print("LAUGH STOPPED |", player_room, "|", current_room)
+		
 		

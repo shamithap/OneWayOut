@@ -4,7 +4,6 @@ func _ready() -> void:
 	#doesn't need to check if player exists because right now
 	#player just starts in main room
 	#might be changed in the future
-	print("DustMinigame started")
 	
 	if NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
