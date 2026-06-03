@@ -9,8 +9,7 @@ var player_room := ""
 var move_timer: Timer
 var waiting_for_continue := false
 
-var room_stay_time := 5.0
-# var speed_decay := 0.98
+var room_stay_time := 60.0
 
 func setup_graph():
 	astar.clear()
