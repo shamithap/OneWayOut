@@ -73,7 +73,7 @@ autoplay = "idle"
 position = Vector2(98, 37)
 scale = Vector2(3.355197, 3.3541195)
 sprite_frames = SubResource("SpriteFrames_tn5s6")
-animation = &"lose"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="Heart3" type="AnimatedSprite2D" parent="." unique_id=1720633295]

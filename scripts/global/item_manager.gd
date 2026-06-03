@@ -1,5 +1,11 @@
 extends Node
 
+@onready var key_dict := {
+	"KeyPiece1" : preload("res://scenes/items/key_piece_1.tscn"),
+	"KeyPiece2" : preload("res://scenes/items/key_piece_2.tscn"),
+	"KeyPiece3" : preload("res://scenes/items/key_piece_3.tscn")
+}
+
 @onready var item_dict := {
 	"KeyPiece1" : preload("res://scenes/items/key_piece_1.tscn"),
 	"KeyPiece2" : preload("res://scenes/items/key_piece_2.tscn"),
@@ -69,3 +75,7 @@ func pickup_item(item):
 	timer.start()
 	await timer.timeout
 	label.text = ""
+
+func reset_inventory() -> void:
+	inventory.clear()
+	item_dict.merge(key_dict)
