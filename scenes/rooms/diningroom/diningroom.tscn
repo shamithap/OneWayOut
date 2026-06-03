@@ -2904,61 +2904,69 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -110.0
-offset_top = -202.0
+offset_top = -98.0
 offset_right = 110.0
-offset_bottom = -179.66666
+offset_bottom = -75.666626
 grow_horizontal = 2
 grow_vertical = 0
-text = "Press E to inspect the dinner"
 
 [node name="DinnerPuzzlePanel" type="Panel" parent="CanvasLayer" unique_id=1173742160]
 visible = false
-offset_left = 135.0
-offset_top = 58.0
-offset_right = 473.0
-offset_bottom = 164.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.99997
+offset_top = -93.0
+offset_right = 120.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3319312, 1.3319312)
 
 [node name="QuestionLabel" type="Label" parent="CanvasLayer/DinnerPuzzlePanel" unique_id=2025774467]
 layout_mode = 0
 offset_right = 323.0
 offset_bottom = 98.333336
 theme_override_font_sizes/font_size = 14
-text = "Dinner is waiting,
-but not every meal is meant for the living.
-
+text = "Dinner is waiting, but not every meal is meant for the living.
 
 Choose what a ghost would leave behind."
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="BreadButton" type="Button" parent="CanvasLayer/DinnerPuzzlePanel" unique_id=1136304312]
 layout_mode = 0
-offset_left = 195.0
+offset_left = 225.0
 offset_top = 117.0
-offset_right = 249.0
+offset_right = 279.0
 offset_bottom = 148.0
 text = "Bread"
 
 [node name="WineButton" type="Button" parent="CanvasLayer/DinnerPuzzlePanel" unique_id=2131389033]
 layout_mode = 0
-offset_left = 124.0
+offset_left = 154.0
 offset_top = 116.0
-offset_right = 171.0
+offset_right = 201.0
 offset_bottom = 147.0
 text = "Wine"
 
 [node name="EmptyPlateButton" type="Button" parent="CanvasLayer/DinnerPuzzlePanel" unique_id=1765526801]
 layout_mode = 0
-offset_left = 1.0
+offset_left = 31.0
 offset_top = 116.0
-offset_right = 102.0
+offset_right = 132.0
 offset_bottom = 147.0
 text = "Empty Plate"
 
 [node name="ResultLabel" type="Label" parent="CanvasLayer/DinnerPuzzlePanel" unique_id=1688390490]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 66.0
-offset_right = 43.0
-offset_bottom = 89.0
+offset_top = 156.16422
+offset_right = 345.0
+offset_bottom = 179.16422
+text = "Correct dinner was never meant to be eaten"
 
 [node name="WrongAnswerSound" type="AudioStreamPlayer2D" parent="." unique_id=1120144514]
 stream = ExtResource("7_xd1q2")
