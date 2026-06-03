@@ -4,6 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://csf87sivifdl7" path="res://assets/player/player tileset/Player/player_Idle.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://blq3biqh1a2w6" path="res://assets/player/player tileset/Player/player_Walk.png" id="3_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://cu4uhuwcrv2qv" path="res://assets/UI/background1.png" id="4_dqkch"]
+[ext_resource type="AudioStream" uid="uid://cyfau2urd1nux" path="res://sounds/gameover.mp3" id="5_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://cvb70b8id5cr5" path="res://sounds/footsteps/Steps_tiles-001.ogg" id="6_y4r1p"]
+[ext_resource type="AudioStream" uid="uid://dc0vfo7ksvdc5" path="res://sounds/footsteps/Steps_tiles-002.ogg" id="7_d2wvv"]
+[ext_resource type="AudioStream" uid="uid://8e3w40e485df" path="res://sounds/footsteps/Steps_tiles-005.ogg" id="8_3v2ag"]
+[ext_resource type="AudioStream" uid="uid://nichjstl43xp" path="res://sounds/footsteps/Steps_tiles-006.ogg" id="9_jej6c"]
+[ext_resource type="AudioStream" uid="uid://c8wx5spqnn2b" path="res://sounds/footsteps/Steps_tiles-007.ogg" id="10_f1ej7"]
+[ext_resource type="AudioStream" uid="uid://bkawrw6om2w4j" path="res://sounds/footsteps/Steps_tiles-008.ogg" id="11_d2wvv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbgi4"]
 atlas = ExtResource("2_dqkch")
@@ -303,6 +310,52 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ml6mh"]
 size = Vector2(9, 14)
 
+[sub_resource type="Animation" id="Animation_dqkch"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeOut/FadeOut:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qlg0r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeOut/FadeOut:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tuyoq"]
+_data = {
+&"FadeOut": SubResource("Animation_dqkch"),
+&"RESET": SubResource("Animation_qlg0r")
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_oprun"]
+random_pitch = 1.005793
+streams_count = 6
+stream_0/stream = ExtResource("6_y4r1p")
+stream_1/stream = ExtResource("7_d2wvv")
+stream_2/stream = ExtResource("8_3v2ag")
+stream_3/stream = ExtResource("9_jej6c")
+stream_4/stream = ExtResource("10_f1ej7")
+stream_5/stream = ExtResource("11_d2wvv")
+
 [node name="Player" type="CharacterBody2D" unique_id=1424528440]
 z_index = 3
 y_sort_enabled = true
@@ -322,12 +375,40 @@ shape = SubResource("RectangleShape2D_ml6mh")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1900570101]
 zoom = Vector2(3.5, 3.5)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1770807260]
+[node name="Background" type="CanvasLayer" parent="." unique_id=1770807260]
 layer = -2
 
-[node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=728594925]
+[node name="Sprite2D" type="TextureRect" parent="Background" unique_id=728594925]
 modulate = Color(0.41521448, 0.4152145, 0.41521448, 1)
 z_index = -3
 offset_right = 1152.0
 offset_bottom = 646.0
 texture = ExtResource("4_dqkch")
+
+[node name="FadeOut" type="CanvasLayer" parent="." unique_id=598137243]
+
+[node name="FadeOut" type="ColorRect" parent="FadeOut" unique_id=1482536512]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FadeOut" unique_id=1435151761]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_tuyoq")
+
+[node name="FootstepTimer" type="Timer" parent="." unique_id=947755238]
+wait_time = 0.25
+one_shot = true
+
+[node name="Sounds" type="Node2D" parent="." unique_id=1405939955]
+
+[node name="GameOver" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1132414217]
+stream = ExtResource("5_qlg0r")
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1043407520]
+stream = SubResource("AudioStreamRandomizer_oprun")
+volume_db = -30.0
