@@ -2,7 +2,7 @@
 
 You wake up in a haunted mansion with the knowledge that a ghost is trying to hunt you down. Navigate through the rooms, solve puzzles and minigames, and find your way out!
 
-Link: https://shamithap.github.io/OneWayOut/export/
+Link: https://shamithap.github.io/OneWayOut
 
 Created by Abby Doinog, Shamitha Pichika, Hritika Naik, and Chengfei Jiang for CPSC 4270/5270 Graphics/Game Project taught by Dr. Kremer-Herman at Seattle University
 
