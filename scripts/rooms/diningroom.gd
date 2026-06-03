@@ -5,12 +5,14 @@ extends "res://scripts/rooms/room.gd"
 @onready var result_label = get_node_or_null("CanvasLayer/DinnerPuzzlePanel/ResultLabel")
 @onready var wrong_answer_sound = get_node_or_null("WrongAnswerSound")
 @onready var correct_answer_sound = get_node_or_null("CorrectAnswerSound")
+@onready var diningroom_marker := $DiningRoomMarker
 
 var in_table_range : bool = false
 var dinner_puzzle_solved : bool = false
 
 func _ready():
 	super._ready()
+	dinner_puzzle_solved = Global.diningroom_complete
 
 	if dining_hint != null:
 		dining_hint.visible = false
@@ -54,7 +56,8 @@ func choose_wrong_answer():
 
 func choose_correct_answer():
 	dinner_puzzle_solved = true
-	
+	Global.diningroom_complete = true
+
 	if correct_answer_sound != null:
 		correct_answer_sound.play()
 
@@ -65,6 +68,10 @@ func choose_correct_answer():
 		NavigationManager.player.can_move = true
 
 	print("Dining room puzzle solved!")
+
+	if not Global.diningroom_item_collected:
+		ItemManager.get_item(diningroom_marker.global_position)
+		Global.diningroom_item_collected = true
 
 func _on_table_area_body_entered(body: Node2D) -> void:
 	if body is Player and not dinner_puzzle_solved:

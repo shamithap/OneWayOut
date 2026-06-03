@@ -2905,6 +2905,7 @@ offset_bottom = 172.33333
 text = "Press E to inspect the dinner"
 
 [node name="DinnerPuzzlePanel" type="Panel" parent="CanvasLayer" unique_id=1173742160]
+visible = false
 offset_left = 135.0
 offset_top = 58.0
 offset_right = 473.0
@@ -2957,6 +2958,9 @@ stream = ExtResource("7_xd1q2")
 
 [node name="CorrectAnswerSound" type="AudioStreamPlayer2D" parent="." unique_id=1447425450]
 stream = ExtResource("8_2hyux")
+
+[node name="DiningRoomMarker" type="Marker2D" parent="." unique_id=1691331533]
+position = Vector2(272, 78)
 
 [connection signal="body_entered" from="TableArea" to="." method="_on_table_area_body_entered"]
 [connection signal="body_exited" from="TableArea" to="." method="_on_table_area_body_exited"]
