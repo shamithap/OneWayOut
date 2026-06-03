@@ -318,6 +318,7 @@ wait_time = 10.0
 [node name="WhisperSound" type="AudioStreamPlayer" parent="." unique_id=991833870]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1514136192]
+visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1480367404]
 visible = false
@@ -335,6 +336,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bbnym")
 
 [node name="WarningLabel" type="Label" parent="CanvasLayer/Panel" unique_id=174511892]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

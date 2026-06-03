@@ -16,11 +16,13 @@ var room_stay_time := 60.0
 @onready var laugh_sound_3: AudioStreamPlayer = $LaughSound3
 @onready var whisper_sound: AudioStreamPlayer = $WhisperSound
 
+
 @onready var warning_panel := $CanvasLayer/Panel
 
 var quiet_volume = 0
 var medium_volume = -18
 var loud_volume = -5
+
 
 #we love adj dictionaries 
 var room_connections = {
@@ -202,9 +204,13 @@ func get_room_name(id: int) -> String:
 	
 
 func caught_player():
+	var current_scene_name = get_tree().current_scene.name
 	Global.in_dialogue = true
 	waiting_for_continue = true
-	warning_panel.visible = true
+	if(current_scene_name == "CreditScreen"):
+		warning_panel.visible = false
+	else:
+		warning_panel.visible = true
 	if(player_room == "graveyard"):
 		current_room = "main"
 	else:
