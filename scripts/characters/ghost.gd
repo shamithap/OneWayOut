@@ -207,7 +207,8 @@ func caught_player():
 	var current_scene_name = get_tree().current_scene.name
 	Global.in_dialogue = true
 	waiting_for_continue = true
-	if(current_scene_name == "CreditScreen"):
+	if(current_scene_name == "CreditScreen" || current_scene_name == "EndScreen"
+	|| current_scene_name == "LostScreen"):
 		warning_panel.visible = false
 	else:
 		warning_panel.visible = true
