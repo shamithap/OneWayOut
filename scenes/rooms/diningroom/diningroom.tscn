@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dni46tbd12sop" path="res://assets/SpookyCastleTileset/animation_breakable+doors.png" id="4_e37gv"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="4_xe27j"]
 [ext_resource type="Texture2D" uid="uid://dd8l1qalb8lie" path="res://assets/Ballroom/fancy_mansion_furnitureset.png" id="5_kyd48"]
+[ext_resource type="AudioStream" uid="uid://bw1lgcu3c1q3f" path="res://sounds/armory/lose.mp3" id="7_xd1q2"]
+[ext_resource type="AudioStream" uid="uid://d3jvdpy6yk73k" path="res://sounds/armory/win.mp3" id="8_2hyux"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e37gv"]
 texture = ExtResource("2_e37gv")
@@ -2949,6 +2951,12 @@ offset_left = 3.0
 offset_top = 66.0
 offset_right = 43.0
 offset_bottom = 89.0
+
+[node name="WrongAnswerSound" type="AudioStreamPlayer2D" parent="." unique_id=1120144514]
+stream = ExtResource("7_xd1q2")
+
+[node name="CorrectAnswerSound" type="AudioStreamPlayer2D" parent="." unique_id=1447425450]
+stream = ExtResource("8_2hyux")
 
 [connection signal="body_entered" from="TableArea" to="." method="_on_table_area_body_entered"]
 [connection signal="body_exited" from="TableArea" to="." method="_on_table_area_body_exited"]

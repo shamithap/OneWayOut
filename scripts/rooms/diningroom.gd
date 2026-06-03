@@ -3,6 +3,8 @@ extends "res://scripts/rooms/room.gd"
 @onready var dining_hint = get_node_or_null("CanvasLayer/DiningHint")
 @onready var puzzle_panel = get_node_or_null("CanvasLayer/DinnerPuzzlePanel")
 @onready var result_label = get_node_or_null("CanvasLayer/DinnerPuzzlePanel/ResultLabel")
+@onready var wrong_answer_sound = get_node_or_null("WrongAnswerSound")
+@onready var correct_answer_sound = get_node_or_null("CorrectAnswerSound")
 
 var in_table_range : bool = false
 var dinner_puzzle_solved : bool = false
@@ -44,11 +46,17 @@ func close_dinner_puzzle():
 		dining_hint.visible = true
 
 func choose_wrong_answer():
+	if wrong_answer_sound != null:
+		wrong_answer_sound.play()
+
 	if result_label != null:
 		result_label.text = "That belongs to the living..."
 
 func choose_correct_answer():
 	dinner_puzzle_solved = true
+	
+	if correct_answer_sound != null:
+		correct_answer_sound.play()
 
 	if result_label != null:
 		result_label.text = "Correct! Dinner was never meant to be eaten."
