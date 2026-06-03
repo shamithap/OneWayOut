@@ -19,6 +19,9 @@ func _ready():
 	
 	if NavigationManager.spawn_door_tag != null :
 		_on_level_spawn(NavigationManager.spawn_door_tag)
+	
+	# lock doorss at the start
+	lock_doors()
 
 # gets the spawn marker from the door and send that info to the player
 # through a signal so it spawns at the correct place
@@ -29,12 +32,18 @@ func _on_level_spawn(destination_tag : String):
 	
 func arrow_dodged():
 	arrows_dodged += 1
-	if arrows_dodged <= 5 and  doors_locked:
-		lock_doors()
+	if arrows_dodged >= 5 and doors_locked:
+		unlock_doors()
 
 func lock_doors():
+	$Doors/Door_E.locked = true
+	$Doors/Door_N.locked = true
+	$Doors/Door_S.locked = true
+	$Doors/Door_W.locked = true
+
+func unlock_doors():
 	doors_locked = false
-	$Doors/Door_E.lock()
-	$Doors/Door_N.lock()
-	$Doors/Door_S.lock()
-	$Doors/Door_W.lock()
+	$Doors/Door_E.unlock()
+	$Doors/Door_N.unlock()
+	$Doors/Door_S.unlock()
+	$Doors/Door_W.unlock()

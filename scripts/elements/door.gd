@@ -16,10 +16,10 @@ class_name Door
 var player_in_range = false 
 var locked: bool = false
 
-func lock():
-	locked = true
-	print("DOOR IS LOCKED")
-	hint.text = "Dodge 5 arrows first!"
+func unlock():
+	if locked:
+		!locked
+	print("DOOR IS UNLOCKED")
 
 func _on_door_body_entered(body: Node2D) -> void:
 	if body is Player:
