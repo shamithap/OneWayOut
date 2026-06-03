@@ -10,8 +10,10 @@ script = ExtResource("1_r61ij")
 metadata/_custom_type_script = "uid://c7qgiwhv1adq"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=576876525]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -11.0
+offset_top = -13.0
+offset_right = 77.0
+offset_bottom = 75.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_bu1wn")
 
