@@ -3,6 +3,7 @@ extends Node2D
 class_name FancyBathroom
 
 @onready var player_packed_scene = preload("res://scenes/player.tscn")
+@onready var toilet_sound = $TileMaps/Toilet/AudioStreamPlayer2D
 var player : Player = null
 
 #makes sure the player is in the scene
@@ -23,3 +24,8 @@ func _on_level_spawn(destination_tag : String):
 	var door_path = "Doors/Door_" + destination_tag
 	var door = get_node(door_path) as Door
 	NavigationManager.trigger_player_spawn(door.spawn.global_position, door.spawn_direction)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body is Player :
+		toilet_sound.play()

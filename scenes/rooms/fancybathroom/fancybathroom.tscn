@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b3e1i6yf0un4y" path="res://assets/bathroom/image-1.png.png" id="6_qhwyt"]
 [ext_resource type="Texture2D" uid="uid://bxkxm6oxb4we2" path="res://assets/bathroom/image-1.png (3).png" id="7_i8av6"]
 [ext_resource type="Texture2D" uid="uid://bosppgj23n654" path="res://assets/bathroom/toilet.png" id="8_wxamw"]
+[ext_resource type="AudioStream" uid="uid://bdxhwbwapjwra" path="res://assets/bathroom/404329__inspectorj__toilet-flush-european-distant-lid-up.wav" id="9_i8av6"]
 [ext_resource type="Script" uid="uid://bbe2e5vfjmnec" path="res://scripts/characters/knight.gd" id="10_qhwyt"]
 [ext_resource type="Texture2D" uid="uid://srennupptqf" path="res://assets/UI/Chat BalloonsBubbles - Pixel Art/Icons-1.png" id="11_i8av6"]
 
@@ -2311,6 +2312,7 @@ sources/1 = SubResource("TileSetAtlasSource_60vpl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bvded"]
 texture = ExtResource("8_wxamw")
+separation = Vector2i(0, 1)
 19:5/0 = 0
 21:5/0 = 0
 15:6/0 = 0
@@ -2329,14 +2331,20 @@ texture = ExtResource("8_wxamw")
 [sub_resource type="TileSet" id="TileSet_3nt0b"]
 sources/0 = SubResource("TileSetAtlasSource_bvded")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxamw"]
+size = Vector2(32, 29)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qi1si"]
-size = Vector2(7, 12)
+size = Vector2(16, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmnej"]
-size = Vector2(15, 10)
+size = Vector2(15, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhwyt"]
-size = Vector2(26, 11)
+size = Vector2(36, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0uwb"]
+size = Vector2(18, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wxamw"]
 atlas = ExtResource("2_vob3p")
@@ -2346,7 +2354,7 @@ region = Rect2(0.3768158, 118.11754, 16.392319, 18.577972)
 size = Vector2(26.33452, 25.622776)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60vpl"]
-size = Vector2(12.811388, 10.676157)
+size = Vector2(11.3879, 10.676157)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2dixu"]
 load_path = "res://.godot/imported/Chat-1.png-e863348028d881e23cb84b8ddc4a1084.ctex"
@@ -2410,12 +2418,12 @@ metadata/_edit_lock_ = true
 
 [node name="Bathtub" type="TileMapLayer" parent="TileMaps" unique_id=730844225]
 position = Vector2(-624, -336)
-scale = Vector2(0.215, 0.215)
-tile_map_data = PackedByteArray("AAC/AFoAAAABAAIAAAC/AFsAAAABAAMAAAC/AFwAAAABAAQAAAC/AF0AAAABAAUAAADAAFoAAAACAAIAAADAAFsAAAACAAMAAADAAFwAAAACAAQAAADAAF0AAAACAAUAAADBAFoAAAADAAIAAADBAFsAAAADAAMAAADBAFwAAAADAAQAAADBAF0AAAADAAUAAADCAFoAAAAEAAIAAADCAFsAAAAEAAMAAADCAFwAAAAEAAQAAADCAF0AAAAEAAUAAADDAFoAAAAFAAIAAADDAFsAAAAFAAMAAADDAFwAAAAFAAQAAADDAF0AAAAFAAUAAADEAFoAAAAGAAIAAADEAFsAAAAGAAMAAADEAFwAAAAGAAQAAADEAF0AAAAGAAUAAADFAFkAAAAHAAEAAADFAFoAAAAHAAIAAADFAFsAAAAHAAMAAADFAFwAAAAHAAQAAADFAF0AAAAHAAUAAADGAFkAAAAIAAEAAADGAFoAAAAIAAIAAADGAFsAAAAIAAMAAADGAFwAAAAIAAQAAADGAF0AAAAIAAUAAAA=")
+scale = Vector2(0.338, 0.338)
+tile_map_data = PackedByteArray("AAB3ADkAAAABAAIAAAB3ADoAAAABAAMAAAB3ADsAAAABAAQAAAB3ADwAAAABAAUAAAB4ADkAAAACAAIAAAB4ADoAAAACAAMAAAB4ADsAAAACAAQAAAB4ADwAAAACAAUAAAB5ADkAAAADAAIAAAB5ADoAAAADAAMAAAB5ADsAAAADAAQAAAB5ADwAAAADAAUAAAB6ADkAAAAEAAIAAAB6ADoAAAAEAAMAAAB6ADsAAAAEAAQAAAB6ADwAAAAEAAUAAAB7ADkAAAAFAAIAAAB7ADoAAAAFAAMAAAB7ADsAAAAFAAQAAAB7ADwAAAAFAAUAAAB8ADkAAAAGAAIAAAB8ADoAAAAGAAMAAAB8ADsAAAAGAAQAAAB8ADwAAAAGAAUAAAB9ADgAAAAHAAEAAAB9ADkAAAAHAAIAAAB9ADoAAAAHAAMAAAB9ADsAAAAHAAQAAAB9ADwAAAAHAAUAAAB+ADgAAAAIAAEAAAB+ADkAAAAIAAIAAAB+ADoAAAAIAAMAAAB+ADsAAAAIAAQAAAB+ADwAAAAIAAUAAAA=")
 tile_set = SubResource("TileSet_u0uwb")
 
 [node name="Duck" type="Sprite2D" parent="TileMaps" unique_id=228539231]
-position = Vector2(24, -21)
+position = Vector2(56, 8)
 scale = Vector2(0.22887324, 0.22887324)
 texture = ExtResource("5_cmnej")
 
@@ -2430,12 +2438,23 @@ scale = Vector2(0.32638884, 0.3263889)
 texture = ExtResource("6_qhwyt")
 
 [node name="Plunger" type="Sprite2D" parent="TileMaps" unique_id=1098531921]
-position = Vector2(-35.125, 20.498075)
-scale = Vector2(0.15769234, 0.15769234)
+position = Vector2(-40.5, 19.407692)
+scale = Vector2(0.26153848, 0.2132279)
 texture = ExtResource("7_i8av6")
 
 [node name="Toilet" type="TileMapLayer" parent="TileMaps" unique_id=429532969]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAD+/wAAAAATAAUAAAD+/wEAAAATAAYAAAA=")
 tile_set = SubResource("TileSet_3nt0b")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TileMaps/Toilet" unique_id=809908451]
+stream = ExtResource("9_i8av6")
+
+[node name="Area2D" type="Area2D" parent="TileMaps/Toilet" unique_id=2069945567]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMaps/Toilet/Area2D" unique_id=1958449823]
+position = Vector2(-24, 14.5)
+shape = SubResource("RectangleShape2D_wxamw")
 
 [node name="Doors" type="Node2D" parent="." unique_id=1188086430]
 position = Vector2(-8, -32)
@@ -2480,19 +2499,23 @@ position = Vector2(0, -56)
 [node name="Collisions" type="StaticBody2D" parent="." unique_id=1093161602]
 
 [node name="Plunger" type="CollisionShape2D" parent="Collisions" unique_id=650772529]
-position = Vector2(-43.5, -11)
+position = Vector2(-48, -11)
 shape = SubResource("RectangleShape2D_qi1si")
 
 [node name="Duck" type="CollisionShape2D" parent="Collisions" unique_id=578450620]
-position = Vector2(16.5, -52)
+position = Vector2(48, -22.5)
 shape = SubResource("RectangleShape2D_cmnej")
 
 [node name="Bathtub" type="CollisionShape2D" parent="Collisions" unique_id=422119669]
-position = Vector2(39, -52.5)
+position = Vector2(34, -48)
 shape = SubResource("RectangleShape2D_qhwyt")
 
+[node name="Toilet" type="CollisionShape2D" parent="Collisions" unique_id=290827328]
+position = Vector2(-32, -14)
+shape = SubResource("RectangleShape2D_u0uwb")
+
 [node name="Wizard" type="StaticBody2D" parent="." unique_id=2087986412]
-position = Vector2(-10, -39)
+position = Vector2(0, -16)
 scale = Vector2(1.405, 1.405)
 collision_layer = 4
 script = ExtResource("10_qhwyt")
@@ -2512,8 +2535,7 @@ shape = SubResource("RectangleShape2D_vev1p")
 debug_color = Color(0.7727886, 0.4400833, 0.14358974, 0.41960785)
 
 [node name="HitBox" type="CollisionShape2D" parent="Wizard" unique_id=1147633982]
-visible = false
-position = Vector2(0.71174383, -0.3558712)
+position = Vector2(0, -0.35587025)
 shape = SubResource("RectangleShape2D_60vpl")
 
 [node name="Bubbles" type="Node2D" parent="Wizard" unique_id=2146487595]
@@ -2531,6 +2553,7 @@ offset_left = -20.46245
 offset_top = -9.479416
 offset_right = 20.80895
 offset_bottom = 9.911873
+size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = -3
 theme_override_font_sizes/font_size = 5
@@ -2546,6 +2569,7 @@ sprite_frames = SubResource("SpriteFrames_bvded")
 animation = &"idle"
 autoplay = "idle"
 
+[connection signal="body_entered" from="TileMaps/Toilet/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Wizard/TriggerArea" to="Wizard" method="_on_trigger_area_body_entered"]
 [connection signal="body_exited" from="Wizard/TriggerArea" to="Wizard" method="_on_trigger_area_body_exited"]
 

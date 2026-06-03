@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="6_pp0hg"]
 [ext_resource type="PackedScene" uid="uid://ce3q8idjjq5u8" path="res://scenes/rooms/recroom/arrow.tscn" id="7_ae67q"]
 [ext_resource type="Script" uid="uid://wxxq0u16l8w2" path="res://scenes/rooms/recroom/arrow_spawner.gd" id="7_i1e4o"]
+[ext_resource type="AudioStream" uid="uid://3pms05ryv2r4" path="res://assets/ArrowSound/djartmusic-arrow-swish_03-306040.mp3" id="9_pyyos"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6hwbr"]
 texture = ExtResource("2_46m43")
@@ -2680,6 +2681,9 @@ position = Vector2(48, -40)
 [node name="ArrowSpawner" type="Node2D" parent="." unique_id=1138354409]
 script = ExtResource("7_i1e4o")
 arrow_scene = ExtResource("7_ae67q")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ArrowSpawner" unique_id=1801309958]
+stream = ExtResource("9_pyyos")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1752938404]
 visible = false

@@ -3,6 +3,7 @@ extends Node2D
 @export var arrow_scene: PackedScene
 @export var fire_interval: float = 1.5
 @export var arrow_speed: float = 100.0
+@onready var arrow_sound = $AudioStreamPlayer2D
 
 
 var arrow_slots = [
@@ -39,6 +40,7 @@ func fire_random():
 	arrow.direction = Vector2(1, 0)
 	arrow.rotation = 0.0
 	arrow.speed = arrow_speed
+	arrow_sound.play()
 	get_parent().add_child(arrow)
 	
 	arrows_fired += 1
