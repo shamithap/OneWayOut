@@ -1541,6 +1541,15 @@ destination_room_name = "livingroom"
 destination_door_tag = "S"
 spawn_direction = "down"
 
+[node name="Door_S" parent="Doors" unique_id=1336069685 instance=ExtResource("2_3os3j")]
+position = Vector2(321, 273)
+destination_room_name = "main"
+destination_door_tag = "S"
+spawn_direction = "up"
+
+[node name="Spawn" parent="Doors/Door_S" index="1" unique_id=817698842]
+position = Vector2(0, -29)
+
 [node name="Table" type="StaticBody2D" parent="." unique_id=222286363]
 position = Vector2(0, 5)
 collision_layer = 4
@@ -1635,3 +1644,5 @@ frame_progress = 0.79929346
 
 [connection signal="body_entered" from="Table/TriggerArea" to="Table" method="_on_trigger_area_body_entered"]
 [connection signal="body_exited" from="Table/TriggerArea" to="Table" method="_on_trigger_area_body_exited"]
+
+[editable path="Doors/Door_S"]
