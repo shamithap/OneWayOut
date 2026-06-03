@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="2_knwi8"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="3_fy8uh"]
 [ext_resource type="Texture2D" uid="uid://brxrq0bfcvhte" path="res://assets/kenney_roguelike-indoors/Tilesheets/roguelikeIndoor_transparent.png" id="4_gveg1"]
+[ext_resource type="Texture2D" uid="uid://dyfuuqx0xcgpv" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0089.png" id="6_gvy2s"]
+[ext_resource type="Texture2D" uid="uid://c6yyr18uvr46b" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0091.png" id="7_wnq50"]
+[ext_resource type="Texture2D" uid="uid://dmlcoknkqo0wq" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0090.png" id="8_8hbb7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56ggk"]
 texture = ExtResource("1_swuvk")
@@ -2786,6 +2789,42 @@ separation = Vector2i(1, 1)
 [sub_resource type="TileSet" id="TileSet_u2mk5"]
 sources/0 = SubResource("TileSetAtlasSource_gveg1")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_0qe5n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gvy2s")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_wnq50")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gvy2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8hbb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wnq50")
+}],
+"loop": false,
+"name": &"opening",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_by6gu"]
+size = Vector2(13, 10)
+
 [node name="Kitchen" type="Node2D" unique_id=1373528116]
 script = ExtResource("1_0xotn")
 
@@ -2853,6 +2892,24 @@ position = Vector2(2.0000048, 123)
 
 [node name="GhostPoint" type="Marker2D" parent="." unique_id=3982059]
 position = Vector2(0, -56)
+
+[node name="RewardChest" type="StaticBody2D" parent="." unique_id=1712241391]
+position = Vector2(-24, -8)
+collision_layer = 4
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="RewardChest" unique_id=1225647018]
+sprite_frames = SubResource("SpriteFrames_0qe5n")
+animation = &"opening"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RewardChest" unique_id=1966347911]
+visible = false
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_by6gu")
+
+[node name="Marker2D" type="Marker2D" parent="RewardChest" unique_id=671620913]
+visible = false
 
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_N"]
