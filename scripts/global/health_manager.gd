@@ -1,7 +1,6 @@
 extends Node2D
 
-#@onready var health : int = 3
-@onready var health : int = 2 #for testing
+@onready var health : int = 3
 @onready var max_health : int = 3
 
 @onready var heart1 := $Heart1
@@ -13,8 +12,6 @@ extends Node2D
 func _ready():
 	Global.player_health = health
 	
-	if health == 2:
-		heart3.animation = "lose"
 
 func lose_health() -> void:
 	print("you lost a heart!")

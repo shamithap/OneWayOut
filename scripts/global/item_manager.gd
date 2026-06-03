@@ -30,8 +30,6 @@ func get_item(position : Vector2):
 		possible_items.erase("HealthVial")
 
 	var random_item = possible_items.pick_random()
-	#for testing
-	#var random_item = "HealthVial"
 	var item_instance = item_dict[random_item].instantiate()
 	get_parent().add_child(item_instance)
 	item_instance.global_position = position
