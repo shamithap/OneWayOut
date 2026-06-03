@@ -2902,6 +2902,22 @@ offset_right = 309.0
 offset_bottom = 172.33333
 text = "Press E to inspect the dinner"
 
+[node name="DinnerPuzzlePanel" type="Panel" parent="CanvasLayer" unique_id=1173742160]
+offset_left = 135.0
+offset_top = 58.0
+offset_right = 473.0
+offset_bottom = 164.0
+
+[node name="QuestionLabel" type="Label" parent="CanvasLayer/DinnerPuzzlePanel" unique_id=2025774467]
+layout_mode = 0
+offset_right = 323.0
+offset_bottom = 98.333336
+theme_override_font_sizes/font_size = 14
+text = "Dinner is waiting,
+but not every meal is meant for the living.
+
+Choose what a ghost would leave behind."
+
 [connection signal="body_entered" from="TableArea" to="." method="_on_table_area_body_entered"]
 [connection signal="body_exited" from="TableArea" to="." method="_on_table_area_body_exited"]
 
