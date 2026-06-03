@@ -297,11 +297,10 @@ z_index = 10
 script = ExtResource("1_bbnym")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1805342997]
-position = Vector2(0, 4)
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.031595603, 0.031595577)
 sprite_frames = SubResource("SpriteFrames_veat2")
 animation = &"idle_down"
-frame_progress = 0.70045626
+autoplay = "idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1111953300]
 position = Vector2(0, 0.5)
