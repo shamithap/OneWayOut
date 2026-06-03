@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://brxrq0bfcvhte" path="res://assets/kenney_roguelike-indoors/Tilesheets/roguelikeIndoor_transparent.png" id="7_kdwso"]
 [ext_resource type="Texture2D" uid="uid://ch8in3mw752y2" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_02_ArtOfScrolls_BigWander(16x16).png" id="7_l2hhy"]
 [ext_resource type="Texture2D" uid="uid://cogk382dg1swy" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_01_ArtOfScrolls_BigWander(16x16).png" id="9_2fptk"]
+[ext_resource type="Texture2D" uid="uid://ddpn4wepdfh4k" path="res://assets/UI/exclamation_mark.png" id="11_10tn2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5qli"]
 texture = ExtResource("1_oafy4")
@@ -1475,6 +1476,41 @@ size = Vector2(44, 17)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l2hhy"]
 size = Vector2(20.833328, 31)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgppd"]
+atlas = ExtResource("11_10tn2")
+region = Rect2(0, 0, 4, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88koh"]
+atlas = ExtResource("11_10tn2")
+region = Rect2(6, 0, 4, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxrnf"]
+atlas = ExtResource("11_10tn2")
+region = Rect2(12, 0, 4, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oby0s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgppd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88koh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxrnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88koh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgppd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Main" type="Node2D" unique_id=1807837972 groups=["ghost_point"]]
 script = ExtResource("1_3os3j")
 
@@ -1560,7 +1596,7 @@ rotation = 0.75629354
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 2
 theme_override_font_sizes/font_size = 1
-text = "You wake up in an unknown mansion... try to find your way out  while avoiding the ghost haunting you. 
+text = "You wake up in an unknown mansion... try to find your way out while avoiding the ghost haunting you. 
 
 (Press tab to open the overlay)"
 autowrap_mode = 3
@@ -1588,6 +1624,14 @@ position = Vector2(321, 249)
 
 [node name="GhostPoint" type="Marker2D" parent="." unique_id=1655420591 groups=["ghost_point"]]
 position = Vector2(270, 179)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=840042633]
+position = Vector2(321, 173)
+scale = Vector2(0.8125, 0.8125)
+sprite_frames = SubResource("SpriteFrames_oby0s")
+autoplay = "default"
+frame = 3
+frame_progress = 0.79929346
 
 [connection signal="body_entered" from="Table/TriggerArea" to="Table" method="_on_trigger_area_body_entered"]
 [connection signal="body_exited" from="Table/TriggerArea" to="Table" method="_on_trigger_area_body_exited"]
