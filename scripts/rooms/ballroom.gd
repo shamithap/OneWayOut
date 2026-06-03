@@ -4,7 +4,7 @@ extends "res://scripts/rooms/room.gd"
 @onready var scroll_sound = $ScrollArea/AudioStreamPlayer2D
 @onready var scroll = $CanvasLayer/Scroll
 
-@onready var dance_hint = get_node_or_null("CanvasLayer/DanceHint")
+@onready var dance_hint = get_node_or_null("DanceArea/DanceHint")
 @onready var step_sound = get_node_or_null("StepSound")
 @onready var wrong_sound = get_node_or_null("WrongSound")
 @onready var success_sound = get_node_or_null("SuccessSound")
@@ -123,7 +123,7 @@ func solve_dance():
 
 	if dance_hint != null:
 		dance_hint.visible = true
-		dance_hint.text = "Perfect dance! You hear something unlock."
+		dance_hint.text = "Perfect dance!"
 
 	print("Ballroom dance puzzle solved!")
 
