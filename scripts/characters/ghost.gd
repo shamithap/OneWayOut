@@ -282,7 +282,7 @@ func play_spooky_audio(volume):
 
 func update_danger_audio():
 
-	# no ghost audio in exit room
+	#no ghost audio in exit room
 	if player_room == "exitroom":
 		laugh_sound_1.stop()
 		laugh_sound_2.stop()
@@ -290,21 +290,21 @@ func update_danger_audio():
 		whisper_sound.stop()
 		return
 
-	# loud if same room
+	#loud if same room
 	if current_room == player_room:
 
 		play_spooky_audio(loud_volume)
 
 		print("LAUGH LOUD |", player_room, "|", current_room)
 
-	# medium if adjacent room
+	#medium 
 	elif current_room in room_connections.get(player_room, []):
 
 		play_spooky_audio(medium_volume)
 
 		print("LAUGH MEDIUM |", player_room, "|", current_room)
 
-	# stop audio otherwise
+	#stop audio otherwise
 	else:
 
 		if laugh_sound_1.playing:
