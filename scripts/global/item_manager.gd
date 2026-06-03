@@ -22,19 +22,33 @@ extends Node
 @onready var label : Label = $CanvasLayer/Label
 @onready var timer : Timer = $Timer
 @onready var sound : AudioStreamPlayer2D = $AudioStreamPlayer2D
+var reward_count = 0
 
 func get_item(position : Vector2):
+	reward_count += 1
 	var possible_items = item_dict.keys()
+	
 	#chooses a random item but if we're at 3 hearts, then you can't get a vial
 	if Global.player_health >= Global.max_health:
 		possible_items.erase("HealthVial")
-
-	var random_item = possible_items.pick_random()
+		
+	var key_items = []
+	#removes keys from item pool since they should be unique
+	for item in possible_items:
+		if item == "KeyPiece1" or item == "KeyPiece2" or item == "KeyPiece3":
+			key_items.append(item)
+			
+	var random_item
+	#the first reward and every other reward after that guarantees a key
+	if reward_count % 2 == 1 and key_items.size() > 0:
+		random_item = key_items.pick_random()
+	else:
+		random_item = possible_items.pick_random()
+		
 	var item_instance = item_dict[random_item].instantiate()
 	get_parent().add_child(item_instance)
 	item_instance.global_position = position
-	
-	#removes keys from item pool since they should be unique
+
 	if random_item == "KeyPiece1" or random_item == "KeyPiece2" or random_item == "KeyPiece3":
 		item_dict.erase(random_item)
 

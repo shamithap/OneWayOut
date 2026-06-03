@@ -18,4 +18,7 @@ func _on_music_finished():
 #added a tween to try to make the end less choppy
 func fade_out_music():
 	var tween = create_tween()
-	tween.tween_property(music, "volume_db", -40, 5.0)
+	tween.tween_property(music, "volume_db", -40, 2.0)
+
+	await tween.finished
+	music.stop()
