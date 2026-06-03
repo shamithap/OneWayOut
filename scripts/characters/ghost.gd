@@ -9,7 +9,7 @@ var player_room := ""
 var move_timer: Timer
 var waiting_for_continue := false
 
-var room_stay_time := 60.0
+var room_stay_time := 5.0
 # var speed_decay := 0.98
 
 func setup_graph():
@@ -75,9 +75,11 @@ func _on_room_changed(room_name:String):
 		player_room = room_name
 	else:
 		print("Unknown player room:", room_name)
-
+	
+	await get_tree().process_frame
 	# immediately re-evaluate ghost appearance
 	update_visual_position()
+	check_capture()
 
 func _on_timer_timeout() -> void:
 	#player_room = NavigationManager.current_room_name	
@@ -135,7 +137,7 @@ func chase_player():
 	# Show ghost only if ghost and player share room
 	if current_room == player_room:
 		update_visual_position()
-		caught_player()
+		check_capture()
 	else:
 		hide()
 
@@ -156,7 +158,8 @@ func caught_player():
 	$WarningLabel.text = "The ghost caught you! Press E to continue."
 	if(player_room == "graveyard"):
 		current_room = "main"
-	current_room = "graveyard"
+	else:
+		current_room = "graveyard"
 	
 func _input(event):
 	if waiting_for_continue and event.is_action_pressed("interact"):
@@ -165,6 +168,10 @@ func _input(event):
 		Overlay.get_node("CanvasLayer/HealthBar").lose_health()
 		hide()
 	
+func check_capture():
+	if current_room == player_room:
+		caught_player()
+
 #func attack_player() -> void:
 	## take one heart away
 	#Overlay.get_node("CanvasLayer/HealthBar").lose_health()
