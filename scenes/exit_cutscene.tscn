@@ -2425,7 +2425,6 @@ animation = &"opening"
 autoplay = "opening"
 
 [node name="FadeIn" type="CanvasLayer" parent="." unique_id=111679365]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="FadeIn" unique_id=952594376]
 anchors_preset = 15
