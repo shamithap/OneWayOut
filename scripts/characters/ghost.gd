@@ -11,6 +11,51 @@ var waiting_for_continue := false
 
 var room_stay_time := 60.0
 
+@onready var laugh_sound_1: AudioStreamPlayer = $LaughSound1
+@onready var laugh_sound_2: AudioStreamPlayer = $LaughSound2
+@onready var laugh_sound_3: AudioStreamPlayer = $LaughSound3
+@onready var whisper_sound: AudioStreamPlayer = $WhisperSound
+
+var quiet_volume = 0
+var medium_volume = -18
+var loud_volume = -5
+
+#we love adj dictionaries 
+var room_connections = {
+	"dungeon": ["armory", "graveyard"],
+	"armory": ["dungeon", "theater", "recreationalroom"],
+	"theater": ["armory", "ballroom", "library"],
+	"ballroom": ["theater", "livingroom"],
+
+	"graveyard": ["dungeon", "recreationalroom", "winecellar"],
+	"recreationalroom": ["graveyard", "library", "armory", "kitchen"],
+	"library": ["recreationalroom", "livingroom", "theater", "diningroom"],
+	"livingroom": ["library", "ballroom", "main", "fancybathroom"],
+	"main": ["livingroom"],
+
+	"winecellar": ["graveyard", "kitchen"],
+	"kitchen": ["winecellar", "recreationalroom", "diningroom"],
+	"diningroom": ["kitchen", "library", "fancybathroom"],
+	"fancybathroom": ["diningroom", "livingroom"]
+}
+var laugh_sounds = [
+	preload("res://sounds/ghostLaugh/ghostlaugh1.ogg"),
+	preload("res://sounds/ghostLaugh/ghostlaugh2.ogg"),
+	preload("res://sounds/ghostLaugh/ghostlaugh3.ogg"),
+	preload("res://sounds/ghostLaugh/ghostlaugh4.ogg"),
+	preload("res://sounds/ghostLaugh/ghostlaugh5.ogg"),
+	preload("res://sounds/ghostLaugh/ghostlaugh6.ogg"),
+	preload("res://sounds/ghostLaugh/ghostlaugh7.ogg")
+]
+
+var whisper_sounds = [
+	preload("res://sounds/ghostLaugh/whisper1.ogg"),
+	preload("res://sounds/ghostLaugh/whisper2.ogg"),
+	preload("res://sounds/ghostLaugh/scary_gibberish.ogg")
+]
+
+
+
 func setup_graph():
 	astar.clear()
 	room_ids.clear()
@@ -76,9 +121,11 @@ func _on_room_changed(room_name:String):
 		print("Unknown player room:", room_name)
 	
 	await get_tree().process_frame
-	# immediately re-evaluate ghost appearance
+	
+	# immediately re-evaluate ghost appearance, capture, and audio
 	update_visual_position()
 	check_capture()
+	update_danger_audio()
 
 func _on_timer_timeout() -> void:
 	#player_room = NavigationManager.current_room_name	
@@ -139,6 +186,7 @@ func chase_player():
 		check_capture()
 	else:
 		hide()
+	update_danger_audio()
 
 	# speed scaling
 	# speed = max(min_speed, speed * speed_decay)
@@ -159,12 +207,14 @@ func caught_player():
 		current_room = "main"
 	else:
 		current_room = "graveyard"
+	Overlay.get_node("CanvasLayer/Minimap").update_ghost_position(current_room)
 	
 func _input(event):
 	if waiting_for_continue and event.is_action_pressed("interact"):
 		waiting_for_continue = false
 		$WarningLabel.visible = false
 		Overlay.get_node("CanvasLayer/HealthBar").lose_health()
+		print("Current health:", Global.player_health)
 		hide()
 	
 func check_capture():
@@ -208,3 +258,66 @@ func _ready() -> void:
 	move_timer.wait_time = room_stay_time
 	move_timer.timeout.connect(_on_timer_timeout)
 	move_timer.start()
+	
+	#mwahahahahahah
+func play_spooky_audio(volume):
+
+	if laugh_sound_1.playing or laugh_sound_2.playing or laugh_sound_3.playing or whisper_sound.playing:
+		return
+
+	var laugh_players = [laugh_sound_1, laugh_sound_2, laugh_sound_3]
+
+	for laugh_player in laugh_players:
+		laugh_player.stream = laugh_sounds.pick_random()
+		laugh_player.volume_db = volume + randf_range(-4, 1)
+		laugh_player.pitch_scale = randf_range(0.85, 1.15)
+		laugh_player.play()
+
+	whisper_sound.stream = whisper_sounds.pick_random()
+	whisper_sound.volume_db = volume - 10
+	whisper_sound.pitch_scale = randf_range(0.75, 0.95)
+
+	await get_tree().create_timer(0.25).timeout
+	whisper_sound.play()
+
+func update_danger_audio():
+
+	# no ghost audio in exit room
+	if player_room == "exitroom":
+		laugh_sound_1.stop()
+		laugh_sound_2.stop()
+		laugh_sound_3.stop()
+		whisper_sound.stop()
+		return
+
+	# loud if same room
+	if current_room == player_room:
+
+		play_spooky_audio(loud_volume)
+
+		print("LAUGH LOUD |", player_room, "|", current_room)
+
+	# medium if adjacent room
+	elif current_room in room_connections.get(player_room, []):
+
+		play_spooky_audio(medium_volume)
+
+		print("LAUGH MEDIUM |", player_room, "|", current_room)
+
+	# stop audio otherwise
+	else:
+
+		if laugh_sound_1.playing:
+			laugh_sound_1.stop()
+
+		if laugh_sound_2.playing:
+			laugh_sound_2.stop()
+
+		if laugh_sound_3.playing:
+			laugh_sound_3.stop()
+
+		if whisper_sound.playing:
+			whisper_sound.stop()
+
+		print("LAUGH STOPPED |", player_room, "|", current_room)
+		
