@@ -34,6 +34,6 @@ func already_won():
 		chest.animation = "opening"
 		await chest.animation_finished
 		ItemManager.get_item(chest_marker.global_position)
-		Global.armory_item_collected = true
+		Global.kitchen_item_collected = true
 	else:
 		chest.animation = "open"
