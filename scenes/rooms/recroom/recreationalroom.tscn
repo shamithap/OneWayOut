@@ -1,11 +1,12 @@
 [gd_scene format=4 uid="uid://b5golwofx2sd2"]
 
-[ext_resource type="Script" uid="uid://b1x76ilrdj8q6" path="res://scripts/rooms/recreationalroom.gd" id="1_mrcfk"]
+[ext_resource type="Script" uid="uid://b1x76ilrdj8q6" path="res://scripts/rooms/rec_room/recreationalroom.gd" id="1_mrcfk"]
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="2_46m43"]
 [ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="3_7emkf"]
 [ext_resource type="Texture2D" uid="uid://bjqm6kd10po0d" path="res://assets/Rec Room/pixel_bow_default_FREE.png" id="4_bm6xx"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="6_pp0hg"]
 [ext_resource type="PackedScene" uid="uid://8v6ewggwmu2s" path="res://scenes/rooms/recroom/guess_popup.tscn" id="7_b1dg8"]
+[ext_resource type="Script" uid="uid://wxxq0u16l8w2" path="res://scenes/rooms/recroom/arrow_spawner.gd" id="7_i1e4o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6hwbr"]
 texture = ExtResource("2_46m43")
@@ -2265,8 +2266,6 @@ texture = ExtResource("4_bm6xx")
 sources/1 = SubResource("TileSetAtlasSource_i1e4o")
 pattern_0 = SubResource("TileMapPattern_bm6xx")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bm6xx"]
-
 [node name="RecreationalRoom" type="Node2D" unique_id=1244363592]
 script = ExtResource("1_mrcfk")
 
@@ -2368,31 +2367,7 @@ script = null
 position = Vector2(40, -40)
 
 [node name="ArrowSpawner" type="Node2D" parent="." unique_id=1138354409]
-
-[node name="Arrow1" type="Sprite2D" parent="ArrowSpawner" unique_id=1764321396]
-position = Vector2(-59.999996, -64)
-scale = Vector2(23.999996, 14.125005)
-texture = SubResource("AtlasTexture_bm6xx")
-
-[node name="Arrow2" type="Sprite2D" parent="ArrowSpawner" unique_id=447293291]
-position = Vector2(-54.000004, -48)
-scale = Vector2(19.999994, 14.125005)
-texture = SubResource("AtlasTexture_bm6xx")
-
-[node name="Arrow3" type="Sprite2D" parent="ArrowSpawner" unique_id=873588046]
-position = Vector2(-48, -32.000004)
-scale = Vector2(19.999994, 14.125005)
-texture = SubResource("AtlasTexture_bm6xx")
-
-[node name="Arrow4" type="Sprite2D" parent="ArrowSpawner" unique_id=2034272835]
-position = Vector2(-54.000004, -16)
-scale = Vector2(19.999994, 14.125005)
-texture = SubResource("AtlasTexture_bm6xx")
-
-[node name="Arrow5" type="Sprite2D" parent="ArrowSpawner" unique_id=1521417176]
-position = Vector2(-56, 0)
-scale = Vector2(19.999994, 14.125005)
-texture = SubResource("AtlasTexture_bm6xx")
+script = ExtResource("7_i1e4o")
 
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_W"]
