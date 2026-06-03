@@ -2787,6 +2787,9 @@ size = Vector2(138, 28)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xe27j"]
 size = Vector2(11, 12)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xd1q2"]
+size = Vector2(140, 44)
+
 [node name="diningroom" type="Node2D" unique_id=703094713]
 script = ExtResource("1_kyd48")
 
@@ -2849,6 +2852,7 @@ position = Vector2(104, 125)
 [node name="Collisions" type="Node2D" parent="." unique_id=2002587830]
 
 [node name="TableCollision" type="StaticBody2D" parent="Collisions" unique_id=1188312268]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/TableCollision" unique_id=364722632]
 position = Vector2(201, 116)
@@ -2882,6 +2886,24 @@ shape = SubResource("RectangleShape2D_xe27j")
 
 [node name="GhostPoint" type="Marker2D" parent="." unique_id=1599243229]
 position = Vector2(232, 80)
+
+[node name="TableArea" type="Area2D" parent="." unique_id=1480080272]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TableArea" unique_id=741834729]
+position = Vector2(201, 121)
+shape = SubResource("RectangleShape2D_xd1q2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=638978709]
+
+[node name="DiningHint" type="Label" parent="CanvasLayer" unique_id=717527795]
+offset_left = 89.0
+offset_top = 150.0
+offset_right = 309.0
+offset_bottom = 172.33333
+text = "Press E to inspect the dinner"
+
+[connection signal="body_entered" from="TableArea" to="." method="_on_table_area_body_entered"]
+[connection signal="body_exited" from="TableArea" to="." method="_on_table_area_body_exited"]
 
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_N"]
