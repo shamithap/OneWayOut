@@ -737,85 +737,137 @@ shape = SubResource("RectangleShape2D_31umg")
 position = Vector2(189, 127)
 shape = SubResource("RectangleShape2D_sy43q")
 
-[node name="Hint" type="Label" parent="ClockPuzzle" unique_id=1755194246]
+[node name="CanvasLayer" type="CanvasLayer" parent="ClockPuzzle" unique_id=1178387215]
+
+[node name="Hint" type="Label" parent="ClockPuzzle/CanvasLayer" unique_id=1755194246]
 z_index = 10
-offset_left = 160.00005
-offset_top = 142.0
-offset_right = 339.00006
-offset_bottom = 164.33334
-scale = Vector2(0.35, 0.35)
+offset_left = 515.0
+offset_top = 600.0
+offset_right = 694.0
+offset_bottom = 622.3334
 text = "Press E to inspect clock"
 
-[node name="PuzzlePanel" type="Panel" parent="ClockPuzzle" unique_id=574260901]
+[node name="PuzzlePanel" type="Panel" parent="ClockPuzzle/CanvasLayer" unique_id=574260901]
 z_index = 2
-offset_left = 168.0
-offset_top = 110.0
-offset_right = 210.0
-offset_bottom = 145.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.14813
+offset_top = -188.99998
+offset_right = 134.70679
+offset_bottom = -80.53281
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.09221, 1.09221)
 
-[node name="ClueBackground" type="ColorRect" parent="ClockPuzzle/PuzzlePanel" unique_id=2038706576]
+[node name="ClueBackground" type="ColorRect" parent="ClockPuzzle/CanvasLayer/PuzzlePanel" unique_id=2038706576]
 z_index = 1
-layout_mode = 0
-offset_left = -7.0
-offset_top = -37.0
-offset_right = 71.0
-offset_bottom = -15.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -75.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.6431373, 0.827451, 0.89411765, 0.7882353)
 
-[node name="ClueLabel" type="Label" parent="ClockPuzzle/PuzzlePanel" unique_id=552200085]
+[node name="ClueLabel" type="Label" parent="ClockPuzzle/CanvasLayer/PuzzlePanel/ClueBackground" unique_id=552200085]
 z_index = 7
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.712
-anchor_right = 0.5
-anchor_bottom = 0.712
-offset_left = -25.000006
-offset_top = -59.92
-offset_right = 297.0
-offset_bottom = -12.253332
-scale = Vector2(0.4, 0.4)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -93.0
+offset_top = 48.499992
+offset_right = 93.0
+offset_bottom = 96.16666
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 21
 text = "Dinner began when the 
 daylight disappeared."
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HourInput" type="LineEdit" parent="ClockPuzzle/PuzzlePanel" unique_id=1704982211]
+[node name="HourInput" type="LineEdit" parent="ClockPuzzle/CanvasLayer/PuzzlePanel" unique_id=1704982211]
 z_index = 5
-layout_mode = 0
-offset_left = 6.0
-offset_top = -14.0
-offset_right = 74.5
-offset_bottom = 17.0
-scale = Vector2(0.3, 0.3)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = 67.53784
+offset_right = -13.5
+offset_bottom = 98.537834
+grow_horizontal = 2
+grow_vertical = 2
 placeholder_text = "Hour"
 
-[node name="MinuteInput" type="LineEdit" parent="ClockPuzzle/PuzzlePanel" unique_id=1258948229]
+[node name="MinuteInput" type="LineEdit" parent="ClockPuzzle/CanvasLayer/PuzzlePanel" unique_id=1258948229]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = -0.18400002
-offset_left = 27.0
-offset_top = -7.5599976
-offset_right = 95.5
-offset_bottom = 17.000002
-scale = Vector2(0.3, 0.3)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = 67.53784
+offset_right = 87.5
+offset_bottom = 98.537834
+grow_horizontal = 2
+grow_vertical = 2
 placeholder_text = "Minute"
 
-[node name="CheckButton" type="Button" parent="ClockPuzzle/PuzzlePanel" unique_id=37745457]
-layout_mode = 0
-offset_left = 19.0
-offset_top = -1.0
-offset_right = 74.0
-offset_bottom = 30.0
-scale = Vector2(0.3, 0.3)
+[node name="CheckButton" type="Button" parent="ClockPuzzle/CanvasLayer/PuzzlePanel" unique_id=37745457]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = 103.9585
+offset_right = 27.5
+offset_bottom = 134.9585
+grow_horizontal = 2
+grow_vertical = 2
 text = "Check"
 
-[node name="ResultLabel" type="Label" parent="ClockPuzzle/PuzzlePanel" unique_id=1735613917]
+[node name="ResultPanel" type="Panel" parent="ClockPuzzle/CanvasLayer" unique_id=1175846042]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = 70.0
+offset_right = 151.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.09221, 1.09221)
+
+[node name="ResultLabel" type="Label" parent="ClockPuzzle/CanvasLayer/ResultPanel" unique_id=1735613917]
 z_index = 5
-layout_mode = 0
-offset_left = -24.0
-offset_top = 39.0
-offset_right = 16.0
-offset_bottom = 62.0
-scale = Vector2(0.3, 0.3)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Correct! 
+A hidden note:
+Dinner is waiting in the Dining Room.
+Press E to close.\""
+horizontal_alignment = 1
 
 [node name="TickSound" type="AudioStreamPlayer2D" parent="ClockPuzzle" unique_id=1170109877]
 stream = ExtResource("11_31npf")

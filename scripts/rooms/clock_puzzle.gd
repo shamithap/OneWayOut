@@ -1,11 +1,12 @@
 extends Node2D
 
-@onready var hint_label = $Hint
-@onready var puzzle_panel = $PuzzlePanel
-@onready var hour_input = $PuzzlePanel/HourInput
-@onready var minute_input = $PuzzlePanel/MinuteInput
-@onready var check_button = $PuzzlePanel/CheckButton
-@onready var result_label = $PuzzlePanel/ResultLabel
+@onready var hint_label = $CanvasLayer/Hint
+@onready var puzzle_panel = $CanvasLayer/PuzzlePanel
+@onready var hour_input = $CanvasLayer/PuzzlePanel/HourInput
+@onready var minute_input = $CanvasLayer/PuzzlePanel/MinuteInput
+@onready var check_button = $CanvasLayer/PuzzlePanel/CheckButton
+@onready var result_label = $CanvasLayer/ResultPanel/ResultLabel
+@onready var result_panel = $CanvasLayer/ResultPanel
 @onready var tick_sound = $TickSound
 @onready var chime_sound = $ChimeSound
 
@@ -30,6 +31,7 @@ func _process(_delta):
 			hint_label.visible = false
 		else:
 			puzzle_panel.visible = false
+			result_panel.visible = false
 
 func _on_interact_area_body_entered(body):
 	if body is Player:
@@ -61,6 +63,7 @@ func _on_check_button_pressed():
 		minute_input.visible = false
 		check_button.visible = false
 		hint_label.visible = false
+		puzzle_panel.visible = false
 		
 		#stop ticking sound when the puzzle is solved
 		if tick_sound.playing:
@@ -69,6 +72,8 @@ func _on_check_button_pressed():
 		#play chime sound as a success sound
 		chime_sound.play()
 		
+		result_panel.visible = true
 		result_label.text = "Correct! \nA hidden note:\n\"Dinner is waiting in the Dining Room.\"\nPress E to close."
 	else:
+		result_panel.visible = true
 		result_label.text = "That time does not seem right. Try again."
