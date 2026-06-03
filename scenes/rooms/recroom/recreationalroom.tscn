@@ -2265,6 +2265,8 @@ texture = ExtResource("4_bm6xx")
 sources/1 = SubResource("TileSetAtlasSource_i1e4o")
 pattern_0 = SubResource("TileMapPattern_bm6xx")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bm6xx"]
+
 [node name="RecreationalRoom" type="Node2D" unique_id=1244363592]
 script = ExtResource("1_mrcfk")
 
@@ -2368,12 +2370,29 @@ position = Vector2(40, -40)
 [node name="ArrowSpawner" type="Node2D" parent="." unique_id=1138354409]
 
 [node name="Arrow1" type="Sprite2D" parent="ArrowSpawner" unique_id=1764321396]
-position = Vector2(-16, -32)
-scale = Vector2(20.124996, 14.125005)
+position = Vector2(-59.999996, -64)
+scale = Vector2(23.999996, 14.125005)
+texture = SubResource("AtlasTexture_bm6xx")
 
-[node name="Arrow2" type="Node2D" parent="ArrowSpawner" unique_id=618509852]
+[node name="Arrow2" type="Sprite2D" parent="ArrowSpawner" unique_id=447293291]
+position = Vector2(-54.000004, -48)
+scale = Vector2(19.999994, 14.125005)
+texture = SubResource("AtlasTexture_bm6xx")
 
-[node name="Arrow3" type="Node2D" parent="ArrowSpawner" unique_id=2094054536]
+[node name="Arrow3" type="Sprite2D" parent="ArrowSpawner" unique_id=873588046]
+position = Vector2(-48, -32.000004)
+scale = Vector2(19.999994, 14.125005)
+texture = SubResource("AtlasTexture_bm6xx")
+
+[node name="Arrow4" type="Sprite2D" parent="ArrowSpawner" unique_id=2034272835]
+position = Vector2(-54.000004, -16)
+scale = Vector2(19.999994, 14.125005)
+texture = SubResource("AtlasTexture_bm6xx")
+
+[node name="Arrow5" type="Sprite2D" parent="ArrowSpawner" unique_id=1521417176]
+position = Vector2(-56, 0)
+scale = Vector2(19.999994, 14.125005)
+texture = SubResource("AtlasTexture_bm6xx")
 
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_W"]
