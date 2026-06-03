@@ -45,7 +45,7 @@ func close_dinner_puzzle():
 
 func choose_wrong_answer():
 	if result_label != null:
-		result_label.text = "That belongs to the living."
+		result_label.text = "That belongs to the living..."
 
 func choose_correct_answer():
 	dinner_puzzle_solved = true
@@ -78,3 +78,12 @@ func _on_table_area_body_exited(body: Node2D) -> void:
 
 		if NavigationManager.player != null:
 			NavigationManager.player.can_move = true
+	
+func _on_bread_button_pressed() -> void:
+	choose_wrong_answer()
+
+func _on_wine_button_pressed() -> void:
+	choose_wrong_answer()
+
+func _on_empty_plate_button_pressed() -> void:
+	choose_correct_answer()

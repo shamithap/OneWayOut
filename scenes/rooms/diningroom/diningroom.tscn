@@ -2916,10 +2916,45 @@ theme_override_font_sizes/font_size = 14
 text = "Dinner is waiting,
 but not every meal is meant for the living.
 
+
 Choose what a ghost would leave behind."
+
+[node name="BreadButton" type="Button" parent="CanvasLayer/DinnerPuzzlePanel" unique_id=1136304312]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 117.0
+offset_right = 249.0
+offset_bottom = 148.0
+text = "Bread"
+
+[node name="WineButton" type="Button" parent="CanvasLayer/DinnerPuzzlePanel" unique_id=2131389033]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 116.0
+offset_right = 171.0
+offset_bottom = 147.0
+text = "Wine"
+
+[node name="EmptyPlateButton" type="Button" parent="CanvasLayer/DinnerPuzzlePanel" unique_id=1765526801]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 116.0
+offset_right = 102.0
+offset_bottom = 147.0
+text = "Empty Plate"
+
+[node name="ResultLabel" type="Label" parent="CanvasLayer/DinnerPuzzlePanel" unique_id=1688390490]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 66.0
+offset_right = 43.0
+offset_bottom = 89.0
 
 [connection signal="body_entered" from="TableArea" to="." method="_on_table_area_body_entered"]
 [connection signal="body_exited" from="TableArea" to="." method="_on_table_area_body_exited"]
+[connection signal="pressed" from="CanvasLayer/DinnerPuzzlePanel/BreadButton" to="." method="_on_bread_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/DinnerPuzzlePanel/WineButton" to="." method="_on_wine_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/DinnerPuzzlePanel/EmptyPlateButton" to="." method="_on_empty_plate_button_pressed"]
 
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_N"]
