@@ -64,4 +64,5 @@ func player_lost() -> void:
 	fade_out.visible = true
 	animation_player.play("FadeOut")
 	await animation_player.animation_finished
+
 	get_tree().change_scene_to_file("res://scenes/lost_screen.tscn")

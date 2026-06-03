@@ -12,10 +12,6 @@ signal player_died
 
 func _ready():
 	Global.player_health = health
-	
-func _process(_delta: float) -> void:
-	if health <= 0:
-		death()
 
 func lose_health() -> void:
 	print("you lost a heart!")

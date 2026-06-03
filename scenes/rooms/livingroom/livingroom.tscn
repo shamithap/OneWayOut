@@ -740,9 +740,9 @@ shape = SubResource("RectangleShape2D_sy43q")
 [node name="Hint" type="Label" parent="ClockPuzzle" unique_id=1755194246]
 z_index = 10
 offset_left = 160.00005
-offset_top = 104.99999
+offset_top = 142.0
 offset_right = 339.00006
-offset_bottom = 127.333336
+offset_bottom = 164.33334
 scale = Vector2(0.35, 0.35)
 text = "Press E to inspect clock"
 

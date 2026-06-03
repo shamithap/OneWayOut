@@ -2898,10 +2898,17 @@ shape = SubResource("RectangleShape2D_xd1q2")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=638978709]
 
 [node name="DiningHint" type="Label" parent="CanvasLayer" unique_id=717527795]
-offset_left = 89.0
-offset_top = 150.0
-offset_right = 309.0
-offset_bottom = 172.33333
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -110.0
+offset_top = -202.0
+offset_right = 110.0
+offset_bottom = -179.66666
+grow_horizontal = 2
+grow_vertical = 0
 text = "Press E to inspect the dinner"
 
 [node name="DinnerPuzzlePanel" type="Panel" parent="CanvasLayer" unique_id=1173742160]
