@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bjktkap7exwqj"]
+
+[ext_resource type="Script" uid="uid://c6genrm8mmo4t" path="res://scenes/music_manager.gd" id="1_jud7y"]
+[ext_resource type="AudioStream" uid="uid://bmpf4bp60majn" path="res://sounds/backgroundMUSIC.mp3" id="2_m5y1j"]
+
+[node name="MusicManager" type="Node" unique_id=1961821683]
+script = ExtResource("1_jud7y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=727671358]
+stream = ExtResource("2_m5y1j")
+volume_db = -12.0
+autoplay = true

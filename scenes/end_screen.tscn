@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dq6ekecfqfffc"]
 
-[ext_resource type="Script" uid="uid://dkb8mled7thdq" path="res://scripts/end_screen.gd" id="1_87vmq"]
+[ext_resource type="Script" path="res://scripts/end_screen.gd" id="1_87vmq"]
 [ext_resource type="Texture2D" uid="uid://cu4uhuwcrv2qv" path="res://assets/UI/background1.png" id="1_jc7ji"]
 [ext_resource type="FontFile" uid="uid://d208f377vxcrw" path="res://assets/UI/ThaleahFat.ttf" id="2_87vmq"]
 [ext_resource type="Texture2D" uid="uid://ddxd875dlhwg8" path="res://assets/UI/FreeHorrorUi.png" id="3_g44xs"]
