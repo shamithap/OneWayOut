@@ -411,4 +411,3 @@ stream = ExtResource("5_qlg0r")
 
 [node name="Footsteps" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1043407520]
 stream = SubResource("AudioStreamRandomizer_oprun")
-volume_db = -30.0
