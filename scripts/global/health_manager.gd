@@ -13,6 +13,9 @@ signal player_died
 func _ready():
 	Global.player_health = health
 	
+func _process(_delta: float) -> void:
+	if health <= 0:
+		death()
 
 func lose_health() -> void:
 	print("you lost a heart!")
@@ -49,3 +52,9 @@ func heal_health() -> void:
 
 func death() -> void:
 	player_died.emit()
+	
+func restore_health() -> void:
+	health = 3
+	heart1.animation = "idle"
+	heart2.animation = "idle"
+	heart3.animation = "idle"

@@ -24,3 +24,7 @@ var max_health = 3
 
 #0 pieces collected
 var key_tracker = 0
+
+func reset_game() -> void:
+	Overlay.get_node("CanvasLayer/HealthBar").restore_health()
+	ItemManager.reset_inventory()
