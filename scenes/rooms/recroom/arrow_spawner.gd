@@ -19,6 +19,8 @@ var arrows_fired: int = 0
 var max_arrows: int = 10
 
 func _process(delta):
+	if Global.recroom_complete:
+		return
 	if arrows_fired >= max_arrows:
 		return
 	timer += delta

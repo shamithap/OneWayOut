@@ -6,9 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dni46tbd12sop" path="res://assets/SpookyCastleTileset/animation_breakable+doors.png" id="4_pyyos"]
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="5_07irn"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="6_pp0hg"]
-[ext_resource type="PackedScene" path="res://scenes/rooms/recroom/arrow.tscn" id="7_ae67q"]
-[ext_resource type="PackedScene" uid="uid://8v6ewggwmu2s" path="res://scenes/rooms/recroom/guess_popup.tscn" id="7_b1dg8"]
-[ext_resource type="Script" path="res://scenes/rooms/recroom/arrow_spawner.gd" id="7_i1e4o"]
+[ext_resource type="PackedScene" uid="uid://ce3q8idjjq5u8" path="res://scenes/rooms/recroom/arrow.tscn" id="7_ae67q"]
+[ext_resource type="Script" uid="uid://wxxq0u16l8w2" path="res://scenes/rooms/recroom/arrow_spawner.gd" id="7_i1e4o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6hwbr"]
 texture = ExtResource("2_46m43")
@@ -2503,6 +2502,7 @@ separation = Vector2i(1, 1)
 7:3/0 = 0
 8:3/0 = 0
 9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:3/0 = 0
 10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:3/0 = 0
@@ -2599,6 +2599,9 @@ sources/1 = SubResource("TileSetAtlasSource_v7ujy")
 sources/2 = SubResource("TileSetAtlasSource_tleha")
 sources/3 = SubResource("TileSetAtlasSource_8vnem")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ae67q"]
+bg_color = Color(0, 0, 0, 0.54901963)
+
 [node name="RecreationalRoom" type="Node2D" unique_id=1244363592]
 script = ExtResource("1_mrcfk")
 
@@ -2653,7 +2656,7 @@ destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Doors/Door_N" index="0" unique_id=1225352784]
-position = Vector2(-8, -23)
+position = Vector2(-8, -15)
 
 [node name="Spawn" parent="Doors/Door_N" index="1" unique_id=817698842]
 position = Vector2(-8, -7)
@@ -2671,35 +2674,43 @@ position = Vector2(-6, 19)
 [node name="Spawn" parent="Doors/Door_E" index="1" unique_id=817698842]
 position = Vector2(2.0000002, 19)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1075243557]
-
-[node name="Hint" type="Label" parent="CanvasLayer" unique_id=284901892]
-visible = false
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -60.5
-offset_top = -220.0
-offset_right = 60.5
-offset_bottom = -197.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Press E to talk"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="GuessPopup" parent="CanvasLayer" unique_id=21247487 instance=ExtResource("7_b1dg8")]
-visible = false
-script = null
-
 [node name="GhostPoint" type="Marker2D" parent="." unique_id=364784701]
 position = Vector2(48, -40)
 
 [node name="ArrowSpawner" type="Node2D" parent="." unique_id=1138354409]
 script = ExtResource("7_i1e4o")
 arrow_scene = ExtResource("7_ae67q")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1752938404]
+visible = false
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=415888774]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -44.0
+offset_right = 208.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ae67q")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=1638640346]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 23
+text = "You may procede to the next room"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_W"]

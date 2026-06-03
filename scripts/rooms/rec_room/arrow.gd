@@ -10,7 +10,7 @@ func _process(delta):
 	global_position += direction * speed * delta
 	
 	var screen = get_viewport_rect().size
-	if position.x > screen.x + 60:  # arrow fully crossed the room
+	if position.x > screen.x + 128:  # arrow fully crossed the room
 		get_parent().arrow_dodged()  # tell main the player dodged it
 
 func _ready():
