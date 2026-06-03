@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="3_xceyv"]
 [ext_resource type="Texture2D" uid="uid://csf87sivifdl7" path="res://assets/player/player tileset/Player/player_Idle.png" id="4_tslau"]
 [ext_resource type="Texture2D" uid="uid://blq3biqh1a2w6" path="res://assets/player/player tileset/Player/player_Walk.png" id="5_llrxq"]
-[ext_resource type="Texture2D" uid="uid://dhk7oor33j5qa" path="res://icon.svg" id="6_e0pt5"]
 [ext_resource type="Texture2D" uid="uid://7ma2neu25p2v" path="res://assets/Graveyardassets/Pixel-16px Graveyard/tileset/tileset.png" id="7_fvoks"]
+[ext_resource type="Texture2D" uid="uid://yunp1amjtagn" path="res://assets/objects/Ghost/Frame1-1.png.png" id="7_jygom"]
+[ext_resource type="Texture2D" uid="uid://bo2wvbd2mkib8" path="res://assets/objects/Ghost/Frame2-1.png.png" id="8_cdjkh"]
 [ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="8_qosab"]
 [ext_resource type="Texture2D" uid="uid://cotf4y563qnen" path="res://assets/kenney_tiny-dungeon/Tiles/tile_2_transparent.png" id="9_e4n2j"]
 [ext_resource type="Texture2D" uid="uid://dr55vyhcpedju" path="res://assets/kenney_tiny-dungeon/Tiles/tile_1_transparent.png" id="10_f2nlb"]
@@ -1336,6 +1337,20 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_wrbsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_jygom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cdjkh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.5
+}]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1d6vf"]
 texture = ExtResource("1_h0k38")
 separation = Vector2i(1, 1)
@@ -2315,10 +2330,11 @@ sprite_frames = SubResource("SpriteFrames_a1sov")
 animation = &"idle_down"
 autoplay = "walk_up"
 
-[node name="Ghost" type="Sprite2D" parent="Layers" unique_id=1508708732]
+[node name="Ghost" type="AnimatedSprite2D" parent="Layers" unique_id=471243510]
 position = Vector2(0, 56.000008)
-scale = Vector2(0.140625, 0.140625)
-texture = ExtResource("6_e0pt5")
+scale = Vector2(0.032, 0.032)
+sprite_frames = SubResource("SpriteFrames_wrbsb")
+autoplay = "default"
 
 [node name="Walls" type="TileMapLayer" parent="Layers" unique_id=959071429]
 tile_map_data = PackedByteArray("AAD9/wUAAAAEAAIAAAD+/wUAAAAEAAIAAAACAAUAAAAEAAIAAAADAAUAAAAEAAMAAAABAAUAAAAEAAIAAAD6/wUAAAACAAEAAAAFAAUAAAACAAEAAAAGAAUAAAACAAEAAAD4/wUAAAAEAAMAAAAHAAUAAAAEAAMAAAAEAAUAAAAEAAMAAAD8/wUAAAAEAAMAAAD5/wUAAAAEAAMAAAD7/wUAAAAEAAMAAAD3//7/AQAGAAAAAAD4//7/AQAGAAAAAAD5//7/AQAGAAAAAAD6//7/AQAGAAAAAAD7//7/AQAGAAAAAAD8//7/AQAGAAAAAAD9//7/AQAGAAAAAAD+//7/AQAHAAAAAAABAP7/AQAFAAAAAAACAP7/AQAGAAAAAAADAP7/AQAGAAAAAAAEAP7/AQAGAAAAAAAFAP7/AQAGAAAAAAAGAP7/AQAGAAAAAAAHAP7/AQAGAAAAAAAIAP7/AQAGAAAAAAA=")
