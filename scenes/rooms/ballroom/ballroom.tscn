@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://ch8in3mw752y2" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_02_ArtOfScrolls_BigWander(16x16).png" id="8_5kief"]
 [ext_resource type="AudioStream" uid="uid://cxwuijcob7htj" path="res://sounds/winecellar/paper_flutter.mp3" id="9_sq41c"]
 [ext_resource type="Texture2D" uid="uid://cogk382dg1swy" path="res://assets/objects/BigWander_ArtOfScrolls/IndividualSprites/Scroll_02_01_ArtOfScrolls_BigWander(16x16).png" id="10_aqfx0"]
+[ext_resource type="AudioStream" uid="uid://blxt2dikvmyey" path="res://sounds/ballroom/step.mp3" id="11_adj3n"]
+[ext_resource type="AudioStream" uid="uid://cqrsla5wfwifo" path="res://sounds/ballroom/wrong.mp3" id="12_u0n06"]
+[ext_resource type="AudioStream" uid="uid://c1oq4xmeucrw6" path="res://sounds/ballroom/success.mp3" id="13_7bacp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sq41c"]
 texture = ExtResource("2_5g4ma")
@@ -2031,6 +2034,19 @@ position = Vector2(272, 125)
 position = Vector2(185, 132)
 shape = SubResource("RectangleShape2D_a5utf")
 
+[node name="DanceHint" type="Label" parent="DanceArea" unique_id=1895153027]
+anchors_preset = -1
+anchor_left = 0.15900001
+anchor_top = 0.20400001
+anchor_right = 0.15900001
+anchor_bottom = 0.20400001
+offset_left = 143.0
+offset_top = 150.0
+offset_right = 266.0
+offset_bottom = 173.0
+theme_override_font_sizes/font_size = 7
+text = "Press E to start the dance"
+
 [node name="Collisions" type="Node2D" parent="." unique_id=1722220901]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Collisions" unique_id=181769126]
@@ -2148,19 +2164,14 @@ text = "Press E to interact with note "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DanceHint" type="Label" parent="CanvasLayer" unique_id=1895153027]
-visible = false
-anchors_preset = -1
-anchor_left = 0.162
-anchor_top = 0.20400001
-anchor_right = 0.162
-anchor_bottom = 0.20400001
-offset_left = -40.623993
-offset_top = -31.192001
-offset_right = 82.37601
-offset_bottom = -8.191994
-theme_override_font_sizes/font_size = 7
-text = "Press E to start the dance"
+[node name="StepSound" type="AudioStreamPlayer2D" parent="." unique_id=922219296]
+stream = ExtResource("11_adj3n")
+
+[node name="WrongSound" type="AudioStreamPlayer2D" parent="." unique_id=679101838]
+stream = ExtResource("12_u0n06")
+
+[node name="SuccessSound" type="AudioStreamPlayer2D" parent="." unique_id=1590847566]
+stream = ExtResource("13_7bacp")
 
 [connection signal="body_entered" from="DanceArea" to="." method="_on_dance_area_body_entered"]
 [connection signal="body_exited" from="DanceArea" to="." method="_on_dance_area_body_exited"]
