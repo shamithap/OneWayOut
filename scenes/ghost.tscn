@@ -322,3 +322,11 @@ wait_time = 180.0
 [node name="WarningLabel" type="Label" parent="." unique_id=174511892]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="LaughSound1" type="AudioStreamPlayer" parent="." unique_id=1475366954]
+
+[node name="LaughSound2" type="AudioStreamPlayer" parent="." unique_id=1183565370]
+
+[node name="LaughSound3" type="AudioStreamPlayer" parent="." unique_id=1806269935]
+
+[node name="WhisperSound" type="AudioStreamPlayer" parent="." unique_id=991833870]
