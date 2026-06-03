@@ -6,7 +6,9 @@ class_name Player
 @onready var anim = $AnimatedSprite2D
 @onready var animation_player := $FadeOut/AnimationPlayer
 @onready var fade_out := $FadeOut/FadeOut
-@onready var gameover_audio := $AudioStreamPlayer2D
+@onready var gameover_audio := $Sounds/GameOver
+@onready var footsteps_audio := $Sounds/Footsteps
+@onready var footstep_timer := $FootstepTimer
 
 var lose_animation_playing = false
 var last_direction = "down"
@@ -37,8 +39,13 @@ func _physics_process(_delta):
 					last_direction = "up"
 
 			anim.play("walk_" + last_direction)
+			if not footsteps_audio.playing and footstep_timer.is_stopped():
+				footsteps_audio.play()
+				footstep_timer.start()
 		else:
 			anim.play("idle_" + last_direction)
+			if footsteps_audio.playing:
+				footsteps_audio.stop()
 			
 
 #is triggered from navigation manager
