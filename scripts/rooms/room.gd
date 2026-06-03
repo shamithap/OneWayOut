@@ -8,6 +8,8 @@ var player : Player = null
 #makes sure the player is in the scene
 func _ready():
 	ensure_player()
+	if Global.player_health <= 0:
+		Overlay.get_node("CanvasLayer/HealthBar").death()
 
 func ensure_player():
 	if NavigationManager.player != null:

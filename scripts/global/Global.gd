@@ -26,5 +26,6 @@ var in_dialogue = false
 var key_tracker = 0
 
 func reset_game() -> void:
+	player_health = 3
 	Overlay.get_node("CanvasLayer/HealthBar").restore_health()
 	ItemManager.reset_inventory()
