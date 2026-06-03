@@ -32,15 +32,11 @@ func _on_door_body_exited(body: Node2D) -> void:
 		player_in_range = false
 
 func _process(_delta):
-<<<<<<< Updated upstream
 	if Global.in_dialogue:
 		hint.visible = false
 		player_in_range = false
 	
-	if player_in_range and Input.is_action_just_pressed("interact"):
-=======
 	if !locked and player_in_range and Input.is_action_just_pressed("interact"):
->>>>>>> Stashed changes
 		NavigationManager.go_to_level(destination_room_name, destination_door_tag)
 	else: 
 		return
