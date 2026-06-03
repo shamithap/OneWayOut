@@ -3,6 +3,7 @@ extends "res://scripts/rooms/room.gd"
 @onready var scroll_hint = $CanvasLayer/ScrollHint
 @onready var scroll_sound = $ScrollArea/AudioStreamPlayer2D
 @onready var scroll = $CanvasLayer/Scroll
+@onready var ballroom_marker := $BallroomMarker
 
 @onready var dance_hint = get_node_or_null("DanceArea/DanceHint")
 @onready var step_sound = get_node_or_null("StepSound")
@@ -13,7 +14,7 @@ var in_dance_range : bool = false
 var dance_active : bool = false
 var dance_solved : bool = false
 
-var correct_steps = ["ui_left", "ui_right", "ui_left", "ui_down"]
+var correct_steps = ["left", "right", "left", "down"]
 var current_step_index = 0
 var in_scroll_range : bool = false
 
@@ -21,9 +22,13 @@ func _ready():
 	super._ready()
 	scroll_hint.visible = false
 	scroll.visible = false
+	
+	dance_solved = Global.ballroom_complete
 
 	if dance_hint != null:
 		dance_hint.visible = false
+		
+	
 
 func _process(_delta: float) -> void:
 	if in_scroll_range and Input.is_action_just_pressed("interact"):
@@ -46,10 +51,10 @@ func _process(_delta: float) -> void:
 		return
 
 	if dance_active:
-		check_dance_step("ui_left")
-		check_dance_step("ui_right")
-		check_dance_step("ui_up")
-		check_dance_step("ui_down")
+		check_dance_step("left")
+		check_dance_step("right")
+		check_dance_step("up")
+		check_dance_step("down")
 
 func _on_scroll_area_body_entered(body: Node2D) -> void:
 	if body is Player:
@@ -114,7 +119,7 @@ func check_dance_step(action_name):
 func solve_dance():
 	dance_solved = true
 	dance_active = false
-
+	Global.ballroom_complete = true
 	if NavigationManager.player != null:
 		NavigationManager.player.can_move = true
 
@@ -124,8 +129,11 @@ func solve_dance():
 	if dance_hint != null:
 		dance_hint.visible = true
 		dance_hint.text = "Perfect dance!"
-
+	
 	print("Ballroom dance puzzle solved!")
+	if not Global.ballroom_item_collected:
+			ItemManager.get_item(ballroom_marker.global_position)
+			Global.ballroom_item_collected = true
 
 
 func _on_dance_area_body_entered(body: Node2D) -> void:

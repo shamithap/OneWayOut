@@ -2173,6 +2173,9 @@ stream = ExtResource("12_u0n06")
 [node name="SuccessSound" type="AudioStreamPlayer2D" parent="." unique_id=1590847566]
 stream = ExtResource("13_7bacp")
 
+[node name="BallroomMarker" type="Marker2D" parent="." unique_id=129323189]
+position = Vector2(219, 138)
+
 [connection signal="body_entered" from="DanceArea" to="." method="_on_dance_area_body_entered"]
 [connection signal="body_exited" from="DanceArea" to="." method="_on_dance_area_body_exited"]
 [connection signal="body_entered" from="ScrollArea" to="." method="_on_scroll_area_body_entered"]

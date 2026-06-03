@@ -13,8 +13,11 @@ var theater_complete = false
 var theater_item_collected = false
 var return_from_mirror = false
 var theater_mask_states = [-1, -1, -1, -1, -1]
+var ballroom_item_collected = false
+var ballroom_complete = false
 var player_health = 3
 var max_health = 3
+
 
 
 #0 pieces collected
