@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cqpgn1x202wby"]
 
-[ext_resource type="Script" uid="uid://c2ua0iy7blnvt" path="res://scripts/rooms/room.gd" id="1_nr1m3"]
+[ext_resource type="Script" uid="uid://cwnu0mtq0ry0v" path="res://scripts/rooms/diningroom.gd" id="1_kyd48"]
 [ext_resource type="Texture2D" uid="uid://ivlcrp1mdvmk" path="res://assets/SpookyCastleTileset/static_floors+walls.png" id="2_e37gv"]
 [ext_resource type="Texture2D" uid="uid://bl50xfe12jy2l" path="res://assets/SpookyCastleTileset/Spooky castle - final.png" id="3_kyd48"]
 [ext_resource type="Texture2D" uid="uid://dni46tbd12sop" path="res://assets/SpookyCastleTileset/animation_breakable+doors.png" id="4_e37gv"]
@@ -2788,7 +2788,7 @@ size = Vector2(138, 28)
 size = Vector2(11, 12)
 
 [node name="diningroom" type="Node2D" unique_id=703094713]
-script = ExtResource("1_nr1m3")
+script = ExtResource("1_kyd48")
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=1700306763]
 
