@@ -46,12 +46,15 @@ func _on_level_spawn(destination_tag : String):
 	NavigationManager.trigger_player_spawn(door.spawn.global_position, door.spawn_direction)
 
 func won():
-	chest.animation = "open"
 	wrong_table.visible = false
 	correct_table.visible = true
 	if not Global.wine_cellar_item_collected:
+		chest.animation = "opening"
+		await chest.animation_finished
 		ItemManager.get_item(chest_marker.global_position)
 		Global.wine_cellar_item_collected = true
+	else:
+		chest.animation = "open"
 
 func _on_scroll_area_body_entered(body: Node2D) -> void:
 	if body is Player and not Global.wine_cellar_complete:
