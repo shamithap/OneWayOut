@@ -16,6 +16,8 @@ var room_stay_time := 60.0
 @onready var laugh_sound_3: AudioStreamPlayer = $LaughSound3
 @onready var whisper_sound: AudioStreamPlayer = $WhisperSound
 
+@onready var warning_panel := $CanvasLayer/Panel
+
 var quiet_volume = 0
 var medium_volume = -18
 var loud_volume = -5
@@ -200,9 +202,9 @@ func get_room_name(id: int) -> String:
 	
 
 func caught_player():
+	Global.in_dialogue = true
 	waiting_for_continue = true
-	$WarningLabel.visible = true
-	$WarningLabel.text = "The ghost caught you! Press E to continue."
+	warning_panel.visible = true
 	if(player_room == "graveyard"):
 		current_room = "main"
 	else:
@@ -211,8 +213,9 @@ func caught_player():
 	
 func _input(event):
 	if waiting_for_continue and event.is_action_pressed("interact"):
+		Global.in_dialogue = false
 		waiting_for_continue = false
-		$WarningLabel.visible = false
+		warning_panel.visible = false
 		Overlay.get_node("CanvasLayer/HealthBar").lose_health()
 		print("Current health:", Global.player_health)
 		hide()

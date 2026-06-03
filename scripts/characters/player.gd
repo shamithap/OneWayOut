@@ -22,7 +22,7 @@ func _ready():
 func _physics_process(_delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
 	
-	if can_move and not lose_animation_playing:
+	if can_move and not lose_animation_playing and not Global.in_dialogue:
 		velocity = direction * speed
 		move_and_slide()
 

@@ -22,15 +22,19 @@ func unlock():
 	print("DOOR IS UNLOCKED")
 
 func _on_door_body_entered(body: Node2D) -> void:
-	if body is Player:
+	if body is Player and not Global.in_dialogue:
 		hint.visible = true
 		player_in_range = true 
 
 func _on_door_body_exited(body: Node2D) -> void:
-	if body is Player:
+	if body is Player and not Global.in_dialogue:
 		hint.visible = false
 		player_in_range = false
 
 func _process(_delta):
+	if Global.in_dialogue:
+		hint.visible = false
+		player_in_range = false
+	
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		NavigationManager.go_to_level(destination_room_name, destination_door_tag)

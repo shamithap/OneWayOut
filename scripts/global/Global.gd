@@ -1,8 +1,7 @@
 extends Node
 
 #track completed rooms
-#[right chest, middle chest]
-var dungeon_tracker : Array[bool] = [false, false]
+var dungeon_tracker : Array[bool] = [false, false] #[right chest, middle chest]
 var wine_cellar_complete : bool = false
 var wine_cellar_item_collected : bool = false
 var armory_complete : bool = false
@@ -17,10 +16,11 @@ var ballroom_item_collected = false
 var ballroom_complete = false
 var diningroom_item_collected = false
 var diningroom_complete = false
+
 var player_health = 3
 var max_health = 3
 
-
+var in_dialogue = false
 
 #0 pieces collected
 var key_tracker = 0
