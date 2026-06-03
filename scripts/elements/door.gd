@@ -14,6 +14,12 @@ class_name Door
 
 #helps keep track when player is nearby
 var player_in_range = false 
+var locked: bool = false
+
+func lock():
+	locked = true
+	print("DOOR IS LOCKED")
+	hint.text = "Dodge 5 arrows first!"
 
 func _on_door_body_entered(body: Node2D) -> void:
 	if body is Player:

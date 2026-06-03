@@ -1,29 +1,42 @@
 extends Node2D
 
 @export var arrow_scene: PackedScene
-@export var spawn_interval: float = 1.2
-@export var arrow_speed: float = 380.0
+@export var fire_interval: float = 1.5
+@export var arrow_speed: float = 100.0
+
+
+var arrow_slots = [
+	Vector2(-60, -64),
+	Vector2(-60, -58),
+	Vector2(-60, -32),
+	Vector2(-60, -16),
+	Vector2(-60, 0),
+]
 
 var timer: float = 0.0
-var enabled = true
+var last_slot: int = -1
+var arrows_fired: int = 0
+var max_arrows: int = 10
 
 func _process(delta):
-	if not enabled:
+	if arrows_fired >= max_arrows:
 		return
 	timer += delta
-	if timer >= spawn_interval:
+	if timer >= fire_interval:
 		timer = 0.0
-		spawn_arrow()
-		# Gradually increase difficulty
-		spawn_interval = max(0.3, spawn_interval - 0.015)
+		fire_random()
 
-func spawn_arrow():
-	var screen = get_viewport_rect().size
+func fire_random():
+	var index = randi() % arrow_slots.size()
+	if index == last_slot:
+		index = (index + 1) % arrow_slots.size()
+	last_slot = index
+
 	var arrow = arrow_scene.instantiate()
-	
-	arrow.position = Vector2(-20, randf_range(0, screen.y))
-	arrow.direction = Vector2(1, randf_range(-0.3, 0.3)).normalized()
-	arrow.rotation = 0
-
+	arrow.position = arrow_slots[index]
+	arrow.direction = Vector2(1, 0)
+	arrow.rotation = 0.0
 	arrow.speed = arrow_speed
 	get_parent().add_child(arrow)
+	
+	arrows_fired += 1
