@@ -99,6 +99,7 @@ func round_winner() -> void:
 	else: 
 		#tie
 		label.text = "It was a tie!"
+		player_win_count += 1
 	
 func player_won_round():
 	player_win_count += 1
