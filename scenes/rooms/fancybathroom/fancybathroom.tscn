@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bslr0p311g0ua"]
 
-[ext_resource type="Script" uid="uid://emgwfko0d382" path="res://scripts/rooms/kitchen.gd" id="1_0u5rj"]
+[ext_resource type="Script" uid="uid://cee7vs4v3504q" path="res://scripts/rooms/fancybathroom.gd" id="1_0u5rj"]
 [ext_resource type="Texture2D" uid="uid://be3mn781g22yy" path="res://assets/kenney_tiny-dungeon/tilemap.png" id="2_vob3p"]
 [ext_resource type="Texture2D" uid="uid://d3toerbp3a1s7" path="res://assets/SpookyCastleTileset/- Spooky castle - final.png" id="3_1ywdp"]
 [ext_resource type="PackedScene" uid="uid://yy6em55b80o7" path="res://scenes/door.tscn" id="4_o3ew4"]
