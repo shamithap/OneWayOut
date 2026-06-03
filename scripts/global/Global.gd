@@ -16,7 +16,10 @@ var ballroom_item_collected = false
 var ballroom_complete = false
 var diningroom_item_collected = false
 var diningroom_complete = false
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 var recroom_complete = false
 var player_health = 3
 var max_health = 3
