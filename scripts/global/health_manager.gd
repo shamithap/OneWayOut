@@ -17,6 +17,7 @@ func _ready():
 		heart3.animation = "lose"
 
 func lose_health() -> void:
+	print("you lost a heart!")
 	if health <= 0:
 		return
 

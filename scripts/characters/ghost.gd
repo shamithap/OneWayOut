@@ -7,6 +7,7 @@ var current_room := ""
 var player_room := ""
 
 var move_timer: Timer
+var waiting_for_continue := false
 
 var room_stay_time := 60.0
 # var speed_decay := 0.98
@@ -134,7 +135,7 @@ func chase_player():
 	# Show ghost only if ghost and player share room
 	if current_room == player_room:
 		update_visual_position()
-		attack_player()
+		caught_player()
 	else:
 		hide()
 
@@ -148,14 +149,35 @@ func get_room_name(id: int) -> String:
 			return room
 	return ""
 	
-func attack_player() -> void:
-	# take one heart away
-	# print ghost got you! dialouge box
-	hide()
-	# transport ghost back to graveyard 
-	current_room = "graveyard"
+
+func caught_player():
+	waiting_for_continue = true
+	$WarningLabel.visible = true
+	$WarningLabel.text = "The ghost caught you! Press E to continue."
 	if(player_room == "graveyard"):
 		current_room = "main"
+	current_room = "graveyard"
+	
+func _input(event):
+	if waiting_for_continue and event.is_action_pressed("interact"):
+		waiting_for_continue = false
+		$WarningLabel.visible = false
+		Overlay.get_node("CanvasLayer/HealthBar").lose_health()
+		hide()
+	
+#func attack_player() -> void:
+	## take one heart away
+	#Overlay.get_node("CanvasLayer/HealthBar").lose_health()
+	## print ghost got you! dialouge box
+	## TODO: dialouge box
+	#hide()
+	## transport ghost back to graveyard 
+	#current_room = "graveyard"
+	#if(player_room == "graveyard"):
+		#current_room = "main"
+		
+func show_ghost_location():
+	print("Ghost currently in:", current_room)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -167,6 +189,13 @@ func _ready() -> void:
 
 	# listen for room changes
 	NavigationManager.room_changed.connect(_on_room_changed)
+	
+	# ghost room display
+	var debug_timer = Timer.new()
+	debug_timer.wait_time = 1.0
+	debug_timer.timeout.connect(show_ghost_location)
+	add_child(debug_timer)
+	debug_timer.start()
 	
 	# setup timer
 	move_timer = $Timer
