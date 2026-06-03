@@ -4,17 +4,23 @@ class_name Player
 
 @export var speed := 120.0
 @onready var anim = $AnimatedSprite2D
+@onready var animation_player := $FadeOut/AnimationPlayer
+@onready var fade_out := $FadeOut/FadeOut
+@onready var gameover_audio := $AudioStreamPlayer2D
 
+var lose_animation_playing = false
 var last_direction = "down"
 var can_move : bool = true
 
 func _ready():
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	Overlay.get_node("CanvasLayer/HealthBar").player_died.connect(player_lost)
+
 
 func _physics_process(_delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
 	
-	if can_move:
+	if can_move and not lose_animation_playing:
 		velocity = direction * speed
 		move_and_slide()
 
@@ -41,3 +47,14 @@ func _on_spawn(spawn_position : Vector2, direction : String):
 	velocity = Vector2.ZERO
 	last_direction = direction
 	anim.play("walk_" + direction)
+
+func player_lost() -> void:
+	gameover_audio.play()
+	
+	lose_animation_playing = true
+	anim.play("idle_" + last_direction)
+	
+	fade_out.visible = true
+	animation_player.play("FadeOut")
+	await animation_player.animation_finished
+	get_tree().change_scene_to_file("res://scenes/lost_screen.tscn")

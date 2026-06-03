@@ -8,7 +8,8 @@ extends Node2D
 @onready var heart3 := $Heart3
 @onready var hurt_sound := $HurtSound
 
-#for testing
+signal player_died
+
 func _ready():
 	Global.player_health = health
 	
@@ -47,4 +48,4 @@ func heal_health() -> void:
 			heart3.animation = "idle"
 
 func death() -> void:
-	print("dead")
+	player_died.emit()

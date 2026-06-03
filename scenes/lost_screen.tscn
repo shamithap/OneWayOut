@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://hs3tcn6pd7o0"]
+
+[ext_resource type="Texture2D" uid="uid://cu4uhuwcrv2qv" path="res://assets/UI/background1.png" id="1_12qoe"]
+[ext_resource type="Script" uid="uid://dkb8mled7thdq" path="res://scripts/end_screen.gd" id="1_erjvp"]
+[ext_resource type="FontFile" uid="uid://d208f377vxcrw" path="res://assets/UI/ThaleahFat.ttf" id="2_erjvp"]
+[ext_resource type="Texture2D" uid="uid://ddxd875dlhwg8" path="res://assets/UI/FreeHorrorUi.png" id="3_0nhqw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5h5wx"]
+atlas = ExtResource("3_0nhqw")
+region = Rect2(6, 234, 52, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emgh4"]
+atlas = ExtResource("3_0nhqw")
+region = Rect2(70, 234, 52, 15)
+
+[sub_resource type="Animation" id="Animation_wke0n"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_um0j2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l6y1l"]
+_data = {
+&"FadeIn": SubResource("Animation_wke0n"),
+&"RESET": SubResource("Animation_um0j2")
+}
+
+[node name="LostScreen" type="Control" unique_id=1394026197]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_erjvp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1736977962]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1682573314]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_12qoe")
+
+[node name="Title" type="Label" parent="CanvasLayer" unique_id=561073871]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -406.5
+offset_top = -142.0
+offset_right = 406.5
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_erjvp")
+theme_override_font_sizes/font_size = 200
+text = "You died..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="TextureButton" parent="CanvasLayer" unique_id=1949453889]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -178.33606
+offset_top = -182.0
+offset_right = 194.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_5h5wx")
+texture_hover = SubResource("AtlasTexture_emgh4")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/BackButton" unique_id=625501126]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.83197
+offset_top = -33.5
+offset_right = 169.16803
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_erjvp")
+theme_override_font_sizes/font_size = 82
+text = "main menu "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=416969305]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=887830137]
+libraries/ = SubResource("AnimationLibrary_l6y1l")
+autoplay = &"FadeIn"
+
+[connection signal="pressed" from="CanvasLayer/BackButton" to="." method="_on_back_button_button_down"]
