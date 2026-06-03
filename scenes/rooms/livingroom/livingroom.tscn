@@ -13,7 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://dxb2yeotd2bl7" path="res://assets/objects/Livingroom assets/fireplace.png" id="7_ofrfw"]
 [ext_resource type="Texture2D" uid="uid://b03835ek68gws" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(carpet)B.png" id="9_31umg"]
 [ext_resource type="Texture2D" uid="uid://duqmego2lt5ks" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(pouf).png" id="10_qe3uy"]
+[ext_resource type="AudioStream" uid="uid://c0oek7f5ljge6" path="res://sounds/livingroom/ticksound.mp3" id="11_31npf"]
 [ext_resource type="Texture2D" uid="uid://6jpkmc18i4ig" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(pouf)D.png" id="11_xdu01"]
+[ext_resource type="AudioStream" uid="uid://b0dhifweh5dtp" path="res://sounds/livingroom/chimesound.mp3" id="12_k7q3b"]
 [ext_resource type="Texture2D" uid="uid://m3ocvelgj0yg" path="res://assets/objects/Livingroom assets/livingroom_assets/livingroom_classic(chair)D.png" id="12_uy6pk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mldlc"]
@@ -814,6 +816,12 @@ offset_top = 39.0
 offset_right = 16.0
 offset_bottom = 62.0
 scale = Vector2(0.3, 0.3)
+
+[node name="TickSound" type="AudioStreamPlayer2D" parent="ClockPuzzle" unique_id=1170109877]
+stream = ExtResource("11_31npf")
+
+[node name="ChimeSound" type="AudioStreamPlayer2D" parent="ClockPuzzle" unique_id=537481199]
+stream = ExtResource("12_k7q3b")
 
 [node name="Fireplace" type="Sprite2D" parent="." unique_id=1264126537]
 position = Vector2(144, 82)
