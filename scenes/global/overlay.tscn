@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c2hatf0ihqy07"]
 
 [ext_resource type="Script" uid="uid://mqhjx6jodbcy" path="res://scripts/overlay.gd" id="1_p5j10"]
-[ext_resource type="PackedScene" uid="uid://0mhla5afdkpj" path="res://scenes/minimap.tscn" id="1_r2eog"]
-[ext_resource type="PackedScene" uid="uid://od2a7045d4i0" path="res://scenes/health_bar.tscn" id="2_sfd0e"]
-[ext_resource type="PackedScene" uid="uid://dbwntvgio2pmb" path="res://scenes/key_overlay.tscn" id="3_sfd0e"]
+[ext_resource type="PackedScene" uid="uid://0mhla5afdkpj" path="res://scenes/global/minimap.tscn" id="1_r2eog"]
+[ext_resource type="PackedScene" uid="uid://od2a7045d4i0" path="res://scenes/global/health_bar.tscn" id="2_sfd0e"]
+[ext_resource type="PackedScene" uid="uid://dbwntvgio2pmb" path="res://scenes/global/key_overlay.tscn" id="3_sfd0e"]
 
 [node name="Overlay" type="Control" unique_id=1808055294]
 layout_mode = 3
