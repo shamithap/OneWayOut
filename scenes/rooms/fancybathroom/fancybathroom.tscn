@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bxkxm6oxb4we2" path="res://assets/bathroom/image-1.png (3).png" id="7_i8av6"]
 [ext_resource type="Texture2D" uid="uid://bosppgj23n654" path="res://assets/bathroom/toilet.png" id="8_wxamw"]
 [ext_resource type="AudioStream" uid="uid://bdxhwbwapjwra" path="res://assets/bathroom/404329__inspectorj__toilet-flush-european-distant-lid-up.wav" id="9_i8av6"]
-[ext_resource type="Script" uid="uid://bbe2e5vfjmnec" path="res://scripts/characters/knight.gd" id="10_qhwyt"]
 [ext_resource type="Texture2D" uid="uid://srennupptqf" path="res://assets/UI/Chat BalloonsBubbles - Pixel Art/Icons-1.png" id="11_i8av6"]
+[ext_resource type="Script" uid="uid://biydsr643ftpt" path="res://scripts/characters/wizard.gd" id="11_wxamw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56ggk"]
 texture = ExtResource("2_vob3p")
@@ -2518,7 +2518,7 @@ shape = SubResource("RectangleShape2D_u0uwb")
 position = Vector2(0, -16)
 scale = Vector2(1.405, 1.405)
 collision_layer = 4
-script = ExtResource("10_qhwyt")
+script = ExtResource("11_wxamw")
 metadata/_edit_group_ = true
 
 [node name="WizardSprite" type="Sprite2D" parent="Wizard" unique_id=323327008]
