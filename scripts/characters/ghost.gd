@@ -9,7 +9,7 @@ var player_room := ""
 var move_timer: Timer
 var waiting_for_continue := false
 
-var room_stay_time := 60.0
+var room_stay_time := 180.0
 
 @onready var laugh_sound_1: AudioStreamPlayer = $LaughSound1
 @onready var laugh_sound_2: AudioStreamPlayer = $LaughSound2
