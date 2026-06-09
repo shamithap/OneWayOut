@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b3fxjxfrptndo" path="res://scripts/global/minimap_manager.gd" id="1_4v8nv"]
 [ext_resource type="Texture2D" uid="uid://bdedccbjkbeyv" path="res://assets/objects/Minimap/minimap.png" id="1_lj7mc"]
 [ext_resource type="Texture2D" uid="uid://csf87sivifdl7" path="res://assets/player/player tileset/Player/player_Idle.png" id="2_o13pn"]
-[ext_resource type="Texture2D" uid="uid://dhk7oor33j5qa" path="res://icon.svg" id="4_dsx0k"]
+[ext_resource type="Texture2D" uid="uid://yunp1amjtagn" path="res://assets/objects/Ghost/Frame1-1.png.png" id="4_xn58s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p5j10"]
 atlas = ExtResource("2_o13pn")
@@ -198,8 +198,8 @@ texture = SubResource("AtlasTexture_p5j10")
 [node name="Ghost" type="Sprite2D" parent="." unique_id=1832926635]
 visible = false
 position = Vector2(0, -45.47206)
-scale = Vector2(0.079, 0.079)
-texture = ExtResource("4_dsx0k")
+scale = Vector2(0.016065588, 0.016065588)
+texture = ExtResource("4_xn58s")
 
 [node name="CompassTimer" type="Timer" parent="." unique_id=495479696]
 wait_time = 240.0

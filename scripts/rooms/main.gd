@@ -7,6 +7,8 @@ func _ready() -> void:
 	
 	if NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
+		
+	Overlay.turn_health_on()
 
 #gets the spawn marker from the door and send that info to the player
 #through a signal so it spawns at teh correct place
@@ -15,4 +17,7 @@ func _on_level_spawn(destination_tag : String):
 	var door = get_node(door_path) as Door
 	NavigationManager.trigger_player_spawn(door.spawn.global_position, door.spawn_direction)
 	
-	
+
+
+func _on_area_2d_body_entered(_body: Node2D) -> void:
+	Overlay.get_node("CanvasLayer/HealthBar").lose_health()

@@ -309,6 +309,10 @@ shape = SubResource("RectangleShape2D_5mfnq")
 [node name="Timer" type="Timer" parent="." unique_id=1559917584]
 wait_time = 10.0
 
+[node name="HourglassTimer" type="Timer" parent="." unique_id=159215211]
+wait_time = 120.0
+one_shot = true
+
 [node name="LaughSound1" type="AudioStreamPlayer" parent="." unique_id=1475366954]
 
 [node name="LaughSound2" type="AudioStreamPlayer" parent="." unique_id=1183565370]
@@ -345,3 +349,5 @@ theme_override_font_sizes/font_size = 26
 text = "The ghost caught you! Press E to continue"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="timeout" from="HourglassTimer" to="." method="hourglass_timer_timeout"]

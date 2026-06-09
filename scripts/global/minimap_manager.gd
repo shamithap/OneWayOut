@@ -2,7 +2,7 @@ extends Node
 
 @onready var player := $Player
 @onready var ghost := $Ghost
-@onready var timer := $CompassTimer
+@onready var compass_timer := $CompassTimer
 var compass_activated = false
 var hourglass_activated = false
 
@@ -41,6 +41,7 @@ var hourglass_activated = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	NavigationManager.update_minimap_position.connect(update_player_position)
+	Global.restart_game_signal.connect(reset_minimap)
 	self.visible = false
 	
 func _process(_delta: float) -> void:
@@ -69,3 +70,8 @@ func turn_off_compass() -> void:
 
 func turn_off_hourglass() -> void:
 	Overlay.get_node("CanvasLayer/Minimap").hourglass_activated = false
+
+func reset_minimap():
+	for explore_square in explored_dict.values():
+		explore_square.visible = false
+	update_player_position("main")

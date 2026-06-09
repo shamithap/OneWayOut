@@ -30,6 +30,9 @@ extends Node
 @onready var sound : AudioStreamPlayer2D = $AudioStreamPlayer2D
 var reward_count = 0
 
+func _ready() -> void:
+	Global.restart_game_signal.connect(reset_inventory)
+
 func get_item(position : Vector2):
 	reward_count += 1
 	var possible_items = item_dict.keys()
@@ -76,6 +79,6 @@ func pickup_item(item):
 	await timer.timeout
 	label.text = ""
 
-func reset_inventory() -> void:
+func reset_inventory():
 	inventory.clear()
 	item_dict.merge(key_dict)

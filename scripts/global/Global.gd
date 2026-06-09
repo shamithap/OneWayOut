@@ -26,7 +26,26 @@ var in_dialogue = false
 #0 pieces collected
 var key_tracker = 0
 
+signal restart_game_signal
+
 func reset_game() -> void:
-	player_health = 3
-	Overlay.get_node("CanvasLayer/HealthBar").restore_health()
-	ItemManager.reset_inventory()
+	NavigationManager.spawn_door_tag = "S"
+	restart_game_signal.emit()
+	
+	dungeon_tracker = [false, false] 
+	wine_cellar_complete = false
+	wine_cellar_item_collected = false
+	armory_complete = false
+	armory_item_collected = false
+	kitchen_item_collected = false
+	library_complete = false
+	library_item_collected = false
+	theater_complete = false
+	theater_item_collected = false
+	return_from_mirror = false
+	theater_mask_states = [-1, -1, -1, -1, -1]
+	ballroom_item_collected = false
+	ballroom_complete = false
+	diningroom_item_collected = false
+	diningroom_complete = false
+	recroom_complete = false

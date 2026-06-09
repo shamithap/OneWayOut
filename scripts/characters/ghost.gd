@@ -8,6 +8,7 @@ var player_room := ""
 
 var move_timer: Timer
 var waiting_for_continue := false
+@onready var hourglass_timer := $HourglassTimer
 
 var room_stay_time := 180.0
 
@@ -269,6 +270,15 @@ func _ready() -> void:
 	move_timer.timeout.connect(_on_timer_timeout)
 	move_timer.start()
 	
+
+func hourglass_timer_start() -> void:
+	hourglass_timer.start()
+	move_timer.wait_time = room_stay_time * 2
+	
+func hourglass_timer_timeout() -> void :
+	move_timer.wait_time = room_stay_time
+	
+
 	#mwahahahahahah
 func play_spooky_audio(volume):
 

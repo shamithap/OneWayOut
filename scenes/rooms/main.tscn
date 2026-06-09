@@ -1634,7 +1634,7 @@ position = Vector2(321, 249)
 [node name="GhostPoint" type="Marker2D" parent="." unique_id=1655420591 groups=["ghost_point"]]
 position = Vector2(270, 179)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=840042633]
+[node name="ExclamationPoint" type="AnimatedSprite2D" parent="." unique_id=840042633]
 position = Vector2(321, 173)
 scale = Vector2(0.8125, 0.8125)
 sprite_frames = SubResource("SpriteFrames_oby0s")

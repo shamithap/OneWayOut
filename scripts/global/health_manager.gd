@@ -12,6 +12,7 @@ signal player_died
 
 func _ready():
 	Global.player_health = health
+	Global.restart_game_signal.connect(restore_health)
 
 func lose_health() -> void:
 	print("you lost a heart!")
@@ -24,11 +25,11 @@ func lose_health() -> void:
 
 	match health:
 		2:
-			heart3.animation = "lose"
+			heart3.play("lose")
 		1:
-			heart2.animation = "lose"
+			heart2.play("lose")
 		0:
-			heart1.animation = "lose"
+			heart1.play("lose")
 			death()
 
 func heal_health() -> void:
@@ -51,6 +52,7 @@ func death() -> void:
 	
 func restore_health() -> void:
 	health = 3
-	heart1.animation = "idle"
-	heart2.animation = "idle"
-	heart3.animation = "idle"
+	Global.player_health = health
+	heart1.play("idle")
+	heart2.play("idle")
+	heart3.play("idle")
